@@ -1,0 +1,61 @@
+SESSION NAME:	ADR Spotting test
+SAMPLE RATE:	48000.000000
+BIT DEPTH:	24-bit
+SESSION START TIMECODE:	00:59:52:00
+TIMECODE FORMAT:	23.976 Frame
+# OF AUDIO TRACKS:	4
+# OF AUDIO CLIPS:	0
+# OF AUDIO FILES:	0
+
+
+F I L E S  I N  S E S S I O N
+Filename	Location
+
+
+P L U G - I N S  L I S T I N G
+MANUFACTURER            	PLUG-IN NAME            	VERSION         	FORMAT          	STEMS                   	NUMBER OF INSTANCES
+
+
+T R A C K  L I S T I N G
+TRACK NAME:	Jamie
+COMMENTS:	Jamie comments
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	This is a line                	   00:59:59:16	   01:00:17:17	   00:00:18:01	Unmuted
+
+
+TRACK NAME:	Bill
+COMMENTS:	Bill comments
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	This is another line          	   01:00:22:04	   01:00:38:04	   00:00:16:00	Unmuted
+1       	2       	This is Bill's seocnd line    	   01:00:41:14	   01:00:46:05	   00:00:04:14	Unmuted
+
+
+TRACK NAME:	Steve
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	This is Steve's line at the same time as Bill's line	   01:00:22:04	   01:00:38:04	   00:00:16:00	Unmuted
+1       	2       	This is Steve's second line   	   01:00:50:23	   01:00:59:20	   00:00:08:20	Unmuted
+
+
+TRACK NAME:	Elissa
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	This is the last line         	   01:01:02:22	   01:01:15:00	   00:00:12:02	Unmuted
+
+
+M A R K E R S  L I S T I N G
+#   	LOCATION     	TIME REFERENCE    	UNITS    	NAME                             	COMMENTS
+1   	01:00:00:00  	384384            	Samples  	One hour                         	This is the comments section for One Hour
+2   	01:00:59:20  	3260416           	Samples  	This is a new scene              	
