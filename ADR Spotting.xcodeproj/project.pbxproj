@@ -13,6 +13,8 @@
 		9A94503C1FE71F31007CFC2D /* TimeLord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450331FE71F31007CFC2D /* TimeLord.framework */; };
 		9A9450411FE71F31007CFC2D /* TimeLordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450401FE71F31007CFC2D /* TimeLordTests.swift */; };
 		9A9450431FE71F31007CFC2D /* TimeLord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450351FE71F31007CFC2D /* TimeLord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A94504B1FE71F86007CFC2D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A94502D1FE71C8E007CFC2D /* CoreMedia.framework */; };
+		9A94504C1FE71F8B007CFC2D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A94504A1FE71F80007CFC2D /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		9A94503B1FE71F31007CFC2D /* TimeLordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeLordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9450401FE71F31007CFC2D /* TimeLordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLordTests.swift; sourceTree = "<group>"; };
 		9A9450421FE71F31007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A94504A1FE71F80007CFC2D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A94504B1FE71F86007CFC2D /* CoreMedia.framework in Frameworks */,
+				9A94504C1FE71F8B007CFC2D /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +127,7 @@
 		9A94502C1FE71C8E007CFC2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A94504A1FE71F80007CFC2D /* CoreVideo.framework */,
 				9A94502D1FE71C8E007CFC2D /* CoreMedia.framework */,
 			);
 			name = Frameworks;
