@@ -26,6 +26,7 @@
 		9A944FE61FE713EF007CFC2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 			};
 			buildConfigurationList = 9A944FE91FE713EF007CFC2D /* Build configuration list for PBXProject "ADR Spotting" */;
@@ -36,6 +37,7 @@
 				en,
 			);
 			mainGroup = 9A944FE51FE713EF007CFC2D;
+			productRefGroup = 9A944FE51FE713EF007CFC2D;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
