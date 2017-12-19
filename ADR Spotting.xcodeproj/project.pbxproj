@@ -15,6 +15,7 @@
 		9A9450431FE71F31007CFC2D /* TimeLord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450351FE71F31007CFC2D /* TimeLord.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A94504B1FE71F86007CFC2D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A94502D1FE71C8E007CFC2D /* CoreMedia.framework */; };
 		9A94504C1FE71F8B007CFC2D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A94504A1FE71F80007CFC2D /* CoreVideo.framework */; };
+		9A9450521FE72069007CFC2D /* FeetFramesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9A9450401FE71F31007CFC2D /* TimeLordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLordTests.swift; sourceTree = "<group>"; };
 		9A9450421FE71F31007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A94504A1FE71F80007CFC2D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeetFramesFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				9A9450351FE71F31007CFC2D /* TimeLord.h */,
 				9A9450361FE71F31007CFC2D /* Info.plist */,
+				9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */,
 			);
 			path = TimeLord;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 					};
 					9A9450321FE71F31007CFC2D = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					9A94503A1FE71F31007CFC2D = {
@@ -344,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9450521FE72069007CFC2D /* FeetFramesFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +797,7 @@
 		9A9450481FE71F31007CFC2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -857,6 +863,7 @@
 		9A9450491FE71F31007CFC2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
