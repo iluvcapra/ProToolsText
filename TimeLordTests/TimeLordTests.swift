@@ -11,17 +11,7 @@ import CoreMedia
 @testable import TimeLord
 
 class TimeLordTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
+
     func testFeetFrames() {
         let t1 = FeetFrames.from(frameCount: 16, perfsPerFrame: 4, perfsPerFoot: 64)
         XCTAssertEqual(t1.feet, 1)
@@ -48,7 +38,7 @@ class TimeLordTests: XCTestCase {
 //        XCTAssertEqual(frames.filter { $0.feet == 1}.count , 21)
 //        XCTAssertEqual(frames.filter { $0.feet == 2}.count , 22)
 //        XCTAssertEqual(frames.filter { $0.feet == 3}.count , 0)
-//        
+//
 //        XCTAssertTrue(frames.filter { $0.feet == 0}.map {$0.frame} == Array(0...20) )
 //        XCTAssertTrue(frames.filter { $0.feet == 1}.map {$0.frame} == Array(0...20) )
 //        XCTAssertTrue(frames.filter { $0.feet == 2}.map {$0.frame} == Array(0...21) )
