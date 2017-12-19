@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import CoreMedia
+
 @testable import TimeLord
 
 class TimeLordTests: XCTestCase {
@@ -20,16 +22,26 @@ class TimeLordTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testDivide() {
+        let frame24 = CMTime(value: 1, timescale: 24)
+        let frame2997 = CMTime(value: 1001, timescale: 30_000)
+        
+        let t1 = CMTime(value: 100, timescale: 24)
+        let r1 = t1.divide(by: frame24)
+        XCTAssertEqual(r1, 100.0)
+        
+        let t2 = CMTime(value: 50, timescale: 25)
+        let r2 = t2.divide(by: frame24)
+        XCTAssertEqual(r2, 48.0)
+        
+        let t3 = CMTime(value: 31, timescale: 30)
+        let r3 = t3.divide(by: frame24)
+        XCTAssertEqual(r3, 24.8)
+        
+        let t4 = CMTime(value: 108_000, timescale: 30)
+        let r4 = t4.divide(by: frame2997)
+        XCTAssertGreaterThanOrEqual(r4, 107_892.0)
+        XCTAssertLessThanOrEqual(r4, 107_892.2)
     }
     
 }

@@ -69,21 +69,18 @@ struct FeetFrames {
 }
 
 
-extension CMTime {
-    func divideWithRemainder(by time : CMTime) -> (quotient: Int, remainder: CMTime) {
-        if time == kCMTimeZero {
-            return (quotient: kCMTimeIndefinite, remainder : kCMTimeZero)
+public extension CMTime {
+    
+    public func divide(by divider : CMTime) -> Double {
+        
+        if divider.isPositiveInfinity || divider.isNegativeInfinity {
+            return 0.0
         }
         
-        if time.isPositiveInfinity || time.isNegativeInfinity {
-            return (quotient: 0, remainder : kCMTimeZero)
-        }
-        
-        let conv = self.convertScale(time.timescale, method: .roundTowardZero)
-        let result = conv.value.quotientAndRemainder(dividingBy: time.value)
-        let quotientTime = CMTime(value: result.quotient, timescale: time.timescale)
-        
-        return ( quotient : result.quotient, remainder: self - quotientTime )
+        let scale = self.timescale * divider.timescale
+        let finNum = self.convertScale(scale, method: CMTimeRoundingMethod.roundTowardZero)
+        let finDiv = divider.convertScale(scale, method: CMTimeRoundingMethod.roundTowardZero)
+        return Double(finNum.value) / Double(finDiv.value)
     }
 }
 
@@ -108,11 +105,13 @@ class FeetFramesFormatter: Formatter {
             return "(-∞)"
         }
         
+        return ""
     }
     
     override func getObjectValue(_ obj: AutoreleasingUnsafeMutablePointer<AnyObject?>?,
                                  for string: String,
                                  errorDescription error: AutoreleasingUnsafeMutablePointer<NSString?>?) -> Bool {
 
+        return false
     }
 }
