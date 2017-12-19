@@ -16,6 +16,7 @@
 		9A94504B1FE71F86007CFC2D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A94502D1FE71C8E007CFC2D /* CoreMedia.framework */; };
 		9A94504C1FE71F8B007CFC2D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A94504A1FE71F80007CFC2D /* CoreVideo.framework */; };
 		9A9450521FE72069007CFC2D /* FeetFramesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */; };
+		9AD95A6A1FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9A9450421FE71F31007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A94504A1FE71F80007CFC2D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeetFramesFormatter.swift; sourceTree = "<group>"; };
+		9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "DigiConform - 35mm 3 perf.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				9A944FEC1FE71407007CFC2D /* Notes.rtf */,
+				9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */,
 				9A9450141FE71C1F007CFC2D /* PKit */,
 				9A94501F1FE71C1F007CFC2D /* PKitTests */,
 				9A9450341FE71F31007CFC2D /* TimeLord */,
@@ -302,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD95A6A1FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

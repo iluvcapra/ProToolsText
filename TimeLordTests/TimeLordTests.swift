@@ -22,6 +22,47 @@ class TimeLordTests: XCTestCase {
         super.tearDown()
     }
     
+    func testFeetFrames() {
+        let t1 = FeetFrames.from(frameCount: 16, perfsPerFrame: 4, perfsPerFoot: 64)
+        XCTAssertEqual(t1.feet, 1)
+        XCTAssertEqual(t1.frame, 0)
+        XCTAssertEqual(t1.footFraming, 0)
+        
+        let t2 = FeetFrames.from(frameCount: 24, perfsPerFrame: 4, perfsPerFoot: 64)
+        XCTAssertEqual(t2.feet, 1)
+        XCTAssertEqual(t2.frame, 8)
+        XCTAssertEqual(t2.footFraming, 0)
+        
+        let t3 = FeetFrames.from(frameCount: 30, perfsPerFrame: 3, perfsPerFoot: 64)
+        XCTAssertEqual(t3.feet, 1)
+        XCTAssertEqual(t3.frame, 8)
+        XCTAssertEqual(t3.footFraming, 1)
+    }
+    
+    func test3perf() {
+        let frames = (0..<64).map { (i) -> FeetFrames in
+            return FeetFrames.from(frameCount: i, perfsPerFrame: 3, perfsPerFoot: 64)
+        }
+        
+        var x :Int = frames.first!.feet
+        var z :Int = frames.first!.footFraming
+        for frame in frames.dropFirst() {
+            XCTAssertGreaterThanOrEqual(frame.feet, x)
+            XCTAssertGreaterThanOrEqual(frame.footFraming, z)
+            x = frame.feet
+            z = frame.footFraming
+        }
+        
+        XCTAssertEqual(frames.filter { $0.footFraming == 0}.count , 21)
+        XCTAssertEqual(frames.filter { $0.footFraming == 1}.count , 21)
+        XCTAssertEqual(frames.filter { $0.footFraming == 2}.count , 22)
+        
+        XCTAssertTrue(frames.filter { $0.footFraming == 0}.map {$0.frame} == Array(0...20) )
+        XCTAssertTrue(frames.filter { $0.footFraming == 1}.map {$0.frame} == Array(0...21) )
+        XCTAssertTrue(frames.filter { $0.footFraming == 2}.map {$0.frame} == Array(0...21) )
+        
+    }
+    
     func testDivide() {
         let frame24 = CMTime(value: 1, timescale: 24)
         let frame2997 = CMTime(value: 1001, timescale: 30_000)
