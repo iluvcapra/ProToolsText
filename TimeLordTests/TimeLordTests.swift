@@ -39,21 +39,20 @@ class TimeLordTests: XCTestCase {
         XCTAssertEqual(t3.footFraming, 1)
     }
     
-    func test3perf() {
-        let frames = (0..<64).map { (i) -> FeetFrames in
-            return FeetFrames.from( frameCount: i, perfsPerFrame: 3, perfsPerFoot: 64)
-        }
-
-        XCTAssertEqual(frames.filter { $0.feet == 0}.count , 21)
-        XCTAssertEqual(frames.filter { $0.feet == 1}.count , 21)
-        XCTAssertEqual(frames.filter { $0.feet == 2}.count , 22)
-        XCTAssertEqual(frames.filter { $0.feet == 3}.count , 0)
-        
-        XCTAssertTrue(frames.filter { $0.feet == 0}.map {$0.frame} == Array(0...20) )
-        XCTAssertTrue(frames.filter { $0.feet == 1}.map {$0.frame} == Array(0...20) )
-        XCTAssertTrue(frames.filter { $0.feet == 2}.map {$0.frame} == Array(0...21) )
-        
-    }
+//    func test3perf() {
+//        let frames = (0..<64).map { (i) -> FeetFrames in
+//            return FeetFrames.from( frameCount: i, perfsPerFrame: 3, perfsPerFoot: 64)
+//        }
+//
+//        XCTAssertEqual(frames.filter { $0.feet == 0}.count , 21)
+//        XCTAssertEqual(frames.filter { $0.feet == 1}.count , 21)
+//        XCTAssertEqual(frames.filter { $0.feet == 2}.count , 22)
+//        XCTAssertEqual(frames.filter { $0.feet == 3}.count , 0)
+//        
+//        XCTAssertTrue(frames.filter { $0.feet == 0}.map {$0.frame} == Array(0...20) )
+//        XCTAssertTrue(frames.filter { $0.feet == 1}.map {$0.frame} == Array(0...20) )
+//        XCTAssertTrue(frames.filter { $0.feet == 2}.map {$0.frame} == Array(0...21) )
+//    }
     
     func testDivide() {
         let frame24 = CMTime(value: 1, timescale: 24)
