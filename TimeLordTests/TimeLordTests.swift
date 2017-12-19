@@ -49,9 +49,9 @@ class TimeLordTests: XCTestCase {
         XCTAssertEqual(frames.filter { $0.feet == 2}.count , 22)
         XCTAssertEqual(frames.filter { $0.feet == 3}.count , 0)
         
-        XCTAssertTrue(frames.filter { $0.footFraming == 0}.map {$0.frame} == Array(0...20) )
-        XCTAssertTrue(frames.filter { $0.footFraming == 1}.map {$0.frame} == Array(0...20) )
-        XCTAssertTrue(frames.filter { $0.footFraming == 2}.map {$0.frame} == Array(0...21) )
+        XCTAssertTrue(frames.filter { $0.feet == 0}.map {$0.frame} == Array(0...20) )
+        XCTAssertTrue(frames.filter { $0.feet == 1}.map {$0.frame} == Array(0...20) )
+        XCTAssertTrue(frames.filter { $0.feet == 2}.map {$0.frame} == Array(0...21) )
         
     }
     
