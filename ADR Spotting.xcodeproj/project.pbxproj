@@ -18,6 +18,7 @@
 		9A9450521FE72069007CFC2D /* FeetFramesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */; };
 		9AD95A6A1FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */; };
 		9AD95A6C1FE9D52D0004CF02 /* CMTime_Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD95A6B1FE9D52D0004CF02 /* CMTime_Additions.swift */; };
+		9AD95A6E1FE9D56D0004CF02 /* FrameCountFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD95A6D1FE9D56D0004CF02 /* FrameCountFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeetFramesFormatter.swift; sourceTree = "<group>"; };
 		9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "DigiConform - 35mm 3 perf.pdf"; sourceTree = "<group>"; };
 		9AD95A6B1FE9D52D0004CF02 /* CMTime_Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTime_Additions.swift; sourceTree = "<group>"; };
+		9AD95A6D1FE9D56D0004CF02 /* FrameCountFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameCountFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				9A9450361FE71F31007CFC2D /* Info.plist */,
 				9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */,
 				9AD95A6B1FE9D52D0004CF02 /* CMTime_Additions.swift */,
+				9AD95A6D1FE9D56D0004CF02 /* FrameCountFormatter.swift */,
 			);
 			path = TimeLord;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD95A6E1FE9D56D0004CF02 /* FrameCountFormatter.swift in Sources */,
 				9AD95A6C1FE9D52D0004CF02 /* CMTime_Additions.swift in Sources */,
 				9A9450521FE72069007CFC2D /* FeetFramesFormatter.swift in Sources */,
 			);
