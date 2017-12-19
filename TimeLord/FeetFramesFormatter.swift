@@ -79,24 +79,20 @@ extension CMTime {
             return (quotient: 0, remainder : kCMTimeZero)
         }
         
-        let conv = self.convertScale(time.timescale, method: .roundAwayFromZero)
+        let conv = self.convertScale(time.timescale, method: .roundTowardZero)
         let result = conv.value.quotientAndRemainder(dividingBy: time.value)
+        let quotientTime = CMTime(value: result.quotient, timescale: time.timescale)
         
         return (quotient : result.quotient,
-                remainder: CMTime(value: result.remainder, timescale: conv.timescale) )
+                remainder: self - quotientTime )
     }
 }
 
 class FeetFramesFormatter: Formatter {
     
-    enum Rate {
-        case Frame23976
-        case Frame24
-    }
-    
-    var rate : Rate = .Frame24
-    
     var fractionalFrames : Bool = false
+    
+    var frameDuration : CMTime = CMTime(value: 1, timescale: 24)
     
     override func string(for obj: Any?) -> String? {
         guard let time = obj as? CMTime else {
