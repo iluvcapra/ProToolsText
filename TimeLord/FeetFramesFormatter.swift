@@ -83,8 +83,7 @@ extension CMTime {
         let result = conv.value.quotientAndRemainder(dividingBy: time.value)
         let quotientTime = CMTime(value: result.quotient, timescale: time.timescale)
         
-        return (quotient : result.quotient,
-                remainder: self - quotientTime )
+        return ( quotient : result.quotient, remainder: self - quotientTime )
     }
 }
 
