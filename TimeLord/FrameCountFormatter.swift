@@ -7,14 +7,15 @@
 
 import Cocoa
 import CoreMedia
+import AVFoundation
 
-class FrameCountFormatter: Formatter {
+public class FrameCountFormatter: Formatter {
     
     var showFractionalFrames : Bool = false
     
     var frameDuration : CMTime = CMTime(value: 1, timescale: 24)
     
-    override func string(for obj: Any?) -> String? {
+    public override func string(for obj: Any?) -> String? {
         guard let time = obj as? CMTime else {
             return nil
         }
@@ -24,12 +25,12 @@ class FrameCountFormatter: Formatter {
         if showFractionalFrames {
             return "\(frames)"
         } else {
-            let frm = floor(frames)
+            let frm = Int(floor(frames))
             return "\(frm)"
         }
     }
     
-    override func getObjectValue(_ obj: AutoreleasingUnsafeMutablePointer<AnyObject?>?,
+    public override func getObjectValue(_ obj: AutoreleasingUnsafeMutablePointer<AnyObject?>?,
                                  for string: String,
                                  errorDescription error: AutoreleasingUnsafeMutablePointer<NSString?>?) -> Bool {
         
@@ -41,7 +42,9 @@ class FrameCountFormatter: Formatter {
             return false
         }
         
-        obj?.pointee = NSNumber(floatLiteral: dval)
+        let timeval = CMTimeMultiply( frameDuration, Int32( floor(dval) ) )
+        
+        obj?.pointee = NSValue(time: timeval)
         
         return true
     }
