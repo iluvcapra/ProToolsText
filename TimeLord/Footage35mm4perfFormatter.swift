@@ -12,7 +12,7 @@ import AVFoundation
 public class Footage35mm4perfFormatter: Formatter {
     
     var frameDuration : CMTime = CMTime(value: 1, timescale: 24)
-    var showSubframes : Bool = false
+    private var showSubframes : Bool = false
     
     let framesPerFoot = 16
     var feetFramesSeparator = "+"
@@ -30,13 +30,16 @@ public class Footage35mm4perfFormatter: Formatter {
         let divresult = fullFrames.quotientAndRemainder(dividingBy: framesPerFoot)
         
         if showSubframes {
-            return NSString(format:"%i%s%02i%.3f", divresult.quotient,
+            let sfScaled = floor(subFrames * 1000)
+            
+            return NSString(format:"%i%@%02i.%03i",
+                            divresult.quotient,
                             feetFramesSeparator,
-                            divresult.remainder, subFrames ) as String
+                            divresult.remainder,
+                            sfScaled ) as String
         } else {
-            
-            
-            return NSString(format:"%i%s%02i", divresult.quotient,
+            return NSString(format:"%i%@%02i",
+                            divresult.quotient,
                             feetFramesSeparator,
                             divresult.remainder ) as String
         }

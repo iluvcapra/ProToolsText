@@ -21,6 +21,7 @@
 		9AD95A6E1FE9D56D0004CF02 /* FrameCountFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD95A6D1FE9D56D0004CF02 /* FrameCountFormatter.swift */; };
 		9AE576961FE9F0E200AF4B5A /* Footage35mm4perfFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE576951FE9F0E200AF4B5A /* Footage35mm4perfFormatter.swift */; };
 		9AE576981FE9F15C00AF4B5A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE576971FE9F15800AF4B5A /* AVFoundation.framework */; };
+		9AE7E3D61FEB498000011429 /* Footage35mm4perfFormatter_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7E3D51FEB498000011429 /* Footage35mm4perfFormatter_Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		9AD95A6D1FE9D56D0004CF02 /* FrameCountFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameCountFormatter.swift; sourceTree = "<group>"; };
 		9AE576951FE9F0E200AF4B5A /* Footage35mm4perfFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footage35mm4perfFormatter.swift; sourceTree = "<group>"; };
 		9AE576971FE9F15800AF4B5A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9AE7E3D51FEB498000011429 /* Footage35mm4perfFormatter_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footage35mm4perfFormatter_Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				9A9450401FE71F31007CFC2D /* TimeLordTests.swift */,
 				9AC50AFC1FE9E6F0000EB1C8 /* FrameCountFormatter_Test.swift */,
 				9A9450421FE71F31007CFC2D /* Info.plist */,
+				9AE7E3D51FEB498000011429 /* Footage35mm4perfFormatter_Test.swift */,
 			);
 			path = TimeLordTests;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE7E3D61FEB498000011429 /* Footage35mm4perfFormatter_Test.swift in Sources */,
 				9AC50AFD1FE9E6F0000EB1C8 /* FrameCountFormatter_Test.swift in Sources */,
 				9A9450411FE71F31007CFC2D /* TimeLordTests.swift in Sources */,
 			);
