@@ -4,16 +4,27 @@ BIT DEPTH:	24-bit
 SESSION START TIMECODE:	00:59:52:00.00
 TIMECODE FORMAT:	23.976 Frame
 # OF AUDIO TRACKS:	5
-# OF AUDIO CLIPS:	0
-# OF AUDIO FILES:	0
+# OF AUDIO CLIPS:	2
+# OF AUDIO FILES:	2
 
 
 F I L E S  I N  S E S S I O N
-Filename	Location
+Filename        	Location
+Audio 1_01.L.wav	Macintosh HD:Users:jamiehardt:Documents:ADR Spotting test:Audio Files:
+Audio 1_01.R.wav	Macintosh HD:Users:jamiehardt:Documents:ADR Spotting test:Audio Files:
+
+
+O N L I N E  C L I P S  I N  S E S S I O N
+CLIP NAME   	Source File
+Audio 1_01.L	Audio 1_01.L.wav
+Audio 1_01.R	Audio 1_01.R.wav
 
 
 P L U G - I N S  L I S T I N G
 MANUFACTURER            	PLUG-IN NAME            	VERSION         	FORMAT          	STEMS                   	NUMBER OF INSTANCES
+AIR Music Technology    	AIR Non-Linear Reverb   	1.2.0.18799     	AAX Native      	Stereo / Stereo         	1 active
+Avid                    	Channel Strip           	12.8.2d106      	AAX Native      	Mono / Mono             	1 active
+                        	Channel Strip           	12.8.2d106      	AAX Native      	Stereo / Stereo         	1 active
 
 
 T R A C K  L I S T I N G
@@ -30,7 +41,7 @@ TRACK NAME:	Bill
 COMMENTS:	Bill comments
 USER DELAY:	0 Samples
 STATE: 
-PLUG-INS: 
+PLUG-INS: 	Channel Strip (mono)
 CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	TIMESTAMP         	STATE
 1       	1       	This is another line          	01:00:22:04.27	01:00:38:04.91	00:00:16:00.64	    01:00:22:04.27	Unmuted
 1       	2       	This is Bill's seocnd line    	01:00:41:14.75	01:00:46:05.23	00:00:04:14.48	    01:00:41:14.75	Unmuted
@@ -59,10 +70,12 @@ TRACK NAME:	Audio 1 (Stereo)
 COMMENTS:	
 USER DELAY:	0 Samples
 STATE: 
-PLUG-INS: 
+PLUG-INS: 	AIR Non-Linear Reverb (stereo)	Channel Strip (stereo)
 CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	TIMESTAMP         	STATE
+1       	1       	Audio 1_01.L                  	01:00:08:17.01	01:00:17:01.51	00:00:08:08.50	    01:00:08:17.01	Unmuted
 
 
+2       	1       	Audio 1_01.R                  	01:00:08:17.01	01:00:17:01.51	00:00:08:08.50	    01:00:08:17.01	Unmuted
 
 
 M A R K E R S  L I S T I N G
