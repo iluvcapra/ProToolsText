@@ -24,6 +24,22 @@ class Footage35mm4perfFormatter_Test: XCTestCase {
         let r2 = f.string(for: t2)
         XCTAssertEqual(r2, "90+00")
     }
+    
+    func testToString() {
+        let f = Footage35mm4perfFormatter()
+        
+        let t1 = "14+11"
+        
+        var timeObj : AnyObject? = nil
+        var errorDesc : NSString? = nil
+        let r1 = f.getObjectValue(&timeObj, for: t1, errorDescription: &errorDesc)
+        
+        XCTAssertTrue(r1)
+        XCTAssertNil(errorDesc)
+        XCTAssertNotNil(timeObj)
+        XCTAssertEqual(timeObj!.timeValue, CMTime(value: 235, timescale: 24))
+        
+    }
 
 
 

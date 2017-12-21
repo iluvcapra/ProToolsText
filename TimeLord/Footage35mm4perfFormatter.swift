@@ -49,6 +49,22 @@ public class Footage35mm4perfFormatter: Formatter {
                                for string: String,
                                errorDescription error: AutoreleasingUnsafeMutablePointer<NSString?>?) -> Bool {
         
-        return false
+        let s = Scanner(string: string)
+        
+        var feet : Int = 0
+        var frames : Int = 0
+        guard s.scanInt(&feet) else {
+            error?.pointee = "Bad format, no footage found"
+            return false
+        }
+        
+        if s.scanString("+", into: nil) {
+            s.scanInt(&frames)
+        }
+        
+        let product = CMTimeMultiply(frameDuration, Int32( (feet * 16) + frames)  ) 
+        obj?.pointee = NSValue(time: product )
+        
+        return true
     }
 }

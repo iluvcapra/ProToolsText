@@ -169,8 +169,8 @@
 			children = (
 				9A9450401FE71F31007CFC2D /* TimeLordTests.swift */,
 				9AC50AFC1FE9E6F0000EB1C8 /* FrameCountFormatter_Test.swift */,
-				9A9450421FE71F31007CFC2D /* Info.plist */,
 				9AE7E3D51FEB498000011429 /* Footage35mm4perfFormatter_Test.swift */,
+				9A9450421FE71F31007CFC2D /* Info.plist */,
 			);
 			path = TimeLordTests;
 			sourceTree = "<group>";
