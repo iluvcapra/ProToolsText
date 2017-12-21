@@ -19,13 +19,13 @@ class FrameCountFormatter_Test: XCTestCase {
         f.frameDuration = CMTime(value: 1, timescale: 24)
         
         let t1 = CMTime(value: 12, timescale: 24)
-        let r1 = f.string(for: t1)
+        let r1 = f.string(for: NSValue(time:t1) )
         XCTAssertEqual("12", r1)
         
         f.showFractionalFrames = true
         
         let t2 = CMTime(value: 31, timescale: 30)
-        let r2 = f.string(for: t2)
+        let r2 = f.string(for: NSValue(time:t2) )
         XCTAssertEqual("24.8", r2)
     }
     

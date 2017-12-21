@@ -16,10 +16,12 @@ public class FrameCountFormatter: Formatter {
     var frameDuration : CMTime = CMTime(value: 1, timescale: 24)
     
     public override func string(for obj: Any?) -> String? {
-        guard let time = obj as? CMTime else {
+        
+        guard let timeValObj = obj as? NSValue else {
             return nil
         }
         
+        let time = timeValObj.timeValue
         let frames = time.divide(by: frameDuration)
         
         if showFractionalFrames {
