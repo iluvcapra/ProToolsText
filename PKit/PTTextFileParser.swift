@@ -138,19 +138,14 @@ public class PTTextFileParser: NSObject {
     
     private func files() throws {
         try expect(.LineBreak)
-        try expectField("Filename        ")
+        try expect(.Field) // "Filename"
         try expect(.ColumnBreak)
         try expectField("Location")
-        try expect(.LineBreak)
-        while true {
+        while !accept(.TripleLineBreak) {
+            try expect(.LineBreak)
             try expect(.Field)
             try expect(.ColumnBreak)
             try expect(.Field)
-            if accept(.TripleLineBreak) {
-                break
-            } else {
-                try expect(.LineBreak)
-            }
         }
     }
     

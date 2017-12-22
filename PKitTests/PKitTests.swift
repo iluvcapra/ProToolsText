@@ -12,14 +12,20 @@ class PKitTests: XCTestCase {
     
 
     
-    func testExample() {
+    func testExample1() {
         let testURL = URL(fileURLWithPath: "/Users/jamiehardt/src/ADR Spotting/PKitTests/ADR Spotting test.txt")
         
         let p = PTTextFileParser()
         let d = try! Data.init(contentsOf: testURL)
         XCTAssertNoThrow(try p.parse(data: d, encoding: String.Encoding.utf8.rawValue) )
+    }
+
+    func testExample2() {
+        let testURL = URL(fileURLWithPath: "/Users/jamiehardt/src/ADR Spotting/PKitTests/PT Text Export.txt")
         
-       
+        let p = PTTextFileParser()
+        let d = try! Data.init(contentsOf: testURL)
+        XCTAssertNoThrow(try p.parse(data: d, encoding: String.Encoding.utf8.rawValue) )
     }
     
 //    func testPerformanceExample() {
