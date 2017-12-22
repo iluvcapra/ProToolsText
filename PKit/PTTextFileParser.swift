@@ -173,7 +173,7 @@ public class PTTextFileParser: NSObject {
         try expect(.LineBreak)
         try expectField("COMMENTS:")
         try expect(.ColumnBreak)
-        _ = accept(.Field)
+        _ = accept(.Field) // If the comments are empty there are no characters here, it goes straight to the linebreak
         try expect(.LineBreak)
         try expectField("USER DELAY:")
         try expect(.ColumnBreak)
