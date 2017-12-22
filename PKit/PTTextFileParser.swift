@@ -29,9 +29,14 @@ public class PTTextFileParser: NSObject {
     
     private struct ParseError : Error {
         var expected : Token
+        var found : Token
+        var column : Int
+        var line : Int
     }
     
     private var scanner : Scanner? = nil
+    var lineNumber = 1
+    var thisLineStarts = 0
     private var thisToken : Token = .Begin
     private var fieldValue : String = ""
     
@@ -46,8 +51,12 @@ public class PTTextFileParser: NSObject {
         if !s.isAtEnd {
             if s.scanString("\n\n\n", into: nil) {
                 thisToken = .TripleLineBreak
+                lineNumber += 3
+                thisLineStarts = s.scanLocation
             } else if s.scanString("\n", into: nil) {
                 thisToken =  .LineBreak
+                lineNumber += 1
+                thisLineStarts = s.scanLocation
             } else if s.scanString("\t", into: nil) {
                 thisToken =  .ColumnBreak
             } else {
@@ -99,7 +108,7 @@ public class PTTextFileParser: NSObject {
         if accept(t) {
             return
         } else {
-            throw ParseError(expected: t)
+            throw ParseError(expected: t, found: thisToken, column: scanner!.scanLocation - thisLineStarts, line: lineNumber)
         }
     }
     
@@ -108,7 +117,7 @@ public class PTTextFileParser: NSObject {
         if fieldValue == s {
             return
         } else {
-            throw ParseError(expected: .Field)
+            throw ParseError(expected: .Field, found: thisToken, column: scanner!.scanLocation - thisLineStarts, line: lineNumber)
         }
     }
     
