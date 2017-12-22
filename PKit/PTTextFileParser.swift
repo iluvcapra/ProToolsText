@@ -11,7 +11,7 @@ public class PTTextFileParser: NSObject {
     
     private enum Token {
         case Begin
-        case DoubleLineBreak
+        case TripleLineBreak
         case LineBreak
         case ColumnBreak
         
@@ -44,15 +44,15 @@ public class PTTextFileParser: NSObject {
         let charSet = CharacterSet(charactersIn: "\t\n")
         
         if !s.isAtEnd {
-            if s.scanString("\n\n", into: nil) {
-                thisToken = .DoubleLineBreak
+            if s.scanString("\n\n\n", into: nil) {
+                thisToken = .TripleLineBreak
             } else if s.scanString("\n", into: nil) {
                 thisToken =  .LineBreak
             } else if s.scanString("\t", into: nil) {
                 thisToken =  .ColumnBreak
             } else {
                 s.scanUpToCharacters(from: charSet, into: &buffer)
-                let readText = String(describing: buffer)
+                let readText = buffer! as String
                 
                 switch readText {
                 case "F I L E S  I N  S E S S I O N":
@@ -119,16 +119,17 @@ public class PTTextFileParser: NSObject {
             try expect(.Field)
             try expect(.ColumnBreak)
             try expect(.Field)
-            try expect(.LineBreak)
-            if accept(.DoubleLineBreak) {
+            if accept(.TripleLineBreak) {
                 break
+            } else {
+                try expect(.LineBreak)
             }
         }
     }
     
     private func files() throws {
         try expect(.LineBreak)
-        try expectField("Filename")
+        try expectField("Filename        ")
         try expect(.ColumnBreak)
         try expectField("Location")
         try expect(.LineBreak)
@@ -136,15 +137,18 @@ public class PTTextFileParser: NSObject {
             try expect(.Field)
             try expect(.ColumnBreak)
             try expect(.Field)
-            try expect(.LineBreak)
-            if accept(.DoubleLineBreak) { break }
+            if accept(.TripleLineBreak) {
+                break
+            } else {
+                try expect(.LineBreak)
+            }
         }
     }
     
     private func onlineClips() {
         // to be implemented
         while true {
-            if accept(.DoubleLineBreak) || accept(.End) {
+            if accept(.TripleLineBreak) || accept(.End) {
                 break
             } else { nextToken() }
         }
@@ -153,7 +157,7 @@ public class PTTextFileParser: NSObject {
     private func plugins() {
         // to be implemented
         while true {
-            if accept(.DoubleLineBreak)  || accept(.End) {
+            if accept(.TripleLineBreak)  || accept(.End) {
                 break
             } else { nextToken() }
         }
@@ -165,7 +169,7 @@ public class PTTextFileParser: NSObject {
         try expect(.LineBreak)
         try expectField("COMMENTS:")
         try expect(.ColumnBreak)
-        try expect(.Field)
+        _ = accept(.Field)
         try expect(.LineBreak)
         try expectField("USER DELAY:")
         try expect(.ColumnBreak)
@@ -199,8 +203,9 @@ public class PTTextFileParser: NSObject {
             try expect(.ColumnBreak)
         }
         try expectField("STATE")
-        try expect(.LineBreak)
-        while !accept(.DoubleLineBreak) {
+        
+        while !accept(.TripleLineBreak) {
+            try expect(.LineBreak)
             try expect(.Field) // channel
             try expect(.ColumnBreak)
             try expect(.Field) // event
@@ -218,7 +223,6 @@ public class PTTextFileParser: NSObject {
                 try expect(.ColumnBreak)
             }
             try expect(.Field) // state
-            try expect(.LineBreak)
         }
     }
 
@@ -228,11 +232,20 @@ public class PTTextFileParser: NSObject {
     
     private func parseTextFile() throws {
         try header()
-        if accept(.FilesHeader) { try files() }
-        if accept(.OnlineClipsHeader) { onlineClips() }
-        if accept(.PlugInsHeader) { plugins() }
+        if accept(.FilesHeader) {
+            try files()
+        }
+        if accept(.OnlineClipsHeader) {
+            onlineClips()
+        }
+        if accept(.PlugInsHeader) {
+            plugins()
+        }
         if accept(.TrackListingHeader) {
-            while accept(.TrackName) { try track() }
+            try expect(.LineBreak)
+            while accept(.TrackName) {
+                try track()
+            }
         }
         if accept(.MarkersHeader) { markers() }
     }
@@ -242,7 +255,8 @@ public class PTTextFileParser: NSObject {
     public func parse(data : Data, encoding : UInt) throws {
         let dataString = NSString(data: data, encoding: encoding)! as String
         scanner = Scanner(string: dataString)
-        nextToken()
+        scanner?.charactersToBeSkipped = nil
+        try expect(.Begin)
         try parseTextFile()
     }
     
