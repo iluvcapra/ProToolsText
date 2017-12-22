@@ -23,6 +23,9 @@
 		9AE576981FE9F15C00AF4B5A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE576971FE9F15800AF4B5A /* AVFoundation.framework */; };
 		9AE7E3D61FEB498000011429 /* Footage35mm4perfFormatter_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7E3D51FEB498000011429 /* Footage35mm4perfFormatter_Test.swift */; };
 		9AE7E3D81FEB5B0200011429 /* ADR Spotting test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */; };
+		9AE7E3DA1FEB5C1C00011429 /* PTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7E3D91FEB5C1C00011429 /* PTSession.swift */; };
+		9AE7E3DC1FEB5E8A00011429 /* PTTextFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */; };
+		9AE7E3DD1FEB67CD00011429 /* PT Text Export.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A944FED1FE71952007CFC2D /* PT Text Export.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,8 @@
 		9AE576971FE9F15800AF4B5A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9AE7E3D51FEB498000011429 /* Footage35mm4perfFormatter_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footage35mm4perfFormatter_Test.swift; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
+		9AE7E3D91FEB5C1C00011429 /* PTSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTSession.swift; sourceTree = "<group>"; };
+		9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTTextFileParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +134,8 @@
 			children = (
 				9A9450151FE71C1F007CFC2D /* PKit.h */,
 				9A9450161FE71C1F007CFC2D /* Info.plist */,
+				9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */,
+				9AE7E3D91FEB5C1C00011429 /* PTSession.swift */,
 			);
 			path = PKit;
 			sourceTree = "<group>";
@@ -334,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE7E3D81FEB5B0200011429 /* ADR Spotting test.txt in Resources */,
+				9AE7E3DD1FEB67CD00011429 /* PT Text Export.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE7E3DA1FEB5C1C00011429 /* PTSession.swift in Sources */,
+				9AE7E3DC1FEB5E8A00011429 /* PTTextFileParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +573,7 @@
 		9A9450281FE71C1F007CFC2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -628,6 +639,7 @@
 		9A9450291FE71C1F007CFC2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
