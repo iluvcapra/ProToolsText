@@ -13,7 +13,12 @@ class PKitTests: XCTestCase {
 
     
     func testExample() {
+        let testURL = URL(fileURLWithPath: "/Users/jamiehardt/src/ADR Spotting/PKitTests/ADR Spotting test.txt")
+        
         let p = PTTextFileParser()
+        let d = try! Data.init(contentsOf: testURL)
+        XCTAssertNoThrow(try p.parse(data: d, encoding: String.Encoding.utf8.rawValue) )
+        
        
     }
     
