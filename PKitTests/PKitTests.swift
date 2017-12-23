@@ -21,6 +21,17 @@ class PKitTests: XCTestCase {
         var clipsCount : Int?
         var filesCount : Int?
         
+        var didBegin = false
+        var didFinish = false
+        
+        func parserWillBegin(_ parser : PTTextFileParser) {
+            didBegin = true
+        }
+        
+        func parserDidFinish(_ parser : PTTextFileParser) {
+            didFinish = true
+        }
+        
         func parser(_ p: PTTextFileParser,
                     didReadSessionHeaderWithTitle t: String,
                     sampleRate sr: Double,
@@ -49,6 +60,8 @@ class PKitTests: XCTestCase {
             
         }
         
+        
+        
     }
 
     
@@ -60,8 +73,13 @@ class PKitTests: XCTestCase {
         p.delegate = d
         
         let data = try! Data.init(contentsOf: testURL)
+
+        XCTAssertFalse(d.didBegin)
+        XCTAssertFalse(d.didFinish)
         XCTAssertNoThrow(try p.parse(data: data,
                                      encoding: String.Encoding.utf8.rawValue) )
+        XCTAssertTrue(d.didBegin)
+        XCTAssertTrue(d.didFinish)
         
         XCTAssertEqual(d.title, "ADR Spotting test")
         XCTAssertEqual(d.sampleRate, 48000.0)
@@ -82,7 +100,13 @@ class PKitTests: XCTestCase {
         p.delegate = d
         
         let data = try! Data.init(contentsOf: testURL)
-        XCTAssertNoThrow(try p.parse(data: data, encoding: String.Encoding.utf8.rawValue) )
+        
+        XCTAssertFalse(d.didBegin)
+        XCTAssertFalse(d.didFinish)
+        XCTAssertNoThrow(try p.parse(data: data,
+                                     encoding: String.Encoding.utf8.rawValue) )
+        XCTAssertTrue(d.didBegin)
+        XCTAssertTrue(d.didFinish)
         
         XCTAssertEqual(d.title, "ADR Spotting test")
         XCTAssertEqual(d.sampleRate, 48000.0)

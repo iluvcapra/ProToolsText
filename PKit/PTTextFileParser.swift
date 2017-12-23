@@ -9,6 +9,9 @@ import Cocoa
 
 public protocol PTTextFileParserDelegate {
     
+    func parserWillBegin(_ parser : PTTextFileParser)
+    func parserDidFinish(_ parser : PTTextFileParser)
+    
     func parser(_ parser : PTTextFileParser,
                          didReadSessionHeaderWithTitle: String,
                          sampleRate : Double,
@@ -354,7 +357,9 @@ public class PTTextFileParser: NSObject {
         scanner = Scanner(string: dataString)
         scanner?.charactersToBeSkipped = nil
         try expect(.Begin)
+        delegate?.parserWillBegin(self)
         try parseTextFile()
+        delegate?.parserDidFinish(self)
     }
     
 }
