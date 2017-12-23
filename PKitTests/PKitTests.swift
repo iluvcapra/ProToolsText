@@ -112,6 +112,14 @@ class PKitTests: XCTestCase {
         
         XCTAssertEqual(d.tracks.count, 5)
         
+        XCTAssertEqual(d.tracks[0]["name"] as! String, "Jamie")
+        XCTAssertNotEqual(d.tracks[0]["comments"] as! String, "Jamie Comments")
+        XCTAssertEqual(d.tracks[0]["comments"] as! String, "Jamie comments")
+        XCTAssertEqual(d.tracks[4]["plugins"] as! [String],
+                        ["AIR Non-Linear Reverb (stereo)","Channel Strip (stereo)"])
+        
+        XCTAssertNil(d.tracks[2]["comments"] as? String)
+        
     }
 
     func testExample2() {
