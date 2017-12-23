@@ -10,7 +10,7 @@ import XCTest
 
 class PKitTests: XCTestCase {
     
-    class ParserDelegateMock : PTTextFileParserDelegate {
+    private class ParserDelegateMock : PTTextFileParserDelegate {
         
         var title : String?
         var sampleRate : Double?
