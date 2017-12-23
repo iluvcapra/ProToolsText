@@ -7,6 +7,22 @@
 
 import Cocoa
 
+public protocol PTTextFileParserDelegate {
+    
+    func parser(_ parser : PTTextFileParser,
+                         didReadSessionHeaderWithTitle: String,
+                         sampleRate : Double,
+                         bitDepth : String,
+                         startTime : String,
+                         timecodeFormat : String,
+                         trackCount : Int,
+                         clipsCount : Int,
+                         filesCount : Int)
+    
+    
+}
+
+
 public class PTTextFileParser: NSObject {
     
     private enum Token {
@@ -27,16 +43,24 @@ public class PTTextFileParser: NSObject {
         case End
     }
     
-    private struct ParseError : Error {
+    private struct ParseTokenError : Error {
         var expected : Token
         var found : Token
         var column : Int
         var line : Int
     }
     
+    private struct ParseNumberError : Error {
+        var column : Int
+        var line : Int
+    }
+    
+    
+    var delegate : PTTextFileParserDelegate?
+    
     private var scanner : Scanner? = nil
-    var lineNumber = 1
-    var thisLineStarts = 0
+    private var lineNumber = 1
+    private var thisLineStarts = 0
     private var thisToken : Token = .Begin
     private var fieldValue : String = ""
     
@@ -108,7 +132,7 @@ public class PTTextFileParser: NSObject {
         if accept(t) {
             return
         } else {
-            throw ParseError(expected: t, found: thisToken, column: scanner!.scanLocation - thisLineStarts, line: lineNumber)
+            throw ParseTokenError(expected: t, found: thisToken, column: scanner!.scanLocation - thisLineStarts, line: lineNumber)
         }
     }
     
@@ -117,23 +141,86 @@ public class PTTextFileParser: NSObject {
         if fieldValue == s {
             return
         } else {
-            throw ParseError(expected: .Field, found: thisToken, column: scanner!.scanLocation - thisLineStarts, line: lineNumber)
+            throw ParseTokenError(expected: .Field, found: thisToken,
+                                  column: scanner!.scanLocation - thisLineStarts,
+                                  line: lineNumber)
+        }
+    }
+    
+    private func expectInteger() throws -> Int {
+        try expect(.Field)
+        if let i = Int(fieldValue) {
+            return i
+        } else {
+            throw ParseNumberError(column: scanner!.scanLocation - thisLineStarts,
+                                   line: lineNumber)
+        }
+    }
+    
+    private func expectDouble() throws -> Double {
+        try expect(.Field)
+        if let i = Double(fieldValue) {
+            return i
+        } else {
+            throw ParseNumberError(column: scanner!.scanLocation - thisLineStarts,
+                                   line: lineNumber)
         }
     }
     
     // MARK: -
     
     private func header() throws {
-        while true {
-            try expect(.Field)
+            try expectField("SESSION NAME:")
             try expect(.ColumnBreak)
             try expect(.Field)
-            if accept(.TripleLineBreak) {
-                break
-            } else {
-                try expect(.LineBreak)
-            }
-        }
+            let title = fieldValue
+            try expect(.LineBreak)
+            
+            try expectField("SAMPLE RATE:")
+            try expect(.ColumnBreak)
+            let sampleRate = try expectDouble()
+            try expect(.LineBreak)
+            
+            try expectField("BIT DEPTH:")
+            try expect(.ColumnBreak)
+            try expect(.Field)
+            let bitDepth = fieldValue
+            try expect(.LineBreak)
+            
+            try expectField("SESSION START TIMECODE:")
+            try expect(.ColumnBreak)
+            try expect(.Field)
+            let sessionStart = fieldValue
+            try expect(.LineBreak)
+            
+            try expectField("TIMECODE FORMAT:")
+            try expect(.ColumnBreak)
+            try expect(.Field)
+            let tcFormat = fieldValue
+            try expect(.LineBreak)
+            
+            try expectField("# OF AUDIO TRACKS:")
+            try expect(.ColumnBreak)
+            let trackCount = try expectInteger()
+            try expect(.LineBreak)
+            
+            try expectField("# OF AUDIO CLIPS:")
+            try expect(.ColumnBreak)
+            let clipsCount = try expectInteger()
+            try expect(.LineBreak)
+            
+            try expectField("# OF AUDIO FILES:")
+            try expect(.ColumnBreak)
+            let filesCount = try expectInteger()
+            try expect(.TripleLineBreak)
+            
+            delegate?.parser(self, didReadSessionHeaderWithTitle: title,
+                             sampleRate: sampleRate,
+                             bitDepth: bitDepth, startTime: sessionStart,
+                             timecodeFormat: tcFormat,
+                             trackCount: trackCount,
+                             clipsCount: clipsCount,
+                             filesCount: filesCount)
     }
     
     private func files() throws {

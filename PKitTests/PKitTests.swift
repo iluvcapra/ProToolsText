@@ -10,22 +10,79 @@ import XCTest
 
 class PKitTests: XCTestCase {
     
+    class ParserDelegateMock : PTTextFileParserDelegate {
+        
+        var title : String?
+        var sampleRate : Double?
+        var bitDepth : String?
+        var startTime : String?
+        var timecodeFormat : String?
+        var trackCount : Int?
+        var clipsCount : Int?
+        var filesCount : Int?
+        
+        func parser(_ p: PTTextFileParser,
+                    didReadSessionHeaderWithTitle t: String,
+                    sampleRate sr: Double,
+                    bitDepth bd: String,
+                    startTime st: String,
+                    timecodeFormat tf: String,
+                    trackCount tc: Int,
+                    clipsCount cc: Int,
+                    filesCount fc: Int) {
+            title = t
+            sampleRate = sr
+            bitDepth = bd
+            startTime = st
+            timecodeFormat = tf
+            trackCount = tc
+            clipsCount = cc
+            filesCount = fc
+        }
+    }
 
     
     func testExample1() {
         let testURL = URL(fileURLWithPath: "/Users/jamiehardt/src/ADR Spotting/PKitTests/ADR Spotting test.txt")
         
         let p = PTTextFileParser()
-        let d = try! Data.init(contentsOf: testURL)
-        XCTAssertNoThrow(try p.parse(data: d, encoding: String.Encoding.utf8.rawValue) )
+        let d = ParserDelegateMock()
+        p.delegate = d
+        
+        let data = try! Data.init(contentsOf: testURL)
+        XCTAssertNoThrow(try p.parse(data: data,
+                                     encoding: String.Encoding.utf8.rawValue) )
+        
+        XCTAssertEqual(d.title, "ADR Spotting test")
+        XCTAssertEqual(d.sampleRate, 48000.0)
+        XCTAssertEqual(d.bitDepth, "24-bit")
+        XCTAssertEqual(d.startTime, "00:59:52:00.00")
+        XCTAssertEqual(d.timecodeFormat, "23.976 Frame")
+        XCTAssertEqual(d.trackCount, 5)
+        XCTAssertEqual(d.clipsCount, 2)
+        XCTAssertEqual(d.filesCount, 2)
+        
     }
 
     func testExample2() {
         let testURL = URL(fileURLWithPath: "/Users/jamiehardt/src/ADR Spotting/PKitTests/PT Text Export.txt")
         
         let p = PTTextFileParser()
-        let d = try! Data.init(contentsOf: testURL)
-        XCTAssertNoThrow(try p.parse(data: d, encoding: String.Encoding.utf8.rawValue) )
+        let d = ParserDelegateMock()
+        p.delegate = d
+        
+        let data = try! Data.init(contentsOf: testURL)
+        XCTAssertNoThrow(try p.parse(data: data, encoding: String.Encoding.utf8.rawValue) )
+        
+        XCTAssertEqual(d.title, "ADR Spotting test")
+        XCTAssertEqual(d.sampleRate, 48000.0)
+        XCTAssertEqual(d.bitDepth, "24-bit")
+        XCTAssertEqual(d.startTime, "00:59:52:00")
+        XCTAssertEqual(d.timecodeFormat, "23.976 Frame")
+        XCTAssertEqual(d.trackCount, 4)
+        XCTAssertEqual(d.clipsCount, 0)
+        XCTAssertEqual(d.filesCount, 0)
+        
     }
     
 //    func testPerformanceExample() {
