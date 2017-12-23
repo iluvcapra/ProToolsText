@@ -336,6 +336,7 @@ public class PTTextFileParser: NSObject {
         }
         try expect(string: "STATE")
         
+        // FIXME a TripleLineBreak does not terminate a list of clips
         while !accept(token: .TripleLineBreak) {
             try expect(token: .LineBreak)
             let channel = try expectInteger()
