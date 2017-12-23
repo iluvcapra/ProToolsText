@@ -19,6 +19,40 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
+    @IBAction func convertTextExport(_ sender : AnyObject) {
+        let openPanel = NSOpenPanel()
+        
+        if openPanel.runModal() != NSApplication.ModalResponse.OK {
+            return
+        }
+        
+        guard let inputUrl = openPanel.url else {
+            return
+        }
+        
+        let savePanel = NSSavePanel()
+        savePanel.prompt = "Export All"
+        savePanel.message = "Select Export Folder and Export File Nase Name."
+        savePanel.title = "Export"
+        savePanel.nameFieldLabel = "Base Name:"
+        
+        if savePanel.runModal() != NSApplication.ModalResponse.OK  {
+            return
+        }
+        
+        let engine = CSVConversionEngine()
+        
+        guard let exportFolder = savePanel.url?.deletingLastPathComponent(),
+            let exportBasename = savePanel.url?.lastPathComponent else {
+                return
+        }
+        
+        engine.convert(fileURL: inputUrl,
+                       encoding: String.Encoding.utf8,
+                       to: exportFolder, baseName: exportBasename)
+    }
+    
 
 
 }

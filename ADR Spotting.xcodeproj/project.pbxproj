@@ -13,6 +13,8 @@
 		9A8002901FEEF9A7009D4E28 /* PText_ConvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80028F1FEEF9A7009D4E28 /* PText_ConvertTests.swift */; };
 		9A80029B1FEEF9A7009D4E28 /* PText_ConvertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80029A1FEEF9A7009D4E28 /* PText_ConvertUITests.swift */; };
 		9A8002A81FEEF9CB009D4E28 /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
+		9A8002B31FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */; };
+		9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */; };
 		9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A9450211FE71C1F007CFC2D /* PKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450201FE71C1F007CFC2D /* PKitTests.swift */; };
 		9A9450231FE71C1F007CFC2D /* PKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450151FE71C1F007CFC2D /* PKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,13 +79,14 @@
 		9A8002801FEEF9A6009D4E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A8002831FEEF9A6009D4E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A8002851FEEF9A6009D4E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A8002861FEEF9A6009D4E28 /* PText_Convert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PText_Convert.entitlements; sourceTree = "<group>"; };
 		9A80028B1FEEF9A6009D4E28 /* PText ConvertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PText ConvertTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A80028F1FEEF9A7009D4E28 /* PText_ConvertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PText_ConvertTests.swift; sourceTree = "<group>"; };
 		9A8002911FEEF9A7009D4E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8002961FEEF9A7009D4E28 /* PText ConvertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PText ConvertUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A80029A1FEEF9A7009D4E28 /* PText_ConvertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PText_ConvertUITests.swift; sourceTree = "<group>"; };
 		9A80029C1FEEF9A7009D4E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVConversionEngine.swift; sourceTree = "<group>"; };
+		9A8002B51FEF0092009D4E28 /* PText Convert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PText Convert.entitlements"; sourceTree = "<group>"; };
 		9A944FEC1FE71407007CFC2D /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		9A944FED1FE71952007CFC2D /* PT Text Export.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "PT Text Export.txt"; sourceTree = "<group>"; };
 		9A9450131FE71C1F007CFC2D /* PKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,11 +177,12 @@
 		9A80027B1FEEF9A6009D4E28 /* PText Convert */ = {
 			isa = PBXGroup;
 			children = (
+				9A8002B51FEF0092009D4E28 /* PText Convert.entitlements */,
 				9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */,
 				9A8002801FEEF9A6009D4E28 /* Assets.xcassets */,
 				9A8002821FEEF9A6009D4E28 /* Main.storyboard */,
 				9A8002851FEEF9A6009D4E28 /* Info.plist */,
-				9A8002861FEEF9A6009D4E28 /* PText_Convert.entitlements */,
+				9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */,
 			);
 			path = "PText Convert";
 			sourceTree = "<group>";
@@ -555,6 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8002B31FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A8002901FEEF9A7009D4E28 /* PText_ConvertTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,7 +690,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = "PText Convert/PText_Convert.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "PText Convert/PText Convert.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -751,7 +757,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = "PText Convert/PText_Convert.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "PText Convert/PText Convert.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
