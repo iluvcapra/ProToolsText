@@ -22,18 +22,6 @@
 		9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A9450211FE71C1F007CFC2D /* PKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450201FE71C1F007CFC2D /* PKitTests.swift */; };
 		9A9450231FE71C1F007CFC2D /* PKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450151FE71C1F007CFC2D /* PKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A94503C1FE71F31007CFC2D /* TimeLord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450331FE71F31007CFC2D /* TimeLord.framework */; };
-		9A9450411FE71F31007CFC2D /* TimeLordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450401FE71F31007CFC2D /* TimeLordTests.swift */; };
-		9A9450431FE71F31007CFC2D /* TimeLord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450351FE71F31007CFC2D /* TimeLord.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A94504B1FE71F86007CFC2D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A94502D1FE71C8E007CFC2D /* CoreMedia.framework */; };
-		9A94504C1FE71F8B007CFC2D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A94504A1FE71F80007CFC2D /* CoreVideo.framework */; };
-		9A9450521FE72069007CFC2D /* FeetFramesFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */; };
-		9AC50AFD1FE9E6F0000EB1C8 /* FrameCountFormatter_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC50AFC1FE9E6F0000EB1C8 /* FrameCountFormatter_Test.swift */; };
-		9AD95A6C1FE9D52D0004CF02 /* CMTime_Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD95A6B1FE9D52D0004CF02 /* CMTime_Additions.swift */; };
-		9AD95A6E1FE9D56D0004CF02 /* FrameCountFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD95A6D1FE9D56D0004CF02 /* FrameCountFormatter.swift */; };
-		9AE576961FE9F0E200AF4B5A /* Footage35mm4perfFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE576951FE9F0E200AF4B5A /* Footage35mm4perfFormatter.swift */; };
-		9AE576981FE9F15C00AF4B5A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE576971FE9F15800AF4B5A /* AVFoundation.framework */; };
-		9AE7E3D61FEB498000011429 /* Footage35mm4perfFormatter_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7E3D51FEB498000011429 /* Footage35mm4perfFormatter_Test.swift */; };
 		9AE7E3D81FEB5B0200011429 /* ADR Spotting test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */; };
 		9AE7E3DC1FEB5E8A00011429 /* PTTextFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */; };
 		9AE7E3DD1FEB67CD00011429 /* PT Text Export.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A944FED1FE71952007CFC2D /* PT Text Export.txt */; };
@@ -68,13 +56,6 @@
 			remoteGlobalIDString = 9A9450121FE71C1F007CFC2D;
 			remoteInfo = PKit;
 		};
-		9A94503D1FE71F31007CFC2D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A944FE61FE713EF007CFC2D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9A9450321FE71F31007CFC2D;
-			remoteInfo = TimeLord;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -102,21 +83,9 @@
 		9A9450201FE71C1F007CFC2D /* PKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKitTests.swift; sourceTree = "<group>"; };
 		9A9450221FE71C1F007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A94502D1FE71C8E007CFC2D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		9A9450331FE71F31007CFC2D /* TimeLord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TimeLord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A9450351FE71F31007CFC2D /* TimeLord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeLord.h; sourceTree = "<group>"; };
-		9A9450361FE71F31007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A94503B1FE71F31007CFC2D /* TimeLordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeLordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A9450401FE71F31007CFC2D /* TimeLordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLordTests.swift; sourceTree = "<group>"; };
-		9A9450421FE71F31007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A94504A1FE71F80007CFC2D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeetFramesFormatter.swift; sourceTree = "<group>"; };
-		9AC50AFC1FE9E6F0000EB1C8 /* FrameCountFormatter_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameCountFormatter_Test.swift; sourceTree = "<group>"; };
 		9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "DigiConform - 35mm 3 perf.pdf"; sourceTree = "<group>"; };
-		9AD95A6B1FE9D52D0004CF02 /* CMTime_Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTime_Additions.swift; sourceTree = "<group>"; };
-		9AD95A6D1FE9D56D0004CF02 /* FrameCountFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameCountFormatter.swift; sourceTree = "<group>"; };
-		9AE576951FE9F0E200AF4B5A /* Footage35mm4perfFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footage35mm4perfFormatter.swift; sourceTree = "<group>"; };
 		9AE576971FE9F15800AF4B5A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		9AE7E3D51FEB498000011429 /* Footage35mm4perfFormatter_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footage35mm4perfFormatter_Test.swift; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
 		9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTTextFileParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,24 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9A94502F1FE71F31007CFC2D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A94504B1FE71F86007CFC2D /* CoreMedia.framework in Frameworks */,
-				9A94504C1FE71F8B007CFC2D /* CoreVideo.framework in Frameworks */,
-				9AE576981FE9F15C00AF4B5A /* AVFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9A9450381FE71F31007CFC2D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A94503C1FE71F31007CFC2D /* TimeLord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,16 +172,12 @@
 				9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */,
 				9A9450141FE71C1F007CFC2D /* PKit */,
 				9A94501F1FE71C1F007CFC2D /* PKitTests */,
-				9A9450341FE71F31007CFC2D /* TimeLord */,
-				9A94503F1FE71F31007CFC2D /* TimeLordTests */,
 				9A80027B1FEEF9A6009D4E28 /* PText Convert */,
 				9A80028E1FEEF9A7009D4E28 /* PText ConvertTests */,
 				9A8002991FEEF9A7009D4E28 /* PText ConvertUITests */,
 				9A94502C1FE71C8E007CFC2D /* Frameworks */,
 				9A9450131FE71C1F007CFC2D /* PKit.framework */,
-				9A9450331FE71F31007CFC2D /* TimeLord.framework */,
 				9A94501B1FE71C1F007CFC2D /* PKitTests.xctest */,
-				9A94503B1FE71F31007CFC2D /* TimeLordTests.xctest */,
 				9A80027A1FEEF9A6009D4E28 /* PText Convert.app */,
 				9A80028B1FEEF9A6009D4E28 /* PText ConvertTests.xctest */,
 				9A8002961FEEF9A7009D4E28 /* PText ConvertUITests.xctest */,
@@ -269,30 +216,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9A9450341FE71F31007CFC2D /* TimeLord */ = {
-			isa = PBXGroup;
-			children = (
-				9A9450351FE71F31007CFC2D /* TimeLord.h */,
-				9A9450361FE71F31007CFC2D /* Info.plist */,
-				9A9450511FE72069007CFC2D /* FeetFramesFormatter.swift */,
-				9AD95A6B1FE9D52D0004CF02 /* CMTime_Additions.swift */,
-				9AD95A6D1FE9D56D0004CF02 /* FrameCountFormatter.swift */,
-				9AE576951FE9F0E200AF4B5A /* Footage35mm4perfFormatter.swift */,
-			);
-			path = TimeLord;
-			sourceTree = "<group>";
-		};
-		9A94503F1FE71F31007CFC2D /* TimeLordTests */ = {
-			isa = PBXGroup;
-			children = (
-				9A9450401FE71F31007CFC2D /* TimeLordTests.swift */,
-				9AC50AFC1FE9E6F0000EB1C8 /* FrameCountFormatter_Test.swift */,
-				9AE7E3D51FEB498000011429 /* Footage35mm4perfFormatter_Test.swift */,
-				9A9450421FE71F31007CFC2D /* Info.plist */,
-			);
-			path = TimeLordTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -301,14 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9450231FE71C1F007CFC2D /* PKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9A9450301FE71F31007CFC2D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A9450431FE71F31007CFC2D /* TimeLord.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,42 +320,6 @@
 			productReference = 9A94501B1FE71C1F007CFC2D /* PKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9A9450321FE71F31007CFC2D /* TimeLord */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9A9450441FE71F31007CFC2D /* Build configuration list for PBXNativeTarget "TimeLord" */;
-			buildPhases = (
-				9A94502E1FE71F31007CFC2D /* Sources */,
-				9A94502F1FE71F31007CFC2D /* Frameworks */,
-				9A9450301FE71F31007CFC2D /* Headers */,
-				9A9450311FE71F31007CFC2D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TimeLord;
-			productName = TimeLord;
-			productReference = 9A9450331FE71F31007CFC2D /* TimeLord.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9A94503A1FE71F31007CFC2D /* TimeLordTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9A9450471FE71F31007CFC2D /* Build configuration list for PBXNativeTarget "TimeLordTests" */;
-			buildPhases = (
-				9A9450371FE71F31007CFC2D /* Sources */,
-				9A9450381FE71F31007CFC2D /* Frameworks */,
-				9A9450391FE71F31007CFC2D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9A94503E1FE71F31007CFC2D /* PBXTargetDependency */,
-			);
-			name = TimeLordTests;
-			productName = TimeLordTests;
-			productReference = 9A94503B1FE71F31007CFC2D /* TimeLordTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -473,15 +352,6 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					9A9450321FE71F31007CFC2D = {
-						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 0910;
-						ProvisioningStyle = Automatic;
-					};
-					9A94503A1FE71F31007CFC2D = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 9A944FE91FE713EF007CFC2D /* Build configuration list for PBXProject "ADR Spotting" */;
@@ -499,8 +369,6 @@
 			targets = (
 				9A9450121FE71C1F007CFC2D /* PKit */,
 				9A94501A1FE71C1F007CFC2D /* PKitTests */,
-				9A9450321FE71F31007CFC2D /* TimeLord */,
-				9A94503A1FE71F31007CFC2D /* TimeLordTests */,
 				9A8002791FEEF9A6009D4E28 /* PText Convert */,
 				9A80028A1FEEF9A6009D4E28 /* PText ConvertTests */,
 				9A8002951FEEF9A7009D4E28 /* PText ConvertUITests */,
@@ -550,20 +418,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9A9450311FE71F31007CFC2D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9A9450391FE71F31007CFC2D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -609,27 +463,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9A94502E1FE71F31007CFC2D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9AD95A6E1FE9D56D0004CF02 /* FrameCountFormatter.swift in Sources */,
-				9AD95A6C1FE9D52D0004CF02 /* CMTime_Additions.swift in Sources */,
-				9AE576961FE9F0E200AF4B5A /* Footage35mm4perfFormatter.swift in Sources */,
-				9A9450521FE72069007CFC2D /* FeetFramesFormatter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9A9450371FE71F31007CFC2D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9AE7E3D61FEB498000011429 /* Footage35mm4perfFormatter_Test.swift in Sources */,
-				9AC50AFD1FE9E6F0000EB1C8 /* FrameCountFormatter_Test.swift in Sources */,
-				9A9450411FE71F31007CFC2D /* TimeLordTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -652,11 +485,6 @@
 			isa = PBXTargetDependency;
 			target = 9A9450121FE71C1F007CFC2D /* PKit */;
 			targetProxy = 9A94501D1FE71C1F007CFC2D /* PBXContainerItemProxy */;
-		};
-		9A94503E1FE71F31007CFC2D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9A9450321FE71F31007CFC2D /* TimeLord */;
-			targetProxy = 9A94503D1FE71F31007CFC2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1346,272 +1174,6 @@
 			};
 			name = Release;
 		};
-		9A9450451FE71F31007CFC2D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = MLT4MJ75T3;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = TimeLord/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soundepartment.TimeLord;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9A9450461FE71F31007CFC2D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = MLT4MJ75T3;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = TimeLord/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soundepartment.TimeLord;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9A9450481FE71F31007CFC2D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = MLT4MJ75T3;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = TimeLordTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soundepartment.TimeLordTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		9A9450491FE71F31007CFC2D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = MLT4MJ75T3;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = TimeLordTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soundepartment.TimeLordTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1665,24 +1227,6 @@
 			buildConfigurations = (
 				9A9450281FE71C1F007CFC2D /* Debug */,
 				9A9450291FE71C1F007CFC2D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9A9450441FE71F31007CFC2D /* Build configuration list for PBXNativeTarget "TimeLord" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9A9450451FE71F31007CFC2D /* Debug */,
-				9A9450461FE71F31007CFC2D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9A9450471FE71F31007CFC2D /* Build configuration list for PBXNativeTarget "TimeLordTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9A9450481FE71F31007CFC2D /* Debug */,
-				9A9450491FE71F31007CFC2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
