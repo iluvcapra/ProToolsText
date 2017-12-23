@@ -77,7 +77,7 @@ public class PTTextFileParser: NSObject {
     }
     
     
-    var delegate : PTTextFileParserDelegate?
+    public var delegate : PTTextFileParserDelegate?
     
     private var scanner : Scanner? = nil
     private var lineNumber = 1
