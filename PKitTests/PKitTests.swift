@@ -102,7 +102,7 @@ class PKitTests: XCTestCase {
                     units: String,
                     name: String,
                     comments: String?) {
-            print(loc)
+            
         }
         
         func parserDidFinishReadingTrack(_ parser : PTTextFileParser) {
