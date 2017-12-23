@@ -39,6 +39,16 @@ class PKitTests: XCTestCase {
             clipsCount = cc
             filesCount = fc
         }
+    
+        func parser(_ parser : PTTextFileParser,
+                    willReadEventsForTrack trackName: String,
+                    comments: String?,
+                    userDelay: String,
+                    stateFlags: [String],
+                    plugins: [String]) {
+            
+        }
+        
     }
 
     

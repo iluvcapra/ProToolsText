@@ -19,6 +19,12 @@ public protocol PTTextFileParserDelegate {
                          clipsCount : Int,
                          filesCount : Int)
     
+    func parser(_ parser : PTTextFileParser,
+                willReadEventsForTrack: String,
+                comments: String?,
+                userDelay: String,
+                stateFlags: [String],
+                plugins: [String])
     
 }
 
