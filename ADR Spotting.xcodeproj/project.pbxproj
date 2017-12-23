@@ -15,6 +15,10 @@
 		9A8002A81FEEF9CB009D4E28 /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A8002B31FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */; };
 		9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */; };
+		9A8002B71FEF0511009D4E28 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002B61FEF0511009D4E28 /* Cartfile */; };
+		9A8002B81FEF0511009D4E28 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002B61FEF0511009D4E28 /* Cartfile */; };
+		9A8002BA1FEF0648009D4E28 /* CSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8002B91FEF0648009D4E28 /* CSV.framework */; };
+		9A8002BB1FEF0648009D4E28 /* CSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8002B91FEF0648009D4E28 /* CSV.framework */; };
 		9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A9450211FE71C1F007CFC2D /* PKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450201FE71C1F007CFC2D /* PKitTests.swift */; };
 		9A9450231FE71C1F007CFC2D /* PKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450151FE71C1F007CFC2D /* PKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -87,6 +91,8 @@
 		9A80029C1FEEF9A7009D4E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVConversionEngine.swift; sourceTree = "<group>"; };
 		9A8002B51FEF0092009D4E28 /* PText Convert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PText Convert.entitlements"; sourceTree = "<group>"; };
+		9A8002B61FEF0511009D4E28 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		9A8002B91FEF0648009D4E28 /* CSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSV.framework; path = "PText Convert/Carthage/Build/Mac/CSV.framework"; sourceTree = "<group>"; };
 		9A944FEC1FE71407007CFC2D /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		9A944FED1FE71952007CFC2D /* PT Text Export.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "PT Text Export.txt"; sourceTree = "<group>"; };
 		9A9450131FE71C1F007CFC2D /* PKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8002A81FEEF9CB009D4E28 /* PKit.framework in Frameworks */,
+				9A8002BA1FEF0648009D4E28 /* CSV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8002BB1FEF0648009D4E28 /* CSV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +191,7 @@
 				9A8002821FEEF9A6009D4E28 /* Main.storyboard */,
 				9A8002851FEEF9A6009D4E28 /* Info.plist */,
 				9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */,
+				9A8002B61FEF0511009D4E28 /* Cartfile */,
 			);
 			path = "PText Convert";
 			sourceTree = "<group>";
@@ -252,6 +261,7 @@
 		9A94502C1FE71C8E007CFC2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A8002B91FEF0648009D4E28 /* CSV.framework */,
 				9AE576971FE9F15800AF4B5A /* AVFoundation.framework */,
 				9A94504A1FE71F80007CFC2D /* CoreVideo.framework */,
 				9A94502D1FE71C8E007CFC2D /* CoreMedia.framework */,
@@ -503,6 +513,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8002B71FEF0511009D4E28 /* Cartfile in Resources */,
 				9A8002811FEEF9A6009D4E28 /* Assets.xcassets in Resources */,
 				9A8002841FEEF9A6009D4E28 /* Main.storyboard in Resources */,
 			);
@@ -512,6 +523,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8002B81FEF0511009D4E28 /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +711,10 @@
 				DEVELOPMENT_TEAM = MLT4MJ75T3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PText\\ Convert/Carthage/Build/Mac",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -766,6 +782,10 @@
 				DEVELOPMENT_TEAM = MLT4MJ75T3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PText\\ Convert/Carthage/Build/Mac",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -825,6 +845,10 @@
 				DEVELOPMENT_TEAM = MLT4MJ75T3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PText\\ Convert/Carthage/Build/Mac",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -893,6 +917,10 @@
 				DEVELOPMENT_TEAM = MLT4MJ75T3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PText\\ Convert/Carthage/Build/Mac",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
