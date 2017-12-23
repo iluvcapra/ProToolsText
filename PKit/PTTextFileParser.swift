@@ -329,7 +329,7 @@ public class PTTextFileParser: NSObject {
         try expect(token: .ColumnBreak)
         try expect(string: "DURATION      ")
         try expect(token: .ColumnBreak)
-        let timestampsColumn =  accept(token: .TimestampHeader)
+        let timestampsColumn = accept(token: .TimestampHeader)
         if timestampsColumn {
             try expect(token: .ColumnBreak)
         }
@@ -337,23 +337,30 @@ public class PTTextFileParser: NSObject {
         
         while !accept(token: .TripleLineBreak) {
             try expect(token: .LineBreak)
-            try expect(token: .Field) // channel
+            let channel = try expectInteger()
             try expect(token: .ColumnBreak)
-            try expect(token: .Field) // event
+            let event = try expectInteger()
             try expect(token: .ColumnBreak)
-            try expect(token: .Field) // clip name
+            let clipName = try expectString()
             try expect(token: .ColumnBreak)
-            try expect(token: .Field) // start time
+            let startTime = try expectString()
             try expect(token: .ColumnBreak)
-            try expect(token: .Field) // end time
+            let endTime = try expectString()
             try expect(token: .ColumnBreak)
-            try expect(token: .Field) // duration
+            let duration = try expectString()
             try expect(token: .ColumnBreak)
+            let timestamp : String?
             if timestampsColumn {
-                try expect(token: .Field) // timestamp
+                timestamp = try expectString()
                 try expect(token: .ColumnBreak)
+            } else {
+                timestamp = nil
             }
-            try expect(token: .Field) // state
+            let state = try expectString()
+            
+            delegate?.parser(self, didReadEventNamed: clipName, channel: channel,
+                             eventNumber: event, start: startTime, end: endTime,
+                             duration: duration, timestamp: timestamp, state: state)
         }
         delegate?.parser(self, didFinishReadingEventsForTrack: trackName)
     }
