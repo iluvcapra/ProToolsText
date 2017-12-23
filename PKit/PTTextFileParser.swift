@@ -179,7 +179,7 @@ public class PTTextFileParser: NSObject {
     
     private func expectString() throws -> String {
         try expect(token: .Field)
-        return fieldValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        return fieldValue
     }
     
     private func expectInteger() throws -> Int {
@@ -359,9 +359,14 @@ public class PTTextFileParser: NSObject {
             }
             let state = try expectString()
             
-            delegate?.parser(self, didReadEventNamed: clipName, channel: channel,
-                             eventNumber: event, start: startTime, end: endTime,
-                             duration: duration, timestamp: timestamp, state: state)
+            delegate?.parser(self, didReadEventNamed: clipName.trimmingCharacters(in: .whitespacesAndNewlines),
+                             channel: channel,
+                             eventNumber: event,
+                             start: startTime.trimmingCharacters(in: .whitespacesAndNewlines),
+                             end: endTime.trimmingCharacters(in: .whitespacesAndNewlines),
+                             duration: duration.trimmingCharacters(in: .whitespacesAndNewlines),
+                             timestamp: timestamp?.trimmingCharacters(in: .whitespacesAndNewlines),
+                             state: state.trimmingCharacters(in: .whitespacesAndNewlines))
         }
         delegate?.parser(self, didFinishReadingEventsForTrack: trackName)
     }
