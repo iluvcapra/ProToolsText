@@ -77,6 +77,18 @@ class PKitTests: XCTestCase {
             tracks.append(trackDict)
         }
         
+        func parser(_ parser: PTTextFileParser,
+                    didReadEventNamed: String,
+                    channel: Int,
+                    eventNumber: Int,
+                    start : String,
+                    end : String,
+                    duration : String,
+                    timestamp : String?,
+                    state: String) {
+            
+        }
+        
         func parser(_ parser : PTTextFileParser,
                     didFinishReadingEventsForTrack trackName: String) {
             XCTAssertTrue(tracks.last!["name"] as! String == trackName)

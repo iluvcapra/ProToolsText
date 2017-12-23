@@ -29,6 +29,16 @@ public protocol PTTextFileParserDelegate {
                 stateFlags: [String],
                 plugins: [String])
     
+    func parser(_ parser: PTTextFileParser,
+                didReadEventNamed: String,
+                channel: Int,
+                eventNumber: Int,
+                start : String,
+                end : String,
+                duration : String,
+                timestamp : String?,
+                state: String)
+    
     func parser(_ parser :PTTextFileParser,
                 didFinishReadingEventsForTrack : String)
     
@@ -159,6 +169,11 @@ public class PTTextFileParser: NSObject {
         }
     }
     
+    private func expectString() throws -> String {
+        try expect(.Field)
+        return fieldValue
+    }
+    
     private func expectInteger() throws -> Int {
         try expect(.Field)
         if let i = Int(fieldValue) {
@@ -184,8 +199,7 @@ public class PTTextFileParser: NSObject {
     private func header() throws {
             try expectField("SESSION NAME:")
             try expect(.ColumnBreak)
-            try expect(.Field)
-            let title = fieldValue
+            let title = try expectString()
             try expect(.LineBreak)
             
             try expectField("SAMPLE RATE:")
@@ -195,20 +209,17 @@ public class PTTextFileParser: NSObject {
             
             try expectField("BIT DEPTH:")
             try expect(.ColumnBreak)
-            try expect(.Field)
-            let bitDepth = fieldValue
+            let bitDepth = try expectString()
             try expect(.LineBreak)
             
             try expectField("SESSION START TIMECODE:")
             try expect(.ColumnBreak)
-            try expect(.Field)
-            let sessionStart = fieldValue
+            let sessionStart = try expectString()
             try expect(.LineBreak)
             
             try expectField("TIMECODE FORMAT:")
             try expect(.ColumnBreak)
-            try expect(.Field)
-            let tcFormat = fieldValue
+            let tcFormat = try expectString()
             try expect(.LineBreak)
             
             try expectField("# OF AUDIO TRACKS:")
