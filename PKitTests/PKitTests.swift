@@ -99,9 +99,8 @@ class PKitTests: XCTestCase {
             print(loc)
         }
         
-        func parser(_ parser : PTTextFileParser,
-                    didFinishReadingEventsForTrack trackName: String) {
-            XCTAssertTrue(tracks.last!["name"] as! String == trackName)
+        func parserDidFinishReadingTrack(_ parser : PTTextFileParser) {
+
         }
         
         

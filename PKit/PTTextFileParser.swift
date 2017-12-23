@@ -47,8 +47,7 @@ public protocol PTTextFileParserDelegate {
                 name: String,
                 comments: String?)
     
-    func parser(_ parser :PTTextFileParser,
-                didFinishReadingEventsForTrack : String)
+    func parserDidFinishReadingTrack(_ parser :PTTextFileParser)
     
 }
 
@@ -286,7 +285,7 @@ public class PTTextFileParser: NSObject {
         skipUntilAccept(token: .TripleLineBreak)
     }
     
-    private func trackHeader() throws -> Bool  {
+    private func trackHeader() throws {
         try expect(token: .ColumnBreak)
         let trackName = try expectString()
         try expect(token: .LineBreak)
@@ -317,10 +316,6 @@ public class PTTextFileParser: NSObject {
                          stateFlags: states,
                          plugins: plugins)
         
-        defer {
-            delegate?.parser(self, didFinishReadingEventsForTrack: trackName)
-        }
-        
         try expect(string: "CHANNEL ")
         try expect(token: .ColumnBreak)
         try expect(string: "EVENT   ")
@@ -333,51 +328,65 @@ public class PTTextFileParser: NSObject {
         try expect(token: .ColumnBreak)
         try expect(string: "DURATION      ")
         try expect(token: .ColumnBreak)
-        let timestampsColumn = accept(string: "TIMESTAMP         ")
-        if timestampsColumn {
+        if accept(string: "TIMESTAMP         ") {
             try expect(token: .ColumnBreak)
         }
         try expect(string: "STATE")
-        return timestampsColumn
+    }
+    
+    private func trackEventList() throws {
+        // FIXME a TripleLineBreak does not terminate a list of clips
+        
+        repeat {
+            if accept(token: .TripleLineBreak) || accept(token: .LineBreak) {
+                continue
+            } else if let channel = acceptInteger() {
+                try expect(token: .ColumnBreak)
+                let event = try expectInteger()
+                try expect(token: .ColumnBreak)
+                let clipName = try expectString()
+                try expect(token: .ColumnBreak)
+                let startTime = try expectString()
+                try expect(token: .ColumnBreak)
+                let endTime = try expectString()
+                try expect(token: .ColumnBreak)
+                let duration = try expectString()
+                try expect(token: .ColumnBreak)
+                let fieldY = try expectString()
+                if accept(token: .ColumnBreak) {
+                    let fieldZ = try expectString()
+                    
+                    delegate?.parser(self, didReadEventNamed: clipName.trimmingCharacters(in: .whitespacesAndNewlines),
+                                     channel: channel,
+                                     eventNumber: event,
+                                     start: startTime.trimmingCharacters(in: .whitespacesAndNewlines),
+                                     end: endTime.trimmingCharacters(in: .whitespacesAndNewlines),
+                                     duration: duration.trimmingCharacters(in: .whitespacesAndNewlines),
+                                     timestamp: fieldY.trimmingCharacters(in: .whitespacesAndNewlines),
+                                     state: fieldZ.trimmingCharacters(in: .whitespacesAndNewlines))
+                    
+                } else {
+                    delegate?.parser(self, didReadEventNamed: clipName.trimmingCharacters(in: .whitespacesAndNewlines),
+                                     channel: channel,
+                                     eventNumber: event,
+                                     start: startTime.trimmingCharacters(in: .whitespacesAndNewlines),
+                                     end: endTime.trimmingCharacters(in: .whitespacesAndNewlines),
+                                     duration: duration.trimmingCharacters(in: .whitespacesAndNewlines),
+                                     timestamp: nil,
+                                     state: fieldY.trimmingCharacters(in: .whitespacesAndNewlines))
+                }
+                
+
+            } else {
+                break
+            }
+        } while true
     }
     
     private func track() throws {
-        let timestampsColumn = try trackHeader()
-        
-        // FIXME a TripleLineBreak does not terminate a list of clips
-        while !accept(token: .TripleLineBreak) {
-            try expect(token: .LineBreak)
-            let channel = try expectInteger()
-            try expect(token: .ColumnBreak)
-            let event = try expectInteger()
-            try expect(token: .ColumnBreak)
-            let clipName = try expectString()
-            try expect(token: .ColumnBreak)
-            let startTime = try expectString()
-            try expect(token: .ColumnBreak)
-            let endTime = try expectString()
-            try expect(token: .ColumnBreak)
-            let duration = try expectString()
-            try expect(token: .ColumnBreak)
-            let timestamp : String?
-            if timestampsColumn {
-                timestamp = try expectString()
-                try expect(token: .ColumnBreak)
-            } else {
-                timestamp = nil
-            }
-            let state = try expectString()
-            
-            delegate?.parser(self, didReadEventNamed: clipName.trimmingCharacters(in: .whitespacesAndNewlines),
-                             channel: channel,
-                             eventNumber: event,
-                             start: startTime.trimmingCharacters(in: .whitespacesAndNewlines),
-                             end: endTime.trimmingCharacters(in: .whitespacesAndNewlines),
-                             duration: duration.trimmingCharacters(in: .whitespacesAndNewlines),
-                             timestamp: timestamp?.trimmingCharacters(in: .whitespacesAndNewlines),
-                             state: state.trimmingCharacters(in: .whitespacesAndNewlines))
-        }
-        
+        try trackHeader()
+        try trackEventList()
+        delegate?.parserDidFinishReadingTrack(self)
     }
 
     private func markers() throws {
