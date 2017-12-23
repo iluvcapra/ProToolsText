@@ -179,12 +179,13 @@ public class PTTextFileParser: NSObject {
     
     private func expectString() throws -> String {
         try expect(token: .Field)
-        return fieldValue
+        return fieldValue.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     private func expectInteger() throws -> Int {
         try expect(token: .Field)
-        if let i = Int(fieldValue) {
+        let stripped = fieldValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        if let i = Int(stripped) {
             return i
         } else {
             throw ParseNumberError(column: scanner!.scanLocation - thisLineStarts,
@@ -194,7 +195,7 @@ public class PTTextFileParser: NSObject {
     
     private func expectDouble() throws -> Double {
         try expect(token: .Field)
-        if let i = Double(fieldValue) {
+        if let i = Double(fieldValue.trimmingCharacters(in: .whitespacesAndNewlines)) {
             return i
         } else {
             throw ParseNumberError(column: scanner!.scanLocation - thisLineStarts,
