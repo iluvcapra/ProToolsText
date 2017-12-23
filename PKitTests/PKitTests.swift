@@ -28,6 +28,8 @@ class PKitTests: XCTestCase {
         
         var clips : [Dictionary<String,Any>] = []
         
+        var markers : [Dictionary<String,Any>] = []
+        
         func parserWillBegin(_ parser : PTTextFileParser) {
             didBegin = true
             XCTAssertFalse(didFinish)
@@ -103,6 +105,14 @@ class PKitTests: XCTestCase {
                     name: String,
                     comments: String?) {
             
+            let marker : [String:Any] = ["location" : loc,
+                          "at" : atLocation,
+                          "timeReference" : timeReference,
+                          "units" : units,
+                          "name" : name]
+            
+            markers.append(marker)
+            
         }
         
         func parserDidFinishReadingTrack(_ parser : PTTextFileParser) {
@@ -148,6 +158,8 @@ class PKitTests: XCTestCase {
         XCTAssertNil(d.tracks[2]["comments"] as? String)
         
         XCTAssertEqual(d.clips.count, 8)
+        
+        XCTAssertEqual(d.markers.count, 2)
     }
 
     func testExample2() {
@@ -174,6 +186,8 @@ class PKitTests: XCTestCase {
         XCTAssertEqual(d.trackCount, 4)
         XCTAssertEqual(d.clipsCount, 0)
         XCTAssertEqual(d.filesCount, 0)
+        
+        XCTAssertEqual(d.markers.count, 2)
         
     }
     
