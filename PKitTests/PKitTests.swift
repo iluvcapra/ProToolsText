@@ -26,6 +26,8 @@ class PKitTests: XCTestCase {
         
         var tracks : [Dictionary<String,Any>] = []
         
+        var clips : [Dictionary<String,Any>] = []
+        
         func parserWillBegin(_ parser : PTTextFileParser) {
             didBegin = true
             XCTAssertFalse(didFinish)
@@ -78,7 +80,7 @@ class PKitTests: XCTestCase {
         }
         
         func parser(_ parser: PTTextFileParser,
-                    didReadEventNamed: String,
+                    didReadEventNamed name: String,
                     channel: Int,
                     eventNumber: Int,
                     start : String,
@@ -86,7 +88,11 @@ class PKitTests: XCTestCase {
                     duration : String,
                     timestamp : String?,
                     state: String) {
+            let clip : [String : Any] = ["name" : name, "channel" : channel,
+                                         "eventNumber" : eventNumber,
+                "start": start, "end": end, "duration": duration, "state": state]
             
+            clips.append(clip)
         }
         
         func parser(_ parser : PTTextFileParser,
@@ -141,6 +147,7 @@ class PKitTests: XCTestCase {
         
         XCTAssertNil(d.tracks[2]["comments"] as? String)
         
+        XCTAssertEqual(d.clips.count, 8)
     }
 
     func testExample2() {
