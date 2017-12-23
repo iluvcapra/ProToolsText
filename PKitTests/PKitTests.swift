@@ -24,6 +24,8 @@ class PKitTests: XCTestCase {
         var didBegin = false
         var didFinish = false
         
+        var tracks : [Dictionary<String,Any>] = []
+        
         func parserWillBegin(_ parser : PTTextFileParser) {
             didBegin = true
             XCTAssertFalse(didFinish)
@@ -63,12 +65,25 @@ class PKitTests: XCTestCase {
                     stateFlags: [String],
                     plugins: [String]) {
             XCTAssertNotNil(title)
+            
+            var trackDict = Dictionary<String,Any>()
+            
+            trackDict["name"] = trackName
+            trackDict["comments"] = comments
+            trackDict["userDelay"] = userDelay
+            trackDict["stateFlags"] = stateFlags
+            trackDict["plugins"] =  plugins
+            
+            tracks.append(trackDict)
+        }
+        
+        func parser(_ parser : PTTextFileParser,
+                    didFinishReadingEventsForTrack trackName: String) {
+            XCTAssertTrue(tracks.last!["name"] as! String == trackName)
         }
         
         
-        
     }
-
     
     func testExample1() {
         let testURL = URL(fileURLWithPath: "/Users/jamiehardt/src/ADR Spotting/PKitTests/ADR Spotting test.txt")
@@ -94,6 +109,8 @@ class PKitTests: XCTestCase {
         XCTAssertEqual(d.trackCount, 5)
         XCTAssertEqual(d.clipsCount, 2)
         XCTAssertEqual(d.filesCount, 2)
+        
+        XCTAssertEqual(d.tracks.count, 5)
         
     }
 

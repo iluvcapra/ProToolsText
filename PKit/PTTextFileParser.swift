@@ -29,6 +29,9 @@ public protocol PTTextFileParserDelegate {
                 stateFlags: [String],
                 plugins: [String])
     
+    func parser(_ parser :PTTextFileParser,
+                didFinishReadingEventsForTrack : String)
+    
 }
 
 
@@ -266,25 +269,40 @@ public class PTTextFileParser: NSObject {
     private func track() throws {
         try expect(.ColumnBreak)
         try expect(.Field) // track name
+        let trackName = fieldValue
         try expect(.LineBreak)
         try expectField("COMMENTS:")
         try expect(.ColumnBreak)
-        _ = accept(.Field) // If the comments are empty there are no characters here, it goes straight to the linebreak
+        var comments : String? = nil
+        if accept(.Field) {
+            comments = fieldValue
+        }
         try expect(.LineBreak)
         try expectField("USER DELAY:")
         try expect(.ColumnBreak)
         try expect(.Field)
+        let userDelay = fieldValue
         try expect(.LineBreak)
         try expectField("STATE: ")
+        var states = [String]()
         while accept(.ColumnBreak) {
             try expect(.Field)
+            states.append(fieldValue)
         }
         try expect(.LineBreak)
         try expectField("PLUG-INS: ")
+        var plugins = [String]()
         while accept(.ColumnBreak) {
             try expect(.Field)
+            plugins.append(fieldValue)
         }
         try expect(.LineBreak)
+        
+        delegate?.parser(self, willReadEventsForTrack: trackName,
+                         comments: comments,
+                         userDelay: userDelay,
+                         stateFlags: states,
+                         plugins: plugins)
         
         try expectField("CHANNEL ")
         try expect(.ColumnBreak)
@@ -324,6 +342,7 @@ public class PTTextFileParser: NSObject {
             }
             try expect(.Field) // state
         }
+        delegate?.parser(self, didFinishReadingEventsForTrack: trackName)
     }
 
     private func markers() {
