@@ -26,9 +26,11 @@ class PKitTests: XCTestCase {
         
         func parserWillBegin(_ parser : PTTextFileParser) {
             didBegin = true
+            XCTAssertFalse(didFinish)
         }
         
         func parserDidFinish(_ parser : PTTextFileParser) {
+            XCTAssertTrue(didBegin)
             didFinish = true
         }
         
@@ -41,6 +43,9 @@ class PKitTests: XCTestCase {
                     trackCount tc: Int,
                     clipsCount cc: Int,
                     filesCount fc: Int) {
+            
+            XCTAssertTrue(didBegin)
+            XCTAssertFalse(didFinish)
             title = t
             sampleRate = sr
             bitDepth = bd
@@ -57,7 +62,7 @@ class PKitTests: XCTestCase {
                     userDelay: String,
                     stateFlags: [String],
                     plugins: [String]) {
-            
+            XCTAssertNotNil(title)
         }
         
         
