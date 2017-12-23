@@ -116,6 +116,15 @@ public class PTTextFileParser: NSObject {
     
     
     // MARK: -
+    
+    private func skipUntilAccept(token : Token) {
+        while true {
+            if accept(token: token) { break }
+            if accept(token: .End) { break }
+            nextToken()
+        }
+    }
+    
     private func accept(token t: Token) -> Bool {
         switch thisToken {
         case t:
@@ -246,20 +255,12 @@ public class PTTextFileParser: NSObject {
     
     private func onlineClips() {
         // to be implemented
-        while true {
-            if accept(token: .TripleLineBreak) || accept(token: .End) {
-                break
-            } else { nextToken() }
-        }
+        skipUntilAccept(token: .TripleLineBreak)
     }
     
     private func plugins() {
         // to be implemented
-        while true {
-            if accept(token: .TripleLineBreak)  || accept(token: .End) {
-                break
-            } else { nextToken() }
-        }
+        skipUntilAccept(token: .TripleLineBreak)
     }
     
     private func track() throws {
@@ -347,7 +348,22 @@ public class PTTextFileParser: NSObject {
         delegate?.parser(self, didFinishReadingEventsForTrack: trackName)
     }
 
-    private func markers() {
+    private func markers() throws {
+        try expect(token: .LineBreak)
+        try expect(string: "#   ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "LOCATION     ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "TIME REFERENCE    ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "UNITS    ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "NAME                             ")
+        try expect(token: .LineBreak)
+        
+        let location = try expectInteger()
+        try expect(token: .ColumnBreak)
+        
         
     }
     
@@ -368,7 +384,7 @@ public class PTTextFileParser: NSObject {
                 try track()
             }
         }
-        if accept(string: "M A R K E R S  L I S T I N G") { markers() }
+        //if accept(string: "M A R K E R S  L I S T I N G") { try markers() }
     }
     
     // MARK: -
