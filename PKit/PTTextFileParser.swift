@@ -140,7 +140,7 @@ public class PTTextFileParser: NSObject {
     
     
     // MARK: -
-    private func accept(_ t: Token) -> Bool {
+    private func accept(token t: Token) -> Bool {
         switch thisToken {
         case t:
             nextToken()
@@ -150,16 +150,16 @@ public class PTTextFileParser: NSObject {
         }
     }
     
-    private func expect(_ t: Token) throws {
-        if accept(t) {
+    private func expect(token t: Token) throws {
+        if accept(token: t) {
             return
         } else {
             throw ParseTokenError(expected: t, found: thisToken, column: scanner!.scanLocation - thisLineStarts, line: lineNumber)
         }
     }
     
-    private func expectField(_ s : String) throws {
-        try expect(.Field)
+    private func expect(string s : String) throws {
+        try expect(token: .Field)
         if fieldValue == s {
             return
         } else {
@@ -170,12 +170,12 @@ public class PTTextFileParser: NSObject {
     }
     
     private func expectString() throws -> String {
-        try expect(.Field)
+        try expect(token: .Field)
         return fieldValue
     }
     
     private func expectInteger() throws -> Int {
-        try expect(.Field)
+        try expect(token: .Field)
         if let i = Int(fieldValue) {
             return i
         } else {
@@ -185,7 +185,7 @@ public class PTTextFileParser: NSObject {
     }
     
     private func expectDouble() throws -> Double {
-        try expect(.Field)
+        try expect(token: .Field)
         if let i = Double(fieldValue) {
             return i
         } else {
@@ -197,45 +197,45 @@ public class PTTextFileParser: NSObject {
     // MARK: -
     
     private func header() throws {
-            try expectField("SESSION NAME:")
-            try expect(.ColumnBreak)
+            try expect(string: "SESSION NAME:")
+            try expect(token: .ColumnBreak)
             let title = try expectString()
-            try expect(.LineBreak)
+            try expect(token: .LineBreak)
             
-            try expectField("SAMPLE RATE:")
-            try expect(.ColumnBreak)
+            try expect(string: "SAMPLE RATE:")
+            try expect(token: .ColumnBreak)
             let sampleRate = try expectDouble()
-            try expect(.LineBreak)
+            try expect(token: .LineBreak)
             
-            try expectField("BIT DEPTH:")
-            try expect(.ColumnBreak)
+            try expect(string: "BIT DEPTH:")
+            try expect(token: .ColumnBreak)
             let bitDepth = try expectString()
-            try expect(.LineBreak)
+            try expect(token: .LineBreak)
             
-            try expectField("SESSION START TIMECODE:")
-            try expect(.ColumnBreak)
+            try expect(string: "SESSION START TIMECODE:")
+            try expect(token: .ColumnBreak)
             let sessionStart = try expectString()
-            try expect(.LineBreak)
+            try expect(token: .LineBreak)
             
-            try expectField("TIMECODE FORMAT:")
-            try expect(.ColumnBreak)
+            try expect(string: "TIMECODE FORMAT:")
+            try expect(token: .ColumnBreak)
             let tcFormat = try expectString()
-            try expect(.LineBreak)
+            try expect(token: .LineBreak)
             
-            try expectField("# OF AUDIO TRACKS:")
-            try expect(.ColumnBreak)
+            try expect(string: "# OF AUDIO TRACKS:")
+            try expect(token: .ColumnBreak)
             let trackCount = try expectInteger()
-            try expect(.LineBreak)
+            try expect(token: .LineBreak)
             
-            try expectField("# OF AUDIO CLIPS:")
-            try expect(.ColumnBreak)
+            try expect(string: "# OF AUDIO CLIPS:")
+            try expect(token: .ColumnBreak)
             let clipsCount = try expectInteger()
-            try expect(.LineBreak)
+            try expect(token: .LineBreak)
             
-            try expectField("# OF AUDIO FILES:")
-            try expect(.ColumnBreak)
+            try expect(string: "# OF AUDIO FILES:")
+            try expect(token: .ColumnBreak)
             let filesCount = try expectInteger()
-            try expect(.TripleLineBreak)
+            try expect(token: .TripleLineBreak)
             
             delegate?.parser(self, didReadSessionHeaderWithTitle: title,
                              sampleRate: sampleRate,
@@ -247,22 +247,22 @@ public class PTTextFileParser: NSObject {
     }
     
     private func files() throws {
-        try expect(.LineBreak)
-        try expect(.Field) // "Filename"
-        try expect(.ColumnBreak)
-        try expectField("Location")
-        while !accept(.TripleLineBreak) {
-            try expect(.LineBreak)
-            try expect(.Field)
-            try expect(.ColumnBreak)
-            try expect(.Field)
+        try expect(token: .LineBreak)
+        try expect(token: .Field) // "Filename"
+        try expect(token: .ColumnBreak)
+        try expect(string: "Location")
+        while !accept(token: .TripleLineBreak) {
+            try expect(token: .LineBreak)
+            try expect(token: .Field)
+            try expect(token: .ColumnBreak)
+            try expect(token: .Field)
         }
     }
     
     private func onlineClips() {
         // to be implemented
         while true {
-            if accept(.TripleLineBreak) || accept(.End) {
+            if accept(token: .TripleLineBreak) || accept(token: .End) {
                 break
             } else { nextToken() }
         }
@@ -271,40 +271,40 @@ public class PTTextFileParser: NSObject {
     private func plugins() {
         // to be implemented
         while true {
-            if accept(.TripleLineBreak)  || accept(.End) {
+            if accept(token: .TripleLineBreak)  || accept(token: .End) {
                 break
             } else { nextToken() }
         }
     }
     
     private func track() throws {
-        try expect(.ColumnBreak)
-        try expect(.Field) // track name
+        try expect(token: .ColumnBreak)
+        try expect(token: .Field) // track name
         let trackName = fieldValue
-        try expect(.LineBreak)
-        try expectField("COMMENTS:")
-        try expect(.ColumnBreak)
+        try expect(token: .LineBreak)
+        try expect(string: "COMMENTS:")
+        try expect(token: .ColumnBreak)
         var comments : String? = nil
-        if accept(.Field) {
+        if accept(token: .Field) {
             comments = fieldValue
         }
-        try expect(.LineBreak)
-        try expectField("USER DELAY:")
-        try expect(.ColumnBreak)
+        try expect(token: .LineBreak)
+        try expect(string: "USER DELAY:")
+        try expect(token: .ColumnBreak)
         let userDelay = try expectString()
-        try expect(.LineBreak)
-        try expectField("STATE: ")
+        try expect(token: .LineBreak)
+        try expect(string: "STATE: ")
         var states = [String]()
-        while accept(.ColumnBreak) {
+        while accept(token: .ColumnBreak) {
             states.append(try expectString())
         }
-        try expect(.LineBreak)
-        try expectField("PLUG-INS: ")
+        try expect(token: .LineBreak)
+        try expect(string: "PLUG-INS: ")
         var plugins = [String]()
-        while accept(.ColumnBreak) {
+        while accept(token: .ColumnBreak) {
             plugins.append(try expectString())
         }
-        try expect(.LineBreak)
+        try expect(token: .LineBreak)
         
         delegate?.parser(self, willReadEventsForTrack: trackName,
                          comments: comments,
@@ -312,43 +312,43 @@ public class PTTextFileParser: NSObject {
                          stateFlags: states,
                          plugins: plugins)
         
-        try expectField("CHANNEL ")
-        try expect(.ColumnBreak)
-        try expectField("EVENT   ")
-        try expect(.ColumnBreak)
-        try expectField("CLIP NAME                     ")
-        try expect(.ColumnBreak)
-        try expectField("START TIME    ")
-        try expect(.ColumnBreak)
-        try expectField("END TIME      ")
-        try expect(.ColumnBreak)
-        try expectField("DURATION      ")
-        try expect(.ColumnBreak)
-        let timestampsColumn =  accept(.TimestampHeader)
+        try expect(string: "CHANNEL ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "EVENT   ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "CLIP NAME                     ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "START TIME    ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "END TIME      ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "DURATION      ")
+        try expect(token: .ColumnBreak)
+        let timestampsColumn =  accept(token: .TimestampHeader)
         if timestampsColumn {
-            try expect(.ColumnBreak)
+            try expect(token: .ColumnBreak)
         }
-        try expectField("STATE")
+        try expect(string: "STATE")
         
-        while !accept(.TripleLineBreak) {
-            try expect(.LineBreak)
-            try expect(.Field) // channel
-            try expect(.ColumnBreak)
-            try expect(.Field) // event
-            try expect(.ColumnBreak)
-            try expect(.Field) // clip name
-            try expect(.ColumnBreak)
-            try expect(.Field) // start time
-            try expect(.ColumnBreak)
-            try expect(.Field) // end time
-            try expect(.ColumnBreak)
-            try expect(.Field) // duration
-            try expect(.ColumnBreak)
+        while !accept(token: .TripleLineBreak) {
+            try expect(token: .LineBreak)
+            try expect(token: .Field) // channel
+            try expect(token: .ColumnBreak)
+            try expect(token: .Field) // event
+            try expect(token: .ColumnBreak)
+            try expect(token: .Field) // clip name
+            try expect(token: .ColumnBreak)
+            try expect(token: .Field) // start time
+            try expect(token: .ColumnBreak)
+            try expect(token: .Field) // end time
+            try expect(token: .ColumnBreak)
+            try expect(token: .Field) // duration
+            try expect(token: .ColumnBreak)
             if timestampsColumn {
-                try expect(.Field) // timestamp
-                try expect(.ColumnBreak)
+                try expect(token: .Field) // timestamp
+                try expect(token: .ColumnBreak)
             }
-            try expect(.Field) // state
+            try expect(token: .Field) // state
         }
         delegate?.parser(self, didFinishReadingEventsForTrack: trackName)
     }
@@ -359,22 +359,22 @@ public class PTTextFileParser: NSObject {
     
     private func parseTextFile() throws {
         try header()
-        if accept(.FilesHeader) {
+        if accept(token: .FilesHeader) {
             try files()
         }
-        if accept(.OnlineClipsHeader) {
+        if accept(token: .OnlineClipsHeader) {
             onlineClips()
         }
-        if accept(.PlugInsHeader) {
+        if accept(token: .PlugInsHeader) {
             plugins()
         }
-        if accept(.TrackListingHeader) {
-            try expect(.LineBreak)
-            while accept(.TrackName) {
+        if accept(token: .TrackListingHeader) {
+            try expect(token: .LineBreak)
+            while accept(token: .TrackName) {
                 try track()
             }
         }
-        if accept(.MarkersHeader) { markers() }
+        if accept(token: .MarkersHeader) { markers() }
     }
     
     // MARK: -
@@ -383,7 +383,7 @@ public class PTTextFileParser: NSObject {
         let dataString = NSString(data: data, encoding: encoding)! as String
         scanner = Scanner(string: dataString)
         scanner?.charactersToBeSkipped = nil
-        try expect(.Begin)
+        try expect(token: .Begin)
         delegate?.parserWillBegin(self)
         try parseTextFile()
         delegate?.parserDidFinish(self)
