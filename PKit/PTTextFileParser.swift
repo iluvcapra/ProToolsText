@@ -53,14 +53,6 @@ public class PTTextFileParser: NSObject {
         case LineBreak
         case ColumnBreak
         
-        case FilesHeader
-        case OnlineClipsHeader
-        case PlugInsHeader
-        case TrackListingHeader
-        case TrackName
-        case TimestampHeader
-        case MarkersHeader
-        
         case Field
         case End
     }
@@ -110,22 +102,6 @@ public class PTTextFileParser: NSObject {
                 let readText = buffer! as String
                 
                 switch readText {
-                case "F I L E S  I N  S E S S I O N":
-                    thisToken = .FilesHeader
-                case "O N L I N E  C L I P S  I N  S E S S I O N":
-                    thisToken = .OnlineClipsHeader
-                case "P L U G - I N S  L I S T I N G":
-                    thisToken = .PlugInsHeader
-                case "T R A C K  L I S T I N G":
-                    thisToken = .TrackListingHeader
-                case "M A R K E R S  L I S T I N G":
-                    thisToken = .MarkersHeader
-                case "TRACK NAME:":
-                    thisToken = .TrackName
-                    
-                case "TIMESTAMP         ":
-                    thisToken = .TimestampHeader
-                    
                 default:
                     thisToken = .Field
                     fieldValue = readText
@@ -330,7 +306,7 @@ public class PTTextFileParser: NSObject {
         try expect(token: .ColumnBreak)
         try expect(string: "DURATION      ")
         try expect(token: .ColumnBreak)
-        let timestampsColumn = accept(token: .TimestampHeader)
+        let timestampsColumn = accept(string: "TIMESTAMP         ")
         if timestampsColumn {
             try expect(token: .ColumnBreak)
         }
@@ -377,22 +353,22 @@ public class PTTextFileParser: NSObject {
     
     private func parseTextFile() throws {
         try header()
-        if accept(token: .FilesHeader) {
+        if accept(string: "F I L E S  I N  S E S S I O N") {
             try files()
         }
-        if accept(token: .OnlineClipsHeader) {
+        if accept(string: "O N L I N E  C L I P S  I N  S E S S I O N") {
             onlineClips()
         }
-        if accept(token: .PlugInsHeader) {
+        if accept(string: "P L U G - I N S  L I S T I N G") {
             plugins()
         }
-        if accept(token: .TrackListingHeader) {
+        if accept(string: "T R A C K  L I S T I N G") {
             try expect(token: .LineBreak)
-            while accept(token: .TrackName) {
+            while accept(string: "TRACK NAME:") {
                 try track()
             }
         }
-        if accept(token: .MarkersHeader) { markers() }
+        if accept(string: "M A R K E R S  L I S T I N G") { markers() }
     }
     
     // MARK: -
