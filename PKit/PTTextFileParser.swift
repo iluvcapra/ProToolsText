@@ -39,6 +39,14 @@ public protocol PTTextFileParserDelegate {
                 timestamp : String?,
                 state: String)
     
+    func parser(_ parser : PTTextFileParser,
+                didReadMemoryLocation: Int,
+                atLocation: String,
+                timeReference: Int,
+                units: String,
+                name: String,
+                comments: String?)
+    
     func parser(_ parser :PTTextFileParser,
                 didFinishReadingEventsForTrack : String)
     
@@ -120,8 +128,8 @@ public class PTTextFileParser: NSObject {
     private func skipUntilAccept(token : Token) {
         while true {
             if accept(token: token) { break }
-            if accept(token: .End) { break }
             nextToken()
+            if accept(token: .End) { break }
         }
     }
     
@@ -136,11 +144,26 @@ public class PTTextFileParser: NSObject {
     }
     
     private func accept(string s : String) -> Bool {
-        return accept(token: .Field) && fieldValue == s
+        if (thisToken == .Field && fieldValue == s) {
+            nextToken()
+            return true
+        } else {
+            return false
+        }
     }
     
     private func acceptString() -> String? {
         return accept(token: .Field) ? fieldValue : nil
+    }
+    
+    private func acceptInteger() -> Int? {
+        if (thisToken == .Field) {
+            if let ival = Int(fieldValue.trimmingCharacters(in: .whitespacesAndNewlines)) {
+                nextToken()
+                return ival
+            }
+        }
+        return nil
     }
     
     private func expect(token t: Token) throws {
@@ -359,12 +382,32 @@ public class PTTextFileParser: NSObject {
         try expect(string: "UNITS    ")
         try expect(token: .ColumnBreak)
         try expect(string: "NAME                             ")
+        try expect(token: .ColumnBreak)
+        try expect(string: "COMMENTS")
         try expect(token: .LineBreak)
         
-        let location = try expectInteger()
-        try expect(token: .ColumnBreak)
-        
-        
+        repeat {
+            guard let number = acceptInteger() else {
+                break
+            }
+            try expect(token: .ColumnBreak)
+            let location = try expectString()
+            try expect(token: .ColumnBreak)
+            let timeRef = try expectInteger()
+            try expect(token: .ColumnBreak)
+            let units = try expectString()
+            try expect(token: .ColumnBreak)
+            let name = try expectString()
+            try expect(token: .ColumnBreak)
+            let comments = acceptString()
+            try expect(token: .LineBreak)
+            delegate?.parser(self, didReadMemoryLocation: number,
+                             atLocation: location,
+                             timeReference: timeRef,
+                             units: units,
+                             name: name,
+                             comments: comments)
+        } while true
     }
     
     private func parseTextFile() throws {
@@ -384,7 +427,7 @@ public class PTTextFileParser: NSObject {
                 try track()
             }
         }
-        //if accept(string: "M A R K E R S  L I S T I N G") { try markers() }
+        if accept(string: "M A R K E R S  L I S T I N G") { try markers() }
     }
     
     // MARK: -

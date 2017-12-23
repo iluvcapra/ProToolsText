@@ -90,6 +90,16 @@ class PKitTests: XCTestCase {
         }
         
         func parser(_ parser : PTTextFileParser,
+                    didReadMemoryLocation loc: Int,
+                    atLocation: String,
+                    timeReference: Int,
+                    units: String,
+                    name: String,
+                    comments: String?) {
+            print(loc)
+        }
+        
+        func parser(_ parser : PTTextFileParser,
                     didFinishReadingEventsForTrack trackName: String) {
             XCTAssertTrue(tracks.last!["name"] as! String == trackName)
         }
