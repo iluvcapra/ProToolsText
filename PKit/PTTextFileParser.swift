@@ -291,21 +291,18 @@ public class PTTextFileParser: NSObject {
         try expect(.LineBreak)
         try expectField("USER DELAY:")
         try expect(.ColumnBreak)
-        try expect(.Field)
-        let userDelay = fieldValue
+        let userDelay = try expectString()
         try expect(.LineBreak)
         try expectField("STATE: ")
         var states = [String]()
         while accept(.ColumnBreak) {
-            try expect(.Field)
-            states.append(fieldValue)
+            states.append(try expectString())
         }
         try expect(.LineBreak)
         try expectField("PLUG-INS: ")
         var plugins = [String]()
         while accept(.ColumnBreak) {
-            try expect(.Field)
-            plugins.append(fieldValue)
+            plugins.append(try expectString())
         }
         try expect(.LineBreak)
         
