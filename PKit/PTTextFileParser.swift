@@ -286,10 +286,9 @@ public class PTTextFileParser: NSObject {
         skipUntilAccept(token: .TripleLineBreak)
     }
     
-    private func track() throws {
+    private func trackHeader() throws -> Bool  {
         try expect(token: .ColumnBreak)
-        try expect(token: .Field) // track name
-        let trackName = fieldValue
+        let trackName = try expectString()
         try expect(token: .LineBreak)
         try expect(string: "COMMENTS:")
         try expect(token: .ColumnBreak)
@@ -318,6 +317,10 @@ public class PTTextFileParser: NSObject {
                          stateFlags: states,
                          plugins: plugins)
         
+        defer {
+            delegate?.parser(self, didFinishReadingEventsForTrack: trackName)
+        }
+        
         try expect(string: "CHANNEL ")
         try expect(token: .ColumnBreak)
         try expect(string: "EVENT   ")
@@ -335,6 +338,11 @@ public class PTTextFileParser: NSObject {
             try expect(token: .ColumnBreak)
         }
         try expect(string: "STATE")
+        return timestampsColumn
+    }
+    
+    private func track() throws {
+        let timestampsColumn = try trackHeader()
         
         // FIXME a TripleLineBreak does not terminate a list of clips
         while !accept(token: .TripleLineBreak) {
@@ -369,7 +377,7 @@ public class PTTextFileParser: NSObject {
                              timestamp: timestamp?.trimmingCharacters(in: .whitespacesAndNewlines),
                              state: state.trimmingCharacters(in: .whitespacesAndNewlines))
         }
-        delegate?.parser(self, didFinishReadingEventsForTrack: trackName)
+        
     }
 
     private func markers() throws {
