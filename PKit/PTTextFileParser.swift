@@ -150,6 +150,14 @@ public class PTTextFileParser: NSObject {
         }
     }
     
+    private func accept(string s : String) -> Bool {
+        return accept(token: .Field) && fieldValue == s
+    }
+    
+    private func acceptString() -> String? {
+        return accept(token: .Field) ? fieldValue : nil
+    }
+    
     private func expect(token t: Token) throws {
         if accept(token: t) {
             return
@@ -284,10 +292,7 @@ public class PTTextFileParser: NSObject {
         try expect(token: .LineBreak)
         try expect(string: "COMMENTS:")
         try expect(token: .ColumnBreak)
-        var comments : String? = nil
-        if accept(token: .Field) {
-            comments = fieldValue
-        }
+        let comments = acceptString()
         try expect(token: .LineBreak)
         try expect(string: "USER DELAY:")
         try expect(token: .ColumnBreak)
