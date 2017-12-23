@@ -335,8 +335,6 @@ public class PTTextFileParser: NSObject {
     }
     
     private func trackEventList() throws {
-        // FIXME a TripleLineBreak does not terminate a list of clips
-        
         repeat {
             if accept(token: .TripleLineBreak) || accept(token: .LineBreak) {
                 continue
