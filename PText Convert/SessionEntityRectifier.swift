@@ -19,19 +19,19 @@ protocol SessionEntityRectifierDelegate {
     func rectifier(_ r: SessionEntityRectifier, didReadRecord : [String:String])
 }
 
-let PTSessionName       = "SessionName"
-let PTRawSessionName    = "RawSessionName"
-let PTTrackName         = "TrackName"
-let PTRawTrackName      = "RawTrackName"
-let PTTrackComment      = "TrackComment"
-let PTRawTrackComment   = "RawTrackComment"
-let PTEventNumber       = "EventNumber"
-let PTClipName          = "ClipName"
-let PTRawClipName       = "RawClipName"
-let PTStart             = "Start"
-let PTFinish            = "Finish"
-let PTDuration          = "Duration"
-let PTMuted             = "Muted"
+let PTSessionName       = "PT_SessionName"
+let PTRawSessionName    = "PT_RawSessionName"
+let PTTrackName         = "PT_TrackName"
+let PTRawTrackName      = "PT_RawTrackName"
+let PTTrackComment      = "PT_TrackComment"
+let PTRawTrackComment   = "PT_RawTrackComment"
+let PTEventNumber       = "PT_EventNumber"
+let PTClipName          = "PT_ClipName"
+let PTRawClipName       = "PT_RawClipName"
+let PTStart             = "PT_Start"
+let PTFinish            = "PT_Finish"
+let PTDuration          = "PT_Duration"
+let PTMuted             = "PT_Muted"
 
 class SessionEntityRectifier {
     
