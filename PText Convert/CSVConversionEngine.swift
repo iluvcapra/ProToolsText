@@ -143,12 +143,12 @@ class TagParser {
         fields()
     }
     
-    func parse() -> [String:String] {
+    func parse() -> (text: String, fields: [String:String]) {
         name = ""
         try! expect(token: .Begin)
         taggedString()
-        dict["_name"] = name.trimmingCharacters(in: .whitespaces)
-        return dict
+        let txt = name.trimmingCharacters(in: .whitespaces)
+        return (text : txt, fields: dict)
     }
     
     init(string s: String) {
@@ -158,13 +158,79 @@ class TagParser {
     
 }
 
-class TagInterpreter {
+extension Dictionary {
+    func mergeKeepCurrent(_ other : Dictionary<Key,Value>) -> Dictionary<Key, Value> {
+        return self.merging(other, uniquingKeysWith: { (current, _) -> Value in current} )
+    }
+}
+
+/*
+ The SessionEntityRectifier takes parsed PTEntities and turns the lot into
+ a list of dictionaries.
+    - One dictionary is created for each Clip
+    -
+ */
+
+protocol SessionEntityRectifierDelegate {
+    func rectifier(_ r: SessionEntityRectifier, didReadRecord : [String:String])
+}
+
+class SessionEntityRectifier {
     
-    func interpretClips(inTracks: [PTEntityParser.TrackEntity],
-                        applyMarkers: [PTEntityParser.MarkerEntity],
-                        applySession: PTEntityParser.SessionEntity) {
-       // let sessionFields = extractFields(from: applySession.rawTitle)
+    private let session : PTEntityParser.SessionEntity
+    private let markers : [PTEntityParser.MarkerEntity]
+    
+    var delegate : SessionEntityRectifierDelegate?
+    
+    private func fields(for track : PTEntityParser.TrackEntity) -> [String:String] {
+        let trackNameParse = TagParser(string: track.rawTitle).parse()
+        let trackCommentParse = TagParser(string : track.rawComment).parse()
+        let trackDict : [String:String] = {
+            var dict = trackNameParse.fields
+            dict = dict.mergeKeepCurrent(trackNameParse.fields)
+            dict["TrackName"] = trackNameParse.text
+            dict["RawTrackName"] = track.rawTitle
+            dict["TrackComment"] = trackCommentParse.text
+            dict["RawTrackComment"] = track.rawComment
+            return dict
+        }()
+        return trackDict
+    }
+    
+    private func fields(for clip: PTEntityParser.ClipEntity) -> [String:String] {
+        let clipNameParse = TagParser(string: clip.rawName).parse()
+        let trackDict : [String:String] = {
+            var dict = clipNameParse.fields
+            dict["EventNumber"] = String(clip.eventNumber)
+            dict["ClipName"] = clipNameParse.text
+            dict["Start"] = clip.rawStart
+            dict["Finish"] = clip.rawFinish
+            dict["Duration"] = clip.rawDuration
+            dict["Muted"] = clip.muted ? "Muted" : ""
+            return dict
+        }()
+        return trackDict
+    }
+    
+    private func interpret(track : PTEntityParser.TrackEntity) {
+        let trackFields = fields(for: track)
         
+        for clip in track.clips {
+            let clipFields = fields(for: clip)
+            let record = clipFields.mergeKeepCurrent(trackFields)
+            delegate?.rectifier(self, didReadRecord: record)
+        }
+    }
+    
+    init(tracks: [PTEntityParser.TrackEntity],
+        markers: [PTEntityParser.MarkerEntity],
+        session: PTEntityParser.SessionEntity) {
+        self.session = session
+        self.markers = markers
+        
+        for track in tracks {
+            interpret(track:track)
+        }
     }
 }
 

@@ -1,0 +1,106 @@
+SESSION NAME:	ADR Spotting test
+SAMPLE RATE:	48000.000000
+BIT DEPTH:	24-bit
+SESSION START TIMECODE:	00:59:52:00
+TIMECODE FORMAT:	23.976 Frame
+# OF AUDIO TRACKS:	8
+# OF AUDIO CLIPS:	2
+# OF AUDIO FILES:	2
+
+
+F I L E S  I N  S E S S I O N
+Filename        	Location
+Audio 1_01.L.wav	Macintosh HD:Users:jamiehardt:Documents:ADR Spotting test:Audio Files:
+Audio 1_01.R.wav	Macintosh HD:Users:jamiehardt:Documents:ADR Spotting test:Audio Files:
+
+
+O N L I N E  C L I P S  I N  S E S S I O N
+CLIP NAME   	Source File
+Audio 1_01.L	Audio 1_01.L.wav
+Audio 1_01.R	Audio 1_01.R.wav
+
+
+P L U G - I N S  L I S T I N G
+MANUFACTURER            	PLUG-IN NAME            	VERSION         	FORMAT          	STEMS                   	NUMBER OF INSTANCES
+
+
+T R A C K  L I S T I N G
+TRACK NAME:	Scenes
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	@{Sc=MAIN TITLES}             	   01:00:00:00	   01:00:38:00	   00:00:38:00	Unmuted
+1       	2       	@{Sc=1 Int. House - Day - The Team finds the ancient scrolls}	   01:00:38:00	   01:01:16:05	   00:00:38:05	Unmuted
+
+
+TRACK NAME:	Session
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	@{Spot=2017-12-22}            	   00:59:52:00	   01:01:44:02	   00:01:52:02	Unmuted
+
+
+TRACK NAME:	Jamie
+COMMENTS:	{Actor=Jamie} {Char=Jamie}
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	This is a line {R=Added} $QN=J101	   01:00:00:09	   01:00:17:17	   00:00:17:08	Unmuted
+
+
+TRACK NAME:	Bill
+COMMENTS:	{Actor=Willie} {Char=Bill}
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	This is another line $QN=B101 {R=Noise} {Rq=Dir}	   01:00:22:04	   01:00:38:04	   00:00:16:00	Unmuted
+1       	2       	This is Bill's seocnd line $QN=B102 {R=Off mic} {Rq=Dir}	   01:00:41:14	   01:00:46:05	   00:00:04:14	Unmuted
+
+
+TRACK NAME:	Steve
+COMMENTS:	{Actor=Mike} {Char=Steve}
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	This is Steve's line at the same time as Bill's line $QN=S101 {R=Noise} {Rq=Dir}	   01:00:22:04	   01:00:38:04	   00:00:16:00	Unmuted
+1       	2       	This is Steve's second line $QN=S102 {R=Added} {Rq=Dir}	   01:00:50:23	   01:00:59:20	   00:00:08:20	Unmuted
+
+
+TRACK NAME:	Elissa
+COMMENTS:	{Actor=Alyssa} {Char=Elissa}
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	This is the last line $QN=E101 {R=Added} [TBW] {Rq=Dir}	   01:01:02:22	   01:01:15:00	   00:00:12:02	Unmuted
+
+
+TRACK NAME:	Session 2
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	@{Spot=2018-01-01}            	   00:59:52:00	   01:01:52:02	   00:02:00:02	Unmuted
+
+
+TRACK NAME:	Jamie2
+COMMENTS:	{Actor=Jamie} {Char=Jamie}
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	"This line was added in 2018" $QN=J201 {R=Added}	   01:00:12:02	   01:00:21:01	   00:00:08:23	Unmuted
+
+
+M A R K E R S  L I S T I N G
+#   	LOCATION     	TIME REFERENCE    	UNITS    	NAME                             	COMMENTS
+2   	00:59:52:00  	0                 	Samples  	{Supv=Jamie Hardt} {Client=Blumhouse/Universal}	
+1   	00:59:56:18  	228408            	Samples  	$R=1 $Ver=1                      	
