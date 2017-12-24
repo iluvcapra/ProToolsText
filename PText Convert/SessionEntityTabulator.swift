@@ -16,7 +16,7 @@ import PKit
  */
 
 protocol SessionEntityRectifierDelegate {
-    func rectifier(_ r: SessionEntityRectifier, didReadRecord : [String:String])
+    func rectifier(_ r: SessionEntityTabulator, didReadRecord : [String:String])
 }
 
 let PTSessionName       = "PT_SessionName"
@@ -33,7 +33,7 @@ let PTFinish            = "PT_Finish"
 let PTDuration          = "PT_Duration"
 let PTMuted             = "PT_Muted"
 
-class SessionEntityRectifier {
+class SessionEntityTabulator {
     
     private let session : PTEntityParser.SessionEntity
     private let markers : [PTEntityParser.MarkerEntity]
