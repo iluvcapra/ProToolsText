@@ -11,7 +11,7 @@ class RectifierTestDelegate : SessionEntityRectifierDelegate {
     
     var records = [[String:String]]()
     
-    func rectifier(_ r: SessionEntityRectifier, didReadRecord : [String:String]) {
+    func rectifier(_ r: SessionEntityTabulator, didReadRecord : [String:String]) {
         records.append(didReadRecord)
     }
 }
@@ -39,7 +39,7 @@ class SessionEntityRectiferTest: XCTestCase {
     
     func testBasicClips() {
 
-        let r = SessionEntityRectifier(tracks: [testTrack!], markers: [], session: session!)
+        let r = SessionEntityTabulator(tracks: [testTrack!], markers: [], session: session!)
         let d = RectifierTestDelegate()
         r.delegate = d
         
@@ -59,7 +59,7 @@ class SessionEntityRectiferTest: XCTestCase {
      */
     func testTaggedClips() {
 
-        let r = SessionEntityRectifier(tracks: [testTrack!], markers: [], session: session!)
+        let r = SessionEntityTabulator(tracks: [testTrack!], markers: [], session: session!)
         let d = RectifierTestDelegate()
         r.delegate = d
         
@@ -79,7 +79,7 @@ class SessionEntityRectiferTest: XCTestCase {
     
     func testSessionTags() {
 
-        let r = SessionEntityRectifier(tracks: [testTrack!], markers: [], session: session!)
+        let r = SessionEntityTabulator(tracks: [testTrack!], markers: [], session: session!)
         let d = RectifierTestDelegate()
         r.delegate = d
         
