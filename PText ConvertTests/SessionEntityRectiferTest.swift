@@ -85,11 +85,12 @@ class SessionEntityRectiferTest: XCTestCase {
         
         r.interpetRecords()
         XCTAssertTrue(d.records.count == 2)
-        XCTAssertEqual(d.records[0]["A"], "1")
+        XCTAssertEqual(d.records[0][PTSessionName], "Test Session")
+        XCTAssertEqual(d.records[1][PTSessionName], "Test Session")
+        XCTAssertEqual(d.records[0][PTRawSessionName], "Test Session {S=Bill Hart}")
 
-        
-        XCTAssertEqual(d.records[1]["A"], "2")
-
+        XCTAssertEqual(d.records[0]["S"], "Bill Hart")
+        XCTAssertEqual(d.records[1]["S"], "Bill Hart")
     }
 
 }

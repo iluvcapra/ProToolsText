@@ -41,6 +41,14 @@ class SessionEntityRectifier {
     
     var delegate : SessionEntityRectifierDelegate?
     
+    private func fields(for session : PTEntityParser.SessionEntity) -> [String:String] {
+        let sessionNameParse = TagParser(string: session.rawTitle).parse()
+        var dict = sessionNameParse.fields
+        dict[PTSessionName] = sessionNameParse.text
+        dict[PTRawSessionName] = session.rawTitle
+        return dict
+    }
+    
     private func fields(for track : PTEntityParser.TrackEntity) -> [String:String] {
         let trackNameParse = TagParser(string: track.rawTitle).parse()
         let trackCommentParse = TagParser(string : track.rawComment).parse()
@@ -74,10 +82,10 @@ class SessionEntityRectifier {
     
     private func interpret(track : PTEntityParser.TrackEntity) {
         let trackFields = fields(for: track)
-        
+        let sessionFields = fields(for: session)
         for clip in track.clips {
             let clipFields = fields(for: clip)
-            let record = clipFields.mergeKeepCurrent(trackFields)
+            let record = clipFields.mergeKeepCurrent(trackFields).mergeKeepCurrent(sessionFields)
             delegate?.rectifier(self, didReadRecord: record)
         }
     }
