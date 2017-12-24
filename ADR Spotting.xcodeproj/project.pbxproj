@@ -157,8 +157,8 @@
 			children = (
 				9A8002C51FEF7DD1009D4E28 /* ADR Spotting test.txt */,
 				9A80028F1FEEF9A7009D4E28 /* PText_ConvertTests.swift */,
-				9A8002911FEEF9A7009D4E28 /* Info.plist */,
 				9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */,
+				9A8002911FEEF9A7009D4E28 /* Info.plist */,
 			);
 			path = "PText ConvertTests";
 			sourceTree = "<group>";
