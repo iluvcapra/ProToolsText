@@ -1,0 +1,53 @@
+//
+//  SessionEntityRectiferTest.swift
+//  PText ConvertTests
+//
+//  Created by Jamie Hardt on 12/24/17.
+//
+
+import XCTest
+
+class RectifierTestDelegate : SessionEntityRectifierDelegate {
+    
+    var records = [[String:String]]()
+    
+    func rectifier(_ r: SessionEntityRectifier, didReadRecord : [String:String]) {
+        records.append(didReadRecord)
+    }
+}
+
+class SessionEntityRectiferTest: XCTestCase {
+
+    let session = PTEntityParser.SessionEntity.init(rawTitle: "Test Session")
+    
+    func testBasicClips() {
+
+        let testClips = [
+            PTEntityParser.ClipEntity(rawName: "Test 1",
+                                      eventNumber: 1, rawStart: "01:00:00:00", rawFinish: "01:00:01:00",
+                                      rawDuration: "00:00:01:00", muted: false),
+            PTEntityParser.ClipEntity(rawName: "Test 2",
+                                      eventNumber: 2, rawStart: "01:00:03:10", rawFinish: "01:00:04:10",
+                                      rawDuration: "00:00:01:00", muted: false),
+        ]
+        
+        let testTrack = PTEntityParser.TrackEntity(rawTitle: "Track 1", rawComment: "This is a track", clips: testClips)
+        
+        let r = SessionEntityRectifier(tracks: [testTrack], markers: [], session: session)
+        let d = RectifierTestDelegate()
+        r.delegate = d
+        
+        r.interpetRecords()
+        
+        XCTAssertTrue(d.records.count == 2)
+        XCTAssertEqual(d.records[0]["RawClipName"],"Test 1")
+        XCTAssertEqual(d.records[0]["Start"],"01:00:00:00")
+        XCTAssertEqual(d.records[0]["TrackName"],"Track 1")
+        XCTAssertEqual(d.records[1]["TrackName"],"Track 1")
+        XCTAssertEqual(d.records[1]["RawTrackName"],"Track 1")
+        XCTAssertEqual(d.records[1]["EventNumber"],"2")
+        
+    }
+
+
+}

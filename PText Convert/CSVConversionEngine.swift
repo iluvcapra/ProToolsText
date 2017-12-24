@@ -19,6 +19,7 @@ class TagParser {
         case RightSquareBracket
         case Equals
         case Word
+        case End
     }
     
     struct TagParserError : Error {
@@ -53,8 +54,8 @@ class TagParser {
         } else if scanner.scanUpToCharacters(from: exclusion, into: &buffer) {
             thisToken = .Word
             thisWord = buffer! as String
-        } else {
-            return
+        } else if scanner.isAtEnd {
+            thisToken = .End
         }
     }
     
@@ -179,6 +180,7 @@ class SessionEntityRectifier {
     
     private let session : PTEntityParser.SessionEntity
     private let markers : [PTEntityParser.MarkerEntity]
+    private let tracks : [PTEntityParser.TrackEntity]
     
     var delegate : SessionEntityRectifierDelegate?
     
@@ -203,6 +205,7 @@ class SessionEntityRectifier {
             var dict = clipNameParse.fields
             dict["EventNumber"] = String(clip.eventNumber)
             dict["ClipName"] = clipNameParse.text
+            dict["RawClipName"] = clip.rawName
             dict["Start"] = clip.rawStart
             dict["Finish"] = clip.rawFinish
             dict["Duration"] = clip.rawDuration
@@ -222,15 +225,18 @@ class SessionEntityRectifier {
         }
     }
     
+    func interpetRecords() {
+        for track in tracks {
+            interpret(track:track)
+        }
+    }
+    
     init(tracks: [PTEntityParser.TrackEntity],
         markers: [PTEntityParser.MarkerEntity],
         session: PTEntityParser.SessionEntity) {
         self.session = session
         self.markers = markers
-        
-        for track in tracks {
-            interpret(track:track)
-        }
+        self.tracks = tracks
     }
 }
 

@@ -18,6 +18,7 @@
 		9A8002C11FEF301A009D4E28 /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
 		9A8002C21FEF6CE4009D4E28 /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
 		9A8002C61FEF7DD1009D4E28 /* ADR Spotting test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002C51FEF7DD1009D4E28 /* ADR Spotting test.txt */; };
+		9A8002C81FF04A0E009D4E28 /* SessionEntityRectiferTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */; };
 		9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A9450211FE71C1F007CFC2D /* PKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450201FE71C1F007CFC2D /* PKitTests.swift */; };
 		9A9450231FE71C1F007CFC2D /* PKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450151FE71C1F007CFC2D /* PKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,6 +75,7 @@
 		9A8002B91FEF0648009D4E28 /* CSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSV.framework; path = "PText Convert/Carthage/Build/Mac/CSV.framework"; sourceTree = "<group>"; };
 		9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTEntityParser.swift; sourceTree = "<group>"; };
 		9A8002C51FEF7DD1009D4E28 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
+		9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEntityRectiferTest.swift; sourceTree = "<group>"; };
 		9A944FEC1FE71407007CFC2D /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		9A944FED1FE71952007CFC2D /* PT Text Export.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "PT Text Export.txt"; sourceTree = "<group>"; };
 		9A9450131FE71C1F007CFC2D /* PKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 				9A8002C51FEF7DD1009D4E28 /* ADR Spotting test.txt */,
 				9A80028F1FEEF9A7009D4E28 /* PText_ConvertTests.swift */,
 				9A8002911FEEF9A7009D4E28 /* Info.plist */,
+				9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */,
 			);
 			path = "PText ConvertTests";
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A8002901FEEF9A7009D4E28 /* PText_ConvertTests.swift in Sources */,
 				9A8002C21FEF6CE4009D4E28 /* PTEntityParser.swift in Sources */,
+				9A8002C81FF04A0E009D4E28 /* SessionEntityRectiferTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
