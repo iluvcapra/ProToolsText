@@ -189,7 +189,7 @@ class SessionEntityRectifier {
         let trackCommentParse = TagParser(string : track.rawComment).parse()
         let trackDict : [String:String] = {
             var dict = trackNameParse.fields
-            dict = dict.mergeKeepCurrent(trackNameParse.fields)
+            dict = dict.mergeKeepCurrent(trackCommentParse.fields)
             dict["TrackName"] = trackNameParse.text
             dict["RawTrackName"] = track.rawTitle
             dict["TrackComment"] = trackCommentParse.text
@@ -201,7 +201,7 @@ class SessionEntityRectifier {
     
     private func fields(for clip: PTEntityParser.ClipEntity) -> [String:String] {
         let clipNameParse = TagParser(string: clip.rawName).parse()
-        let trackDict : [String:String] = {
+        let clipDict : [String:String] = {
             var dict = clipNameParse.fields
             dict["EventNumber"] = String(clip.eventNumber)
             dict["ClipName"] = clipNameParse.text
@@ -212,7 +212,7 @@ class SessionEntityRectifier {
             dict["Muted"] = clip.muted ? "Muted" : ""
             return dict
         }()
-        return trackDict
+        return clipDict
     }
     
     private func interpret(track : PTEntityParser.TrackEntity) {

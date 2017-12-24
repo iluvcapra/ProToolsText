@@ -21,7 +21,6 @@ class SessionEntityRectiferTest: XCTestCase {
     let session = PTEntityParser.SessionEntity.init(rawTitle: "Test Session")
     
     func testBasicClips() {
-
         let testClips = [
             PTEntityParser.ClipEntity(rawName: "Test 1",
                                       eventNumber: 1, rawStart: "01:00:00:00", rawFinish: "01:00:01:00",
@@ -46,8 +45,39 @@ class SessionEntityRectiferTest: XCTestCase {
         XCTAssertEqual(d.records[1]["TrackName"],"Track 1")
         XCTAssertEqual(d.records[1]["RawTrackName"],"Track 1")
         XCTAssertEqual(d.records[1]["EventNumber"],"2")
-        
     }
-
+    
+    /*
+     This tests that fields set on track names copy to clips, but that fields on clips prevail.
+     */
+    func testTaggedClips() {
+        let testClips = [
+            PTEntityParser.ClipEntity(rawName: "Test 1 $A=1 {B=Hello}",
+                                      eventNumber: 1, rawStart: "01:00:00:00", rawFinish: "01:00:01:00",
+                                      rawDuration: "00:00:01:00", muted: false),
+            PTEntityParser.ClipEntity(rawName: "Test 2 $A=2",
+                                      eventNumber: 2, rawStart: "01:00:03:10", rawFinish: "01:00:04:10",
+                                      rawDuration: "00:00:01:00", muted: false),
+            ]
+        
+        let testTrack = PTEntityParser.TrackEntity(rawTitle: "Track 1 [D]", rawComment: "This is a track {B=Goodbye} {C=Z1}", clips: testClips)
+        
+        let r = SessionEntityRectifier(tracks: [testTrack], markers: [], session: session)
+        let d = RectifierTestDelegate()
+        r.delegate = d
+        
+        r.interpetRecords()
+        
+        XCTAssertTrue(d.records.count == 2)
+        XCTAssertEqual(d.records[0]["A"], "1")
+        XCTAssertEqual(d.records[0]["B"], "Hello")
+        XCTAssertEqual(d.records[0]["C"], "Z1")
+        XCTAssertEqual(d.records[0]["D"], "D")
+        
+        XCTAssertEqual(d.records[1]["A"], "2")
+        XCTAssertEqual(d.records[1]["B"], "Goodbye")
+        XCTAssertEqual(d.records[1]["C"], "Z1")
+        XCTAssertEqual(d.records[1]["D"], "D")
+    }
 
 }
