@@ -48,9 +48,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 return
         }
         
-        engine.convert(fileURL: inputUrl,
+        do {
+            try engine.convert(fileURL: inputUrl,
                        encoding: String.Encoding.utf8,
                        to: exportFolder, baseName: exportBasename)
+        } catch let error {
+            NSApp.presentError(error)
+        }
     }
     
 

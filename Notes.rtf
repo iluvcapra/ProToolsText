@@ -49,9 +49,9 @@ Text macros in clips and track names...\
 plain text [A] [BC] [D=1] \{comment\} E\{This is text\}\
 Modifiers:\
 \
-[\\c+] 		flags, switch on booleans\
-[\\c+=\\d+] 	set numeric values\
-\\c+\{.*\}		set string values\
+[\\w+] 		flags, switch on booleans\
+\\w+=\\w 	set string values\
+\\c+\{.*\}		set string values with spaces\
 \
 Macros set in track names or track comments apply to all clips on that track\
 Macros set in memory locations apply to all following clips\
