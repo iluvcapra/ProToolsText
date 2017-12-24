@@ -19,6 +19,19 @@ protocol SessionEntityRectifierDelegate {
     func rectifier(_ r: SessionEntityRectifier, didReadRecord : [String:String])
 }
 
+let PTSessionName       = "SessionName"
+let PTRawSessionName    = "RawSessionName"
+let PTTrackName         = "TrackName"
+let PTRawTrackName      = "RawTrackName"
+let PTTrackComment      = "TrackComment"
+let PTRawTrackComment   = "RawTrackComment"
+let PTEventNumber       = "EventNumber"
+let PTClipName          = "ClipName"
+let PTRawClipName       = "RawClipName"
+let PTStart             = "Start"
+let PTFinish            = "Finish"
+let PTDuration          = "Duration"
+let PTMuted             = "Muted"
 
 class SessionEntityRectifier {
     
@@ -34,10 +47,10 @@ class SessionEntityRectifier {
         let trackDict : [String:String] = {
             var dict = trackNameParse.fields
             dict = dict.mergeKeepCurrent(trackCommentParse.fields)
-            dict["TrackName"] = trackNameParse.text
-            dict["RawTrackName"] = track.rawTitle
-            dict["TrackComment"] = trackCommentParse.text
-            dict["RawTrackComment"] = track.rawComment
+            dict[PTTrackName] = trackNameParse.text
+            dict[PTRawTrackName] = track.rawTitle
+            dict[PTTrackComment] = trackCommentParse.text
+            dict[PTRawTrackComment] = track.rawComment
             return dict
         }()
         return trackDict
@@ -47,13 +60,13 @@ class SessionEntityRectifier {
         let clipNameParse = TagParser(string: clip.rawName).parse()
         let clipDict : [String:String] = {
             var dict = clipNameParse.fields
-            dict["EventNumber"] = String(clip.eventNumber)
-            dict["ClipName"] = clipNameParse.text
-            dict["RawClipName"] = clip.rawName
-            dict["Start"] = clip.rawStart
-            dict["Finish"] = clip.rawFinish
-            dict["Duration"] = clip.rawDuration
-            dict["Muted"] = clip.muted ? "Muted" : ""
+            dict[PTEventNumber] = String(clip.eventNumber)
+            dict[PTClipName] = clipNameParse.text
+            dict[PTRawClipName] = clip.rawName
+            dict[PTStart] = clip.rawStart
+            dict[PTFinish] = clip.rawFinish
+            dict[PTDuration] = clip.rawDuration
+            dict[PTMuted] = clip.muted ? "Muted" : ""
             return dict
         }()
         return clipDict

@@ -23,7 +23,7 @@ class SessionEntityRectiferTest: XCTestCase {
     
     override func setUp() {
         
-        session = PTEntityParser.SessionEntity.init(rawTitle: "Test Session")
+        session = PTEntityParser.SessionEntity.init(rawTitle: "Test Session {S=Bill Hart}")
         
         let testClips = [
             PTEntityParser.ClipEntity(rawName: "Test 1 $A=1 {B=Hello}",
@@ -46,12 +46,12 @@ class SessionEntityRectiferTest: XCTestCase {
         r.interpetRecords()
         
         XCTAssertTrue(d.records.count == 2)
-        XCTAssertEqual(d.records[0]["ClipName"],"Test 1")
-        XCTAssertEqual(d.records[0]["Start"],"01:00:00:00")
-        XCTAssertEqual(d.records[0]["TrackName"],"Track 1")
-        XCTAssertEqual(d.records[1]["TrackName"],"Track 1")
-        XCTAssertEqual(d.records[1]["TrackName"],"Track 1")
-        XCTAssertEqual(d.records[1]["EventNumber"],"2")
+        XCTAssertEqual(d.records[0][PTClipName],"Test 1")
+        XCTAssertEqual(d.records[0][PTStart],"01:00:00:00")
+        XCTAssertEqual(d.records[0][PTTrackName],"Track 1")
+        XCTAssertEqual(d.records[1][PTTrackName],"Track 1")
+        XCTAssertEqual(d.records[1][PTTrackName],"Track 1")
+        XCTAssertEqual(d.records[1][PTEventNumber],"2")
     }
     
     /*
@@ -84,6 +84,12 @@ class SessionEntityRectiferTest: XCTestCase {
         r.delegate = d
         
         r.interpetRecords()
+        XCTAssertTrue(d.records.count == 2)
+        XCTAssertEqual(d.records[0]["A"], "1")
+
+        
+        XCTAssertEqual(d.records[1]["A"], "2")
+
     }
 
 }
