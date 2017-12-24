@@ -83,10 +83,7 @@
 		9A94501B1FE71C1F007CFC2D /* PKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9450201FE71C1F007CFC2D /* PKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKitTests.swift; sourceTree = "<group>"; };
 		9A9450221FE71C1F007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A94502D1FE71C8E007CFC2D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		9A94504A1FE71F80007CFC2D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "DigiConform - 35mm 3 perf.pdf"; sourceTree = "<group>"; };
-		9AE576971FE9F15800AF4B5A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
 		9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTTextFileParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,9 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				9A8002B91FEF0648009D4E28 /* CSV.framework */,
-				9AE576971FE9F15800AF4B5A /* AVFoundation.framework */,
-				9A94504A1FE71F80007CFC2D /* CoreVideo.framework */,
-				9A94502D1FE71C8E007CFC2D /* CoreMedia.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
