@@ -74,7 +74,7 @@ class SessionEntityTabulator {
             dict[PTStart] = clip.rawStart
             dict[PTFinish] = clip.rawFinish
             dict[PTDuration] = clip.rawDuration
-            dict[PTMuted] = clip.muted ? "Muted" : ""
+            dict[PTMuted] = clip.muted ? PTMuted : ""
             return dict
         }()
         return clipDict
@@ -85,8 +85,12 @@ class SessionEntityTabulator {
         let sessionFields = fields(for: session)
         for clip in track.clips {
             let clipFields = fields(for: clip)
-            let record = clipFields.mergeKeepCurrent(trackFields).mergeKeepCurrent(sessionFields)
-            delegate?.rectifier(self, didReadRecord: record)
+            if clip.rawName.hasPrefix("@") {
+                
+            } else {
+                let record = clipFields.mergeKeepCurrent(trackFields).mergeKeepCurrent(sessionFields)
+                delegate?.rectifier(self, didReadRecord: record)
+            }
         }
     }
     
