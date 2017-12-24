@@ -17,8 +17,8 @@
 		9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */; };
 		9A8002B71FEF0511009D4E28 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002B61FEF0511009D4E28 /* Cartfile */; };
 		9A8002B81FEF0511009D4E28 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002B61FEF0511009D4E28 /* Cartfile */; };
-		9A8002BB1FEF0648009D4E28 /* CSV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8002B91FEF0648009D4E28 /* CSV.framework */; };
 		9A8002C11FEF301A009D4E28 /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
+		9A8002C21FEF6CE4009D4E28 /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
 		9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A9450211FE71C1F007CFC2D /* PKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450201FE71C1F007CFC2D /* PKitTests.swift */; };
 		9A9450231FE71C1F007CFC2D /* PKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450151FE71C1F007CFC2D /* PKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -101,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8002BB1FEF0648009D4E28 /* CSV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +431,7 @@
 			files = (
 				9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A8002901FEEF9A7009D4E28 /* PText_ConvertTests.swift in Sources */,
+				9A8002C21FEF6CE4009D4E28 /* PTEntityParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
