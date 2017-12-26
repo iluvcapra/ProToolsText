@@ -18,15 +18,14 @@ class RectifierTestDelegate : SessionEntityTabulatorDelegate {
 
 class SessionEntityRectiferTest: XCTestCase {
     
-    var session : PTEntityParser.SessionEntity?
-    var testTrack : PTEntityParser.TrackEntity?
-    var testMarkers : [PTEntityParser.MarkerEntity]?
+    var tabulator : SessionEntityTabulator?
+    var testDelegate : RectifierTestDelegate?
     
     override func setUp() {
         
-        session = PTEntityParser.SessionEntity.init(rawTitle: "Test Session {S=Bill Hart}")
+        let session = PTEntityParser.SessionEntity.init(rawTitle: "Test Session {S=Bill Hart}")
         
-        let testClips = [
+        let testClipsTrack1 = [
             PTEntityParser.ClipEntity(rawName: "Test 1 $A=1 {B=Hello}",
                                       eventNumber: 1, rawStart: "01:00:00:00", rawFinish: "01:00:01:00",
                                       rawDuration: "00:00:01:00", muted: false),
@@ -38,7 +37,7 @@ class SessionEntityRectiferTest: XCTestCase {
                                       rawDuration: "00:00:01:00", muted: true),
             ]
         
-        testMarkers = [PTEntityParser.MarkerEntity(rawName: "Marker 1 [M1]",
+        let testMarkers = [PTEntityParser.MarkerEntity(rawName: "Marker 1 [M1]",
                                                    rawComment: "[MM]",
                                                    rawLocation: "01:00:01:01"),
                        PTEntityParser.MarkerEntity(rawName: "Marker 2 [M3]",
@@ -46,81 +45,70 @@ class SessionEntityRectiferTest: XCTestCase {
                                                    rawLocation: "01:00:10:01")
         ]
         
-        testTrack = PTEntityParser.TrackEntity(rawTitle: "Track 1 [D]", rawComment: "This is a track {B=Goodbye} {C=Z1}", clips: testClips)
+        let testTracks = [
+            PTEntityParser.TrackEntity(rawTitle: "Track 1 [D]", rawComment: "This is a track {B=Goodbye} {C=Z1}", clips: testClipsTrack1)
+        ]
+        
+        tabulator = SessionEntityTabulator(tracks: testTracks, markers: testMarkers, session: session)
+        testDelegate = RectifierTestDelegate()
+        tabulator?.delegate = testDelegate
+        tabulator?.interpetRecords()
     }
     
     func testBasicClips() {
 
-        let r = SessionEntityTabulator(tracks: [testTrack!], markers: testMarkers!, session: session!)
-        let d = RectifierTestDelegate()
-        r.delegate = d
-        
-        r.interpetRecords()
-        
-        XCTAssertTrue(d.records.count == 2)
-        XCTAssertEqual(d.records[0][PTClipName],"Test 1")
-        XCTAssertEqual(d.records[0][PTStart],"01:00:00:00")
-        XCTAssertEqual(d.records[0][PTTrackName],"Track 1")
-        XCTAssertEqual(d.records[1][PTTrackName],"Track 1")
-        XCTAssertEqual(d.records[1][PTTrackName],"Track 1")
-        XCTAssertEqual(d.records[1][PTEventNumber],"3")
-        XCTAssertEqual(d.records[0][PTMuted],"")
-        XCTAssertEqual(d.records[1][PTMuted],PTMuted)
+        XCTAssertTrue(testDelegate!.records.count == 2)
+        XCTAssertEqual(testDelegate!.records[0][PTClipName],"Test 1")
+        XCTAssertEqual(testDelegate!.records[0][PTStart],"01:00:00:00")
+        XCTAssertEqual(testDelegate!.records[0][PTTrackName],"Track 1")
+        XCTAssertEqual(testDelegate!.records[1][PTTrackName],"Track 1")
+        XCTAssertEqual(testDelegate!.records[1][PTTrackName],"Track 1")
+        XCTAssertEqual(testDelegate!.records[1][PTEventNumber],"3")
+        XCTAssertEqual(testDelegate!.records[0][PTMuted],"")
+        XCTAssertEqual(testDelegate!.records[1][PTMuted],PTMuted)
     }
     
     /*
      This tests that fields set on track names copy to clips, but that fields on clips prevail.
      */
     func testTaggedClips() {
-
-        let r = SessionEntityTabulator(tracks: [testTrack!], markers: [], session: session!)
-        let d = RectifierTestDelegate()
-        r.delegate = d
         
-        r.interpetRecords()
+        XCTAssertTrue(testDelegate!.records.count >= 2)
+        XCTAssertEqual(testDelegate!.records[0]["A"], "1")
+        XCTAssertEqual(testDelegate!.records[0]["B"], "Hello")
+        XCTAssertEqual(testDelegate!.records[0]["C"], "Z1")
+        XCTAssertEqual(testDelegate!.records[0]["D"], "D")
         
-        XCTAssertTrue(d.records.count >= 2)
-        XCTAssertEqual(d.records[0]["A"], "1")
-        XCTAssertEqual(d.records[0]["B"], "Hello")
-        XCTAssertEqual(d.records[0]["C"], "Z1")
-        XCTAssertEqual(d.records[0]["D"], "D")
-        
-        XCTAssertEqual(d.records[1]["A"], "2")
-        XCTAssertEqual(d.records[1]["B"], "Goodbye")
-        XCTAssertEqual(d.records[1]["C"], "Z1")
-        XCTAssertEqual(d.records[1]["D"], "D")
+        XCTAssertEqual(testDelegate!.records[1]["A"], "2")
+        XCTAssertEqual(testDelegate!.records[1]["B"], "Goodbye")
+        XCTAssertEqual(testDelegate!.records[1]["C"], "Z1")
+        XCTAssertEqual(testDelegate!.records[1]["D"], "D")
     }
     
     func testSessionTags() {
 
-        let r = SessionEntityTabulator(tracks: [testTrack!], markers: [], session: session!)
-        let d = RectifierTestDelegate()
-        r.delegate = d
-        
-        r.interpetRecords()
-        XCTAssertTrue(d.records.count >= 2)
-        XCTAssertEqual(d.records[0][PTSessionName], "Test Session")
-        XCTAssertEqual(d.records[1][PTSessionName], "Test Session")
-        XCTAssertEqual(d.records[0][PTRawSessionName], "Test Session {S=Bill Hart}")
+        XCTAssertTrue(testDelegate!.records.count >= 2)
+        XCTAssertEqual(testDelegate!.records[0][PTSessionName], "Test Session")
+        XCTAssertEqual(testDelegate!.records[1][PTSessionName], "Test Session")
+        XCTAssertEqual(testDelegate!.records[0][PTRawSessionName], "Test Session {S=Bill Hart}")
 
-        XCTAssertEqual(d.records[0]["S"], "Bill Hart")
-        XCTAssertEqual(d.records[1]["S"], "Bill Hart")
+        XCTAssertEqual(testDelegate!.records[0]["S"], "Bill Hart")
+        XCTAssertEqual(testDelegate!.records[1]["S"], "Bill Hart")
     }
 
     func testMarkerTags() {
-        let r = SessionEntityTabulator(tracks: [testTrack!], markers: testMarkers!, session: session!)
-        let d = RectifierTestDelegate()
-        r.delegate = d
+
+        XCTAssertTrue(testDelegate!.records.count >= 2)
+        XCTAssertNil(testDelegate!.records[0]["M1"])
+        XCTAssertNil(testDelegate!.records[0]["MM"])
+        XCTAssertEqual(testDelegate!.records[1]["M1"] , "M1")
+        XCTAssertEqual(testDelegate!.records[1]["MM"] , "MM")
         
-        r.interpetRecords()
-        
-        XCTAssertTrue(d.records.count >= 2)
-        XCTAssertNil(d.records[0]["M1"])
-        XCTAssertNil(d.records[0]["MM"])
-        XCTAssertEqual(d.records[1]["M1"] , "M1")
-        XCTAssertEqual(d.records[1]["MM"] , "MM")
-        
-        XCTAssertNil(d.records[0]["M3"])
-        XCTAssertNil(d.records[1]["M3"])
+        XCTAssertNil(testDelegate!.records[0]["M3"])
+        XCTAssertNil(testDelegate!.records[1]["M3"])
+    }
+    
+    func testTimespanTags() {
+
     }
 }
