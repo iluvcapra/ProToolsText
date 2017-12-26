@@ -39,6 +39,8 @@ class SessionEntityTabulator {
     private let markers : [PTEntityParser.MarkerEntity]
     private let tracks : [PTEntityParser.TrackEntity]
     
+    private var timeSpanClips : [PTEntityParser.ClipEntity] = []
+    
     var delegate : SessionEntityTabulatorDelegate?
     
     private func fields(for session : PTEntityParser.SessionEntity) -> [String:String] {
@@ -97,7 +99,17 @@ class SessionEntityTabulator {
                 return dict
             }
         }
+    }
+    
+    private func timespanFields(for clip: PTEntityParser.ClipEntity ) -> [String:String] {
+        let applicable = timeSpanClips.reversed().filter {
+            clip.rawStart >= $0.rawStart && clip.rawStart <= $0.rawFinish
+        }
         
+        return applicable.reduce([String:String](), { (dict, thisClip) -> [String:String] in
+            let fields = TagParser(string: thisClip.rawName).parse().fields
+            return dict.mergeKeepCurrent(fields)
+        })
     }
     
     private func interpret(track : PTEntityParser.TrackEntity) {
@@ -105,11 +117,13 @@ class SessionEntityTabulator {
         let sessionFields = fields(for: session)
         for clip in track.clips {
             if clip.rawName.hasPrefix("@") {
-                
+                timeSpanClips.append(clip)
             } else {
                 let clipFields = fields(for: clip)
                 let memoryLocFields = memoryLocationFields(for: clip)
+                let tsFields = timespanFields(for: clip)
                 let record = clipFields.mergeKeepCurrent(trackFields)
+                    .mergeKeepCurrent(tsFields)
                     .mergeKeepCurrent(memoryLocFields)
                     .mergeKeepCurrent(sessionFields)
                 delegate?.rectifier(self, didReadRecord: record)
@@ -118,6 +132,7 @@ class SessionEntityTabulator {
     }
     
     func interpetRecords() {
+        timeSpanClips = []
         for track in tracks {
             interpret(track:track)
         }
