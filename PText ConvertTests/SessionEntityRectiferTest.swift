@@ -31,14 +31,20 @@ class SessionEntityRectiferTest: XCTestCase {
                                       eventNumber: 1, rawStart: "01:00:00:00", rawFinish: "01:00:01:00",
                                       rawDuration: "00:00:01:00", muted: false),
             PTEntityParser.ClipEntity(rawName: "@ {Sc=12 Int. House}",
-                                      eventNumber: 1, rawStart: "01:00:00:00", rawFinish: "01:00:01:00",
+                                      eventNumber: 2, rawStart: "01:00:00:00", rawFinish: "01:00:01:00",
                                       rawDuration: "00:00:01:00", muted: false),
             PTEntityParser.ClipEntity(rawName: "Test 2 $A=2",
-                                      eventNumber: 2, rawStart: "01:00:03:10", rawFinish: "01:00:04:10",
-                                      rawDuration: "00:00:01:00", muted: false),
+                                      eventNumber: 3, rawStart: "01:00:03:10", rawFinish: "01:00:04:10",
+                                      rawDuration: "00:00:01:00", muted: true),
             ]
         
-        testMarkers = [PTEntityParser.MarkerEntity(rawName: "Marker 1 [M1]", rawComment: "[MM]", rawLocation: "01:00:01:01")]
+        testMarkers = [PTEntityParser.MarkerEntity(rawName: "Marker 1 [M1]",
+                                                   rawComment: "[MM]",
+                                                   rawLocation: "01:00:01:01"),
+                       PTEntityParser.MarkerEntity(rawName: "Marker 2 [M3]",
+                                                   rawComment: "",
+                                                   rawLocation: "01:00:10:01")
+        ]
         
         testTrack = PTEntityParser.TrackEntity(rawTitle: "Track 1 [D]", rawComment: "This is a track {B=Goodbye} {C=Z1}", clips: testClips)
     }
@@ -57,7 +63,9 @@ class SessionEntityRectiferTest: XCTestCase {
         XCTAssertEqual(d.records[0][PTTrackName],"Track 1")
         XCTAssertEqual(d.records[1][PTTrackName],"Track 1")
         XCTAssertEqual(d.records[1][PTTrackName],"Track 1")
-        XCTAssertEqual(d.records[1][PTEventNumber],"2")
+        XCTAssertEqual(d.records[1][PTEventNumber],"3")
+        XCTAssertEqual(d.records[0][PTMuted],"")
+        XCTAssertEqual(d.records[1][PTMuted],PTMuted)
     }
     
     /*
@@ -111,5 +119,8 @@ class SessionEntityRectiferTest: XCTestCase {
         XCTAssertNil(d.records[0]["MM"])
         XCTAssertEqual(d.records[1]["M1"] , "M1")
         XCTAssertEqual(d.records[1]["MM"] , "MM")
+        
+        XCTAssertNil(d.records[0]["M3"])
+        XCTAssertNil(d.records[1]["M3"])
     }
 }
