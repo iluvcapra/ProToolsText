@@ -15,7 +15,7 @@ import PKit
  -
  */
 
-protocol SessionEntityRectifierDelegate {
+protocol SessionEntityTabulatorDelegate {
     func rectifier(_ r: SessionEntityTabulator, didReadRecord : [String:String])
 }
 
@@ -39,7 +39,7 @@ class SessionEntityTabulator {
     private let markers : [PTEntityParser.MarkerEntity]
     private let tracks : [PTEntityParser.TrackEntity]
     
-    var delegate : SessionEntityRectifierDelegate?
+    var delegate : SessionEntityTabulatorDelegate?
     
     private func fields(for session : PTEntityParser.SessionEntity) -> [String:String] {
         let sessionNameParse = TagParser(string: session.rawTitle).parse()
