@@ -20,6 +20,7 @@ class SessionEntityRectiferTest: XCTestCase {
     
     var session : PTEntityParser.SessionEntity?
     var testTrack : PTEntityParser.TrackEntity?
+    var testMarkers : [PTEntityParser.MarkerEntity]?
     
     override func setUp() {
         
@@ -35,14 +36,16 @@ class SessionEntityRectiferTest: XCTestCase {
             PTEntityParser.ClipEntity(rawName: "Test 2 $A=2",
                                       eventNumber: 2, rawStart: "01:00:03:10", rawFinish: "01:00:04:10",
                                       rawDuration: "00:00:01:00", muted: false),
-            ] 
+            ]
+        
+        testMarkers = [PTEntityParser.MarkerEntity(rawName: "Marker 1 [M1]", rawComment: "[MM]", rawLocation: "01:00:01:01")]
         
         testTrack = PTEntityParser.TrackEntity(rawTitle: "Track 1 [D]", rawComment: "This is a track {B=Goodbye} {C=Z1}", clips: testClips)
     }
     
     func testBasicClips() {
 
-        let r = SessionEntityTabulator(tracks: [testTrack!], markers: [], session: session!)
+        let r = SessionEntityTabulator(tracks: [testTrack!], markers: testMarkers!, session: session!)
         let d = RectifierTestDelegate()
         r.delegate = d
         
@@ -96,4 +99,17 @@ class SessionEntityRectiferTest: XCTestCase {
         XCTAssertEqual(d.records[1]["S"], "Bill Hart")
     }
 
+    func testMarkerTags() {
+        let r = SessionEntityTabulator(tracks: [testTrack!], markers: testMarkers!, session: session!)
+        let d = RectifierTestDelegate()
+        r.delegate = d
+        
+        r.interpetRecords()
+        
+        XCTAssertTrue(d.records.count == 2)
+        XCTAssertNil(d.records[0]["M1"])
+        XCTAssertNil(d.records[0]["MM"])
+        XCTAssertEqual(d.records[1]["M1"] , "M1")
+        XCTAssertEqual(d.records[1]["MM"] , "MM")
+    }
 }

@@ -80,15 +80,38 @@ class SessionEntityTabulator {
         return clipDict
     }
     
+    private func memoryLocationFields(for clip : PTEntityParser.ClipEntity) -> [String : String] {
+        let sortedMems = markers.sorted { (el, er) -> Bool in
+            el.rawLocation < er.rawLocation
+        }
+        
+        return sortedMems.reduce([:]) { (dict, thisMarker) -> Dictionary<String,String> in
+            if thisMarker.rawLocation < clip.rawFinish {
+                let markerNameFields = TagParser(string: thisMarker.rawName).parse().fields
+                let markerCommentFields = TagParser(string: thisMarker.rawComment).parse().fields
+                let markerFields = markerNameFields.mergeKeepCurrent(markerCommentFields)
+                return dict.merging(markerFields, uniquingKeysWith: { (_, newVal) -> String in
+                    newVal
+                })
+            } else {
+                return dict
+            }
+        }
+        
+    }
+    
     private func interpret(track : PTEntityParser.TrackEntity) {
         let trackFields = fields(for: track)
         let sessionFields = fields(for: session)
         for clip in track.clips {
-            let clipFields = fields(for: clip)
             if clip.rawName.hasPrefix("@") {
                 
             } else {
-                let record = clipFields.mergeKeepCurrent(trackFields).mergeKeepCurrent(sessionFields)
+                let clipFields = fields(for: clip)
+                let memoryLocFields = memoryLocationFields(for: clip)
+                let record = clipFields.mergeKeepCurrent(trackFields)
+                    .mergeKeepCurrent(memoryLocFields)
+                    .mergeKeepCurrent(sessionFields)
                 delegate?.rectifier(self, didReadRecord: record)
             }
         }
