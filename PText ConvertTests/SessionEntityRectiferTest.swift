@@ -34,7 +34,17 @@ class SessionEntityRectiferTest: XCTestCase {
                                       rawDuration: "00:00:01:00", muted: false),
             PTEntityParser.ClipEntity(rawName: "Test 2 $A=2",
                                       eventNumber: 3, rawStart: "01:00:03:10", rawFinish: "01:00:04:10",
-                                      rawDuration: "00:00:01:00", muted: true),
+                                      rawDuration: "00:00:01:00", muted: true)
+            ]
+        
+        let testClipsTrack2 = [
+            PTEntityParser.ClipEntity(rawName: "Test T2 $A=1 {B=Hello}",
+                                      eventNumber: 1, rawStart: "01:00:00:01", rawFinish: "01:00:00:10",
+                                      rawDuration: "00:00:01:00", muted: false),
+            PTEntityParser.ClipEntity(rawName: "Test T2",
+                                      eventNumber: 2, rawStart: "01:00:03:00", rawFinish: "01:00:03:10",
+                                      rawDuration: "00:00:00:10", muted: false)
+,
             ]
         
         let testMarkers = [PTEntityParser.MarkerEntity(rawName: "Marker 1 [M1]",
@@ -46,7 +56,8 @@ class SessionEntityRectiferTest: XCTestCase {
         ]
         
         let testTracks = [
-            PTEntityParser.TrackEntity(rawTitle: "Track 1 [D]", rawComment: "This is a track {B=Goodbye} {C=Z1}", clips: testClipsTrack1)
+            PTEntityParser.TrackEntity(rawTitle: "Track 1 [D]", rawComment: "This is a track {B=Goodbye} {C=Z1}", clips: testClipsTrack1),
+            PTEntityParser.TrackEntity(rawTitle: "Track 2", rawComment: "", clips: testClipsTrack2)
         ]
         
         tabulator = SessionEntityTabulator(tracks: testTracks, markers: testMarkers, session: session)
@@ -57,15 +68,25 @@ class SessionEntityRectiferTest: XCTestCase {
     
     func testBasicClips() {
 
-        XCTAssertTrue(testDelegate!.records.count == 2)
+        XCTAssertTrue(testDelegate!.records.count == 4)
         XCTAssertEqual(testDelegate!.records[0][PTClipName],"Test 1")
         XCTAssertEqual(testDelegate!.records[0][PTStart],"01:00:00:00")
         XCTAssertEqual(testDelegate!.records[0][PTTrackName],"Track 1")
-        XCTAssertEqual(testDelegate!.records[1][PTTrackName],"Track 1")
+        XCTAssertEqual(testDelegate!.records[0][PTMuted],"")
+        
         XCTAssertEqual(testDelegate!.records[1][PTTrackName],"Track 1")
         XCTAssertEqual(testDelegate!.records[1][PTEventNumber],"3")
-        XCTAssertEqual(testDelegate!.records[0][PTMuted],"")
         XCTAssertEqual(testDelegate!.records[1][PTMuted],PTMuted)
+        
+        XCTAssertEqual(testDelegate!.records[2][PTTrackName],"Track 2")
+        XCTAssertEqual(testDelegate!.records[2][PTClipName],"Test T2")
+        XCTAssertEqual(testDelegate!.records[2][PTEventNumber],"1")
+        XCTAssertEqual(testDelegate!.records[2][PTMuted],"")
+        
+        XCTAssertEqual(testDelegate!.records[3][PTTrackName],"Track 2")
+        XCTAssertEqual(testDelegate!.records[3][PTClipName],"Test T2")
+        XCTAssertEqual(testDelegate!.records[3][PTEventNumber],"2")
+        XCTAssertEqual(testDelegate!.records[3][PTMuted],"")
     }
     
     /*
@@ -109,6 +130,10 @@ class SessionEntityRectiferTest: XCTestCase {
     }
     
     func testTimespanTags() {
-
+        XCTAssertNil(testDelegate!.records[0]["Sc"])
+        XCTAssertNil(testDelegate!.records[1]["Sc"])
+        XCTAssertEqual(testDelegate!.records[2]["Sc"],"12 Int. House")
+        XCTAssertNil(testDelegate!.records[3]["Sc"])
+        
     }
 }
