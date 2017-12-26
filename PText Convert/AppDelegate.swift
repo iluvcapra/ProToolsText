@@ -43,15 +43,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let engine = CSVConversionEngine()
         
-        guard let exportFolder = savePanel.url?.deletingLastPathComponent(),
-            let exportBasename = savePanel.url?.lastPathComponent else {
-                return
+        guard let exportUrl = savePanel.url else {
+            return
         }
         
         do {
             try engine.convert(fileURL: inputUrl,
                        encoding: String.Encoding.utf8,
-                       to: exportFolder, baseName: exportBasename)
+                       to: exportUrl)
         } catch let error {
             NSApp.presentError(error)
         }
