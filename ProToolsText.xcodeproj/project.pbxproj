@@ -356,7 +356,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9A944FE91FE713EF007CFC2D /* Build configuration list for PBXProject "ADR Spotting" */;
+			buildConfigurationList = 9A944FE91FE713EF007CFC2D /* Build configuration list for PBXProject "ProToolsText" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -547,11 +547,6 @@
 				DEVELOPMENT_TEAM = MLT4MJ75T3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PText\\ Convert/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/PText\\ Convert/Carthage/Build/Mac",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -619,11 +614,6 @@
 				DEVELOPMENT_TEAM = MLT4MJ75T3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PText\\ Convert/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/PText\\ Convert/Carthage/Build/Mac",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1206,7 +1196,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A944FE91FE713EF007CFC2D /* Build configuration list for PBXProject "ADR Spotting" */ = {
+		9A944FE91FE713EF007CFC2D /* Build configuration list for PBXProject "ProToolsText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A944FEA1FE713EF007CFC2D /* Debug */,

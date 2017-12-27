@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9A9450121FE71C1F007CFC2D"
                BuildableName = "PKit.framework"
                BlueprintName = "PKit"
-               ReferencedContainer = "container:ADR Spotting.xcodeproj">
+               ReferencedContainer = "container:ProToolsText.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -37,7 +37,7 @@
                BlueprintIdentifier = "9A94501A1FE71C1F007CFC2D"
                BuildableName = "PKitTests.xctest"
                BlueprintName = "PKitTests"
-               ReferencedContainer = "container:ADR Spotting.xcodeproj">
+               ReferencedContainer = "container:ProToolsText.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "9A9450121FE71C1F007CFC2D"
             BuildableName = "PKit.framework"
             BlueprintName = "PKit"
-            ReferencedContainer = "container:ADR Spotting.xcodeproj">
+            ReferencedContainer = "container:ProToolsText.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -70,7 +70,7 @@
             BlueprintIdentifier = "9A9450121FE71C1F007CFC2D"
             BuildableName = "PKit.framework"
             BlueprintName = "PKit"
-            ReferencedContainer = "container:ADR Spotting.xcodeproj">
+            ReferencedContainer = "container:ProToolsText.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -88,7 +88,7 @@
             BlueprintIdentifier = "9A9450121FE71C1F007CFC2D"
             BuildableName = "PKit.framework"
             BlueprintName = "PKit"
-            ReferencedContainer = "container:ADR Spotting.xcodeproj">
+            ReferencedContainer = "container:ProToolsText.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

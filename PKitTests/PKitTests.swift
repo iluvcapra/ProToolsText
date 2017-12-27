@@ -123,7 +123,7 @@ class PKitTests: XCTestCase {
     }
     
     func testExample1() {
-        let testURL = URL(fileURLWithPath: "/Users/jamiehardt/src/ADR Spotting/PKitTests/ADR Spotting test.txt")
+        let testURL = Bundle(for: PKitTests.self).url(forResource: "ADR Spotting test", withExtension: "txt")!
         
         let p = PTTextFileParser()
         let d = ParserDelegateMock()
@@ -163,7 +163,7 @@ class PKitTests: XCTestCase {
     }
 
     func testExample2() {
-        let testURL = URL(fileURLWithPath: "/Users/jamiehardt/src/ADR Spotting/PKitTests/PT Text Export.txt")
+        let testURL = Bundle(for: PKitTests.self).url(forResource: "PT Text Export", withExtension: "txt")!
         
         let p = PTTextFileParser()
         let d = ParserDelegateMock()

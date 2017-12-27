@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9A8002791FEEF9A6009D4E28"
                BuildableName = "PText Convert.app"
                BlueprintName = "PText Convert"
-               ReferencedContainer = "container:ADR Spotting.xcodeproj">
+               ReferencedContainer = "container:ProToolsText.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -37,7 +37,7 @@
                BlueprintIdentifier = "9A80028A1FEEF9A6009D4E28"
                BuildableName = "PText ConvertTests.xctest"
                BlueprintName = "PText ConvertTests"
-               ReferencedContainer = "container:ADR Spotting.xcodeproj">
+               ReferencedContainer = "container:ProToolsText.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -47,7 +47,7 @@
                BlueprintIdentifier = "9A8002951FEEF9A7009D4E28"
                BuildableName = "PText ConvertUITests.xctest"
                BlueprintName = "PText ConvertUITests"
-               ReferencedContainer = "container:ADR Spotting.xcodeproj">
+               ReferencedContainer = "container:ProToolsText.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,7 +57,7 @@
             BlueprintIdentifier = "9A8002791FEEF9A6009D4E28"
             BuildableName = "PText Convert.app"
             BlueprintName = "PText Convert"
-            ReferencedContainer = "container:ADR Spotting.xcodeproj">
+            ReferencedContainer = "container:ProToolsText.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -81,7 +81,7 @@
             BlueprintIdentifier = "9A8002791FEEF9A6009D4E28"
             BuildableName = "PText Convert.app"
             BlueprintName = "PText Convert"
-            ReferencedContainer = "container:ADR Spotting.xcodeproj">
+            ReferencedContainer = "container:ProToolsText.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -100,7 +100,7 @@
             BlueprintIdentifier = "9A8002791FEEF9A6009D4E28"
             BuildableName = "PText Convert.app"
             BlueprintName = "PText Convert"
-            ReferencedContainer = "container:ADR Spotting.xcodeproj">
+            ReferencedContainer = "container:ProToolsText.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
