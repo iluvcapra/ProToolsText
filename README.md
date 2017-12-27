@@ -81,7 +81,7 @@ This is experimental software, it is provided AS IS with no warranty for any pur
 At this time the application only accepts text exports in the UTF-8 format, and exports CSV encoded likewise.
 
 The parser is naive about timecodes and time formats. Times are compared by lexicographic sorting, which works great
-for SMPTE timecodes and sample counts, but may have unexpected results with footage or bars:beats.
+for SMPTE timecodes, but may have unexpected results with anything else.
 
 
 
