@@ -90,7 +90,6 @@
 		9A94501B1FE71C1F007CFC2D /* PKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9450201FE71C1F007CFC2D /* PKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKitTests.swift; sourceTree = "<group>"; };
 		9A9450221FE71C1F007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "DigiConform - 35mm 3 perf.pdf"; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
 		9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTTextFileParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				9A944FEC1FE71407007CFC2D /* Notes.rtf */,
-				9AD95A691FE9C4970004CF02 /* DigiConform - 35mm 3 perf.pdf */,
 				9A9450141FE71C1F007CFC2D /* PKit */,
 				9A94501F1FE71C1F007CFC2D /* PKitTests */,
 				9A80027B1FEEF9A6009D4E28 /* PText Convert */,
