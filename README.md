@@ -16,7 +16,7 @@ Importing a normal text export outputs a CSV with one row for each clip, like th
 |Test Session   | Track 1      | 2              | Audio 1-02  |01:01:00:12|01:01:00:20|00:00:00:08  | Unmuted |...|
 
 etc... Each clip has a column for the track name of the clip in addition to the session name. A column for the track comments 
-is also included.
+is also included. The first row of the output *always* contains column headings.
 
 ### Fields in Clip Names
 
@@ -40,16 +40,45 @@ output, clips with the field will have it, and clips without will have the colum
 
 For example, if two clips are named:
 
-`"Squad fifty-one, what is your status?" [FUTZ] {Char=Dispatcher} [ADR]`
+`"Squad fifty-one, what is your status?" [FUTZ] {Ch=Dispatcher} [ADR]`
 
-`"We are ten-eight at Rampart Hospital." {Char=Gage} [ADR]`
+`"We are ten-eight at Rampart Hospital." {Ch=Gage} [ADR]`
 
 The output will contain the range:
 
-|...| PT_ClipName| Char | FUTZ | ADR | ...|
+|...| PT_ClipName| Ch | FUTZ | ADR | ...|
 |---|------------|------|---|----|-----|
 |...| "Squad fifty-one, what is your status?"| Dispatcher | FUTZ | ADR | ... |
 |...| "We are ten-eight at Rampart Hospital."| Gage |  | ADR | ... |
+
+
+### Fields in Track Names and Markers
+
+Fields set in track names, and in track comments, will be applied to *each* clip on that track. If a track comment 
+contains the text "{Dept=Foley}" for example, every clip on that track will have a "Foley" value in a "Dept" column.
+
+Likewise, fields set on the session name will apply to all clips in the session.
+
+Fields set in markers, and in marker comments, will be applied to all clips whose finish is *after* that marker. Fields
+in markers are applied cumulatively from breakfast to dinner in the session. The latest marker apllying to clip has
+precedence, so if one marker comes after the other, but both define a field, the value in the later marker
+
+An important note here is that, always, fields set on the clip name have the highest precedence. If a field is set in a clip
+name, the same field set on the track, the value set on the clip will prevail.
+
+### Using "@" to Apply Fields to a Span of Clips
+
+A clip name beginning with "@" will not be included in the CSV output, but its fields will be applied to clips within 
+its time range on lower tracks.
+
+If track 1 has a clip named `@ {Sc=1- The House}`, any clips beginning within that range on lower tracks will have a 
+field `Sc` with that value.
+
+## Important Notes
+
+This is experimental software, it is provided AS IS with no warranty for any purpose.
+
+At this time the application only accepts text exports in the UTF-8 format, and exports CSV encoded likewise.
 
 
 
