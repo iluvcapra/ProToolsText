@@ -83,7 +83,6 @@
 		9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEntityRectiferTest.swift; sourceTree = "<group>"; };
 		9A8002C91FF051A2009D4E28 /* SessionEntityTabulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEntityTabulator.swift; sourceTree = "<group>"; };
 		9A8002CC1FF051F1009D4E28 /* FieldParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldParser.swift; sourceTree = "<group>"; };
-		9A944FEC1FE71407007CFC2D /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		9A944FED1FE71952007CFC2D /* PT Text Export.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "PT Text Export.txt"; sourceTree = "<group>"; };
 		9A9450131FE71C1F007CFC2D /* PKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9450151FE71C1F007CFC2D /* PKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKit.h; sourceTree = "<group>"; };
@@ -175,7 +174,6 @@
 		9A944FE51FE713EF007CFC2D = {
 			isa = PBXGroup;
 			children = (
-				9A944FEC1FE71407007CFC2D /* Notes.rtf */,
 				9A70F4B81FF43FDF000DBF46 /* README.md */,
 				9A9450141FE71C1F007CFC2D /* PKit */,
 				9A94501F1FE71C1F007CFC2D /* PKitTests */,
