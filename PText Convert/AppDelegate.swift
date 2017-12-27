@@ -8,7 +8,7 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
 
 
 
@@ -36,7 +36,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         savePanel.message = "Select Export Folder and Export File Nase Name."
         savePanel.title = "Export"
         savePanel.nameFieldLabel = "Base Name:"
-        
+        savePanel.allowedFileTypes = ["csv"]
+        savePanel.isExtensionHidden = false
         if savePanel.runModal() != NSApplication.ModalResponse.OK  {
             return
         }
@@ -51,11 +52,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             try engine.convert(fileURL: inputUrl,
                        encoding: String.Encoding.utf8,
                        to: exportUrl)
+            convertSucceeded()
         } catch let error {
             NSApp.presentError(error)
         }
     }
     
+    func convertSucceeded() {
+        let alert = NSAlert()
+        alert.addButton(withTitle: "OK")
+        //alert.addButton(withTitle: "Reveal File")
+        //alert.addButton(withTitle: "Open in Filemaker Pro")
+        
+        alert.delegate = self
+        
+        alert.messageText = "Conversion succeeded."
+        alert.runModal()
+    }
 
 
 }

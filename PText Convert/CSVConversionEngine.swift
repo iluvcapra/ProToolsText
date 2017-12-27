@@ -38,6 +38,7 @@ class CSVWriter: NSObject {
     }
     
     init(writeTo url: URL, encoding : String.Encoding) throws {
+        FileManager().createFile(atPath: url.path, contents: nil, attributes: nil)
         fileHandle = try FileHandle(forWritingTo: url)
         self.encoding = encoding
     }
@@ -109,6 +110,5 @@ class CSVConversionEngine: NSObject, SessionEntityTabulatorDelegate {
         records.forEach { (record) in
             writer.writeRecord(fields: row(for: record))
         }
-
     }
 }

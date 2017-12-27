@@ -103,5 +103,9 @@ class PTEntityParser: NSObject, PTTextFileParserDelegate {
                 timeReference: Int,
                 units: String,
                 name: String,
-                comments: String?) {}
+                comments: String?) {
+        
+        let m = MarkerEntity(rawName: name, rawComment: comments ?? "", rawLocation: atLocation)
+        markers.append(m)
+    }
 }
