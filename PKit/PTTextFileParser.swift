@@ -86,9 +86,7 @@ public class PTTextFileParser: NSObject {
     private var fieldValue : String = ""
     
     private func nextToken() {
-        guard let s = scanner else {
-            precondition(false)
-        }
+        let s = scanner! 
         
         var buffer : NSString? = nil
         let charSet = CharacterSet(charactersIn: "\t\n")
