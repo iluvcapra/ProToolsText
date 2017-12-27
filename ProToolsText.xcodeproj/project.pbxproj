@@ -63,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A70F4B81FF43FDF000DBF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9A80027A1FEEF9A6009D4E28 /* PText Convert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PText Convert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A8002801FEEF9A6009D4E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				9A944FEC1FE71407007CFC2D /* Notes.rtf */,
+				9A70F4B81FF43FDF000DBF46 /* README.md */,
 				9A9450141FE71C1F007CFC2D /* PKit */,
 				9A94501F1FE71C1F007CFC2D /* PKitTests */,
 				9A80027B1FEEF9A6009D4E28 /* PText Convert */,
