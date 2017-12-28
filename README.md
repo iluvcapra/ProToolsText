@@ -55,12 +55,12 @@ The output will contain the range:
 ### Fields in Track Names and Markers
 
 Fields set in track names, and in track comments, will be applied to *each* clip on that track. If a track comment 
-contains the text "{Dept=Foley}" for example, every clip on that track will have a "Foley" value in a "Dept" column.
+contains the text `{Dept=Foley}` for example, every clip on that track will have a "Foley" value in a "Dept" column.
 
 Likewise, fields set on the session name will apply to all clips in the session.
 
 Fields set in markers, and in marker comments, will be applied to all clips whose finish is *after* that marker. Fields
-in markers are applied cumulatively from breakfast to dinner in the session. The latest marker apllying to clip has
+in markers are applied cumulatively from breakfast to dinner in the session. The latest marker applying to a clip has
 precedence, so if one marker comes after the other, but both define a field, the value in the later marker
 
 An important note here is that, always, fields set on the clip name have the highest precedence. If a field is set in a clip
