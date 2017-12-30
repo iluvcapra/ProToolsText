@@ -1,7 +1,7 @@
 # ProToolsText
 Text parser and CSV converter for Avid Pro Tools text exports.
 
-## PText Converter
+## PText Converter.app
 
 ### Theory of Operation
 
