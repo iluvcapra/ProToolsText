@@ -177,7 +177,7 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
     /// done within `block`.
     ///
     /// If `block` throws an error, `lookahead` will simply return `false`. More granular
-    /// error handling should be donw within `block`.
+    /// error handling should be done within `block`.
     /// - parameter block   : Scanning in the block will be unwound if this block returns `false`
     ///             or an error is thrown
     /// - returns : Propagates the return value of `block`
