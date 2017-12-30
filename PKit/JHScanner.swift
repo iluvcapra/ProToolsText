@@ -148,7 +148,6 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
                 break
             }
         } while true
-        
     }
     
     /// Reads until `scalar` and returns the string of read characters. Hitting the
@@ -195,7 +194,6 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
             restoreState(begin)
             return false
         }
-
     }
     
     func accept(string : String)  -> Bool {

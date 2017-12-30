@@ -49,8 +49,48 @@ class JHScannerTests: XCTestCase {
                 return
             }
         }
+    }
+    
+    func testReadWhile() {
+        let s = JHScanner<String.UnicodeScalarView>(scalars: "123 Fake Street".unicodeScalars)
+        do {
+            let num = try s.readUpTo(scalar: UnicodeScalar(0x20) )
+            XCTAssertEqual(num, "123")
+            try s.expect(string: " ")
+            let street = try s.readWhile(characters: CharacterSet.alphanumerics)
+            XCTAssertEqual(street, "Fake")
+        } catch _ {
+            XCTFail("")
+        }
+    }
+    
+    func testLookahead() {
+        let s = JHScanner(scalars: "x[1,2]".unicodeScalars )
+        let b = s.lookahead {
+            try s.expect(string: "x")
+            try s.expect(string: "[")
+            return true
+        }
+        XCTAssertTrue(b)
+        XCTAssertNoThrow(try s.expect(string: "1,2") )
         
+        let s2 = JHScanner(scalars: "[R1]".unicodeScalars)
+        let b2 = s2.lookahead {
+            try s2.expect(string: "[R")
+            try s2.expect(string: "A")
+            return true
+        }
         
+        XCTAssertFalse(b2)
+        XCTAssertNoThrow(try s2.expect(string: "[R1"))
+    }
+    
+    func testRemainder() {
+        let s = JHScanner<String.UnicodeScalarView>(scalars: "wonder wonder".unicodeScalars)
+        XCTAssertNoThrow( try s.expect(string: "wonder") )
+        let rest = s.remainder
+        
+        XCTAssertEqual(String(rest), " wonder")
     }
 
 //    func testPerformanceExample() {
