@@ -1,7 +1,9 @@
 # ProToolsText
 Text parser and CSV converter for Avid Pro Tools text exports.
 
-## Theory of Operation
+## PText Converter
+
+### Theory of Operation
 
 Pro Tools exports a tab-delimited text file organized in multiple parts with an uneven syntax that usually can't "drop in" to
 other tools like Excel or Filemaker. This project implements a simple Mac OS X application that accepts a text export from 
