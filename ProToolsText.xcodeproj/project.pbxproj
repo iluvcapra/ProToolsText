@@ -27,6 +27,7 @@
 		9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A9450211FE71C1F007CFC2D /* PKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450201FE71C1F007CFC2D /* PKitTests.swift */; };
 		9A9450231FE71C1F007CFC2D /* PKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450151FE71C1F007CFC2D /* PKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */; };
 		9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
 		9AD6EE8E1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
 		9AE7E3D81FEB5B0200011429 /* ADR Spotting test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */; };
@@ -106,6 +107,7 @@
 		9A94501B1FE71C1F007CFC2D /* PKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9450201FE71C1F007CFC2D /* PKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKitTests.swift; sourceTree = "<group>"; };
 		9A9450221FE71C1F007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScannerTests.swift; sourceTree = "<group>"; };
 		9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScanner.swift; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
 		9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTTextFileParser.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				9A944FED1FE71952007CFC2D /* PT Text Export.txt */,
 				9A9450201FE71C1F007CFC2D /* PKitTests.swift */,
 				9A9450221FE71C1F007CFC2D /* Info.plist */,
+				9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */,
 			);
 			path = PKitTests;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */,
 				9AD6EE8E1FF595D1008C3CB0 /* JHScanner.swift in Sources */,
 				9A9450211FE71C1F007CFC2D /* PKitTests.swift in Sources */,
 			);

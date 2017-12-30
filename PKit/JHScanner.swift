@@ -172,15 +172,16 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
         try skipWhile { characters.contains($0)}
     }
     
-    /// Saves the state of the scanner and runs the block. If the block
-    /// returns false, the state of the scanner is restored, rewinding any scanning
-    /// done within `block`.
-    ///
-    /// If `block` throws an error, `lookahead` will simply return `false`. More granular
-    /// error handling should be done within `block`.
-    /// - parameter block   : Scanning in the block will be unwound if this block returns `false`
-    ///             or an error is thrown
-    /// - returns : Propagates the return value of `block`
+    /** Saves the state of the scanner and runs the block. If the block
+     returns false, the state of the scanner is restored, rewinding any scanning
+     done within `block`.
+     
+     If `block` throws an error, `lookahead` will simply return `false`. More granular
+     error handling should be done within `block`.
+     - parameter block   :  Scanning in the block will be unwound if this block returns `false`
+                            or an error is thrown
+     - returns : The return value of `block` && block returned without error
+     */
     func lookahead(with block: () throws  -> Bool) -> Bool {
         let begin = saveState()
         do {
