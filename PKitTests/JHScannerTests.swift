@@ -25,7 +25,7 @@ class JHScannerTests: XCTestCase {
     }
     
     func testScannerExpect() {
-        let s = JHScanner(scalars: "01 02 fire 03 % bank 😀".unicodeScalars)
+        let s = JHScanner(string: "01 02 fire 03 % bank 😀")
         XCTAssertNoThrow(try s.expect(string: "01"))
         XCTAssertNoThrow(try s.expect(scalar: Unicode.Scalar(0x20)))
         XCTAssertNoThrow(try s.expect(string: "02"))
@@ -52,7 +52,7 @@ class JHScannerTests: XCTestCase {
     }
     
     func testReadWhile() {
-        let s = JHScanner<String.UnicodeScalarView>(scalars: "123 Fake Street".unicodeScalars)
+        let s = JHScanner(string: "123 Fake Street")
         do {
             let num = try s.readUpTo(scalar: UnicodeScalar(0x20) )
             XCTAssertEqual(num, "123")
@@ -65,7 +65,7 @@ class JHScannerTests: XCTestCase {
     }
     
     func testSkipWhile() {
-        let s = JHScanner(scalars: "12345abc".unicodeScalars)
+        let s = JHScanner(string: "12345abc")
         XCTAssertNoThrow(try s.skipWhile(characters: CharacterSet.decimalDigits))
         let str = s.remainder
         XCTAssertEqual(String(str), "abc")
@@ -80,7 +80,7 @@ class JHScannerTests: XCTestCase {
         XCTAssertTrue(b)
         XCTAssertNoThrow(try s.expect(string: "1,2") )
         
-        let s2 = JHScanner(scalars: "[R1]".unicodeScalars)
+        let s2 = JHScanner(string: "[R1]")
         let b2 = s2.lookahead {
             try s2.expect(string: "[R")
             try s2.expect(string: "A")
@@ -91,7 +91,7 @@ class JHScannerTests: XCTestCase {
     }
     
     func testRemainder() {
-        let s = JHScanner<String.UnicodeScalarView>(scalars: "wonder wonder".unicodeScalars)
+        let s = JHScanner(string: "wonder wonder")
         XCTAssertNoThrow( try s.expect(string: "wonder") )
         let rest = s.remainder
         

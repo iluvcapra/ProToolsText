@@ -231,3 +231,9 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
         }
     }
 }
+
+public extension JHScanner where C == String.UnicodeScalarView {
+    convenience init(string : String) {
+        self.init(scalars: string.unicodeScalars)
+    }
+}
