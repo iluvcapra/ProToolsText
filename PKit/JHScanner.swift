@@ -181,15 +181,11 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
                             or an error is thrown
      - returns : The return value of `block` && block returned without error
      */
-    func lookahead(with block: () throws  -> Bool) -> Bool {
+    func lookahead(with block: () throws -> Void) -> Bool {
         let begin = saveState()
         do {
-            if try block() {
-                return true
-            } else {
-                restoreState(begin)
-                return false
-            }
+            try block()
+            return true
         } catch {
             restoreState(begin)
             return false
@@ -199,11 +195,8 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
     func accept(string : String)  -> Bool {
         return lookahead {
             for this in string.unicodeScalars {
-                if !accept(scalar: this) {
-                    return false
-                }
+                try expect(scalar: this)
             }
-            return true
         }
     }
     

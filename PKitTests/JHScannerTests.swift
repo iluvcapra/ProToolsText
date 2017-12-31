@@ -69,7 +69,6 @@ class JHScannerTests: XCTestCase {
         let b = s.lookahead {
             try s.expect(string: "x")
             try s.expect(string: "[")
-            return true
         }
         XCTAssertTrue(b)
         XCTAssertNoThrow(try s.expect(string: "1,2") )
@@ -78,7 +77,6 @@ class JHScannerTests: XCTestCase {
         let b2 = s2.lookahead {
             try s2.expect(string: "[R")
             try s2.expect(string: "A")
-            return true
         }
         
         XCTAssertFalse(b2)
