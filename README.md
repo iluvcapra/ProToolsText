@@ -76,6 +76,10 @@ its time range on lower tracks.
 If track 1 has a clip named `@ {Sc=1- The House}`, any clips beginning within that range on lower tracks will have a 
 field `Sc` with that value.
 
+### Using `[AP]` to Combine Clips
+
+A clip name containing the `[AP]` field will have its parsed clip name appended to the following cue, and the fields of following cues will be applied (earlier clips having precedence). The clips need not be touching, and the clips will be combined into a single row of the output. The start time of the first clip will become the start time of the row, and the finish time of the last clip will become the finish time of the row.
+
 ## Important Notes
 
 This is experimental software, it is provided AS IS with no warranty for any purpose.

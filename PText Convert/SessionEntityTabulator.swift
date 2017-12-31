@@ -112,9 +112,34 @@ class SessionEntityTabulator {
         })
     }
     
+    private func accumulateRecord(forClipFields clipFields: [String:String],
+                        accumulatedFields : [String : String],
+                        trackFields : [ String: String],
+                        timespanFields : [String : String],
+                        markerFields : [String : String],
+                        sessionFields : [String : String] )  -> [String:String]{
+        var record = accumulatedFields
+            .mergeKeepCurrent(clipFields)
+            .mergeKeepCurrent(trackFields)
+            .mergeKeepCurrent(timespanFields)
+            .mergeKeepCurrent(markerFields)
+            .mergeKeepCurrent(sessionFields)
+        
+        if let currentClipName = clipFields[PTClipName],
+            let accum = accumulatedFields[PTClipName] {
+            record[PTClipName] = accum + " " + currentClipName
+        } else {
+            record[PTClipName] = accumulatedFields[PTClipName] ?? record[PTClipName]
+        }
+        record[PTFinish] = clipFields[PTFinish]
+        return record
+    }
+
     private func interpret(track : PTEntityParser.TrackEntity) {
         let trackFields = fields(for: track)
         let sessionFields = fields(for: session)
+        
+        var fieldAccumulator : [String:String] = [:]
         for clip in track.clips {
             if clip.rawName.hasPrefix("@") {
                 timeSpanClips.append(clip)
@@ -122,11 +147,20 @@ class SessionEntityTabulator {
                 let clipFields = fields(for: clip)
                 let memoryLocFields = memoryLocationFields(for: clip)
                 let tsFields = timespanFields(for: clip)
-                let record = clipFields.mergeKeepCurrent(trackFields)
-                    .mergeKeepCurrent(tsFields)
-                    .mergeKeepCurrent(memoryLocFields)
-                    .mergeKeepCurrent(sessionFields)
-                delegate?.rectifier(self, didReadRecord: record)
+                
+                fieldAccumulator = accumulateRecord(forClipFields: clipFields,
+                                                    accumulatedFields: fieldAccumulator,
+                                                    trackFields: trackFields,
+                                                    timespanFields: tsFields,
+                                                    markerFields: memoryLocFields,
+                                                    sessionFields: sessionFields)
+                
+                if let apidx = fieldAccumulator.index(forKey: "AP") {
+                    fieldAccumulator.remove(at: apidx)
+                } else {
+                    delegate?.rectifier(self, didReadRecord: fieldAccumulator)
+                    fieldAccumulator = [:]
+                }
             }
         }
     }

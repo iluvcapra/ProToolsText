@@ -41,9 +41,21 @@ class SessionEntityRectiferTest: XCTestCase {
             PTEntityParser.ClipEntity(rawName: "Test T2 $A=1 {B=Hello}",
                                       eventNumber: 1, rawStart: "01:00:00:01", rawFinish: "01:00:00:10",
                                       rawDuration: "00:00:01:00", muted: false),
-            PTEntityParser.ClipEntity(rawName: "Test T2",
+            PTEntityParser.ClipEntity(rawName: "Test T2 [AP]",
                                       eventNumber: 2, rawStart: "01:00:03:00", rawFinish: "01:00:03:10",
-                                      rawDuration: "00:00:00:10", muted: false)
+                                      rawDuration: "00:00:00:10", muted: false),
+            PTEntityParser.ClipEntity(rawName: "More test",
+                                      eventNumber: 2, rawStart: "01:00:03:20", rawFinish: "01:00:05:00",
+                                      rawDuration: "00:00:01:04", muted: false),
+            PTEntityParser.ClipEntity(rawName: "Long appending [AP] $TA=1",
+                                      eventNumber: 2, rawStart: "01:01:00:00", rawFinish: "01:00:01:00",
+                                      rawDuration: "00:00:01:04", muted: false),
+            PTEntityParser.ClipEntity(rawName: "More appending [AP] $TA=2",
+                                      eventNumber: 2, rawStart: "01:01:02:00", rawFinish: "01:00:04:01",
+                                      rawDuration: "00:00:01:04", muted: false),
+            PTEntityParser.ClipEntity(rawName: "... and the end $TA2=1",
+                                      eventNumber: 2, rawStart: "01:01:04:01", rawFinish: "01:00:08:00",
+                                      rawDuration: "00:00:01:04", muted: false)
 ,
             ]
         
@@ -68,7 +80,6 @@ class SessionEntityRectiferTest: XCTestCase {
     
     func testBasicClips() {
 
-        XCTAssertTrue(testDelegate!.records.count == 4)
         XCTAssertEqual(testDelegate!.records[0][PTClipName],"Test 1")
         XCTAssertEqual(testDelegate!.records[0][PTStart],"01:00:00:00")
         XCTAssertEqual(testDelegate!.records[0][PTTrackName],"Track 1")
@@ -82,11 +93,6 @@ class SessionEntityRectiferTest: XCTestCase {
         XCTAssertEqual(testDelegate!.records[2][PTClipName],"Test T2")
         XCTAssertEqual(testDelegate!.records[2][PTEventNumber],"1")
         XCTAssertEqual(testDelegate!.records[2][PTMuted],"")
-        
-        XCTAssertEqual(testDelegate!.records[3][PTTrackName],"Track 2")
-        XCTAssertEqual(testDelegate!.records[3][PTClipName],"Test T2")
-        XCTAssertEqual(testDelegate!.records[3][PTEventNumber],"2")
-        XCTAssertEqual(testDelegate!.records[3][PTMuted],"")
     }
     
     /*
@@ -135,5 +141,20 @@ class SessionEntityRectiferTest: XCTestCase {
         XCTAssertEqual(testDelegate!.records[2]["Sc"],"12 Int. House")
         XCTAssertNil(testDelegate!.records[3]["Sc"])
         
+    }
+    
+    func testAppendClips() {
+        XCTAssertEqual(testDelegate?.records[3][PTClipName], "Test T2 More test")
+        XCTAssertEqual(testDelegate?.records[3][PTStart],"01:00:03:00")
+        XCTAssertEqual(testDelegate?.records[3][PTFinish],"01:00:05:00")
+        XCTAssertNil(testDelegate?.records[3]["AP"])
+    }
+    
+    func testLongAppending() {
+        XCTAssertEqual(testDelegate?.records[4][PTClipName], "Long appending More appending ... and the end")
+        XCTAssertEqual(testDelegate?.records[4][PTStart],"01:01:00:00")
+        XCTAssertEqual(testDelegate?.records[4][PTFinish],"01:00:08:00")
+        XCTAssertEqual(testDelegate?.records[4]["TA"],"1")
+        XCTAssertEqual(testDelegate?.records[4]["TA2"],"1")
     }
 }
