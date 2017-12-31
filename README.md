@@ -36,7 +36,7 @@ is also included. The first row of the output *always* contains column headings.
 
 ### Fields in Clip Names
 
-Track names, track comments, and clip names can also contain meta-tags or "fields" to add additional columns to the CSV output.
+Track names, track comments, and clip names can also contain meta-tags, or "fields," to add additional columns to the CSV output.
 Thus, if a clip has the name:
 
 `Fireworks explosion {note=Replace for final} $V=1 [FX] [DESIGN]`
@@ -92,7 +92,7 @@ field `Sc` with that value.
 
 ### Using `[AP]` to Combine Clips
 
-A clip name containing the `[AP]` field will have its parsed clip name appended to the following cue, and the fields of following cues will be applied (earlier clips having precedence). The clips need not be touching, and the clips will be combined into a single row of the output. The start time of the first clip will become the start time of the row, and the finish time of the last clip will become the finish time of the row.
+A clip name setting the `[AP]` field will have its parsed clip name appended to the following cue, and the fields of following cues will be applied (earlier clips having precedence). The clips need not be touching, and the clips will be combined into a single row of the output. The start time of the first clip will become the start time of the row, and the finish time of the last clip will become the finish time of the row.
 
 ## Important Notes
 
