@@ -68,7 +68,7 @@ precedence, so if one marker comes after the other, but both define a field, the
 An important note here is that, always, fields set on the clip name have the highest precedence. If a field is set in a clip
 name, the same field set on the track, the value set on the clip will prevail.
 
-### Using "@" to Apply Fields to a Span of Clips
+### Using `@` to Apply Fields to a Span of Clips
 
 A clip name beginning with "@" will not be included in the CSV output, but its fields will be applied to clips within 
 its time range on lower tracks.
