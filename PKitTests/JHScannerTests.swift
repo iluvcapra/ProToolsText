@@ -54,10 +54,10 @@ class JHScannerTests: XCTestCase {
     func testReadWhile() {
         let s = JHScanner(string: "123 Fake Street")
         do {
-            let num = try s.readUpTo(scalar: UnicodeScalar(0x20) )
+            let num = s.readUpTo(scalar: UnicodeScalar(0x20) )
             XCTAssertEqual(num, "123")
             try s.expect(string: " ")
-            let street = try s.readWhile(characters: CharacterSet.alphanumerics)
+            let street = s.readWhile(characters: CharacterSet.alphanumerics)
             XCTAssertEqual(street, "Fake")
         } catch _ {
             XCTFail("")
@@ -66,7 +66,7 @@ class JHScannerTests: XCTestCase {
     
     func testSkipWhile() {
         let s = JHScanner(string: "12345abc")
-        XCTAssertNoThrow(try s.skipWhile(characters: CharacterSet.decimalDigits))
+        s.skipWhile(characters: CharacterSet.decimalDigits)
         let str = s.remainder
         XCTAssertEqual(String(str), "abc")
     }

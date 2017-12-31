@@ -19,27 +19,27 @@ import Foundation
  */
 public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
     private let scalars : C
-    private var consumed: Int
-    var offset: C.Index
+    public var consumed: Int
+    private var offset: C.Index
     
-    struct ExpectFailedError : Error {
+    public struct ExpectFailedError : Error {
         var expected : String
         var offset : Int
     }
     
-    struct AtEndError : Error { }
+    public struct AtEndError : Error { }
     
     private struct State {
         var consumed : Int
         var offset : C.Index
     }
     
-    var remainder : C.SubSequence {
+    public var remainder : C.SubSequence {
         return scalars[offset..<scalars.endIndex]
     }
     
     /// `true` if the scalar collection has been consumed
-    var atEnd : Bool {
+    public var atEnd : Bool {
         return scalars.endIndex == offset
     }
     
@@ -70,7 +70,7 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
     
     /** The basis the "accept" pattern. Returns the result of `ifTrue && !atEnd`
      */
-    func accept(ifTrue : (Unicode.Scalar) -> Bool ) -> Bool {
+    public func accept(ifTrue : (Unicode.Scalar) -> Bool ) -> Bool {
         if atEnd { return false }
         if ifTrue(scalars[offset]) {
             advance()
@@ -84,13 +84,13 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
     /// otherwise returns false.
     ///
     /// If `atEnd` is true, this returns false
-    func accept(scalar : UnicodeScalar) -> Bool {
+    public func accept(scalar : UnicodeScalar) -> Bool {
         return accept { scalar == $0 }
     }
     
     /// Gives the present character without advancing the scanner.
     ///
-    func peek() -> UnicodeScalar? {
+    public func peek() -> UnicodeScalar? {
         if atEnd {
             return nil
         } else {
@@ -98,20 +98,20 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
         }
     }
     
-    func expectAny() throws -> UnicodeScalar {
+    public func expectAny() throws -> UnicodeScalar {
         try expectMore()
         let retChar = scalars[offset]
         advance()
         return retChar
     }
     
-    func expectPeek() throws -> UnicodeScalar {
+    public func expectPeek() throws -> UnicodeScalar {
         try expectMore()
         return peek()!
     }
     
     /// Throws `JHScanner.AtEndError` if the scanner has exhausted the collection.
-    func expectMore() throws {
+    public func expectMore() throws {
         if atEnd {
             throw AtEndError()
         }
@@ -119,7 +119,7 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
     
     /// Throws if the character at the present index is `scalar`, throws
     /// under all other conditions.
-    func expect(scalar : UnicodeScalar) throws {
+    public func expect(scalar : UnicodeScalar) throws {
         try expectMore()
         if accept(scalar: scalar) {
             return
@@ -128,26 +128,27 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
         }
     }
     
-    /// Reads until `isTrue` returns `false` and returns the string of read characters. Hitting the
-    /// end before seeing `scalar` is an error.
-    func readWhile(isTrue : (UnicodeScalar) -> Bool) throws -> String {
+    /// Reads until `isTrue` returns `false` and returns the string of read characters.
+    /// If the collection is at the end, the empty string is returned.
+    public func readWhile(isTrue : (UnicodeScalar) -> Bool) -> String {
         var read = ""
         repeat {
-            let this = try expectPeek()
+            guard let this = peek() else { break }
             if isTrue(this) {
                 read.append(Character(this))
                 advance()
             } else {
                 break
             }
+
         } while true
         
         return read
     }
     
-    func skipWhile(isTrue : (UnicodeScalar) -> Bool) throws  {
+    public func skipWhile(isTrue : (UnicodeScalar) -> Bool)  {
         repeat {
-            let this = try expectPeek()
+            guard let this = peek() else { return }
             if isTrue(this) {
                 advance()
             } else {
@@ -158,23 +159,23 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
     
     /// Reads until `scalar` and returns the string of read characters. Hitting the
     /// end before seeing `scalar` is an error.
-    func readUpTo(scalar : UnicodeScalar) throws -> String {
-        return try readWhile { $0 != scalar }
+    public func readUpTo(scalar : UnicodeScalar) -> String {
+        return  readWhile { $0 != scalar }
     }
     
     /// Skip all characters up to `scalar`. Hitting the
     /// end before seeing `scalar` is an error. Upon return, the scanner is advanced
     /// past `scalar`.
-    func skipUpTo(scalar : UnicodeScalar) throws {
-        try skipWhile { $0 != scalar }
+    public func skipUpTo(scalar : UnicodeScalar) {
+        skipWhile { $0 != scalar }
     }
 
-    func readWhile(characters : CharacterSet) throws -> String {
-        return try readWhile { characters.contains($0)}
+    public func readWhile(characters : CharacterSet) -> String {
+        return readWhile { characters.contains($0)}
     }
     
-    func skipWhile(characters : CharacterSet) throws  {
-        try skipWhile { characters.contains($0)}
+    public func skipWhile(characters : CharacterSet)  {
+        skipWhile { characters.contains($0)}
     }
     
     /**
@@ -189,7 +190,7 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
                             or an error is thrown
      - returns : The return value of `block` && block returned without error
      */
-    func lookahead(with block: () throws -> Void) -> Bool {
+    public func lookahead(with block: () throws -> Void) -> Bool {
         let begin = saveState()
         do {
             try block()
@@ -200,18 +201,18 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
         }
     }
     
-    func accept(characterfromSet set : CharacterSet) -> Bool {
+    public func accept(characterfromSet set : CharacterSet) -> Bool {
         return accept { set.contains($0) }
     }
     
-    func expect(characterfromSet set : CharacterSet ) throws {
+    public func expect(characterfromSet set : CharacterSet ) throws {
         try expectMore()
         if !accept(characterfromSet: set) {
             throw ExpectFailedError(expected: set.description, offset: consumed)
         }
     }
     
-    func accept(string : String)  -> Bool {
+    public func accept(string : String)  -> Bool {
         return lookahead {
             for this in string.unicodeScalars {
                 try expect(scalar: this)
@@ -219,7 +220,7 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
         }
     }
     
-    func expect(string : String ) throws {
+    public func expect(string : String ) throws {
         if accept(string: string) {
             return
         } else {

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PKit
 
 class TagParser {
     enum Token {
@@ -25,7 +26,7 @@ class TagParser {
         var at : Int
     }
     
-    var scanner :Scanner
+    var scanner : JHScanner<String.UnicodeScalarView>
     var thisToken : Token = .Begin
     var thisWord : String?
     
@@ -34,27 +35,28 @@ class TagParser {
     
     func nextToken() {
         let exclusion = CharacterSet(charactersIn: "{}[]$=").union(CharacterSet.whitespaces)
-        var buffer : NSString? = nil
-        if scanner.scanCharacters(from: .whitespaces, into: nil) {
+        
+        if scanner.accept(characterfromSet: CharacterSet.whitespaces)  {
             thisToken = .Whitespace
             
-        } else if scanner.scanString("$", into: nil) {
+        } else if scanner.accept(string:"$") {
             thisToken = .Dollar
-        } else if scanner.scanString("{", into: nil) {
+        } else if scanner.accept(string:"{") {
             thisToken = .LeftBrace
-        } else if scanner.scanString("}", into: nil) {
+        } else if scanner.accept(string:"}") {
             thisToken = .RightBrace
-        } else if scanner.scanString("[", into: nil) {
+        } else if scanner.accept(string:"[") {
             thisToken = .LeftSquareBracket
-        } else if scanner.scanString("]", into: nil) {
+        } else if scanner.accept(string:"]") {
             thisToken = .RightSquareBracket
-        } else if scanner.scanString("=", into: nil) {
+        } else if scanner.accept(string:"=") {
             thisToken = .Equals
-        } else if scanner.scanUpToCharacters(from: exclusion, into: &buffer) {
-            thisToken = .Word
-            thisWord = buffer! as String
-        } else if scanner.isAtEnd {
+        } else if scanner.atEnd {
             thisToken = .End
+        } else {
+            let buffer = scanner.readWhile(characters: exclusion.inverted)
+            thisToken = .Word
+            thisWord = buffer
         }
     }
     
@@ -69,7 +71,7 @@ class TagParser {
     
     func expect(token : Token) throws {
         if !accept(token: token) {
-            throw TagParserError(at: scanner.scanLocation)
+            throw TagParserError(at: scanner.consumed)
         }
     }
     
@@ -125,7 +127,7 @@ class TagParser {
     }
     
     func fields() {
-        while !scanner.isAtEnd {
+        while !scanner.atEnd {
             if accept(token: .Dollar) {
                 try? dollarDecl()
             } else if accept(token: .LeftBrace) {
@@ -152,8 +154,7 @@ class TagParser {
     }
     
     init(string s: String) {
-        scanner = Scanner(string: s)
-        scanner.charactersToBeSkipped = nil
+        scanner = JHScanner(string: s)
     }
     
 }
