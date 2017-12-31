@@ -64,6 +64,13 @@ class JHScannerTests: XCTestCase {
         }
     }
     
+    func testSkipWhile() {
+        let s = JHScanner(scalars: "12345abc".unicodeScalars)
+        XCTAssertNoThrow(try s.skipWhile(characters: CharacterSet.decimalDigits))
+        let str = s.remainder
+        XCTAssertEqual(String(str), "abc")
+    }
+    
     func testLookahead() {
         let s = JHScanner(scalars: "x[1,2]".unicodeScalars )
         let b = s.lookahead {
