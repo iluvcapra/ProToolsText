@@ -68,18 +68,24 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
         consumed += 1
     }
     
-    /// Returns true if the character at the present index is `scalar`,
-    /// otherwise returns false.
-    ///
-    /// If `atEnd` is true, this returns false
-    func accept(scalar : UnicodeScalar) -> Bool {
+    /** The basis the "accept" pattern. Returns the result of `ifTrue && !atEnd`
+     */
+    func accept(ifTrue : (Unicode.Scalar) -> Bool ) -> Bool {
         if atEnd { return false }
-        if scalars[offset] == scalar {
+        if ifTrue(scalars[offset]) {
             advance()
             return true
         } else {
             return false
         }
+    }
+    
+    /// Returns true if the character at the present index is `scalar`,
+    /// otherwise returns false.
+    ///
+    /// If `atEnd` is true, this returns false
+    func accept(scalar : UnicodeScalar) -> Bool {
+        return accept { scalar == $0 }
     }
     
     /// Gives the present character without advancing the scanner.
@@ -162,7 +168,7 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
     func skipUpTo(scalar : UnicodeScalar) throws {
         try skipWhile { $0 != scalar }
     }
-    
+
     func readWhile(characters : CharacterSet) throws -> String {
         return try readWhile { characters.contains($0)}
     }
@@ -171,12 +177,14 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
         try skipWhile { characters.contains($0)}
     }
     
-    /** Saves the state of the scanner and runs the block. If the block
+    /**
+     Saves the state of the scanner and runs the block. If the block
      returns false, the state of the scanner is restored, rewinding any scanning
      done within `block`.
      
      If `block` throws an error, `lookahead` will simply return `false`. More granular
      error handling should be done within `block`.
+     
      - parameter block   :  Scanning in the block will be unwound if this block returns `false`
                             or an error is thrown
      - returns : The return value of `block` && block returned without error
@@ -189,6 +197,17 @@ public class JHScanner<C:Collection> where C.Iterator.Element == UnicodeScalar {
         } catch {
             restoreState(begin)
             return false
+        }
+    }
+    
+    func accept(characterfromSet set : CharacterSet) -> Bool {
+        return accept { set.contains($0) }
+    }
+    
+    func expect(characterfromSet set : CharacterSet ) throws {
+        try expectMore()
+        if !accept(characterfromSet: set) {
+            throw ExpectFailedError(expected: set.description, offset: consumed)
         }
     }
     
