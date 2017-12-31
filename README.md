@@ -3,12 +3,23 @@ Text parser and CSV converter for Avid Pro Tools text exports.
 
 ## PText Converter.app
 
+### Quick Start
+
+1. Download PText Converter.app from the [Releases page][releases].
+2. Launch PText Converter.app.
+3. From the "File" menu, select "Convert Text Export..." or type Command-O.
+4. Select a text export from Pro Tools.
+5. The app will present a save dialogue. Select a destination for the CSV file.
+6. Click OK.
+
+[releases]: https://github.com/iluvcapra/ProToolsText/releases
+
 ### Theory of Operation
 
-Pro Tools exports a tab-delimited text file organized in multiple parts with an uneven syntax that usually can't "drop in" to
+[Avid Pro Tools][avp] exports a tab-delimited text file organized in multiple parts with an uneven syntax that usually can't "drop in" to
 other tools like Excel or Filemaker. This project implements a simple Mac OS X application that accepts a text export from 
-Pro Tools and converts it into a CSV of the clips, unfolding track and session data in the process and also parsing
-additional columns from the clip, track and session name.
+Pro Tools and converts it into a [CSV][csv] of the clips, unfolding track and session data in the process, and also parsing
+additional columns from the clip, track, and session name.
 
 Importing a normal text export outputs a CSV with one row for each clip, like this:
 
@@ -20,9 +31,12 @@ Importing a normal text export outputs a CSV with one row for each clip, like th
 etc... Each clip has a column for the track name of the clip in addition to the session name. A column for the track comments 
 is also included. The first row of the output *always* contains column headings.
 
+[avp]: http://www.avid.com/pro-tools
+[csv]: https://tools.ietf.org/html/rfc4180
+
 ### Fields in Clip Names
 
-Track names, track comments and clip names can also contain meta-tags or "fields" to add aditional columns to the CSV output.
+Track names, track comments, and clip names can also contain meta-tags or "fields" to add additional columns to the CSV output.
 Thus, if a clip has the name:
 
 `Fireworks explosion {note=Replace for final} $V=1 [FX] [DESIGN]`
