@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import PKit
 
 class RectifierTestDelegate : SessionEntityTabulatorDelegate {
     
@@ -23,7 +24,7 @@ class SessionEntityRectiferTest: XCTestCase {
     
     override func setUp() {
         
-        let session = PTEntityParser.SessionEntity.init(rawTitle: "Test Session {S=Bill Hart}")
+        let session = PTEntityParser.SessionEntity(rawTitle: "Test Session {S=Bill Hart}")
         
         let testClipsTrack1 = [
             PTEntityParser.ClipEntity(rawName: "Test 1 $A=1 {B=Hello}",
@@ -62,7 +63,7 @@ class SessionEntityRectiferTest: XCTestCase {
         let testMarkers = [PTEntityParser.MarkerEntity(rawName: "Marker 1 [M1]",
                                                    rawComment: "[MM]",
                                                    rawLocation: "01:00:01:01"),
-                       PTEntityParser.MarkerEntity(rawName: "Marker 2 [M3]",
+                       PTEntityParser.MarkerEntity.init(rawName: "Marker 2 [M3]",
                                                    rawComment: "",
                                                    rawLocation: "01:00:10:01")
         ]

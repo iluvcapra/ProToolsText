@@ -16,8 +16,6 @@
 		9A8002A81FEEF9CB009D4E28 /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A8002B31FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */; };
 		9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */; };
-		9A8002C11FEF301A009D4E28 /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
-		9A8002C21FEF6CE4009D4E28 /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
 		9A8002C61FEF7DD1009D4E28 /* ADR Spotting test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002C51FEF7DD1009D4E28 /* ADR Spotting test.txt */; };
 		9A8002C81FF04A0E009D4E28 /* SessionEntityRectiferTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */; };
 		9A8002CA1FF051A2009D4E28 /* SessionEntityTabulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C91FF051A2009D4E28 /* SessionEntityTabulator.swift */; };
@@ -27,6 +25,7 @@
 		9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A9450211FE71C1F007CFC2D /* PKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9450201FE71C1F007CFC2D /* PKitTests.swift */; };
 		9A9450231FE71C1F007CFC2D /* PKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450151FE71C1F007CFC2D /* PKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A9C45921FF9C0FF00B13FDA /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
 		9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */; };
 		9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
 		9AD6EE8E1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
@@ -161,7 +160,6 @@
 				9A8002801FEEF9A6009D4E28 /* Assets.xcassets */,
 				9A8002821FEEF9A6009D4E28 /* Main.storyboard */,
 				9A8002851FEEF9A6009D4E28 /* Info.plist */,
-				9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */,
 				9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */,
 				9A8002CC1FF051F1009D4E28 /* FieldParser.swift */,
 				9A8002C91FF051A2009D4E28 /* SessionEntityTabulator.swift */,
@@ -212,6 +210,7 @@
 				9A9450151FE71C1F007CFC2D /* PKit.h */,
 				9A9450161FE71C1F007CFC2D /* Info.plist */,
 				9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */,
+				9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */,
 				9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */,
 			);
 			path = PKit;
@@ -442,7 +441,6 @@
 				9A8002CA1FF051A2009D4E28 /* SessionEntityTabulator.swift in Sources */,
 				9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */,
 				9A8002CD1FF051F1009D4E28 /* FieldParser.swift in Sources */,
-				9A8002C11FEF301A009D4E28 /* PTEntityParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +452,6 @@
 				9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A8002901FEEF9A7009D4E28 /* PText_ConvertTests.swift in Sources */,
 				9A8002CE1FF051F1009D4E28 /* FieldParser.swift in Sources */,
-				9A8002C21FEF6CE4009D4E28 /* PTEntityParser.swift in Sources */,
 				9A8002C81FF04A0E009D4E28 /* SessionEntityRectiferTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +470,7 @@
 			files = (
 				9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */,
 				9AE7E3DC1FEB5E8A00011429 /* PTTextFileParser.swift in Sources */,
+				9A9C45921FF9C0FF00B13FDA /* PTEntityParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
