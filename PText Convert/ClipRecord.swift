@@ -34,7 +34,7 @@ public struct ClipRecord {
                           muted: clip.muted, userData: [:])
     }
     
-    public mutating func applyFieldsCanonically() {
+    mutating func applyFieldsCanonically() {
         applyClipNameFields()
         applyTrackCommentFields()
         applyTrackNameFields()
@@ -70,13 +70,13 @@ public struct ClipRecord {
     mutating func applyClipNameFields() {
         let p = TagParser(string: clipName)
         let result = p.parse()
-        applyUserData(result.fields)
+        applyToUserData(result.fields)
         clipName = result.text
     }
     
     /// merges the given dictionary with `userData`, keeping the
     /// values of exisiting keys where they exist.
-    public mutating func applyToUserData(_ dict : [String:String]) {
+    mutating func applyToUserData(_ dict : [String:String]) {
         userData = userData.mergeKeepCurrent(dict)
     }
 }
