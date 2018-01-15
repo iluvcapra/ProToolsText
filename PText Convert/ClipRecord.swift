@@ -34,6 +34,7 @@ public struct ClipRecord {
                           muted: clip.muted, userData: [:])
     }
     
+    /// applies fields in clip, track and session entities with the standard precedence
     mutating func applyFieldsCanonically() {
         applyClipNameFields()
         applyTrackCommentFields()
