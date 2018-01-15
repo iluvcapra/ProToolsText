@@ -8,12 +8,6 @@
 import Cocoa
 import PKit
 
-extension Dictionary {
-    func mergeKeepCurrent(_ other : Dictionary<Key,Value>) -> Dictionary<Key, Value> {
-        return self.merging(other, uniquingKeysWith: { (current, _) -> Value in current} )
-    }
-}
-
 class CSVWriter: NSObject {
     
     var encoding : String.Encoding
@@ -56,13 +50,7 @@ class CSVWriter: NSObject {
 
 }
 
-class CSVConversionEngine: NSObject, SessionEntityTabulatorDelegate {
-    
-    var records : [[String:String]] = []
-    
-    func rectifier(_ r: SessionEntityTabulator, didReadRecord rec: [String : String]) {
-        records.append(rec)
-    }
+class CSVConversionEngine: NSObject {
     
     private func recordFieldSet() -> Set<String> {
         return records.reduce(Set<String>(), { (accum, thisRecord) -> Set<String> in
@@ -92,12 +80,6 @@ class CSVConversionEngine: NSObject, SessionEntityTabulatorDelegate {
     func convert(fileURL : URL, encoding: String.Encoding, to : URL) throws {
         
         let entityParser = try PTEntityParser(url: fileURL, encoding: encoding.rawValue)
-        let tabulator = SessionEntityTabulator(tracks: entityParser.tracks,
-                                               markers: entityParser.markers,
-                                               session: entityParser.session!)
-        records = []
-        tabulator.delegate = self
-        tabulator.interpetRecords()
         
         let writer = try CSVWriter(writeTo: to, encoding: String.Encoding.utf8)
         writer.writeRecord(fields: orderedFields())

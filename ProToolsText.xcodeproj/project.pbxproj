@@ -29,6 +29,8 @@
 		9A9C45921FF9C0FF00B13FDA /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
 		9A9E8487200C24F0006D8F69 /* ClipRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E8486200C24F0006D8F69 /* ClipRecordTests.swift */; };
 		9A9E8488200C34E5006D8F69 /* ClipRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A525AAE200C1E7900BA2055 /* ClipRecord.swift */; };
+		9A9E848A200C3A34006D8F69 /* Dictionary_additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E8489200C3A33006D8F69 /* Dictionary_additions.swift */; };
+		9A9E848B200C3A39006D8F69 /* Dictionary_additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E8489200C3A33006D8F69 /* Dictionary_additions.swift */; };
 		9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */; };
 		9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
 		9AD6EE8E1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
@@ -110,6 +112,7 @@
 		9A9450201FE71C1F007CFC2D /* PKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKitTests.swift; sourceTree = "<group>"; };
 		9A9450221FE71C1F007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9E8486200C24F0006D8F69 /* ClipRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipRecordTests.swift; sourceTree = "<group>"; };
+		9A9E8489200C3A33006D8F69 /* Dictionary_additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary_additions.swift; sourceTree = "<group>"; };
 		9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScannerTests.swift; sourceTree = "<group>"; };
 		9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScanner.swift; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8002B51FEF0092009D4E28 /* PText Convert.entitlements */,
+				9A9E8489200C3A33006D8F69 /* Dictionary_additions.swift */,
 				9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */,
 				9A8002801FEEF9A6009D4E28 /* Assets.xcassets */,
 				9A8002821FEEF9A6009D4E28 /* Main.storyboard */,
@@ -445,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A525AAF200C1E7900BA2055 /* ClipRecord.swift in Sources */,
+				9A9E848A200C3A34006D8F69 /* Dictionary_additions.swift in Sources */,
 				9A8002B31FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A8002CA1FF051A2009D4E28 /* SessionEntityTabulator.swift in Sources */,
 				9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */,
@@ -457,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8002CB1FF051A2009D4E28 /* SessionEntityTabulator.swift in Sources */,
+				9A9E848B200C3A39006D8F69 /* Dictionary_additions.swift in Sources */,
 				9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A8002901FEEF9A7009D4E28 /* TagParserTests.swift in Sources */,
 				9A8002CE1FF051F1009D4E28 /* FieldParser.swift in Sources */,
