@@ -12,7 +12,7 @@
 		9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */; };
 		9A8002811FEEF9A6009D4E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002801FEEF9A6009D4E28 /* Assets.xcassets */; };
 		9A8002841FEEF9A6009D4E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002821FEEF9A6009D4E28 /* Main.storyboard */; };
-		9A8002901FEEF9A7009D4E28 /* PText_ConvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80028F1FEEF9A7009D4E28 /* PText_ConvertTests.swift */; };
+		9A8002901FEEF9A7009D4E28 /* TagParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80028F1FEEF9A7009D4E28 /* TagParserTests.swift */; };
 		9A80029B1FEEF9A7009D4E28 /* PText_ConvertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80029A1FEEF9A7009D4E28 /* PText_ConvertUITests.swift */; };
 		9A8002A81FEEF9CB009D4E28 /* PKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; };
 		9A8002B31FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */; };
@@ -89,7 +89,7 @@
 		9A8002831FEEF9A6009D4E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A8002851FEEF9A6009D4E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A80028B1FEEF9A6009D4E28 /* PText ConvertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PText ConvertTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A80028F1FEEF9A7009D4E28 /* PText_ConvertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PText_ConvertTests.swift; sourceTree = "<group>"; };
+		9A80028F1FEEF9A7009D4E28 /* TagParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagParserTests.swift; sourceTree = "<group>"; };
 		9A8002911FEEF9A7009D4E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8002961FEEF9A7009D4E28 /* PText ConvertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PText ConvertUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A80029A1FEEF9A7009D4E28 /* PText_ConvertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PText_ConvertUITests.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8002C51FEF7DD1009D4E28 /* ADR Spotting test.txt */,
-				9A80028F1FEEF9A7009D4E28 /* PText_ConvertTests.swift */,
+				9A80028F1FEEF9A7009D4E28 /* TagParserTests.swift */,
 				9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */,
 				9A8002911FEEF9A7009D4E28 /* Info.plist */,
 				9A9E8486200C24F0006D8F69 /* ClipRecordTests.swift */,
@@ -457,7 +457,7 @@
 			files = (
 				9A8002CB1FF051A2009D4E28 /* SessionEntityTabulator.swift in Sources */,
 				9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
-				9A8002901FEEF9A7009D4E28 /* PText_ConvertTests.swift in Sources */,
+				9A8002901FEEF9A7009D4E28 /* TagParserTests.swift in Sources */,
 				9A8002CE1FF051F1009D4E28 /* FieldParser.swift in Sources */,
 				9A9E8487200C24F0006D8F69 /* ClipRecordTests.swift in Sources */,
 				9A8002C81FF04A0E009D4E28 /* SessionEntityRectiferTest.swift in Sources */,
