@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import PText_Convert
+//@testable import PText_Convert
 
 class ClipRecordTests: XCTestCase {
 
