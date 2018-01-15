@@ -1,6 +1,8 @@
 # ProToolsText
 Text parser and CSV converter for Avid Pro Tools text exports.
 
+Of most interest at this time is the PText Converter.app utility program...
+
 ## PText Converter.app
 
 ### Quick Start
