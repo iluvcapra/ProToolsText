@@ -8,6 +8,21 @@
 import Foundation
 import PKit
 
+
+let PTSessionName       = "PT_SessionName"
+let PTRawSessionName    = "PT_RawSessionName"
+let PTTrackName         = "PT_TrackName"
+let PTRawTrackName      = "PT_RawTrackName"
+let PTTrackComment      = "PT_TrackComment"
+let PTRawTrackComment   = "PT_RawTrackComment"
+let PTEventNumber       = "PT_EventNumber"
+let PTClipName          = "PT_ClipName"
+let PTRawClipName       = "PT_RawClipName"
+let PTStart             = "PT_Start"
+let PTFinish            = "PT_Finish"
+let PTDuration          = "PT_Duration"
+let PTMuted             = "PT_Muted"
+
 public struct ClipRecord {
     public var sessionName : String
     public var trackName : String
@@ -32,14 +47,6 @@ public struct ClipRecord {
                           muted: clip.muted, userData: [:])
     }
     
-    /// applies fields in clip, track and session entities with the standard precedence
-    mutating func applyFieldsCanonically() {
-        applyClipNameFields()
-        applyTrackCommentFields()
-        applyTrackNameFields()
-        applySessionNameFields()
-    }
-    
     /**
      Appends `clipRecord` to this `ClipRecord`, mergeing the `userDatas`, appending the clip names and setting
      the receiver's end time to the argument's
@@ -50,6 +57,27 @@ public struct ClipRecord {
         retVal.clipName = [clipName, clipRecord.clipName].joined(separator: " ")
         retVal.finish = clipRecord.finish
         return retVal
+    }
+    
+    public func toDict() -> [String:String] {
+        return [
+            PTSessionName : sessionName,
+            PTTrackName : trackName,
+            PTTrackComment : trackComment,
+            PTEventNumber : String(eventNumber),
+            PTClipName : clipName,
+            PTStart : start,
+            PTFinish : finish,
+            PTMuted : muted ? "Muted" : "Not Muted",
+        ].mergeKeepCurrent(userData)
+    }
+    
+    /// applies fields in clip, track and session entities with the standard precedence
+    mutating func applyFieldsCanonically() {
+        applyClipNameFields()
+        applyTrackCommentFields()
+        applyTrackNameFields()
+        applySessionNameFields()
     }
     
     /**

@@ -19,20 +19,6 @@ protocol SessionEntityTabulatorDelegate {
     func rectifier(_ r: SessionEntityTabulator, didReadRecord : [String:String])
 }
 
-let PTSessionName       = "PT_SessionName"
-let PTRawSessionName    = "PT_RawSessionName"
-let PTTrackName         = "PT_TrackName"
-let PTRawTrackName      = "PT_RawTrackName"
-let PTTrackComment      = "PT_TrackComment"
-let PTRawTrackComment   = "PT_RawTrackComment"
-let PTEventNumber       = "PT_EventNumber"
-let PTClipName          = "PT_ClipName"
-let PTRawClipName       = "PT_RawClipName"
-let PTStart             = "PT_Start"
-let PTFinish            = "PT_Finish"
-let PTDuration          = "PT_Duration"
-let PTMuted             = "PT_Muted"
-
 class SessionEntityTabulator {
     
     private let session : PTEntityParser.SessionEntity
