@@ -71,6 +71,14 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
     
     private var thisTrack : TrackEntity?
     
+    public init(url : URL, encoding : UInt) throws {
+        super.init()
+        let parser = PTTextFileParser()
+        parser.delegate = self
+        let data = try Data(contentsOf: url)
+        try parser.parse(data: data, encoding: encoding)
+    }
+    
     public func parserWillBegin(_ parser : PTTextFileParser) {
         session = nil
         markers = []

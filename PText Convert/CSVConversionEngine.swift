@@ -90,14 +90,8 @@ class CSVConversionEngine: NSObject, SessionEntityTabulatorDelegate {
     }
     
     func convert(fileURL : URL, encoding: String.Encoding, to : URL) throws {
-        let textParser = PTTextFileParser()
         
-        let entityParser = PTEntityParser()
-        textParser.delegate = entityParser
-        
-        let fileData = try Data(contentsOf: fileURL)
-        try textParser.parse(data: fileData, encoding: encoding.rawValue)
-        
+        let entityParser = try PTEntityParser(url: fileURL, encoding: encoding.rawValue)
         let tabulator = SessionEntityTabulator(tracks: entityParser.tracks,
                                                markers: entityParser.markers,
                                                session: entityParser.session!)
