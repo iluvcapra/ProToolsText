@@ -12,6 +12,7 @@ import PKit
 let PTSessionName       = "PT_SessionName"
 let PTRawSessionName    = "PT_RawSessionName"
 let PTTrackName         = "PT_TrackName"
+let PTTrackIndex        = "PT_TrackIndex"
 let PTRawTrackName      = "PT_RawTrackName"
 let PTTrackComment      = "PT_TrackComment"
 let PTRawTrackComment   = "PT_RawTrackComment"
@@ -23,10 +24,13 @@ let PTFinish            = "PT_Finish"
 let PTDuration          = "PT_Duration"
 let PTMuted             = "PT_Muted"
 
+let AppendingField      = "AP"
+
 public struct ClipRecord {
     public var sessionName : String
     public var trackName : String
     public var trackComment : String
+    public var trackIndex : Int
     public var eventNumber : Int
     public var clipName : String
     public var start : String
@@ -34,17 +38,35 @@ public struct ClipRecord {
     public var muted : Bool
     public var userData : [String:String] = [:]
     
-    public static func from(clip : PTEntityParser.ClipEntity,
-                     track: PTEntityParser.TrackEntity,
-                     session : PTEntityParser.SessionEntity ) -> ClipRecord {
-        return ClipRecord(sessionName: session.rawTitle,
-                          trackName: track.rawTitle,
-                          trackComment: track.rawComment,
-                          eventNumber: clip.eventNumber,
-                          clipName: clip.rawName,
-                          start: clip.rawStart, finish:
-                            clip.rawFinish,
-                          muted: clip.muted, userData: [:])
+    
+    public static func from(tracks : [PTEntityParser.TrackEntity],
+                            markers : [PTEntityParser.MarkerEntity],
+                            session : PTEntityParser.SessionEntity) -> [ClipRecord] {
+
+        let records = tracks.enumerated().flatMap { (offset, track) -> [ClipRecord] in
+            let simpleRecords = ClipRecord.from(track: track, trackIndex: offset, session: session)
+            
+            
+            return simpleRecords
+        }
+        
+        
+    }
+    
+    public static func from(track : PTEntityParser.TrackEntity,
+                            trackIndex : Int,
+                            session : PTEntityParser.SessionEntity) -> [ClipRecord] {
+        return track.clips.map({ (clip) -> ClipRecord in
+            return ClipRecord(sessionName: session.rawTitle,
+                              trackName: track.rawTitle,
+                              trackComment: track.rawComment,
+                              trackIndex: trackIndex,
+                              eventNumber: clip.eventNumber,
+                              clipName: clip.rawName,
+                              start: clip.rawStart,
+                              finish: clip.rawFinish,
+                              muted: clip.muted, userData: [:])
+        })
     }
     
     /**
@@ -68,7 +90,7 @@ public struct ClipRecord {
             PTClipName : clipName,
             PTStart : start,
             PTFinish : finish,
-            PTMuted : muted ? "Muted" : "Not Muted",
+            PTMuted : muted ? PTMuted : "",
         ].mergeKeepCurrent(userData)
     }
     
