@@ -50,7 +50,13 @@ class CSVWriter: NSObject {
 
 }
 
-class CSVConversionEngine: NSObject {
+class CSVConversionEngine: NSObject, SessionEntityTabulatorDelegate {
+    
+    var records : [[String:String]] = []
+    
+    func rectifier(_ r: SessionEntityTabulator, didReadRecord rec: [String : String]) {
+        records.append(rec)
+    }
     
     private func recordFieldSet() -> Set<String> {
         return records.reduce(Set<String>(), { (accum, thisRecord) -> Set<String> in

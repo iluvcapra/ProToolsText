@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A44CB9F200D8650000E4605 /* DictionaryAdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A44CB9E200D8650000E4605 /* DictionaryAdditionsTests.swift */; };
 		9A525AAF200C1E7900BA2055 /* ClipRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A525AAE200C1E7900BA2055 /* ClipRecord.swift */; };
 		9A70F4BB1FF448AD000DBF46 /* PKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */; };
@@ -84,6 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A44CB9E200D8650000E4605 /* DictionaryAdditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAdditionsTests.swift; sourceTree = "<group>"; };
 		9A525AAE200C1E7900BA2055 /* ClipRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipRecord.swift; sourceTree = "<group>"; };
 		9A70F4B81FF43FDF000DBF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9A80027A1FEEF9A6009D4E28 /* PText Convert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PText Convert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 				9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */,
 				9A8002911FEEF9A7009D4E28 /* Info.plist */,
 				9A9E8486200C24F0006D8F69 /* ClipRecordTests.swift */,
+				9A44CB9E200D8650000E4605 /* DictionaryAdditionsTests.swift */,
 			);
 			path = "PText ConvertTests";
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				9A8002901FEEF9A7009D4E28 /* TagParserTests.swift in Sources */,
 				9A8002CE1FF051F1009D4E28 /* FieldParser.swift in Sources */,
 				9A9E8488200C34E5006D8F69 /* ClipRecord.swift in Sources */,
+				9A44CB9F200D8650000E4605 /* DictionaryAdditionsTests.swift in Sources */,
 				9A9E8487200C24F0006D8F69 /* ClipRecordTests.swift in Sources */,
 				9A8002C81FF04A0E009D4E28 /* SessionEntityRectiferTest.swift in Sources */,
 			);

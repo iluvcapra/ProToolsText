@@ -24,7 +24,7 @@ extension Sequence where Element: Comparable {
     }
 }
 
-extension Sequence where Element == Dictionary<String,Any> {
+extension Sequence where Iterator.Element == Dictionary<String,Any> {
     
     /// Returns the unique keys of every dictionary in the sequence, sorted.
     func collatedKeys() -> [String] {
