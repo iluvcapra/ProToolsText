@@ -26,19 +26,19 @@ extension Sequence where Element: Comparable {
 
 extension Sequence where Element == Dictionary<String,Any> {
     
-    /// returns the unique keys of every dictionary in the sequence, sorted.
+    /// Returns the unique keys of every dictionary in the sequence, sorted.
     func collatedKeys() -> [String] {
         let keys = self.flatMap {$0.keys}
         return Set(keys).sorted()
     }
     
-    /// returns the unique keys of every dictionary in the sequence, sorted with `prefix` elements first.
+    /// Returns the unique keys of every dictionary in the sequence, sorted with `prefix` elements first.
     func collatedKeys(prefix : [String]) -> [String] {
         let keys = self.flatMap {$0.keys}
         return Set(keys).sorted(prefix: prefix)
     }
     
-    /// returns the sorted values of each dict, in the order of `collatedKeys()`. Where a key does not exist, a nil is
+    /// Returns the sorted values of each dict, in the order of `collatedKeys()`. Where a key does not exist, a nil is
     /// substituted.
     func collatedValues() -> [[Any?]] {
         return map { (dict) -> [Any?] in
@@ -46,7 +46,7 @@ extension Sequence where Element == Dictionary<String,Any> {
         }
     }
     
-    /// returns the sorted values of each dict, in the order of `collatedKeys(prefix:)`. Where a key does not exist, a nil is
+    /// Returns the sorted values of each dict, in the order of `collatedKeys(prefix:)`. Where a key does not exist, a nil is
     /// substituted.
     func collatedValues(prefixKeys : [String] ) -> [[Any?]] {
         return map { (dict) -> [Any?] in
