@@ -62,6 +62,24 @@ public class PTTextFileParser: NSObject {
         
         case Field
         case End
+        
+        var errorDescription : String {
+            switch self {
+            case .Begin:
+                return "the Beginning"
+            case .TripleLineBreak:
+                return "Three Line Breaks"
+            case .LineBreak:
+                return "a Line Break"
+            case .ColumnBreak:
+                return "a Column Break"
+            case .Field:
+                return "a String Field"
+            case .End:
+                return "the End"
+            }
+        }
+        
     }
     
     private struct ParseTokenError : Error {
@@ -69,6 +87,11 @@ public class PTTextFileParser: NSObject {
         var found : Token
         var column : Int
         var line : Int
+        
+        var localizedDescription: String {
+            return "Parse error, expected \(expected.errorDescription) (actually encountered \(found.errorDescription)) at line \(line), column \(column)."
+        }
+        
     }
     
     private struct ParseNumberError : Error {
