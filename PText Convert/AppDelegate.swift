@@ -6,11 +6,12 @@
 //
 
 import Cocoa
+import PKit // for error reporting
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
 
-
+    let errorDomain = "PTextConvertErrorDomain"
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -53,8 +54,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
                        encoding: String.Encoding.utf8,
                        to: exportUrl)
             convertSucceeded()
+        } catch let error as PTTextFileParser.ParseTokenError {
+            let errorMessage = error.localizedDescription
+            let presentedError = NSError(domain: errorDomain, code: -1,
+                                         userInfo: [NSLocalizedDescriptionKey : errorMessage])
+            
+            NSApp.presentError(presentedError)
         } catch let error {
-            NSApp.presentError(error)
+            let presentedError = NSError(domain: errorDomain, code: -1, userInfo: [NSUnderlyingErrorKey : error])
+            NSApp.presentError(presentedError)
         }
     }
     
