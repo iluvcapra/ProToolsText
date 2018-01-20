@@ -318,25 +318,22 @@ public class PTTextFileParser: NSObject {
         try expect(token: .ColumnBreak)
         let userDelay = try expectString()
         try expect(token: .LineBreak)
-        try expect(string: "STATE: ")
-        var states = [String]()
-        while accept(token: .ColumnBreak) {
-            states.append(try expectString())
-        }
+        let rawStates = try expectString() /* "STATE: */
+        let statesString = rawStates.dropFirst(7)
+        let states = statesString.components(separatedBy: " ")
         try expect(token: .LineBreak)
-        try expect(string: "PLUG-INS: ")
         var plugins = [String]()
-        while accept(token: .ColumnBreak) {
-            plugins.append(try expectString())
+        if accept(string: "PLUG-INS:") {
+            while accept(token: .ColumnBreak) {
+                plugins.append(try expectString())
+            }
+            try expect(token: .LineBreak)
         }
-        try expect(token: .LineBreak)
-        
         delegate?.parser(self, willReadEventsForTrack: trackName,
                          comments: comments,
                          userDelay: userDelay,
                          stateFlags: states,
                          plugins: plugins)
-        
         try expect(string: "CHANNEL ")
         try expect(token: .ColumnBreak)
         try expect(string: "EVENT   ")

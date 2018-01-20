@@ -1,10 +1,10 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 48;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
 
 /* Begin PBXBuildFile section */
         9A44CB9F200D8650000E4605 /* DictionaryAdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A44CB9E200D8650000E4605 /* DictionaryAdditionsTests.swift */; };
@@ -41,47 +41,47 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        9A80028C1FEEF9A6009D4E28 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 9A944FE61FE713EF007CFC2D /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 9A8002791FEEF9A6009D4E28;
-            remoteInfo = "PText Convert";
-        };
-        9A8002971FEEF9A7009D4E28 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 9A944FE61FE713EF007CFC2D /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 9A8002791FEEF9A6009D4E28;
-            remoteInfo = "PText Convert";
-        };
-        9A8002A61FEEF9C4009D4E28 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 9A944FE61FE713EF007CFC2D /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 9A9450121FE71C1F007CFC2D;
-            remoteInfo = PKit;
-        };
-        9A94501D1FE71C1F007CFC2D /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 9A944FE61FE713EF007CFC2D /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 9A9450121FE71C1F007CFC2D;
-            remoteInfo = PKit;
-        };
+		9A80028C1FEEF9A6009D4E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A944FE61FE713EF007CFC2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A8002791FEEF9A6009D4E28;
+			remoteInfo = "PText Convert";
+		};
+		9A8002971FEEF9A7009D4E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A944FE61FE713EF007CFC2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A8002791FEEF9A6009D4E28;
+			remoteInfo = "PText Convert";
+		};
+		9A8002A61FEEF9C4009D4E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A944FE61FE713EF007CFC2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A9450121FE71C1F007CFC2D;
+			remoteInfo = PKit;
+		};
+		9A94501D1FE71C1F007CFC2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A944FE61FE713EF007CFC2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A9450121FE71C1F007CFC2D;
+			remoteInfo = PKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-        9A70F4BA1FF448A1000DBF46 /* CopyFiles */ = {
-            isa = PBXCopyFilesBuildPhase;
-            buildActionMask = 2147483647;
-            dstPath = "";
-            dstSubfolderSpec = 10;
-            files = (
-                9A70F4BB1FF448AD000DBF46 /* PKit.framework in CopyFiles */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		9A70F4BA1FF448A1000DBF46 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A70F4BB1FF448AD000DBF46 /* PKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -122,43 +122,43 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        9A8002771FEEF9A6009D4E28 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                9A8002A81FEEF9CB009D4E28 /* PKit.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        9A8002881FEEF9A6009D4E28 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        9A8002931FEEF9A7009D4E28 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        9A94500F1FE71C1F007CFC2D /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        9A9450181FE71C1F007CFC2D /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		9A8002771FEEF9A6009D4E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8002A81FEEF9CB009D4E28 /* PKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A8002881FEEF9A6009D4E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A8002931FEEF9A7009D4E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A94500F1FE71C1F007CFC2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A9450181FE71C1F007CFC2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A94501C1FE71C1F007CFC2D /* PKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -245,108 +245,108 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-        9A9450101FE71C1F007CFC2D /* Headers */ = {
-            isa = PBXHeadersBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                9A9450231FE71C1F007CFC2D /* PKit.h in Headers */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		9A9450101FE71C1F007CFC2D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A9450231FE71C1F007CFC2D /* PKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-        9A8002791FEEF9A6009D4E28 /* PText Convert */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 9A80029D1FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText Convert" */;
-            buildPhases = (
-                9A8002761FEEF9A6009D4E28 /* Sources */,
-                9A8002771FEEF9A6009D4E28 /* Frameworks */,
-                9A8002781FEEF9A6009D4E28 /* Resources */,
-                9A70F4BA1FF448A1000DBF46 /* CopyFiles */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                9A8002A71FEEF9C4009D4E28 /* PBXTargetDependency */,
-            );
-            name = "PText Convert";
-            productName = "PText Convert";
-            productReference = 9A80027A1FEEF9A6009D4E28 /* PText Convert.app */;
-            productType = "com.apple.product-type.application";
-        };
-        9A80028A1FEEF9A6009D4E28 /* PText ConvertTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 9A8002A01FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText ConvertTests" */;
-            buildPhases = (
-                9A8002871FEEF9A6009D4E28 /* Sources */,
-                9A8002881FEEF9A6009D4E28 /* Frameworks */,
-                9A8002891FEEF9A6009D4E28 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                9A80028D1FEEF9A6009D4E28 /* PBXTargetDependency */,
-            );
-            name = "PText ConvertTests";
-            productName = "PText ConvertTests";
-            productReference = 9A80028B1FEEF9A6009D4E28 /* PText ConvertTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        9A8002951FEEF9A7009D4E28 /* PText ConvertUITests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 9A8002A31FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText ConvertUITests" */;
-            buildPhases = (
-                9A8002921FEEF9A7009D4E28 /* Sources */,
-                9A8002931FEEF9A7009D4E28 /* Frameworks */,
-                9A8002941FEEF9A7009D4E28 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                9A8002981FEEF9A7009D4E28 /* PBXTargetDependency */,
-            );
-            name = "PText ConvertUITests";
-            productName = "PText ConvertUITests";
-            productReference = 9A8002961FEEF9A7009D4E28 /* PText ConvertUITests.xctest */;
-            productType = "com.apple.product-type.bundle.ui-testing";
-        };
-        9A9450121FE71C1F007CFC2D /* PKit */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 9A9450241FE71C1F007CFC2D /* Build configuration list for PBXNativeTarget "PKit" */;
-            buildPhases = (
-                9A94500E1FE71C1F007CFC2D /* Sources */,
-                9A94500F1FE71C1F007CFC2D /* Frameworks */,
-                9A9450101FE71C1F007CFC2D /* Headers */,
-                9A9450111FE71C1F007CFC2D /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = PKit;
-            productName = PKit;
-            productReference = 9A9450131FE71C1F007CFC2D /* PKit.framework */;
-            productType = "com.apple.product-type.framework";
-        };
-        9A94501A1FE71C1F007CFC2D /* PKitTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 9A9450271FE71C1F007CFC2D /* Build configuration list for PBXNativeTarget "PKitTests" */;
-            buildPhases = (
-                9A9450171FE71C1F007CFC2D /* Sources */,
-                9A9450181FE71C1F007CFC2D /* Frameworks */,
-                9A9450191FE71C1F007CFC2D /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                9A94501E1FE71C1F007CFC2D /* PBXTargetDependency */,
-            );
-            name = PKitTests;
-            productName = PKitTests;
-            productReference = 9A94501B1FE71C1F007CFC2D /* PKitTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
+		9A8002791FEEF9A6009D4E28 /* PText Convert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A80029D1FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText Convert" */;
+			buildPhases = (
+				9A8002761FEEF9A6009D4E28 /* Sources */,
+				9A8002771FEEF9A6009D4E28 /* Frameworks */,
+				9A8002781FEEF9A6009D4E28 /* Resources */,
+				9A70F4BA1FF448A1000DBF46 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A8002A71FEEF9C4009D4E28 /* PBXTargetDependency */,
+			);
+			name = "PText Convert";
+			productName = "PText Convert";
+			productReference = 9A80027A1FEEF9A6009D4E28 /* PText Convert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A80028A1FEEF9A6009D4E28 /* PText ConvertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A8002A01FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText ConvertTests" */;
+			buildPhases = (
+				9A8002871FEEF9A6009D4E28 /* Sources */,
+				9A8002881FEEF9A6009D4E28 /* Frameworks */,
+				9A8002891FEEF9A6009D4E28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A80028D1FEEF9A6009D4E28 /* PBXTargetDependency */,
+			);
+			name = "PText ConvertTests";
+			productName = "PText ConvertTests";
+			productReference = 9A80028B1FEEF9A6009D4E28 /* PText ConvertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A8002951FEEF9A7009D4E28 /* PText ConvertUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A8002A31FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText ConvertUITests" */;
+			buildPhases = (
+				9A8002921FEEF9A7009D4E28 /* Sources */,
+				9A8002931FEEF9A7009D4E28 /* Frameworks */,
+				9A8002941FEEF9A7009D4E28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A8002981FEEF9A7009D4E28 /* PBXTargetDependency */,
+			);
+			name = "PText ConvertUITests";
+			productName = "PText ConvertUITests";
+			productReference = 9A8002961FEEF9A7009D4E28 /* PText ConvertUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9A9450121FE71C1F007CFC2D /* PKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A9450241FE71C1F007CFC2D /* Build configuration list for PBXNativeTarget "PKit" */;
+			buildPhases = (
+				9A94500E1FE71C1F007CFC2D /* Sources */,
+				9A94500F1FE71C1F007CFC2D /* Frameworks */,
+				9A9450101FE71C1F007CFC2D /* Headers */,
+				9A9450111FE71C1F007CFC2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PKit;
+			productName = PKit;
+			productReference = 9A9450131FE71C1F007CFC2D /* PKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9A94501A1FE71C1F007CFC2D /* PKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A9450271FE71C1F007CFC2D /* Build configuration list for PBXNativeTarget "PKitTests" */;
+			buildPhases = (
+				9A9450171FE71C1F007CFC2D /* Sources */,
+				9A9450181FE71C1F007CFC2D /* Frameworks */,
+				9A9450191FE71C1F007CFC2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A94501E1FE71C1F007CFC2D /* PBXTargetDependency */,
+			);
+			name = PKitTests;
+			productName = PKitTests;
+			productReference = 9A94501B1FE71C1F007CFC2D /* PKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -507,37 +507,37 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        9A80028D1FEEF9A6009D4E28 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 9A8002791FEEF9A6009D4E28 /* PText Convert */;
-            targetProxy = 9A80028C1FEEF9A6009D4E28 /* PBXContainerItemProxy */;
-        };
-        9A8002981FEEF9A7009D4E28 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 9A8002791FEEF9A6009D4E28 /* PText Convert */;
-            targetProxy = 9A8002971FEEF9A7009D4E28 /* PBXContainerItemProxy */;
-        };
-        9A8002A71FEEF9C4009D4E28 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 9A9450121FE71C1F007CFC2D /* PKit */;
-            targetProxy = 9A8002A61FEEF9C4009D4E28 /* PBXContainerItemProxy */;
-        };
-        9A94501E1FE71C1F007CFC2D /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 9A9450121FE71C1F007CFC2D /* PKit */;
-            targetProxy = 9A94501D1FE71C1F007CFC2D /* PBXContainerItemProxy */;
-        };
+		9A80028D1FEEF9A6009D4E28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A8002791FEEF9A6009D4E28 /* PText Convert */;
+			targetProxy = 9A80028C1FEEF9A6009D4E28 /* PBXContainerItemProxy */;
+		};
+		9A8002981FEEF9A7009D4E28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A8002791FEEF9A6009D4E28 /* PText Convert */;
+			targetProxy = 9A8002971FEEF9A7009D4E28 /* PBXContainerItemProxy */;
+		};
+		9A8002A71FEEF9C4009D4E28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A9450121FE71C1F007CFC2D /* PKit */;
+			targetProxy = 9A8002A61FEEF9C4009D4E28 /* PBXContainerItemProxy */;
+		};
+		9A94501E1FE71C1F007CFC2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A9450121FE71C1F007CFC2D /* PKit */;
+			targetProxy = 9A94501D1FE71C1F007CFC2D /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        9A8002821FEEF9A6009D4E28 /* Main.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                9A8002831FEEF9A6009D4E28 /* Base */,
-            );
-            name = Main.storyboard;
-            sourceTree = "<group>";
-        };
+		9A8002821FEEF9A6009D4E28 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A8002831FEEF9A6009D4E28 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1204,61 +1204,61 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        9A80029D1FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText Convert" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                9A80029E1FEEF9A7009D4E28 /* Debug */,
-                9A80029F1FEEF9A7009D4E28 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        9A8002A01FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText ConvertTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                9A8002A11FEEF9A7009D4E28 /* Debug */,
-                9A8002A21FEEF9A7009D4E28 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        9A8002A31FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText ConvertUITests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                9A8002A41FEEF9A7009D4E28 /* Debug */,
-                9A8002A51FEEF9A7009D4E28 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        9A944FE91FE713EF007CFC2D /* Build configuration list for PBXProject "ProToolsText" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                9A944FEA1FE713EF007CFC2D /* Debug */,
-                9A944FEB1FE713EF007CFC2D /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        9A9450241FE71C1F007CFC2D /* Build configuration list for PBXNativeTarget "PKit" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                9A9450251FE71C1F007CFC2D /* Debug */,
-                9A9450261FE71C1F007CFC2D /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        9A9450271FE71C1F007CFC2D /* Build configuration list for PBXNativeTarget "PKitTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                9A9450281FE71C1F007CFC2D /* Debug */,
-                9A9450291FE71C1F007CFC2D /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		9A80029D1FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText Convert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A80029E1FEEF9A7009D4E28 /* Debug */,
+				9A80029F1FEEF9A7009D4E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A8002A01FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText ConvertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A8002A11FEEF9A7009D4E28 /* Debug */,
+				9A8002A21FEEF9A7009D4E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A8002A31FEEF9A7009D4E28 /* Build configuration list for PBXNativeTarget "PText ConvertUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A8002A41FEEF9A7009D4E28 /* Debug */,
+				9A8002A51FEEF9A7009D4E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A944FE91FE713EF007CFC2D /* Build configuration list for PBXProject "ProToolsText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A944FEA1FE713EF007CFC2D /* Debug */,
+				9A944FEB1FE713EF007CFC2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A9450241FE71C1F007CFC2D /* Build configuration list for PBXNativeTarget "PKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A9450251FE71C1F007CFC2D /* Debug */,
+				9A9450261FE71C1F007CFC2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A9450271FE71C1F007CFC2D /* Build configuration list for PBXNativeTarget "PKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A9450281FE71C1F007CFC2D /* Debug */,
+				9A9450291FE71C1F007CFC2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-    };
-    rootObject = 9A944FE61FE713EF007CFC2D /* Project object */;
+	};
+	rootObject = 9A944FE61FE713EF007CFC2D /* Project object */;
 }
