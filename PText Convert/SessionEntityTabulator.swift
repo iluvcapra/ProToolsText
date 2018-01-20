@@ -33,7 +33,7 @@ let PTFinish            = "PT_Finish"
 let PTDuration          = "PT_Duration"
 let PTMuted             = "PT_Muted"
 
-class SessionEntityTabulator {
+class SessionEntityTabulator :SessionEntityTabulatorDelegate {
     
     private let session : PTEntityParser.SessionEntity
     private let markers : [PTEntityParser.MarkerEntity]
@@ -41,7 +41,67 @@ class SessionEntityTabulator {
     
     private var timeSpanClips : [PTEntityParser.ClipEntity] = []
     
-    var delegate : SessionEntityTabulatorDelegate?
+    var delegate : SessionEntityTabulatorDelegate? = nil
+    
+    var records : [[String:String]] = []
+    
+    
+    init(tracks: [PTEntityParser.TrackEntity],
+         markers: [PTEntityParser.MarkerEntity],
+         session: PTEntityParser.SessionEntity) {
+        self.session = session
+        self.markers = markers
+        self.tracks = tracks
+        
+        delegate = self
+    }
+    
+    func interpetRecords() {
+        timeSpanClips = []
+        for track in tracks {
+            interpret(track:track)
+        }
+    }
+    
+    
+    /***
+     Delegate methods
+     */
+    func rectifier(_ r: SessionEntityTabulator, didReadRecord: [String:String]) {
+        records.append(didReadRecord)
+    }
+    
+    // MARK: - Implementation
+    
+    private func interpret(track : PTEntityParser.TrackEntity) {
+        let trackFields = fields(for: track)
+        let sessionFields = fields(for: session)
+        
+        var fieldAccumulator : [String:String] = [:]
+        for clip in track.clips {
+            if clip.rawName.hasPrefix("@") {
+                timeSpanClips.append(clip)
+            } else {
+                let clipFields = fields(for: clip)
+                let memoryLocFields = memoryLocationFields(for: clip)
+                let tsFields = timespanFields(for: clip)
+                
+                fieldAccumulator = accumulateRecord(forClipFields: clipFields,
+                                                    accumulatedFields: fieldAccumulator,
+                                                    trackFields: trackFields,
+                                                    timespanFields: tsFields,
+                                                    markerFields: memoryLocFields,
+                                                    sessionFields: sessionFields)
+                
+                if let apidx = fieldAccumulator.index(forKey: "AP") {
+                    fieldAccumulator.remove(at: apidx)
+                } else {
+                    delegate?.rectifier(self, didReadRecord: fieldAccumulator)
+                    fieldAccumulator = [:]
+                }
+            }
+        }
+    }
     
     private func fields(for session : PTEntityParser.SessionEntity) -> [String:String] {
         let sessionNameParse = TagParser(string: session.rawTitle).parse()
@@ -135,48 +195,4 @@ class SessionEntityTabulator {
         return record
     }
 
-    private func interpret(track : PTEntityParser.TrackEntity) {
-        let trackFields = fields(for: track)
-        let sessionFields = fields(for: session)
-        
-        var fieldAccumulator : [String:String] = [:]
-        for clip in track.clips {
-            if clip.rawName.hasPrefix("@") {
-                timeSpanClips.append(clip)
-            } else {
-                let clipFields = fields(for: clip)
-                let memoryLocFields = memoryLocationFields(for: clip)
-                let tsFields = timespanFields(for: clip)
-                
-                fieldAccumulator = accumulateRecord(forClipFields: clipFields,
-                                                    accumulatedFields: fieldAccumulator,
-                                                    trackFields: trackFields,
-                                                    timespanFields: tsFields,
-                                                    markerFields: memoryLocFields,
-                                                    sessionFields: sessionFields)
-                
-                if let apidx = fieldAccumulator.index(forKey: "AP") {
-                    fieldAccumulator.remove(at: apidx)
-                } else {
-                    delegate?.rectifier(self, didReadRecord: fieldAccumulator)
-                    fieldAccumulator = [:]
-                }
-            }
-        }
-    }
-    
-    func interpetRecords() {
-        timeSpanClips = []
-        for track in tracks {
-            interpret(track:track)
-        }
-    }
-    
-    init(tracks: [PTEntityParser.TrackEntity],
-         markers: [PTEntityParser.MarkerEntity],
-         session: PTEntityParser.SessionEntity) {
-        self.session = session
-        self.markers = markers
-        self.tracks = tracks
-    }
 }

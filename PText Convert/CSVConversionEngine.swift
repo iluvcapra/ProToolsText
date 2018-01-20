@@ -56,23 +56,18 @@ class CSVWriter: NSObject {
 
 }
 
-class CSVConversionEngine: NSObject, SessionEntityTabulatorDelegate {
+class CSVConversionEngine: NSObject {
     
-    var records : [[String:String]] = []
-    
-    func rectifier(_ r: SessionEntityTabulator, didReadRecord rec: [String : String]) {
-        records.append(rec)
-    }
-    
-    private func recordFieldSet() -> Set<String> {
+
+    private func recordFieldSet(forRecords records: [[String:String]]) -> Set<String> {
         return records.reduce(Set<String>(), { (accum, thisRecord) -> Set<String> in
             return accum.union(thisRecord.keys)
         })
     }
     
-    private func orderedFields() -> [String] {
+    private func orderedFields(forRecords records : [[String:String]]) -> [String] {
         
-        let allFields = recordFieldSet()
+        let allFields = recordFieldSet(forRecords: records)
         
         let canonicalFields = [PTSessionName, PTRawSessionName, PTTrackName,
                                PTRawTrackName, PTTrackComment, PTRawTrackComment,
@@ -83,8 +78,8 @@ class CSVConversionEngine: NSObject, SessionEntityTabulatorDelegate {
         return canonicalFields + userFields.sorted()
     }
     
-    private func row(for record : [String : String]) -> [String] {
-        return orderedFields().map { (key) -> String in
+    private func row(withFields fields: [String], for record : [String : String]) -> [String] {
+        return fields.map { (key) -> String in
             record[key] ?? ""
         }
     }
@@ -95,14 +90,15 @@ class CSVConversionEngine: NSObject, SessionEntityTabulatorDelegate {
         let tabulator = SessionEntityTabulator(tracks: entityParser.tracks,
                                                markers: entityParser.markers,
                                                session: entityParser.session!)
-        records = []
-        tabulator.delegate = self
         tabulator.interpetRecords()
         
+        let records = tabulator.records
+        
         let writer = try CSVWriter(writeTo: to, encoding: String.Encoding.utf8)
-        writer.writeRecord(fields: orderedFields())
+        let fields = orderedFields(forRecords: records)
+        writer.writeRecord(fields: fields)
         records.forEach { (record) in
-            writer.writeRecord(fields: row(for: record))
+            writer.writeRecord(fields: row(withFields: fields, for: record) )
         }
     }
 }

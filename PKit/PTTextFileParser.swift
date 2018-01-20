@@ -323,7 +323,7 @@ public class PTTextFileParser: NSObject {
         let states = statesString.components(separatedBy: " ")
         try expect(token: .LineBreak)
         var plugins = [String]()
-        if accept(string: "PLUG-INS:") {
+        if accept(string: "PLUG-INS: ") {
             while accept(token: .ColumnBreak) {
                 plugins.append(try expectString())
             }
