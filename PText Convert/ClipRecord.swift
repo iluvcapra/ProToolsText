@@ -21,7 +21,7 @@ let PTClipName          = "PT_ClipName"
 let PTRawClipName       = "PT_RawClipName"
 let PTStart             = "PT_Start"
 let PTFinish            = "PT_Finish"
-let PTDuration          = "PT_Duration"
+//let PTDuration          = "PT_Duration"
 let PTMuted             = "PT_Muted"
 
 let AppendingField      = "AP"
@@ -38,6 +38,10 @@ public struct ClipRecord {
     public var muted : Bool
     public var userData : [String:String] = [:]
     
+    static func scanAppendeds(from : [ClipRecord]) -> (next: ClipRecord, rest: [ClipRecord]) {
+        
+        
+    }
     
     public static func from(tracks : [PTEntityParser.TrackEntity],
                             markers : [PTEntityParser.MarkerEntity],
@@ -45,12 +49,12 @@ public struct ClipRecord {
 
         let records = tracks.enumerated().flatMap { (offset, track) -> [ClipRecord] in
             let simpleRecords = ClipRecord.from(track: track, trackIndex: offset, session: session)
-            
+            let appendedRecords = scanAppendeds(from: simpleRecords)
             
             return simpleRecords
         }
         
-        
+        return records
     }
     
     public static func from(track : PTEntityParser.TrackEntity,
