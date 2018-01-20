@@ -191,6 +191,21 @@ class PKitTests: XCTestCase {
         
     }
     
+    func testExample3() {
+        let testURL = Bundle(for: PKitTests.self).url(forResource: "cue.test.utf8", withExtension: "txt")!
+        
+        let p = PTTextFileParser()
+        let d = ParserDelegateMock()
+        p.delegate = d
+        
+        let data = try! Data.init(contentsOf: testURL)
+        
+        XCTAssertFalse(d.didBegin)
+        XCTAssertFalse(d.didFinish)
+        XCTAssertNoThrow(try p.parse(data: data,
+                                     encoding: String.Encoding.utf8.rawValue) )
+    }
+    
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
 //        self.measure {

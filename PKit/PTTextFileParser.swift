@@ -54,7 +54,7 @@ public protocol PTTextFileParserDelegate {
 
 public class PTTextFileParser: NSObject {
     
-    private enum Token {
+    public enum Token {
         case Begin
         case TripleLineBreak
         case LineBreak
@@ -62,16 +62,39 @@ public class PTTextFileParser: NSObject {
         
         case Field
         case End
+        
+        var errorDescription : String {
+            switch self {
+            case .Begin:
+                return "the Beginning"
+            case .TripleLineBreak:
+                return "Three Line Breaks"
+            case .LineBreak:
+                return "a Line Break"
+            case .ColumnBreak:
+                return "a Column Break"
+            case .Field:
+                return "a String Field"
+            case .End:
+                return "the End"
+            }
+        }
+        
     }
     
-    private struct ParseTokenError : Error {
+    public struct ParseTokenError : Error {
         var expected : Token
         var found : Token
         var column : Int
         var line : Int
+        
+        public var localizedDescription: String {
+            return "Parse error, expected \(expected.errorDescription) (actually encountered \(found.errorDescription)) at line \(line), column \(column)."
+        }
+        
     }
     
-    private struct ParseNumberError : Error {
+    public struct ParseNumberError : Error {
         var column : Int
         var line : Int
     }

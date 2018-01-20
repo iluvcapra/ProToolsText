@@ -1,0 +1,1243 @@
+SESSION NAME:	cue test
+SAMPLE RATE:	48000.000000
+BIT DEPTH:	24-bit
+SESSION START TIMECODE:	00:00:00:00
+TIMECODE FORMAT:	23.976 Frame
+# OF AUDIO TRACKS:	76
+# OF AUDIO CLIPS:	14212
+# OF AUDIO FILES:	6494
+
+
+T R A C K  L I S T I N G
+TRACK NAME:	PROP 1.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	Whale blow water              	   01:01:24:18	   01:01:31:02	   00:00:06:08	Unmuted
+1       	2       	water drip in drain pipes exterior	   01:02:56:00	   01:03:03:05	   00:00:07:05	Unmuted
+1       	3       	hands in flute case           	   01:04:15:05	   01:04:22:02	   00:00:06:21	Unmuted
+1       	4       	keys mvnt into lock and out  then in and out metal mailbox	   01:04:47:04	   01:05:07:17	   00:00:20:13	Unmuted
+1       	5       	hand into pocket grab biz card handle	   01:05:51:01	   01:05:59:08	   00:00:08:07	Unmuted
+1       	6       	bix card mvnt                 	   01:06:09:15	   01:06:12:18	   00:00:03:03	Unmuted
+1       	7       	biz card mvnt                 	   01:06:23:04	   01:06:35:08	   00:00:12:04	Unmuted
+1       	8       	scissors slice box tape dwn on wood piano bench	   01:06:43:12	   01:06:43:23	   00:00:00:11	Unmuted
+1       	9       	grab shirt unbutton cont os   	   01:06:57:14	   01:06:59:22	   00:00:02:08	Unmuted
+1       	10      	hand on couch sit lean mvnt up	   01:07:19:11	   01:07:41:19	   00:00:22:08	Unmuted
+1       	11      	canvas tool bag full of tools handle up/dwn mvnt dwn rumage get boxknife	   01:07:52:13	   01:08:10:01	   00:00:17:12	Unmuted
+1       	12      	nail gun trigger              	   01:08:20:12	   01:08:32:14	   00:00:12:02	Unmuted
+1       	13      	shoes mvnt on os              	   01:09:04:21	   01:09:11:21	   00:00:07:00	Unmuted
+1       	14      	hands on lwood doors          	   01:09:44:23	   01:10:02:02	   00:00:17:03	Unmuted
+1       	15      	grab purse toos backseat      	   01:11:40:04	   01:11:42:11	   00:00:02:07	Unmuted
+1       	16      	body fall                     	   01:11:55:08	   01:11:56:15	   00:00:01:06	Unmuted
+1       	17      	leaf branches mvnt-03         	   01:12:16:12	   01:12:49:22	   00:00:33:10	Unmuted
+1       	18      	leaf branches mvnt-04         	   01:12:49:22	   01:12:50:02	   00:00:00:03	Unmuted
+1       	19      	body fall rug on wood         	   01:13:11:22	   01:13:18:10	   00:00:06:12	Unmuted
+1       	20      	grab envelope from pocket mvnt grab open drop paper	   01:13:25:00	   01:13:47:19	   00:00:22:19	Unmuted
+1       	21      	office chair mvnt             	   01:14:00:23	   01:14:04:09	   00:00:03:10	Unmuted
+1       	22      	popcorn bag mvnt dwn p/u mvnt 	   01:14:26:18	   01:14:45:13	   00:00:18:19	Unmuted
+1       	23      	wood chopsticks plastci take out	   02:00:01:15	   02:00:08:21	   00:00:07:06	Unmuted
+1       	24      	chopsticks tap plastic bowl   	   02:00:19:14	   02:00:19:20	   00:00:00:06	Unmuted
+1       	25      	shoulder and head dwn rug     	   02:00:28:12	   02:00:29:21	   00:00:01:09	Unmuted
+1       	26      	earbud mvnt                   	   02:01:22:23	   02:01:24:18	   00:00:01:19	Unmuted
+1       	27      	slight knapsack mvnt          	   02:02:12:16	   02:03:08:13	   00:00:55:21	Unmuted
+1       	28      	shade cord mvnt double thin cord about 5x	   02:03:50:09	   02:03:51:16	   00:00:01:07	Unmuted
+1       	29      	sleeves up 2x bump stomach thermal shirt	   02:04:10:13	   02:04:12:03	   00:00:01:14	Unmuted
+1       	30      	scissors up wood bench mvt dwn on cardboard box	   02:04:21:06	   02:04:26:13	   00:00:05:07	Unmuted
+1       	31      	ipad up mvnt handle           	   02:04:45:21	   02:04:50:11	   00:00:04:14	Unmuted
+1       	32      	ipad dwn to lap               	   02:04:58:04	   02:04:58:19	   00:00:00:15	Unmuted
+1       	33      	jacket handle mvnt            	   02:05:02:03	   02:05:29:19	   00:00:27:16	Unmuted
+1       	34      	adj sunglasses                	   02:06:23:04	   02:06:24:00	   00:00:00:20	Unmuted
+1       	35      	sunglasses off mvnt           	   02:07:15:22	   02:07:17:17	   00:00:01:19	Unmuted
+1       	36      	sunglasses mvnt on            	   02:07:24:22	   02:07:52:10	   00:00:27:12	Unmuted
+1       	37      	hiking boot metal grate (elgie)	   02:08:33:21	   02:08:43:10	   00:00:09:13	Unmuted
+1       	38      	sunglasses off handle mvnt fold away in purse	   02:09:45:10	   02:10:10:19	   00:00:25:09	Unmuted
+1       	39      	flute case dwn car floor      	   02:10:20:02	   02:10:21:11	   00:00:01:09	Unmuted
+1       	40      	sunglasses push dwn/push up   	   02:10:29:16	   02:10:38:19	   00:00:09:03	Unmuted
+1       	41      	wooden flute handle put in cloth bag	   02:10:45:04	   02:10:55:13	   00:00:10:09	Unmuted
+1       	42      	straw with paper mvnt tear off dwn	   02:11:32:15	   02:12:24:20	   00:00:52:05	Unmuted
+1       	43      	plastic basket paper and chips dwn slide up dwn	   02:12:43:13	   02:12:53:17	   00:00:10:04	Unmuted
+1       	44      	silverware bump prod          	   02:13:21:08	   02:13:22:02	   00:00:00:18	Unmuted
+1       	45      	chip in guac                  	   02:13:25:23	   02:13:26:10	   00:00:00:11	Unmuted
+1       	46      	chip paper mvnt               	   02:13:29:20	   02:13:31:14	   00:00:01:18	Unmuted
+1       	47      	fork dwn os                   	   02:14:14:23	   02:14:20:00	   00:00:05:01	Unmuted
+1       	48      	hand on med cabinet mirror    	   02:14:54:13	   02:14:57:09	   00:00:02:20	Unmuted
+1       	49      	glass jar filled with pills up off glass shelf mvnt	   02:15:11:08	   02:15:20:16	   00:00:09:08	Unmuted
+1       	50      	man L sip                     	   03:00:09:01	   03:00:10:05	   00:00:01:04	Unmuted
+1       	51      	man grab door handle 2x       	   03:00:16:19	   03:00:18:13	   00:00:01:18	Unmuted
+1       	52      	plastic cup with napkin (soo-lin)	   03:01:01:04	   03:01:03:15	   00:00:02:11	Unmuted
+1       	53      	plastic cup with napkin (soo-lin)	   03:01:06:16	   03:01:11:04	   00:00:04:12	Unmuted
+1       	54      	plastic cup with napkin (soo-lin)	   03:01:16:17	   03:01:25:02	   00:00:08:09	Unmuted
+1       	55      	plastic cup with napkin (soo-lin)	   03:01:28:00	   03:01:34:04	   00:00:06:04	Unmuted
+1       	56      	plastic cup mvmnt (soo-lin)   	   03:01:39:22	   03:01:40:19	   00:00:00:21	Unmuted
+1       	57      	upholstered chair L shift on wood floor 	   03:01:48:16	   03:01:53:10	   00:00:04:18	Unmuted
+1       	58      	smart phone screen tap (soo-lin)	   03:02:23:05	   03:02:26:11	   00:00:03:06	Unmuted
+1       	59      	smart phone screen tap x2 (soo-lin)	   03:02:32:05	   03:02:35:06	   00:00:03:01	Unmuted
+1       	60      	BG man in blue puts raincoat over girl	   03:03:26:08	   03:03:29:05	   00:00:02:21	Unmuted
+1       	61      	plastic plate trash kick & bounce	   03:03:34:23	   03:03:36:16	   00:00:01:17	Unmuted
+1       	62      	car window button & off       	   03:04:07:16	   03:04:10:02	   00:00:02:10	Muted
+1       	63      	seatbelt click off            	   03:04:44:09	   03:04:45:18	   00:00:01:09	Unmuted
+1       	64      	car keys jingle (prod)        	   03:04:46:22	   03:04:47:21	   00:00:00:23	Unmuted
+1       	65      	car door handle INT open (bee OS prod)	   03:06:38:15	   03:06:38:20	   00:00:00:05	Unmuted
+1       	66      	car door handle INT open (bern)	   03:06:40:17	   03:06:40:23	   00:00:00:06	Unmuted
+1       	67      	car keys in steering column   	   03:07:53:18	   03:07:55:01	   00:00:01:07	Unmuted
+1       	68      	bern plays with earpiece      	   03:08:02:18	   03:08:08:12	   00:00:05:18	Unmuted
+1       	69      	bern plays with earpiece      	   03:08:22:11	   03:08:26:00	   00:00:03:13	Unmuted
+1       	70      	leather gloved hand 2 welder mask up	   03:09:24:17	   03:09:25:17	   00:00:01:00	Unmuted
+1       	71      	leather gloved hand 2 metal table	   03:09:26:06	   03:09:26:23	   00:00:00:17	Unmuted
+1       	72      	leather gloved hands 2 leather apron x2	   03:09:27:21	   03:09:28:18	   00:00:00:21	Unmuted
+1       	73      	glasses in hand mvmnt         	   03:09:42:12	   03:09:51:09	   00:00:08:21	Unmuted
+1       	74      	glasses in hand mvmnt         	   03:09:55:13	   03:09:57:19	   00:00:02:06	Unmuted
+1       	75      	sweater grab & hold up        	   03:11:06:05	   03:11:17:21	   00:00:11:16	Unmuted
+1       	76      	elgie hand 2 folder with files on desk	   04:00:00:14	   04:00:01:00	   00:00:00:10	Unmuted
+1       	77      	computer mouse hand on move click (elgie)	   04:00:04:13	   04:00:07:22	   00:00:03:09	Unmuted
+1       	78      	computer mouse hand on (elgie)	   04:00:10:19	   04:00:12:13	   00:00:01:18	Unmuted
+1       	79      	computer mouse hand off (elgie)	   04:00:31:06	   04:00:31:20	   00:00:00:14	Unmuted
+1       	80      	elgie remove wire frame glasses	   04:00:54:18	   04:00:55:01	   00:00:00:07	Unmuted
+1       	81      	elgie fold wire frame glasses 	   04:00:55:11	   04:00:56:02	   00:00:00:15	Unmuted
+1       	82      	tight leather seat mvmnt (bern)	   04:01:15:20	   04:01:19:08	   00:00:03:12	Unmuted
+1       	83      	tight leather seat mvmnt (bern)	   04:01:20:12	   04:01:23:18	   00:00:03:06	Unmuted
+1       	84      	tight leather seat flop back (bee)	   04:01:25:01	   04:01:26:11	   00:00:01:10	Unmuted
+1       	85      	tight leather chair hand 2 & slide out (bee)	   04:01:40:19	   04:01:43:03	   00:00:02:08	Unmuted
+1       	86      	hand 2 tight leather chair & OS off (elgie)	   04:01:54:07	   04:01:57:22	   00:00:03:15	Unmuted
+1       	87      	tight leather chair mvmnt & sit back (bern)	   04:02:25:03	   04:02:28:20	   00:00:03:17	Unmuted
+1       	88      	hand 2 leather chair adjust (bern)	   04:02:56:19	   04:03:01:14	   00:00:04:19	Unmuted
+1       	89      	tight leather chair mvmnt sit forward (elgie)	   04:03:09:11	   04:03:11:06	   00:00:01:19	Unmuted
+1       	90      	tight leather chair mvmnts (elgie)	   04:03:19:22	   04:03:31:02	   00:00:11:04	Unmuted
+1       	91      	tight leather chair mvmnt sit back (elgie)	   04:03:35:08	   04:03:36:11	   00:00:01:03	Unmuted
+1       	92      	tight leather chair lean forward & mvmnts (elgie)	   04:03:38:09	   04:03:46:11	   00:00:08:02	Unmuted
+1       	93      	hands 2 tight leather chair slide out up hand 2 slide off (bee)	   04:04:00:21	   04:04:04:01	   00:00:03:04	Unmuted
+1       	94      	tight leather chair slide up & out (elgie)	   04:04:23:11	   04:04:25:03	   00:00:01:16	Unmuted
+1       	95      	smart phone mvmnt             	   04:04:47:16	   04:04:49:13	   00:00:01:21	Unmuted
+1       	96      	smart phone hand 2 hand & handle	   04:05:00:00	   04:05:05:11	   00:00:05:11	Unmuted
+1       	97      	smart phone waving handle     	   04:05:08:20	   04:05:13:09	   00:00:04:13	Unmuted
+1       	98      	smart phone hand 2 hand       	   04:05:13:15	   04:05:15:02	   00:00:01:11	Unmuted
+1       	99      	smart phone mvmnt             	   04:05:15:02	   04:05:20:14	   00:00:05:12	Unmuted
+1       	100     	smart phone drop down on thin wood side table with cords	   04:05:20:14	   04:05:21:11	   00:00:00:21	Unmuted
+1       	101     	potted plant brush past (bern)	   04:05:40:11	   04:05:45:20	   00:00:05:09	Unmuted
+1       	102     	apple keyboard typing OS on OS x9?	   04:06:00:00	   04:06:02:06	   00:00:02:06	Unmuted
+1       	103     	apple keyboard space bar X2 OS	   04:06:02:06	   04:06:02:18	   00:00:00:12	Unmuted
+1       	104     	apple keyboard typing OS on OS x2	   04:06:02:18	   04:06:03:09	   00:00:00:15	Unmuted
+1       	105     	apple keyboard space bar      	   04:06:03:09	   04:06:03:16	   00:00:00:07	Unmuted
+1       	106     	apple keyboard typing OS on OS x16?	   04:06:03:16	   04:06:10:02	   00:00:06:10	Unmuted
+1       	107     	hand 2 soft plastic chair arm 	   04:06:11:02	   04:06:12:10	   00:00:01:08	Unmuted
+1       	108     	teacup from saucer OS         	   04:08:29:07	   04:08:30:00	   00:00:00:17	Unmuted
+1       	109     	sip tea (bern)                	   04:08:31:08	   04:08:31:18	   00:00:00:10	Unmuted
+1       	110     	grab teacup (bern)            	   04:10:09:01	   04:10:09:10	   00:00:00:09	Unmuted
+1       	111     	gold watch touch (jelnik)     	   04:12:50:07	   04:12:54:01	   00:00:03:18	Unmuted
+1       	112     	whiteboard drawing with dry-erase marker	   05:00:00:00	   05:00:07:15	   00:00:07:15	Unmuted
+1       	113     	dry-erase marker cap off back & OS on	   05:00:12:06	   05:00:15:19	   00:00:03:13	Unmuted
+1       	114     	dry-erase marker 2 metal tray OS	   05:00:20:10	   05:00:26:13	   00:00:06:03	Unmuted
+1       	115     	smart phone from pocket 2 prefab wood (elgie)	   05:00:52:21	   05:00:55:20	   00:00:02:23	Unmuted
+1       	116     	wire arm glasses from pocket & on (elgie)	   05:00:59:21	   05:01:04:15	   00:00:04:18	Unmuted
+1       	117     	take glasses off & down 2 prefab wood table (elgie)	   05:01:31:20	   05:01:35:11	   00:00:03:15	Unmuted
+1       	118     	leather bag adjust (bern)     	   05:03:08:22	   05:03:10:17	   00:00:01:19	Unmuted
+1       	119     	smart phone in hand cord attached mvmnt	   05:05:10:18	   05:05:19:01	   00:00:08:07	Unmuted
+1       	120     	smart phone cord mvmnt        	   05:05:28:02	   05:05:28:23	   00:00:00:21	Unmuted
+1       	121     	smart phone cord attached tap hang up	   05:05:35:08	   05:05:36:09	   00:00:01:01	Unmuted
+1       	122     	leather badge from suit pocket open close back into pocket (agent)	   05:06:49:06	   05:06:58:11	   00:00:09:05	Unmuted
+1       	123     	hand 2 old wood door 3x       	   05:14:04:20	   05:14:08:09	   00:00:03:13	Unmuted
+1       	124     	smart phone off wood table & mvmnt in hands (soo-lin)	   05:14:34:16	   05:14:44:10	   00:00:09:18	Unmuted
+1       	125     	smart phone handle mvmnt (soo-lin)	   05:15:12:07	   05:15:15:22	   00:00:03:15	Unmuted
+1       	126     	wreath on door mvmnt          	   05:15:31:00	   05:15:32:01	   00:00:01:01	Unmuted
+1       	127     	wreath on door mvmnt          	   05:15:33:11	   05:15:35:17	   00:00:02:06	Unmuted
+1       	128     	hand 2 wood & glass front door (soo-lin)	   05:18:01:22	   05:18:02:11	   00:00:00:13	Muted
+1       	129     	rain on unbrella              	   06:00:00:00	   06:00:04:15	   00:00:04:15	Unmuted
+1       	130     	up from couch                 	   06:01:47:18	   06:01:50:20	   00:00:03:02	Unmuted
+1       	131     	roller bag cmnt-metal         	   06:02:19:07	   06:02:22:14	   00:00:03:07	Unmuted
+1       	132     	bg roller bag mvnt opposite aisle	   06:03:27:12	   06:03:30:18	   00:00:03:06	Unmuted
+1       	133     	roller bag mvnt               	   06:03:35:14	   06:03:39:02	   00:00:03:12	Unmuted
+1       	134     	up leather plane seat down mvnt	   06:03:56:05	   06:04:10:12	   00:00:14:07	Unmuted
+1       	135     	hand laptop                   	   06:04:54:21	   06:04:56:16	   00:00:01:19	Unmuted
+1       	136     	hand laptop                   	   06:04:57:12	   06:04:59:07	   00:00:01:19	Unmuted
+1       	137     	writ on boob marker           	   06:05:40:09	   06:05:42:04	   00:00:01:19	Unmuted
+1       	138     	bull dozer demo sweetner if we have time to add	   06:06:54:12	   06:07:02:06	   00:00:07:18	Unmuted
+1       	139     	water rocks                   	   06:07:58:20	   06:08:02:21	   00:00:04:01	Unmuted
+1       	140     	glasses mvnt                  	   06:08:29:08	   06:08:39:16	   00:00:10:08	Unmuted
+1       	141     	sweater mvnt                  	   06:08:52:12	   06:09:01:18	   00:00:09:06	Unmuted
+1       	142     	bun container mvnt            	   06:09:41:05	   06:09:56:05	   00:00:15:00	Unmuted
+1       	143     	sip coffee                    	   06:10:02:12	   06:10:03:02	   00:00:00:14	Unmuted
+1       	144     	cup dwn double wood           	   06:10:03:21	   06:10:04:18	   00:00:00:21	Unmuted
+1       	145     	bread out of toasted toss on counter	   06:10:15:01	   06:10:15:21	   00:00:00:20	Unmuted
+1       	146     	plastic bag mvnt dwn os       	   06:10:18:15	   06:10:29:23	   00:00:11:08	Unmuted
+1       	147     	grab bread bag mvnt dwn in keeper	   06:11:19:03	   06:11:27:04	   00:00:08:01	Unmuted
+1       	148     	watch mvnt                    	   07:00:00:18	   07:00:01:05	   00:00:00:11	Unmuted
+1       	149     	mvnt sit back leather couch   	   07:00:40:19	   07:00:43:22	   00:00:03:03	Unmuted
+1       	150     	dog fs-01                     	   07:01:10:00	   07:01:39:08	   00:00:29:08	Unmuted
+1       	151     	bernadette hands to metal rail	   07:01:46:15	   07:01:51:10	   00:00:04:19	Unmuted
+1       	152     	head turn headrest cloth      	   07:02:45:01	   07:02:46:13	   00:00:01:12	Unmuted
+1       	153     	ice cooler lid in hand to bed cooler to bed	   07:03:15:07	   07:03:18:13	   00:00:03:06	Unmuted
+1       	154     	hand headrest                 	   07:03:27:02	   07:03:29:03	   00:00:02:01	Muted
+1       	155     	bed  hand mvnt                	   07:03:38:16	   07:03:59:17	   00:00:21:01	Unmuted
+1       	156     	glove grab mvnt               	   07:04:17:04	   07:04:22:14	   00:00:05:10	Unmuted
+1       	157     	kayak mvnt water grp 1        	   07:05:33:11	   07:05:43:11	   00:00:10:00	Unmuted
+1       	158     	whales tail                   	   07:06:06:22	   07:06:13:01	   00:00:06:03	Unmuted
+1       	159     	finger hits glasses           	   07:07:39:06	   07:07:39:23	   00:00:00:17	Unmuted
+1       	160     	bag mvnt OS small pouch very zippy in prod out dwn 	   07:07:59:04	   07:08:02:17	   00:00:03:13	Unmuted
+1       	161     	sit on steel mvnt             	   07:09:15:15	   07:09:20:08	   00:00:04:17	Unmuted
+1       	162     	knitting needles mvnt yarn mvnt	   07:10:34:16	   07:10:46:18	   00:00:12:02	Unmuted
+1       	163     	grab yarn kneedle mvnt        	   07:10:51:06	   07:10:52:13	   00:00:01:07	Unmuted
+1       	164     	bed mvnt                      	   07:10:55:05	   07:11:03:19	   00:00:08:14	Unmuted
+1       	165     	a raft of penquins            	   07:11:23:05	   07:11:29:16	   00:00:06:11	Unmuted
+1       	166     	bed mvnt                      	   07:11:48:20	   07:11:56:11	   00:00:07:15	Unmuted
+1       	167     	M wood rail gloves            	   07:12:15:14	   07:12:22:20	   00:00:07:06	Unmuted
+1       	168     	camera mvnt                   	   07:12:35:20	   07:12:38:17	   00:00:02:21	Unmuted
+1       	169     	 blonde W pamphlet mvnt gloves	   07:13:08:20	   07:13:12:11	   00:00:03:15	Unmuted
+1       	170     	body bump mvnt winter clothes 	   07:13:34:12	   07:13:45:03	   00:00:10:15	Unmuted
+1       	171     	sit rock                      	   07:14:19:18	   07:14:26:19	   00:00:07:01	Unmuted
+1       	172     	leather chair-couch mvnt      	   08:00:03:10	   08:01:22:04	   00:01:18:18	Unmuted
+1       	173     	grab winter coat on mvnt hood on	   08:02:00:19	   08:02:08:10	   00:00:07:15	Unmuted
+1       	174     	gloved hands rubber tube 2x sit mvnt up	   08:02:13:22	   08:02:16:19	   00:00:02:21	Unmuted
+1       	175     	gloved hand os rubber tube mvnt in dinghy	   08:02:19:14	   08:02:22:02	   00:00:02:12	Unmuted
+1       	176     	sip mug                       	   08:02:48:20	   08:02:52:17	   00:00:03:21	Unmuted
+1       	177     	paper -dot matrics?- handle mvnt  into next scene dwn on bed	   08:04:34:10	   08:05:17:05	   00:00:42:19	Unmuted
+1       	178     	bed mvnt hands                	   08:05:29:08	   08:05:32:12	   00:00:03:04	Unmuted
+1       	179     	mvnt inside motor             	   08:05:48:13	   08:05:54:21	   00:00:06:08	Unmuted
+1       	180     	door knob metal door          	   08:06:02:04	   08:06:06:16	   00:00:04:12	Unmuted
+1       	181     	game piece taps bard OS prod  	   08:07:38:23	   08:07:40:22	   00:00:01:23	Unmuted
+1       	182     	sander mvnt off on metal      	   08:08:10:03	   08:08:18:00	   00:00:07:21	Unmuted
+1       	183     	grab walkie mvnt              	   08:08:58:06	   08:09:01:18	   00:00:03:12	Unmuted
+1       	184     	unclip baget mvnt-01          	   08:09:47:03	   08:09:53:18	   00:00:06:15	Unmuted
+1       	185     	PROD is good and no dia listen	   08:10:31:08	   08:11:06:19	   00:00:35:11	Unmuted
+1       	186     	PROD is good and no dia listen	   08:11:48:02	   08:12:54:01	   00:01:05:23	Unmuted
+1       	187     	bump hip on wood              	   08:12:59:03	   08:13:00:02	   00:00:00:23	Unmuted
+1       	188     	hat gloved hand handle        	   08:13:16:05	   08:13:22:23	   00:00:06:18	Unmuted
+1       	189     	hip bumps wood                	   08:13:35:13	   08:13:38:03	   00:00:02:14	Unmuted
+1       	190     	reach hand into pocket        	   08:14:58:07	   08:15:03:09	   00:00:05:02	Unmuted
+1       	191     	knit hat pull dwn             	   08:15:52:10	   08:15:55:16	   00:00:03:06	Unmuted
+
+
+TRACK NAME:	PROP 2.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	whale crest in water          	   01:01:24:17	   01:01:30:09	   00:00:05:16	Unmuted
+1       	2       	water drips on wood slats     	   01:02:59:09	   01:03:03:08	   00:00:03:23	Unmuted
+1       	3       	grab snap back brace strap    	   01:03:25:01	   01:03:25:23	   00:00:00:22	Unmuted
+1       	4       	metal mailbox open close      	   01:04:47:04	   01:04:53:02	   00:00:05:22	Unmuted
+1       	5       	mail out from under arm mvnt  	   01:05:55:02	   01:06:11:18	   00:00:16:16	Unmuted
+1       	6       	mail mvnt                     	   01:06:22:20	   01:06:38:15	   00:00:15:19	Unmuted
+1       	7       	box mvnt                      	   01:06:43:12	   01:06:48:05	   00:00:04:17	Unmuted
+1       	8       	scarf nylon/silk out dwn on bag-01	   01:06:54:15	   01:06:57:15	   00:00:03:00	Muted
+1       	9       	grab scarf mvnt on tie        	   01:07:03:08	   01:07:18:08	   00:00:15:00	Unmuted
+1       	10      	kick off shoes 2x os          	   01:07:22:20	   01:07:30:19	   00:00:07:23	Unmuted
+1       	11      	nail gun up bumps rail under piano bench dwn wobble	   01:07:55:05	   01:08:02:16	   00:00:07:11	Unmuted
+1       	12      	nailgun up mvnt dwn           	   01:08:20:12	   01:08:31:15	   00:00:11:03	Unmuted
+1       	13      	nailgun grab drop up mvnt dwn mvnt 	   01:08:49:19	   01:09:00:00	   00:00:10:05	Unmuted
+1       	14      	elastic snap on shoe          	   01:09:08:01	   01:09:08:06	   00:00:00:05	Unmuted
+1       	15      	elastic snap on shoe          	   01:09:11:19	   01:09:12:00	   00:00:00:05	Unmuted
+1       	16      	untuck shirt                  	   01:09:14:08	   01:09:18:02	   00:00:03:18	Unmuted
+1       	17      	hands to small door lock      	   01:09:45:04	   01:09:47:09	   00:00:02:05	Unmuted
+1       	18      	hands to small lock mvnt      	   01:09:53:11	   01:09:55:09	   00:00:01:22	Unmuted
+1       	19      	adjust jacket                 	   01:11:36:17	   01:11:38:22	   00:00:02:05	Unmuted
+1       	20      	ladder hits house             	   01:12:30:20	   01:12:31:17	   00:00:00:21	Unmuted
+1       	21      	hand to wood 3x               	   01:13:15:14	   01:13:19:10	   00:00:03:20	Unmuted
+1       	22      	envelope into mouth grab      	   01:13:31:21	   01:13:33:07	   00:00:01:10	Unmuted
+1       	23      	envelope dwn                  	   01:13:37:20	   01:13:40:04	   00:00:02:08	Unmuted
+1       	24      	popcorn pour mvnt             	   01:14:31:05	   01:14:35:07	   00:00:04:02	Unmuted
+1       	25      	popcorn mvnt                  	   01:16:37:17	   01:16:42:11	   00:00:04:18	Unmuted
+1       	26      	workout ball mvnt  feet then hand continue mvnt	   02:00:12:07	   02:00:51:10	   00:00:39:03	Unmuted
+1       	27      	phone mvnt                    	   02:01:23:06	   02:01:59:14	   00:00:36:08	Unmuted
+1       	28      	phone out handle in pocket os 	   02:02:48:18	   02:03:01:04	   00:00:12:10	Unmuted
+1       	29      	rubber boot off mvnt kick drop over strap mvnt	   02:03:52:23	   02:04:04:03	   00:00:11:04	Unmuted
+1       	30      	cut open box tape             	   02:04:23:10	   02:04:24:02	   00:00:00:16	Unmuted
+1       	31      	zipper hits box lid           	   02:04:31:00	   02:04:31:12	   00:00:00:12	Unmuted
+1       	32      	sit couch shoulder into back hardish	   02:04:51:07	   02:04:52:16	   00:00:01:09	Unmuted
+1       	33      	hand on close laptop          	   02:05:26:20	   02:05:27:19	   00:00:00:23	Unmuted
+1       	34      	glasses off                   	   02:06:25:06	   02:06:26:00	   00:00:00:18	Unmuted
+1       	35      	fold glasses os in prod       	   02:06:27:17	   02:06:28:18	   00:00:01:01	Unmuted
+1       	36      	glasses mvnt                  	   02:07:54:15	   02:07:57:09	   00:00:02:18	Unmuted
+1       	37      	bg shifts pill bottle         	   02:09:08:19	   02:09:09:15	   00:00:00:20	Unmuted
+1       	38      	canvas knapsack mvnt toss on car floor	   02:10:11:00	   02:10:26:10	   00:00:15:10	Unmuted
+1       	39      	straw handle put in big glass of ice water	   02:12:24:17	   02:12:30:22	   00:00:06:05	Unmuted
+1       	40      	salsa up from trap dwn table  	   02:12:46:04	   02:12:47:07	   00:00:01:03	Unmuted
+1       	41      	chip mvnt grab                	   02:13:23:01	   02:13:23:20	   00:00:00:19	Unmuted
+1       	42      	chip breaks                   	   02:13:26:00	   02:13:26:06	   00:00:00:06	Unmuted
+1       	43      	chip grab toss dwn            	   02:13:30:08	   02:13:32:09	   00:00:02:01	Unmuted
+1       	44      	pill bottle up mvnt dwn 2x glass shelf	   02:14:58:15	   02:15:09:01	   00:00:10:10	Unmuted
+1       	45      	woman lift sushi place on plastic plate	   03:00:38:08	   03:00:41:13	   00:00:03:05	Unmuted
+1       	46      	woman hand 2 plastic plate with finger mvmnt	   03:00:43:12	   03:00:44:22	   00:00:01:10	Unmuted
+1       	47      	server LR tray mvmnt          	   03:01:21:19	   03:01:34:04	   00:00:12:09	Unmuted
+1       	48      	upholstered chair R shift on wood floor	   03:01:49:13	   03:01:54:17	   00:00:05:04	Unmuted
+1       	49      	handle smart phone (soo-lin)  	   03:02:16:23	   03:02:35:06	   00:00:18:07	Unmuted
+1       	50      	door trim wood flying debris  	   03:03:00:00	   03:03:03:14	   00:00:03:14	Muted
+1       	51      	BG R remove umbrella from stand	   03:03:21:18	   03:03:22:13	   00:00:00:19	Muted
+1       	52      	black plastic trash bag mvmnt 	   03:03:29:16	   03:03:57:12	   00:00:27:20	Unmuted
+1       	53      	car window down               	   03:04:07:16	   03:04:11:01	   00:00:03:09	Muted
+1       	54      	seatbelt mvmnt & retract      	   03:04:42:02	   03:04:46:00	   00:00:03:22	Unmuted
+1       	55      	seatbelt grab pull click      	   03:06:28:02	   03:06:31:03	   00:00:03:01	Unmuted
+1       	56      	seatbelt click                	   03:06:31:03	   03:06:31:11	   00:00:00:08	Unmuted
+1       	57      	setbelt mvmnt                 	   03:06:32:18	   03:06:38:15	   00:00:05:21	Unmuted
+1       	58      	seatbelt click & retract OS   	   03:06:40:00	   03:06:40:16	   00:00:00:16	Unmuted
+1       	59      	welding machine handle & down on metal	   03:09:21:04	   03:09:27:14	   00:00:06:10	Unmuted
+1       	60      	leather office chair mvmnt    	   03:10:14:03	   03:10:29:07	   00:00:15:04	Unmuted
+1       	61      	leather office chair mvmnt    	   03:10:40:00	   03:10:52:05	   00:00:12:05	Unmuted
+1       	62      	leather office chair mvmnt    	   03:10:57:02	   03:11:17:21	   00:00:20:19	Unmuted
+1       	63      	leather office chair mvmnt    	   03:12:24:18	   03:12:29:20	   00:00:05:02	Unmuted
+1       	64      	leather office chair mvmnt    	   03:14:46:08	   03:14:54:17	   00:00:08:09	Unmuted
+1       	65      	computer keyboard hand on (elgie)	   04:00:05:05	   04:00:06:20	   00:00:01:15	Unmuted
+1       	66      	computer keyboard hands on type off (elgie)	   04:00:08:06	   04:00:09:22	   00:00:01:16	Unmuted
+1       	67      	computer keyboard hand on type off	   04:00:41:03	   04:00:50:05	   00:00:09:02	Unmuted
+1       	68      	hand 2 tight leather seat & adjust (bern)	   04:01:27:01	   04:01:30:06	   00:00:03:05	Unmuted
+1       	69      	hand 2 tight leather chair & up (kennedy)	   04:01:40:16	   04:01:41:21	   00:00:01:05	Unmuted
+1       	70      	hand 2 tight leather chair & off (bern)	   04:01:53:11	   04:01:54:10	   00:00:00:23	Unmuted
+1       	71      	hand 2 tight leather chair slide in & adjust (bee)	   04:02:55:18	   04:03:02:16	   00:00:06:22	Unmuted
+1       	72      	hand 2 tight leather chair & sit (kennedy)	   04:03:16:18	   04:03:19:22	   00:00:03:04	Unmuted
+1       	73      	hand 2 tight leather chair & shift forward (kennedy)	   04:03:36:11	   04:03:37:13	   00:00:01:02	Unmuted
+1       	74      	tight leather chair mvmnts (bern)	   04:03:40:14	   04:03:46:12	   00:00:05:22	Unmuted
+1       	75      	tight leather chair lean forward OS (bern)	   04:03:50:20	   04:03:56:15	   00:00:05:19	Unmuted
+1       	76      	hand 2 tight leather chair mvmnts & up (kennedy)	   04:03:59:08	   04:04:01:01	   00:00:01:17	Unmuted
+1       	77      	hand with ring on door knob tap	   04:04:42:04	   04:04:42:17	   00:00:00:13	Unmuted
+1       	78      	doorknob mvmnts with close    	   04:04:48:09	   04:04:51:22	   00:00:03:13	Unmuted
+1       	79      	remove shawl & toss down      	   04:05:15:08	   04:05:18:00	   00:00:02:16	Unmuted
+1       	80      	wood chair shift cmnt         	   04:05:40:20	   04:05:43:04	   00:00:02:08	Unmuted
+1       	81      	office chair shift            	   04:06:04:04	   04:06:05:14	   00:00:01:10	Unmuted
+1       	82      	office chair shift & up       	   04:06:10:07	   04:06:12:12	   00:00:02:05	Unmuted
+1       	83      	small chain necklace          	   04:10:04:23	   04:10:06:07	   00:00:01:08	Unmuted
+1       	84      	leather purse mvmnt           	   04:10:28:06	   04:10:30:21	   00:00:02:15	Unmuted
+1       	85      	leather purse in lap wallet in & hands on	   04:11:11:02	   04:11:26:22	   00:00:15:20	Unmuted
+1       	86      	hand 2 leather purse          	   04:11:36:12	   04:11:36:19	   00:00:00:07	Unmuted
+1       	87      	hand 2 leather purse          	   04:11:38:20	   04:11:39:01	   00:00:00:05	Unmuted
+1       	88      	hand 2 leather purse & mvmnt OS (prod)	   04:11:41:18	   04:11:42:17	   00:00:00:23	Unmuted
+1       	89      	hands 2 leather purse         	   04:11:44:21	   04:11:46:00	   00:00:01:03	Unmuted
+1       	90      	elbow 2 wood chair arm (jelnik)	   04:12:43:18	   04:12:44:09	   00:00:00:15	Unmuted
+1       	91      	elbow 2 wood chair arm (jelnik)	   04:12:49:21	   04:12:50:13	   00:00:00:16	Unmuted
+1       	92      	elbow 2 wood chair arm (jelnik)	   04:12:55:08	   04:12:56:05	   00:00:00:21	Unmuted
+1       	93      	dry-erase marker handle       	   05:00:00:00	   05:00:22:21	   00:00:22:21	Unmuted
+1       	94      	smart phone from prefab wood tap 2 ear down toss (elgie)	   05:01:45:16	   05:01:56:08	   00:00:10:16	Unmuted
+1       	95      	smart phone toss 2 stack of papers (elgie)	   05:01:56:08	   05:01:56:20	   00:00:00:12	Unmuted
+1       	96      	wood flute handle             	   05:03:23:04	   05:03:24:21	   00:00:01:17	Unmuted
+1       	97      	hand 2 wood flute             	   05:03:26:17	   05:03:28:08	   00:00:01:15	Unmuted
+1       	98      	wood flute play & handle      	   05:03:31:14	   05:04:00:03	   00:00:28:13	Unmuted
+1       	99      	files & papers mvmnt (doc)    	   05:04:17:05	   05:04:21:17	   00:00:04:12	Unmuted
+1       	100     	hand to leather file folder OS (doc)	   05:04:22:12	   05:04:24:00	   00:00:01:12	Unmuted
+1       	101     	files & papers mvmnt (doc)    	   05:04:24:02	   05:04:27:00	   00:00:02:22	Unmuted
+1       	102     	files & papers mvmnt (doc)    	   05:04:29:03	   05:04:35:23	   00:00:06:20	Unmuted
+1       	103     	smart phone down on car dash  	   05:05:18:16	   05:05:19:04	   00:00:00:12	Unmuted
+1       	104     	plastic sunglasses from head fold down 2 center console	   05:05:20:10	   05:05:22:09	   00:00:01:23	Unmuted
+1       	105     	grab sunglasses from console & into vest pocket	   05:05:27:23	   05:05:31:10	   00:00:03:11	Unmuted
+1       	106     	files & papers mvmnt (doc)    	   05:05:40:11	   05:05:47:14	   00:00:07:03	Unmuted
+1       	107     	files & papers mvmnt (doc)    	   05:05:51:06	   05:06:01:01	   00:00:09:19	Unmuted
+1       	108     	files & papers mvmnt (doc)    	   05:06:06:23	   05:06:15:04	   00:00:08:05	Unmuted
+1       	109     	files & papers mvmnt (doc)    	   05:06:29:00	   05:06:33:04	   00:00:04:04	Unmuted
+1       	110     	hands 2 files & folders 2x (doc)	   05:08:11:20	   05:08:19:13	   00:00:07:17	Unmuted
+1       	111     	hands 2 files & folders (doc) 	   05:08:31:02	   05:08:32:00	   00:00:00:22	Unmuted
+1       	112     	hand 2 files & folders with mvmnt (doc)	   05:09:19:17	   05:09:21:00	   00:00:01:07	Unmuted
+1       	113     	arms 2 files & folders (mvmnt)	   05:09:37:08	   05:09:41:22	   00:00:04:14	Unmuted
+1       	114     	files & folders mvmnt (doc)   	   05:09:54:05	   05:09:58:18	   00:00:04:13	Unmuted
+1       	115     	files & folders mvmnt (doc)   	   05:10:01:18	   05:10:05:11	   00:00:03:17	Unmuted
+1       	116     	hands 2 files & folders x2 (doc)	   05:10:43:16	   05:10:45:22	   00:00:02:06	Unmuted
+1       	117     	hands 2 files & folders OS (doc)	   05:11:39:14	   05:11:40:16	   00:00:01:02	Unmuted
+1       	118     	file & folder mvmnt (doc)     	   05:12:05:01	   05:12:09:01	   00:00:04:00	Unmuted
+1       	119     	file & folder mvmnt (doc)     	   05:13:11:10	   05:13:15:04	   00:00:03:18	Unmuted
+1       	120     	hands 2 toilet seat sit & up  	   05:14:08:05	   05:14:13:20	   00:00:05:15	Unmuted
+1       	121     	hand 2 porcelain sink 2x      	   05:14:14:06	   05:14:17:22	   00:00:03:16	Unmuted
+1       	122     	paper mvmnt (doc)             	   05:14:44:07	   05:14:48:01	   00:00:03:18	Unmuted
+1       	123     	old doorknob locked mvmnt (elgie)	   05:15:04:03	   05:15:06:06	   00:00:02:03	Unmuted
+1       	124     	old door knob locked mvmnt (elgie)	   05:15:17:11	   05:15:19:20	   00:00:02:09	Unmuted
+1       	125     	old door knob mvmnt & release (elgie)	   05:15:20:11	   05:15:21:13	   00:00:01:02	Unmuted
+1       	126     	door latch & open INT (audrey 	   05:15:33:12	   05:15:35:23	   00:00:02:11	Unmuted
+1       	127     	front door handle open        	   05:16:56:00	   05:16:57:17	   00:00:01:17	Unmuted
+1       	128     	front door handle open (soo-lin)	   05:18:00:21	   05:18:02:03	   00:00:01:06	Unmuted
+1       	129     	umbrella mvnt dwn             	   06:00:00:00	   06:00:15:23	   00:00:15:23	Unmuted
+1       	130     	danggling chain necklace      	   06:02:03:23	   06:02:09:21	   00:00:05:22	Unmuted
+1       	131     	roller bag cmnt-metal         	   06:02:20:06	   06:02:23:13	   00:00:03:07	Unmuted
+1       	132     	man seated canvas bag mvnt    	   06:03:34:07	   06:03:37:21	   00:00:03:14	Unmuted
+1       	133     	headrest cloth shifts         	   06:04:08:23	   06:04:10:12	   00:00:01:13	Unmuted
+1       	134     	hard hat on leg mvnt          	   06:08:05:06	   06:08:09:14	   00:00:04:08	Unmuted
+1       	135     	laptop hands close mvnt dwn bed	   06:09:34:11	   06:09:38:12	   00:00:04:01	Unmuted
+1       	136     	bun handle eat                	   06:09:45:12	   06:09:56:11	   00:00:10:23	Unmuted
+1       	137     	bread saver open  os close metal	   06:10:18:04	   06:10:21:01	   00:00:02:21	Unmuted
+1       	138     	bread keeper open close       	   06:11:22:20	   06:11:27:01	   00:00:04:05	Unmuted
+1       	139     	dog collar-laesh              	   07:01:10:00	   07:01:39:08	   00:00:29:08	Unmuted
+1       	140     	brochure touch up bside mvnt handle	   07:01:54:05	   07:02:27:18	   00:00:33:13	Unmuted
+1       	141     	big hand on ice cooler mvnt on wood lid off cooler 	   07:03:11:03	   07:03:17:19	   00:00:06:16	Unmuted
+1       	142     	hand headrest mvnt            	   07:03:33:21	   07:03:35:05	   00:00:01:08	Muted
+1       	143     	curtain mvnt                  	   07:03:50:16	   07:03:58:23	   00:00:08:07	Unmuted
+1       	144     	kayak mvnt water grp 2        	   07:05:33:11	   07:05:43:11	   00:00:10:00	Unmuted
+1       	145     	flip nylon bag it flops       	   07:07:16:06	   07:07:17:13	   00:00:01:07	Unmuted
+1       	146     	bag mvnt OS cont bside        	   07:07:23:13	   07:07:32:17	   00:00:09:04	Unmuted
+1       	147     	kayak water mvnt              	   07:08:02:13	   07:09:04:21	   00:01:02:08	Unmuted
+1       	148     	tag on jacket mvnt flap       	   07:09:08:21	   07:09:20:22	   00:00:12:01	Unmuted
+1       	149     	lift large page mvnt dwn      	   07:10:46:23	   07:10:51:03	   00:00:04:04	Unmuted
+1       	150     	clip humidifier on turn prod is good but maybe try something	   07:10:52:19	   07:10:55:04	   00:00:02:09	Muted
+1       	151     	penquin C flapping            	   07:11:05:18	   07:11:07:12	   00:00:01:18	Unmuted
+1       	152     	a raft of penquins            	   07:11:23:05	   07:11:29:17	   00:00:06:12	Unmuted
+1       	153     	curtain mvnt open             	   07:11:52:04	   07:11:56:02	   00:00:03:22	Unmuted
+1       	154     	finger slide dwn wooden rail  	   07:12:15:15	   07:12:18:08	   00:00:02:17	Unmuted
+1       	155     	B unsnap vest off             	   07:12:51:02	   07:12:56:13	   00:00:05:11	Unmuted
+1       	156     	 M r cup mvnt glove cont bside 	   07:13:08:17	   07:13:18:09	   00:00:09:16	Muted
+1       	157     	hat off dwn                   	   07:14:33:22	   07:14:36:11	   00:00:02:13	Unmuted
+1       	158     	wine glass dwn coaster        	   08:00:17:17	   08:00:20:20	   00:00:03:03	Unmuted
+1       	159     	wine glass mvnt up dwn coaster	   08:00:42:16	   08:00:49:20	   00:00:07:04	Unmuted
+1       	160     	tote on tote                  	   08:01:47:00	   08:01:49:17	   00:00:02:17	Unmuted
+1       	161     	shove hat in coat pocket      	   08:01:58:23	   08:02:00:05	   00:00:01:06	Unmuted
+1       	162     	tote grab up from tote on to tote	   08:02:11:01	   08:02:13:16	   00:00:02:15	Unmuted
+1       	163     	sit wooden seat               	   08:02:21:00	   08:02:23:03	   00:00:02:03	Unmuted
+1       	164     	mug dwn double                	   08:02:51:03	   08:02:52:05	   00:00:01:02	Unmuted
+1       	165     	sit bed adjust up             	   08:05:16:01	   08:05:29:08	   00:00:13:07	Unmuted
+1       	166     	back against metal door big bamg prod	   08:05:33:03	   08:05:34:03	   00:00:01:00	Unmuted
+1       	167     	big nut drops indie motor prod	   08:05:50:22	   08:05:52:20	   00:00:01:22	Unmuted
+1       	168     	spin nut prod                 	   08:05:54:07	   08:05:58:15	   00:00:04:08	Unmuted
+1       	169     	leather chair mvnt hands up-dwn-up	   08:07:41:14	   08:07:59:03	   00:00:17:13	Unmuted
+1       	170     	 mask off                     	   08:08:15:03	   08:08:20:04	   00:00:05:01	Unmuted
+1       	171     	mask off  dwn OS metal        	   08:08:40:03	   08:08:45:04	   00:00:05:01	Unmuted
+1       	172     	card into card reader swipe   	   08:09:50:08	   08:09:53:18	   00:00:03:10	Unmuted
+1       	173     	phone cord mvnt               	   08:11:06:06	   08:11:48:15	   00:00:42:09	Unmuted
+1       	174     	door knob mvnt metal door     	   08:12:06:01	   08:12:10:15	   00:00:04:14	Unmuted
+1       	175     	big double grab glove jcket   	   08:12:45:17	   08:12:50:23	   00:00:05:06	Unmuted
+1       	176     	glove off with teeth handle   	   08:13:19:02	   08:13:22:09	   00:00:03:07	Unmuted
+1       	177     	velvet pouch necklace mvnt cont with arm up hug mvnt	   08:15:00:17	   08:15:57:11	   00:00:56:18	Unmuted
+
+
+TRACK NAME:	PROP 3.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	water drips in pot w/ water and towel in it	   01:02:59:09	   01:03:07:20	   00:00:08:11	Unmuted
+1       	2       	mail mvnt                     	   01:04:50:05	   01:05:06:13	   00:00:16:08	Unmuted
+1       	3       	plastic bag out mvnt-04       	   01:06:46:14	   01:06:57:16	   00:00:11:02	Unmuted
+1       	4       	bag mvnt                      	   01:07:03:08	   01:07:04:09	   00:00:01:01	Unmuted
+1       	5       	head couch                    	   01:07:21:12	   01:07:21:20	   00:00:00:08	Muted
+1       	6       	grab sleeve unbutton roll up 2x	   01:07:27:05	   01:07:40:15	   00:00:13:10	Unmuted
+1       	7       	hand on palster or wood object mvnt	   01:07:51:13	   01:07:53:10	   00:00:01:21	Unmuted
+1       	8       	box knife open cut rug 2x dwn 	   01:08:07:05	   01:08:17:08	   00:00:10:03	Unmuted
+1       	9       	box knife retract mvnt toss in bag mvnt in bag	   01:08:31:04	   01:08:33:20	   00:00:02:16	Unmuted
+1       	10      	toss something into bag  mvnt prod	   01:08:49:19	   01:08:52:23	   00:00:03:04	Unmuted
+1       	11      	biz card up mvnt hsnd 2 hand toss mvnt	   01:09:17:01	   01:09:33:12	   00:00:16:11	Unmuted
+1       	12      	grab unbrella from under arm  	   01:11:59:06	   01:12:00:09	   00:00:01:03	Unmuted
+1       	13      	feet ladder                   	   01:12:40:01	   01:12:57:15	   00:00:17:14	Unmuted
+1       	14      	bella feet ladder             	   01:13:03:17	   01:13:07:20	   00:00:04:03	Unmuted
+1       	15      	grab scarf mvnt wrap hand busy	   01:13:34:11	   01:13:52:16	   00:00:18:05	Unmuted
+1       	16      	small remote out of pocket handle	   01:15:31:02	   01:15:36:13	   00:00:05:11	Unmuted
+1       	17      	small brain interface out of shirt pocket  mvnt adhere to forehead	   01:15:52:09	   01:16:22:11	   00:00:30:02	Unmuted
+1       	18      	plastic mvnt sweeper          	   01:16:28:02	   01:16:42:12	   00:00:14:10	Unmuted
+1       	19      	peel interface off forehead handle mvnt	   01:17:19:19	   01:17:57:02	   00:00:37:07	Unmuted
+1       	20      	necklace mvnt plastis cubes   	   02:00:12:22	   02:00:16:15	   00:00:03:17	Unmuted
+1       	21      	up from floor knees on rug    	   02:00:32:21	   02:00:50:19	   00:00:17:22	Unmuted
+1       	22      	arms cross thin  zippy nylon  	   02:02:33:09	   02:02:35:10	   00:00:02:01	Unmuted
+1       	23      	couch mvnt up 2x              	   02:03:10:00	   02:03:15:14	   00:00:05:14	Unmuted
+1       	24      	ipad grab dwn on couch        	   02:03:51:16	   02:03:53:22	   00:00:02:06	Unmuted
+1       	25      	vest out mvnt on handle-02    	   02:04:30:10	   02:04:47:16	   00:00:17:06	Unmuted
+1       	26      	nylon jacket off chair handle mvnt	   02:05:28:04	   02:05:29:19	   00:00:01:15	Unmuted
+1       	27      	hand door knob                	   02:06:12:19	   02:06:13:14	   00:00:00:19	Unmuted
+1       	28      	hand door knob                	   02:06:18:19	   02:06:22:00	   00:00:03:05	Unmuted
+1       	29      	grab clipboard grab dwn       	   02:06:23:02	   02:06:25:16	   00:00:02:14	Unmuted
+1       	30      	clipboard up mvnt             	   02:07:55:06	   02:07:57:09	   00:00:02:03	Unmuted
+1       	31      	leather purse mvnt            	   02:09:57:02	   02:10:00:03	   00:00:03:01	Unmuted
+1       	32      	folded paper mvnt handle open crumple bella hits toss	   02:10:11:00	   02:10:39:20	   00:00:28:20	Unmuted
+1       	33      	glass ice water up mvnt dwn   	   02:12:25:13	   02:12:32:02	   00:00:06:13	Unmuted
+1       	34      	guac up/dwn                   	   02:12:47:05	   02:12:48:18	   00:00:01:13	Unmuted
+1       	35      	guac up dwn                   	   02:12:50:16	   02:12:52:12	   00:00:01:20	Unmuted
+1       	36      	knapkin mvnt                  	   02:13:31:05	   02:13:33:06	   00:00:02:01	Unmuted
+1       	37      	glass ice water up handle ice mvnt	   02:14:33:11	   02:14:54:11	   00:00:21:00	Unmuted
+1       	38      	FG woman snack from bowl 2 plastic plate	   03:00:08:09	   03:00:10:05	   00:00:01:20	Unmuted
+1       	39      	woman napkin mvmnt            	   03:00:43:08	   03:00:45:00	   00:00:01:16	Muted
+1       	40      	audrey play with straw in empty hard plastic cup with napkin	   03:00:51:13	   03:01:16:01	   00:00:24:12	Unmuted
+1       	41      	audrey empty hard plastic cup hand 2 hand	   03:01:21:23	   03:01:24:16	   00:00:02:17	Unmuted
+1       	42      	eating with hands (audrey son)	   03:01:34:05	   03:01:38:06	   00:00:04:01	Unmuted
+1       	43      	small tree being pummled      	   03:02:53:06	   03:02:58:14	   00:00:05:08	Unmuted
+1       	44      	door glass shatter            	   03:03:00:02	   03:03:02:06	   00:00:02:04	Muted
+1       	45      	handle umbrella & open on B-side	   03:03:15:10	   03:03:20:08	   00:00:04:22	Unmuted
+1       	46      	BG RL handle umbrella & open  	   03:03:21:18	   03:03:29:16	   00:00:07:22	Unmuted
+1       	47      	car door handle INT open      	   03:04:45:13	   03:04:46:11	   00:00:00:22	Unmuted
+1       	48      	car door handle INT open      	   03:04:49:00	   03:04:50:07	   00:00:01:07	Unmuted
+1       	49      	car door handle EXT open OS   	   03:05:37:11	   03:05:38:00	   00:00:00:13	Unmuted
+1       	50      	car door handle EXT open      	   03:06:22:21	   03:06:23:09	   00:00:00:12	Unmuted
+1       	51      	car door handle EXT open (bee)	   03:07:33:12	   03:07:34:14	   00:00:01:02	Unmuted
+1       	52      	car door handle EXT open (bern)	   03:07:35:12	   03:07:36:07	   00:00:00:19	Unmuted
+1       	53      	welding sparks                	   03:09:21:15	   03:09:24:19	   00:00:03:04	Muted
+1       	54      	marble on metal rollers       	   03:11:30:12	   03:11:32:07	   00:00:01:19	Unmuted
+1       	55      	big wooden beam handoff       	   03:13:11:14	   03:13:14:08	   00:00:02:18	Unmuted
+1       	56      	bern yarn & knitting needles  	   03:13:37:19	   03:13:43:22	   00:00:06:03	Unmuted
+1       	57      	contracotr glasses in hand mvmnt	   03:13:48:14	   03:13:51:03	   00:00:02:13	Unmuted
+1       	58      	plastic chair mvmnt           	   03:14:58:08	   03:15:01:05	   00:00:02:21	Unmuted
+1       	59      	plastic chair mvmnt           	   03:15:03:11	   03:15:15:23	   00:00:12:12	Unmuted
+1       	60      	office chair up (elgie)       	   04:00:00:00	   04:00:00:22	   00:00:00:22	Unmuted
+1       	61      	soo-lin hand 2 folder OS      	   04:00:18:21	   04:00:19:12	   00:00:00:15	Unmuted
+1       	62      	office chair sit & mvmnt (elgie)	   04:00:36:11	   04:00:44:12	   00:00:08:01	Unmuted
+1       	63      	office chair mvmnt & sit backs (elgie)	   04:00:50:14	   04:01:06:20	   00:00:16:06	Unmuted
+1       	64      	hand 2 cloth booth seat & off (kennedy)	   04:01:45:10	   04:01:45:20	   00:00:00:10	Unmuted
+1       	65      	shift chair metal legs on crpt (bern & elgie)	   04:01:53:12	   04:01:55:15	   00:00:02:03	Unmuted
+1       	66      	hand 2 tight leather chair sit & adjust (elgie)	   04:02:56:01	   04:03:01:09	   00:00:05:08	Unmuted
+1       	67      	door hook latch mvmnt & rattle	   04:04:48:19	   04:04:51:22	   00:00:03:03	Unmuted
+1       	68      	hands 2 sheet with blanket mvmnt	   04:05:21:11	   04:05:30:16	   00:00:09:05	Unmuted
+1       	69      	thick paper menu mvmnt & turn over	   04:05:32:13	   04:05:35:20	   00:00:03:07	Unmuted
+1       	70      	thick paper menu mvmnt        	   04:05:37:02	   04:05:38:06	   00:00:01:04	Unmuted
+1       	71      	thick paper menu down on wood table OS	   04:05:40:06	   04:05:41:16	   00:00:01:10	Unmuted
+1       	72      	glasses plastic frames wire arms off (elgie)	   04:06:10:23	   04:06:12:01	   00:00:01:02	Unmuted
+1       	73      	glasses plastic frames wire arms down on prefab desk (elgie)	   04:06:12:01	   04:06:12:13	   00:00:00:12	Unmuted
+1       	74      	purse clasp 2 hard wood table 	   04:10:28:08	   04:10:28:11	   00:00:00:03	Unmuted
+1       	75      	leather wallet out open rifle drop 2 hard wood	   04:10:28:18	   04:10:32:06	   00:00:03:12	Unmuted
+1       	76      	leather wallet grab open close into purse	   04:11:12:04	   04:11:21:19	   00:00:09:15	Unmuted
+1       	77      	gold ring on string hits hard wood 3x (prod)	   04:12:57:00	   04:12:59:21	   00:00:02:21	Unmuted
+1       	78      	smart phone in hand mvmnt (soo-lin)	   05:00:13:17	   05:00:22:16	   00:00:08:23	Unmuted
+1       	79      	finger taps smart phone x22 (soo-lin)	   05:00:22:16	   05:00:27:05	   00:00:04:13	Unmuted
+1       	80      	smart phone in hand mvmnt (soo-lin)	   05:00:27:05	   05:00:39:12	   00:00:12:07	Unmuted
+1       	81      	smart phone in hand mvmnt (soo-lin)	   05:00:44:20	   05:00:53:02	   00:00:08:06	Unmuted
+1       	82      	smart phone down on prefab wood (soo-lin)	   05:00:53:02	   05:00:53:17	   00:00:00:15	Unmuted
+1       	83      	hand 2 smart phone & slide on prefab wood (soo-lin)	   05:00:55:12	   05:00:57:02	   00:00:01:14	Unmuted
+1       	84      	smart phone up from prefab wood dial 2 ear (soo-lin)	   05:02:28:21	   05:03:05:10	   00:00:36:13	Unmuted
+1       	85      	fishing vest with zippers mvmnt & down center console	   05:05:22:03	   05:05:27:04	   00:00:05:01	Unmuted
+1       	86      	fishing vest with zippers mvmnt	   05:05:28:00	   05:05:32:02	   00:00:04:02	Unmuted
+1       	87      	fishing vest with zippers mvmnt	   05:05:36:09	   05:05:40:11	   00:00:04:02	Unmuted
+1       	88      	keys in hand mvmnt & down with coat (bern)	   05:05:47:16	   05:06:35:02	   00:00:47:10	Unmuted
+1       	89      	smart phone drop into glass fish bown with water (bern)	   05:08:04:10	   05:08:07:01	   00:00:02:15	Unmuted
+1       	90      	hands 2 squeaky antique faucets & turn	   05:14:14:18	   05:14:17:10	   00:00:02:16	Unmuted
+1       	91      	metal watch mvmnt (soo-lin)   	   05:15:12:07	   05:15:13:02	   00:00:00:19	Unmuted
+1       	92      	door open with weather seal?  	   05:15:33:13	   05:15:35:03	   00:00:01:14	Unmuted
+1       	93      	door with weather seal open & close?	   05:16:56:00	   05:17:00:00	   00:00:04:00	Unmuted
+1       	94      	front door with weather seal open & close	   05:18:01:01	   05:18:03:09	   00:00:02:08	Muted
+1       	95      	phone in to pocket            	   06:00:10:08	   06:00:13:01	   00:00:02:17	Unmuted
+1       	96      	finger on phone mvnt          	   06:02:11:05	   06:02:13:10	   00:00:02:05	Unmuted
+1       	97      	roller bag cmnt-metal         	   06:02:21:09	   06:02:24:00	   00:00:02:15	Unmuted
+1       	98      	passport ticket mvnt          	   06:03:30:22	   06:03:39:02	   00:00:08:04	Unmuted
+1       	99      	laptop on lap mvnt hands      	   06:04:10:09	   06:04:16:10	   00:00:06:01	Unmuted
+1       	100     	glasses off fold dwn          	   06:10:09:18	   06:10:11:05	   00:00:01:11	Unmuted
+1       	101     	hand on toaster temp slide mvnt	   06:11:25:15	   06:11:28:17	   00:00:03:02	Unmuted
+1       	102     	red raincoat over arm mvnt    	   07:01:39:06	   07:01:43:07	   00:00:04:01	Unmuted
+1       	103     	knapsack mvnt off dwn OS      	   07:01:51:10	   07:01:54:19	   00:00:03:09	Unmuted
+1       	104     	hand towel mvnt start OS      	   07:03:06:08	   07:03:17:22	   00:00:11:14	Unmuted
+1       	105     	sit dwn bus seat              	   07:03:25:17	   07:03:30:18	   00:00:05:01	Unmuted
+1       	106     	fingers slide on glass        	   07:03:55:10	   07:03:58:07	   00:00:02:21	Unmuted
+1       	107     	kayak mvnt water grp 3        	   07:05:33:11	   07:05:43:11	   00:00:10:00	Unmuted
+1       	108     	grab cord and toggle mvnt     	   07:07:17:15	   07:07:20:12	   00:00:02:21	Unmuted
+1       	109     	soft book out of bag OS handle dwn soft book out mvnt dwn on other book	   07:07:23:13	   07:07:32:15	   00:00:09:02	Unmuted
+1       	110     	books up OS dwn on ipad mvnt dwn on bed	   07:07:34:20	   07:07:38:19	   00:00:03:23	Unmuted
+1       	111     	soft book out dwn on books    	   07:07:43:02	   07:07:45:01	   00:00:01:23	Unmuted
+1       	112     	2 sets of paddles bump kayak  	   07:08:05:01	   07:08:06:01	   00:00:01:00	Unmuted
+1       	113     	arms gloved hands on paddle mvnt slide	   07:08:11:03	   07:08:15:13	   00:00:04:10	Unmuted
+1       	114     	arm bumps paddle R            	   07:08:17:21	   07:08:18:09	   00:00:00:12	Unmuted
+1       	115     	paddle bumps boat             	   07:08:21:16	   07:08:22:03	   00:00:00:11	Unmuted
+1       	116     	gloved hand on paddle mvnt    	   07:08:25:23	   07:08:30:05	   00:00:04:06	Unmuted
+1       	117     	bare hand to glove            	   07:08:53:05	   07:08:53:20	   00:00:00:15	Unmuted
+1       	118     	bare hand to paddle           	   07:08:57:12	   07:08:59:16	   00:00:02:04	Unmuted
+1       	119     	gloved hand to paddle         	   07:09:03:01	   07:09:03:06	   00:00:00:05	Unmuted
+1       	120     	light dim click off           	   07:11:01:09	   07:11:02:13	   00:00:01:04	Unmuted
+1       	121     	penquin on rock               	   07:11:05:21	   07:11:07:06	   00:00:01:09	Unmuted
+1       	122     	a raft of penquins            	   07:11:23:05	   07:11:29:18	   00:00:06:13	Unmuted
+1       	123     	grab rope mvnt dwn with beaner to alumi floor	   07:11:31:06	   07:11:36:15	   00:00:05:09	Unmuted
+1       	124     	glasses up off book on        	   07:11:54:15	   07:11:58:05	   00:00:03:14	Unmuted
+1       	125     	chapstick roll on wood        	   07:12:00:22	   07:12:09:02	   00:00:08:04	Unmuted
+1       	126     	gloves dwn wood rail          	   07:12:15:15	   07:12:22:20	   00:00:07:05	Unmuted
+1       	127     	badge mvnt                    	   07:12:49:02	   07:13:06:08	   00:00:17:06	Unmuted
+1       	128     	gulp drink                    	   08:00:12:21	   08:00:16:18	   00:00:03:21	Unmuted
+1       	129     	sip                           	   08:00:45:20	   08:00:48:09	   00:00:02:13	Unmuted
+1       	130     	tote grab up dwn on alumin hands	   08:02:08:11	   08:02:13:10	   00:00:04:23	Unmuted
+1       	131     	tote grab up dwn alumin       	   08:02:15:01	   08:02:20:01	   00:00:05:00	Unmuted
+1       	132     	sit thin wood butt and back   	   08:02:51:19	   08:02:52:23	   00:00:01:04	Unmuted
+1       	133     	rag mvnt dwn metal            	   08:05:57:03	   08:06:00:22	   00:00:03:19	Unmuted
+1       	134     	rag grab mvnt                 	   08:06:08:05	   08:06:22:04	   00:00:13:23	Unmuted
+1       	135     	keyboard listen prod          	   08:07:46:12	   08:07:54:15	   00:00:08:03	Unmuted
+1       	136     	keyboard OS                   	   08:07:59:11	   08:08:06:21	   00:00:07:10	Unmuted
+1       	137     	gloved hand to rubber-rope    	   08:10:04:13	   08:10:06:21	   00:00:02:08	Unmuted
+1       	138     	drips 19 times                	   08:12:24:18	   08:12:38:02	   00:00:13:08	Unmuted
+1       	139     	gloved hand hat off           	   08:12:50:17	   08:12:51:11	   00:00:00:18	Unmuted
+1       	140     	phone cord mvnt               	   08:12:53:17	   08:13:00:10	   00:00:06:17	Unmuted
+1       	141     	phone cord mvnt               	   08:13:08:08	   08:13:16:09	   00:00:08:01	Unmuted
+1       	142     	phone cord mvnt               	   08:13:22:20	   08:13:39:10	   00:00:16:14	Unmuted
+1       	143     	phone cord mvnt dwn on wood-blueprint	   08:13:44:16	   08:14:22:02	   00:00:37:10	Unmuted
+1       	144     	locket open close OS          	   08:15:11:13	   08:15:21:11	   00:00:09:22	Unmuted
+
+
+TRACK NAME:	PROP 4.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	water drips distant brass pot water and towel in it	   01:03:07:15	   01:03:09:01	   00:00:01:10	Unmuted
+1       	2       	booklet mvnt hsndle pages turn dwn/up handle turn pages mvnt	   01:03:39:10	   01:04:47:13	   00:01:08:03	Unmuted
+1       	3       	envelope into pocket          	   01:04:58:08	   01:05:03:03	   00:00:04:19	Unmuted
+1       	4       	foot slide off bench          	   01:06:56:02	   01:06:57:02	   00:00:01:00	Unmuted
+1       	5       	thick cotton rope up dwn carpet	   01:07:51:14	   01:07:53:17	   00:00:02:03	Unmuted
+1       	6       	hand mvnt floor               	   01:08:10:00	   01:08:16:20	   00:00:06:20	Unmuted
+1       	7       	hand to carpet arm to carpet  	   01:08:33:05	   01:08:35:06	   00:00:02:01	Unmuted
+1       	8       	hands tug on carpet slide dwn 	   01:08:40:14	   01:08:46:10	   00:00:05:20	Unmuted
+1       	9       	nailgun dwn floor 1x big prod mvnt up	   01:08:59:15	   01:09:03:17	   00:00:04:01	Unmuted
+1       	10      	phone up hand 2 hand mvnt     	   01:09:15:23	   01:09:32:13	   00:00:16:14	Unmuted
+1       	11      	phone hand 2 hand dwn wooden box	   01:09:48:03	   01:09:57:18	   00:00:09:15	Unmuted
+1       	12      	big grab phone slide off wooden box	   01:10:02:21	   01:10:04:19	   00:00:01:22	Unmuted
+1       	13      	knapscack mvnt                	   01:11:38:17	   01:11:55:08	   00:00:16:15	Unmuted
+1       	14      	hands on ladder               	   01:12:20:00	   01:13:07:19	   00:00:47:19	Unmuted
+1       	15      	knees to carpet               	   01:13:20:15	   01:13:30:21	   00:00:10:06	Unmuted
+1       	16      	whip scarf (zippy)  hit paper 	   01:13:42:16	   01:13:44:11	   00:00:01:19	Muted
+1       	17      	plastic bag mvnt              	   01:13:52:16	   01:14:18:22	   00:00:26:05	Unmuted
+1       	18      	robot mvnt                    	   01:14:26:15	   01:14:34:03	   00:00:07:12	Unmuted
+1       	19      	robot mvnt                    	   01:15:10:07	   01:15:23:11	   00:00:13:04	Unmuted
+1       	20      	peel plastic back off put in pocket use a bandaid	   01:16:07:18	   01:16:13:01	   00:00:05:07	Unmuted
+1       	21      	brush mvnt sweeper            	   01:16:28:02	   01:16:42:12	   00:00:14:10	Muted
+1       	22      	mvnt leather chair hands arm up	   02:00:32:13	   02:00:39:08	   00:00:06:19	Unmuted
+1       	23      	knit throw mvnt               	   02:00:50:13	   02:01:59:19	   00:01:09:06	Unmuted
+1       	24      	dog collar mvnt               	   02:03:09:23	   02:03:21:20	   00:00:11:21	Unmuted
+1       	25      	eyeglasses mvnt               	   02:03:52:01	   02:03:53:21	   00:00:01:20	Unmuted
+1       	26      	tag mvmnt                     	   02:04:33:23	   02:04:53:02	   00:00:19:03	Unmuted
+1       	27      	os nylon bag off desk on mvnt 	   02:05:26:01	   02:05:29:19	   00:00:03:18	Unmuted
+1       	28      	sit couch hard and lay back   	   02:08:00:16	   02:08:03:13	   00:00:02:21	Unmuted
+1       	29      	couch mvnt up                 	   02:08:04:08	   02:08:07:23	   00:00:03:15	Unmuted
+1       	30      	couch mvnt                    	   02:09:09:06	   02:10:10:19	   00:01:01:13	Unmuted
+1       	31      	purse grab toss backseat      	   02:10:18:04	   02:10:20:23	   00:00:02:19	Unmuted
+1       	32      	sip swallow                   	   02:12:27:16	   02:12:30:09	   00:00:02:17	Unmuted
+1       	33      	hands on menu (thick cardpoard) wipe up flip mvnt dwn	   02:12:32:09	   02:12:51:01	   00:00:18:16	Unmuted
+1       	34      	silverware rolled in knapkin mvnt grab fork handle	   02:13:31:05	   02:13:34:07	   00:00:03:02	Unmuted
+1       	35      	slurpping sound               	   02:14:48:17	   02:14:52:10	   00:00:03:17	Muted
+1       	36      	man in blue hand 2 plastic cup with ice lift	   03:00:08:22	   03:00:10:05	   00:00:01:07	Unmuted
+1       	37      	server vape exhale            	   03:00:27:14	   03:00:29:01	   00:00:01:11	Unmuted
+1       	38      	server vape nose puff         	   03:00:30:00	   03:00:30:23	   00:00:00:23	Unmuted
+1       	39      	audrey napkin mvmnt           	   03:01:21:23	   03:01:24:16	   00:00:02:17	Unmuted
+1       	40      	wood door stress creak        	   03:02:58:14	   03:03:00:02	   00:00:01:12	Unmuted
+1       	41      	BG open umbrella              	   03:03:16:22	   03:03:18:07	   00:00:01:09	Unmuted
+1       	42      	BG C open umbrella            	   03:03:21:18	   03:03:22:10	   00:00:00:16	Unmuted
+1       	43      	leather car seat mvmnt        	   03:03:57:12	   03:04:08:08	   00:00:10:20	Unmuted
+1       	44      	leather car seat mvmnt        	   03:04:09:18	   03:04:17:23	   00:00:08:05	Unmuted
+1       	45      	leather car seat mvmnt        	   03:04:29:14	   03:04:38:05	   00:00:08:15	Unmuted
+1       	46      	leather car seat mvmnt & out  	   03:04:42:01	   03:04:47:18	   00:00:05:17	Unmuted
+1       	47      	leather car seat mvmnt & out  	   03:04:49:03	   03:04:51:21	   00:00:02:18	Unmuted
+1       	48      	leather car seat in & mvmnts OS cont B-side	   03:06:24:02	   03:06:29:16	   00:00:05:14	Unmuted
+1       	49      	leather seat mvmnt            	   03:06:32:18	   03:06:38:15	   00:00:05:21	Unmuted
+1       	50      	leather car seat mvmnt & out  	   03:06:40:16	   03:06:42:16	   00:00:02:00	Unmuted
+1       	51      	leather car seat mvmnt in (bee)	   03:07:34:17	   03:07:36:13	   00:00:01:20	Unmuted
+1       	52      	leather car seat in & mvmnt   	   03:07:36:13	   03:07:55:02	   00:00:18:13	Unmuted
+1       	53      	laptop grab pick up           	   03:08:08:11	   03:08:09:23	   00:00:01:12	Unmuted
+1       	54      	laptop down on knee           	   03:08:09:23	   03:08:10:21	   00:00:00:22	Unmuted
+1       	55      	laptop grab side with ring    	   03:08:11:14	   03:08:11:22	   00:00:00:08	Unmuted
+1       	56      	laptop grab screen with ring adjust	   03:08:11:22	   03:08:12:22	   00:00:01:00	Unmuted
+1       	57      	laptop hand to trackpad click 	   03:08:13:04	   03:08:13:23	   00:00:00:19	Unmuted
+1       	58      	laptop hand on trackpad       	   03:08:22:21	   03:08:24:10	   00:00:01:13	Unmuted
+1       	59      	hand 2 laptop x2              	   03:08:28:21	   03:08:30:06	   00:00:01:09	Unmuted
+1       	60      	paper contruction plan mvmnt  	   03:13:14:22	   03:13:18:13	   00:00:03:15	Unmuted
+1       	61      	bern knitting bag             	   03:13:37:19	   03:13:43:22	   00:00:06:03	Unmuted
+1       	62      	laptop lid grab close         	   03:15:59:09	   03:16:00:13	   00:00:01:04	Unmuted
+1       	63      	ballpoint pen in hand mvmnt & tap (soo-lin)	   04:00:00:00	   04:00:01:00	   00:00:01:00	Unmuted
+1       	64      	ballpoint pen in hand fidget mvmnt & taps (soo-lin)	   04:00:04:21	   04:00:19:03	   00:00:14:06	Unmuted
+1       	65      	ballpoint pen in hand fidget mvmnt & taps (soo-lin)	   04:00:20:00	   04:00:25:13	   00:00:05:13	Unmuted
+1       	66      	ballpoint pen in hand mvmnt & taps (soo-lin)	   04:00:31:06	   04:00:35:18	   00:00:04:12	Unmuted
+1       	67      	ballpoint pen in hand mvmnt & fidget (soo-lin)	   04:00:41:22	   04:00:50:07	   00:00:08:09	Unmuted
+1       	68      	ballpoint pen in hand mvmnt & fidget (soo-lin)	   04:00:52:13	   04:01:02:05	   00:00:09:16	Unmuted
+1       	69      	sharpie writing on large card (bern)	   04:01:12:02	   04:01:14:12	   00:00:02:10	Unmuted
+1       	70      	grab large card close & set on wood window sill (bern)	   04:01:17:06	   04:01:22:16	   00:00:05:10	Unmuted
+1       	71      	tight leather chair mvmnt (bern)	   04:01:51:07	   04:01:58:13	   00:00:07:06	Unmuted
+1       	72      	stemmed water glass with ice grab lift OS down wood table (bern)	   04:02:41:06	   04:02:46:22	   00:00:05:16	Unmuted
+1       	73      	chair metal legs slide on crpt (elgie)	   04:02:57:01	   04:03:01:06	   00:00:04:05	Unmuted
+1       	74      	door hinge creaks             	   04:04:43:16	   04:04:51:22	   00:00:08:06	Muted
+1       	75      	pillow hits & mvmnts          	   04:05:23:04	   04:05:29:15	   00:00:06:11	Unmuted
+1       	76      	leather purse mvmnt           	   04:05:35:15	   04:06:00:00	   00:00:24:09	Unmuted
+1       	77      	badge on lanyard mvmnt (soo-lin)	   04:06:06:15	   04:06:10:07	   00:00:03:16	Unmuted
+1       	78      	badge on lanyard mvmnt (soo-lin)	   04:06:12:09	   04:06:13:12	   00:00:01:03	Unmuted
+1       	79      	badge on lanyard mvmnt (soo-lin)	   04:06:17:07	   04:06:32:01	   00:00:14:17	Unmuted
+1       	80      	polaroid out pass handle      	   04:10:30:21	   04:10:39:01	   00:00:08:04	Unmuted
+1       	81      	polaroid pass mvmnt into wallet	   04:10:57:02	   04:11:14:01	   00:00:16:23	Unmuted
+1       	82      	FBI badge leather in hand mvmnt close into pocket (agent)	   05:00:19:14	   05:00:36:20	   00:00:17:06	Unmuted
+1       	83      	leather briefcase zipper open (agent)	   05:00:52:22	   05:00:54:13	   00:00:01:15	Unmuted
+1       	84      	stack of files in folder remove from leather briefcase (agent)	   05:00:55:13	   05:00:58:05	   00:00:02:16	Unmuted
+1       	85      	stack of files in folder handle mvmnt (agent)	   05:00:58:05	   05:00:59:16	   00:00:01:11	Unmuted
+1       	86      	stack of files in folder down on laptop (agent)	   05:00:59:16	   05:01:00:02	   00:00:00:10	Unmuted
+1       	87      	stack of files in folder open 2x	   05:01:00:02	   05:01:02:19	   00:00:02:17	Unmuted
+1       	88      	hands 2 stack of files & remove papers (elgie)	   05:01:04:09	   05:01:11:19	   00:00:07:10	Unmuted
+1       	89      	hand off papers OS (elgie)    	   05:01:13:15	   05:01:17:08	   00:00:03:17	Unmuted
+1       	90      	hand 2 papers OS (elgie)      	   05:01:20:01	   05:01:25:21	   00:00:05:20	Unmuted
+1       	91      	papers down 2 stack of files (elgie)	   05:01:29:20	   05:01:34:18	   00:00:04:22	Unmuted
+1       	92      	arms & hands 2 stack of files with mvmnt (agent)	   05:02:07:16	   05:02:25:14	   00:00:17:22	Unmuted
+1       	93      	fingers tap stack of files & off (agent)	   05:02:30:05	   05:02:35:14	   00:00:05:09	Unmuted
+1       	94      	stack of files hand mvmnts (agent)	   05:02:36:16	   05:02:44:13	   00:00:07:21	Unmuted
+1       	95      	finger 2 stack of files (agent)	   05:02:44:13	   05:02:47:05	   00:00:02:16	Unmuted
+1       	96      	stack of files hand mvmnts (agent)	   05:02:47:05	   05:02:56:08	   00:00:09:03	Unmuted
+1       	97      	zip pocket closed             	   05:05:30:09	   05:05:31:16	   00:00:01:07	Unmuted
+1       	98      	zip pocket open then close    	   05:05:36:11	   05:05:40:11	   00:00:04:00	Unmuted
+1       	99      	smart phone in hand mvmnt (bern)	   05:06:21:11	   05:06:43:17	   00:00:22:06	Unmuted
+1       	100     	hand 2 smart phone OS (bern)  	   05:06:51:15	   05:06:54:20	   00:00:03:05	Unmuted
+1       	101     	hand 2 smart phone (bern)     	   05:07:41:02	   05:07:43:03	   00:00:02:01	Unmuted
+1       	102     	smart phone mvmnt (bern)      	   05:07:49:22	   05:08:04:05	   00:00:14:07	Unmuted
+1       	103     	smart phone on glass fish bowl (bern)	   05:08:04:10	   05:08:05:02	   00:00:00:16	Unmuted
+1       	104     	hand 2 antique metal door lock & lock	   05:14:05:21	   05:14:07:18	   00:00:01:21	Unmuted
+1       	105     	wreath on door mvmnt          	   05:16:56:03	   05:17:00:23	   00:00:04:20	Unmuted
+1       	106     	wreath on door mvmnt          	   05:18:01:00	   05:18:03:12	   00:00:02:12	Unmuted
+1       	107     	raincoat mvnt                 	   06:00:10:08	   06:00:13:01	   00:00:02:17	Unmuted
+1       	108     	mug up handle dwn             	   06:00:42:03	   06:00:46:10	   00:00:04:07	Unmuted
+1       	109     	sip                           	   06:00:54:20	   06:00:57:23	   00:00:03:03	Unmuted
+1       	110     	cup roll dwn                  	   06:01:10:00	   06:01:12:22	   00:00:02:22	Unmuted
+1       	111     	knapsack mvnt                 	   06:01:18:17	   06:02:11:17	   00:00:53:00	Unmuted
+1       	112     	roller bag cmnt-metal         	   06:02:22:03	   06:02:24:00	   00:00:01:21	Unmuted
+1       	113     	purse mvnt                    	   06:03:29:18	   06:03:35:08	   00:00:05:14	Unmuted
+1       	114     	laptop p-u mvnt open handle slam shut up away	   06:03:39:01	   06:03:49:19	   00:00:10:18	Unmuted
+1       	115     	wood stool up squeak          	   06:10:09:16	   06:10:11:20	   00:00:02:04	Unmuted
+1       	116     	knit hat mvnt                 	   06:11:41:11	   06:11:44:14	   00:00:03:03	Unmuted
+1       	117     	M red duffle bag mvnt         	   07:01:39:06	   07:01:44:17	   00:00:05:11	Unmuted
+1       	118     	paper towel on bed mvnt       	   07:03:16:10	   07:03:17:14	   00:00:01:04	Unmuted
+1       	119     	sit dwn cloth bus seat sit back	   07:03:28:14	   07:03:33:20	   00:00:05:06	Muted
+1       	120     	cheat hands to glass?         	   07:03:55:10	   07:03:55:23	   00:00:00:13	Muted
+1       	121     	penquin preening              	   07:04:02:04	   07:04:07:20	   00:00:05:16	Unmuted
+1       	122     	kayak paddle water 3          	   07:05:33:11	   07:05:43:11	   00:00:10:00	Unmuted
+1       	123     	bag mvnt OS cont bside        	   07:07:20:01	   07:07:34:01	   00:00:14:00	Unmuted
+1       	124     	bag hand on mvnt cont OS      	   07:07:38:22	   07:07:48:15	   00:00:09:17	Unmuted
+1       	125     	write on vial pencil          	   07:08:02:13	   07:08:08:01	   00:00:05:12	Unmuted
+1       	126     	write on vial pencil          	   07:08:19:22	   07:08:34:12	   00:00:14:14	Unmuted
+1       	127     	write on vial pencil          	   07:09:04:07	   07:09:04:16	   00:00:00:09	Unmuted
+1       	128     	seal mvnt on icey snow        	   07:11:03:19	   07:11:05:22	   00:00:02:03	Unmuted
+1       	129     	penquin snow cont bside distant	   07:11:07:11	   07:11:11:21	   00:00:04:10	Unmuted
+1       	130     	life vest mvnt handle         	   07:11:13:16	   07:11:23:05	   00:00:09:13	Unmuted
+1       	131     	water spraying through fabric 	   07:11:25:16	   07:11:30:10	   00:00:04:18	Unmuted
+1       	132     	grab lid handle screw on 3 turns	   07:11:33:22	   07:11:44:16	   00:00:10:18	Unmuted
+1       	133     	pen up write pad pen dwn      	   07:12:00:02	   07:12:08:09	   00:00:08:07	Unmuted
+1       	134     	door handle door door handle  	   07:12:13:04	   07:12:15:20	   00:00:02:16	Unmuted
+1       	135     	vest down in boat             	   07:12:55:09	   07:12:57:03	   00:00:01:18	Unmuted
+1       	136     	straps mvnt-01                	   08:01:21:18	   08:01:43:05	   00:00:21:11	Unmuted
+1       	137     	straps mvnt                   	   08:01:46:09	   08:01:49:09	   00:00:03:00	Unmuted
+1       	138     	straps mvnt                   	   08:02:08:06	   08:02:34:12	   00:00:26:06	Unmuted
+1       	139     	grab walkie talkie handle mvnt	   08:02:51:21	   08:02:56:20	   00:00:04:23	Unmuted
+1       	140     	walkie talkie mvnt hit face   	   08:03:25:13	   08:03:32:02	   00:00:06:13	Unmuted
+1       	141     	hand on flashlight            	   08:06:00:15	   08:06:01:17	   00:00:01:02	Unmuted
+1       	142     	hand mvnt flashlight          	   08:06:08:09	   08:06:10:03	   00:00:01:18	Unmuted
+1       	143     	walkie cheat OS mvnt then into pocket on screen	   08:08:33:07	   08:08:38:17	   00:00:05:10	Unmuted
+1       	144     	rubber dinghy hands mvnt      	   08:10:05:15	   08:10:31:04	   00:00:25:13	Unmuted
+1       	145     	badge mvnt                    	   08:10:33:15	   08:11:06:15	   00:00:33:00	Unmuted
+1       	146     	badge mvnt                    	   08:11:47:21	   08:12:54:06	   00:01:06:09	Unmuted
+
+
+TRACK NAME:	PROP 5.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	same pot close up             	   01:03:09:00	   01:03:11:01	   00:00:02:01	Unmuted
+1       	2       	flip hit booklet              	   01:04:12:05	   01:04:14:12	   00:00:02:07	Muted
+1       	3       	sunglass mvnt off head on     	   01:05:03:15	   01:05:05:00	   00:00:01:09	Unmuted
+1       	4       	hand knee to floor            	   01:07:54:16	   01:07:56:17	   00:00:02:01	Unmuted
+1       	5       	knee to floor                 	   01:08:01:12	   01:08:01:23	   00:00:00:11	Unmuted
+1       	6       	fingers touch wood floor      	   01:08:34:14	   01:08:34:22	   00:00:00:08	Unmuted
+1       	7       	dog paws on wood door         	   01:09:34:22	   01:10:05:04	   00:00:30:06	Unmuted
+1       	8       	leather car seat mvnt in sit-01	   01:11:38:18	   01:11:56:05	   00:00:17:11	Unmuted
+1       	9       	extention ladder mvnt climb   	   01:12:16:12	   01:13:07:19	   00:00:51:07	Unmuted
+1       	10      	grab scarf dwn                	   01:13:21:22	   01:13:23:05	   00:00:01:07	Unmuted
+1       	11      	bernadette badge mvnt         	   01:13:52:16	   01:14:18:23	   00:00:26:06	Unmuted
+1       	12      	small laptop up handle mvnt   	   02:00:47:23	   02:00:50:04	   00:00:02:05	Unmuted
+1       	13      	laptop keyboard 13 hits       	   02:01:13:17	   02:01:18:08	   00:00:04:15	Unmuted
+1       	14      	slight leather purse mvnt     	   02:01:59:17	   02:03:08:13	   00:01:08:20	Unmuted
+1       	15      	vest zipper mvnt if I don't catch in vest mvnt	   02:04:30:10	   02:04:47:08	   00:00:16:22	Muted
+1       	16      	badge mvnt handle mvnt        	   02:05:02:04	   02:05:29:19	   00:00:27:15	Unmuted
+1       	17      	tube of cream dwn glass shelf grab another	   02:08:00:04	   02:08:04:08	   00:00:04:04	Unmuted
+1       	18      	sit leather seat              	   02:10:21:05	   02:10:22:00	   00:00:00:19	Muted
+1       	19      	glass ice water grab up       	   02:13:07:17	   02:13:10:01	   00:00:02:08	Unmuted
+1       	20      	fork into bowl                	   02:13:34:23	   02:13:44:03	   00:00:09:04	Unmuted
+1       	21      	fork dwn in bowl prod         	   02:13:54:22	   02:13:55:07	   00:00:00:09	Unmuted
+1       	22      	sip                           	   02:14:45:21	   02:14:48:16	   00:00:02:19	Muted
+1       	23      	sip                           	   02:14:50:12	   02:14:54:10	   00:00:03:22	Muted
+1       	24      	son vape inhale               	   03:00:29:06	   03:00:30:23	   00:00:01:17	Unmuted
+1       	25      	audrey hard plastic cup 2 ceramic tray	   03:01:23:23	   03:01:24:19	   00:00:00:20	Unmuted
+1       	26      	bricks fall & tumble          	   03:02:53:06	   03:02:58:14	   00:00:05:08	Unmuted
+1       	27      	BG L open collapsable umbrella	   03:03:21:18	   03:03:22:07	   00:00:00:13	Unmuted
+1       	28      	laptop keys typing x10        	   03:07:56:03	   03:07:58:19	   00:00:02:16	Unmuted
+1       	29      	laptop key backspace continuous x20? (prod)	   03:08:00:04	   03:08:02:20	   00:00:02:16	Unmuted
+1       	30      	laptop keys typing x20 end with big enter (prod)	   03:08:15:12	   03:08:22:15	   00:00:07:03	Unmuted
+1       	31      	laptop spacebar               	   03:08:30:22	   03:08:31:05	   00:00:00:07	Unmuted
+1       	32      	contractor toolbelt mvmnt     	   03:13:09:08	   03:13:18:14	   00:00:09:06	Unmuted
+1       	33      	stack of file folders in arms mvmnt & grabs (soo-lin)	   04:00:00:00	   04:01:05:01	   00:01:05:01	Unmuted
+1       	34      	sharpie into cap squeeze (bern)	   04:01:14:12	   04:01:15:01	   00:00:00:13	Unmuted
+1       	35      	grab 2 sharpies add third & set on wood window sill (bern)	   04:01:15:04	   04:01:17:12	   00:00:02:08	Unmuted
+1       	36      	leather purse grab move wrangle strap down (bern)	   04:01:52:05	   04:01:58:16	   00:00:06:11	Unmuted
+1       	37      	sip OS (bern)                 	   04:02:43:07	   04:02:44:00	   00:00:00:17	Unmuted
+1       	38      	door close with bounce & settle	   04:04:51:11	   04:04:51:22	   00:00:00:11	Muted
+1       	39      	bedding legs slide under      	   04:05:23:06	   04:05:30:21	   00:00:07:15	Unmuted
+1       	40      	glasses rimless plastic arm mvmnt (jelnik)	   04:05:46:05	   04:05:50:07	   00:00:04:02	Muted
+1       	41      	glasses rimless plastic arm mvmnt (jelnik)	   04:05:56:21	   04:06:00:00	   00:00:03:03	Muted
+1       	42      	files in arms with smart phone (soo-lin)	   04:06:06:15	   04:06:10:07	   00:00:03:16	Unmuted
+1       	43      	files in arms with smart phone (soo-lin)	   04:06:12:09	   04:06:32:01	   00:00:19:16	Unmuted
+1       	44      	polaroid in hair with flip    	   04:11:00:07	   04:11:01:22	   00:00:01:15	Unmuted
+1       	45      	leather briefcase with zippers carry mvmnt (agent)	   05:00:13:14	   05:00:27:07	   00:00:13:17	Unmuted
+1       	46      	leather briefcase with zippers carry mvmnt (agent)-01	   05:00:30:20	   05:00:51:18	   00:00:20:22	Unmuted
+1       	47      	leather briefcase 2 prefab wood (agent)	   05:00:51:18	   05:00:52:15	   00:00:00:21	Unmuted
+1       	48      	leather briefcase with zippers carry mvmnt (agent)-02	   05:00:52:15	   05:01:02:20	   00:00:10:05	Unmuted
+1       	49      	leather briefcase with zippers 2 floor OS (agent)	   05:01:02:20	   05:01:06:09	   00:00:03:13	Unmuted
+1       	50      	clothing tag mvmnt & toss 2 leather seat	   05:05:21:22	   05:05:26:08	   00:00:04:10	Unmuted
+1       	51      	smart phone tapping (soo-lin) 	   05:05:40:11	   05:05:47:00	   00:00:06:13	Unmuted
+1       	52      	smart phone mvmnt & hand 2 (soo-lin)	   05:06:49:02	   05:06:50:17	   00:00:01:15	Unmuted
+1       	53      	smart phone thumb stroke 3x (soo-lin)	   05:07:10:02	   05:07:13:21	   00:00:03:19	Unmuted
+1       	54      	smart phone thumb stroke (soo-lin)	   05:07:17:17	   05:07:19:05	   00:00:01:12	Unmuted
+1       	55      	smart phone mvmnt (soo-lin)   	   05:08:57:23	   05:09:10:04	   00:00:12:05	Unmuted
+1       	56      	old door hinge                	   05:14:04:22	   05:14:07:01	   00:00:02:03	Muted
+1       	57      	hand on cloth window shade mvmnt (audrey)	   05:16:01:21	   05:16:04:15	   00:00:02:18	Unmuted
+1       	58      	hand on cloth window shade (audrey)	   05:16:08:10	   05:16:09:22	   00:00:01:12	Unmuted
+1       	59      	hand on cloth window shade mvmnt off OS (audrey)	   05:16:13:10	   05:16:16:05	   00:00:02:19	Unmuted
+1       	60      	mug up handle-mug up handle slow dwn up again 	   06:00:49:11	   06:01:17:11	   00:00:28:00	Unmuted
+1       	61      	grab coat os mvnt-01          	   06:02:07:07	   06:02:17:07	   00:00:10:00	Unmuted
+1       	62      	roller bag cmnt               	   06:02:22:05	   06:02:24:00	   00:00:01:19	Unmuted
+1       	63      	duffle bag mvnt by cont bside 	   06:03:31:17	   06:03:37:11	   00:00:05:18	Unmuted
+1       	64      	dog fs start os               	   06:10:02:12	   06:10:07:21	   00:00:05:09	Unmuted
+1       	65      	cloth bus seat mvnt-02        	   06:11:46:09	   06:12:05:14	   00:00:19:05	Unmuted
+1       	66      	W grey duffle bag mvnt        	   07:01:42:23	   07:01:46:18	   00:00:03:19	Unmuted
+1       	67      	small water bottle a little bit of water in it roll across floor start OS	   07:03:05:01	   07:03:13:16	   00:00:08:15	Unmuted
+1       	68      	M sit dwn behid bella         	   07:03:32:03	   07:03:33:23	   00:00:01:20	Unmuted
+1       	69      	penquin wobble C              	   07:04:02:04	   07:04:03:08	   00:00:01:04	Unmuted
+1       	70      	kayak paddle water 2          	   07:05:33:11	   07:05:43:11	   00:00:10:00	Unmuted
+1       	71      	paddle mvnt on kayak          	   07:06:13:06	   07:06:15:09	   00:00:02:03	Unmuted
+1       	72      	slight gloved fingers kayak   	   07:06:27:19	   07:06:28:05	   00:00:00:10	Unmuted
+1       	73      	paddle slide on kayak         	   07:06:31:23	   07:06:34:02	   00:00:02:03	Unmuted
+1       	74      	pants out dwn wood draw       	   07:07:20:06	   07:07:23:20	   00:00:03:14	Unmuted
+1       	75      	knit shirt out unfold fold mvnt dwn wood draw	   07:07:25:04	   07:07:32:06	   00:00:07:02	Unmuted
+1       	76      	leg hits wood bed frame       	   07:07:38:23	   07:07:39:18	   00:00:00:19	Unmuted
+1       	77      	dip vial in water and dripps  	   07:08:02:13	   07:08:07:16	   00:00:05:03	Unmuted
+1       	78      	dip vial in water drips       	   07:08:20:09	   07:08:21:21	   00:00:01:12	Unmuted
+1       	79      	dip vial in water pour a smal amount out drips	   07:08:27:03	   07:08:31:06	   00:00:04:03	Unmuted
+1       	80      	dry bag mvnt                  	   07:11:11:21	   07:11:23:05	   00:00:11:08	Unmuted
+1       	81      	glove on rim of fabric        	   07:11:27:00	   07:11:32:00	   00:00:05:00	Unmuted
+1       	82      	pad mvnt up dwn bed           	   07:12:00:01	   07:12:08:23	   00:00:08:22	Unmuted
+1       	83      	 don not dist sign mvnt hand on mvnt	   07:12:13:06	   07:12:15:19	   00:00:02:13	Unmuted
+1       	84      	BG glass dwn                  	   08:00:27:06	   08:00:28:23	   00:00:01:17	Unmuted
+1       	85      	BG bottle mvnt at bar         	   08:00:41:13	   08:00:44:19	   00:00:03:06	Unmuted
+1       	86      	BG beer bottles dwn 1st os 2nd on screen	   08:00:52:21	   08:00:55:14	   00:00:02:17	Unmuted
+1       	87      	seal R mvnt                   	   08:02:43:23	   08:02:45:23	   00:00:02:00	Muted
+1       	88      	folder mvnt on metal clip box 	   08:02:54:02	   08:03:48:00	   00:00:53:22	Unmuted
+1       	89      	cresent wrench up cmnt mvnt bangs on metal  dwn on cmnt  man slides prod	   08:05:59:02	   08:06:09:20	   00:00:10:18	Unmuted
+1       	90      	dinghy on rock ?              	   08:10:20:00	   08:10:32:15	   00:00:12:15	Muted
+
+
+TRACK NAME:	PROP 6.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	towel hand2hand toss catch    	   01:03:17:03	   01:03:20:17	   00:00:03:14	Unmuted
+1       	2       	 BIG copper pot up-dwn-02     	   01:03:37:12	   01:03:39:07	   00:00:01:19	Unmuted
+1       	3       	OS  BIG copper pot up dwn bside-01	   01:03:42:04	   01:03:47:08	   00:00:05:04	Unmuted
+1       	4       	BIG copper pot dwn on towels ring hit	   01:03:49:19	   01:03:51:00	   00:00:01:05	Unmuted
+1       	5       	 BIG copper pot mvnt hands on off	   01:03:59:05	   01:04:08:19	   00:00:09:14	Unmuted
+1       	6       	brush twig mvnt               	   01:05:05:02	   01:06:44:07	   00:01:39:05	Unmuted
+1       	7       	plastic bag mvmnt             	   01:07:51:13	   01:07:53:20	   00:00:02:07	Unmuted
+1       	8       	carpet pull up                	   01:08:17:06	   01:08:28:17	   00:00:11:11	Unmuted
+1       	9       	handle vine                   	   01:08:35:04	   01:08:40:18	   00:00:05:14	Unmuted
+1       	10      	dog collar                    	   01:09:35:00	   01:10:05:07	   00:00:30:07	Unmuted
+1       	11      	sunglasses off onto head      	   01:11:43:15	   01:11:44:12	   00:00:00:21	Unmuted
+1       	12      	break glass mvnt              	   01:12:49:22	   01:12:55:00	   00:00:05:01	Unmuted
+1       	13      	latch rattle                  	   01:13:05:20	   01:13:11:20	   00:00:06:00	Unmuted
+1       	14      	bump latch                    	   01:13:19:01	   01:13:19:17	   00:00:00:16	Unmuted
+1       	15      	bella badge mvnt              	   01:13:52:16	   01:14:18:23	   00:00:26:06	Unmuted
+1       	16      	dog carpet over wood to wood  	   02:03:12:01	   02:03:21:14	   00:00:09:13	Unmuted
+1       	17      	box mvnt                      	   02:04:23:07	   02:04:28:18	   00:00:05:11	Muted
+1       	18      	grb box lid box mvnt          	   02:04:40:02	   02:04:45:06	   00:00:05:04	Muted
+1       	19      	soo lin badge mvnt            	   02:05:27:19	   02:05:29:19	   00:00:02:00	Muted
+1       	20      	felt hat tap knee mvnt        	   02:08:05:09	   02:08:06:22	   00:00:01:13	Unmuted
+1       	21      	guac with chip in it mvnt     	   02:13:34:23	   02:13:44:03	   00:00:09:04	Muted
+1       	22      	guac mvnt -01                 	   02:13:53:11	   02:14:00:00	   00:00:06:13	Unmuted
+1       	23      	guac mvnt                     	   02:14:04:23	   02:14:06:18	   00:00:01:19	Unmuted
+1       	24      	vape machine handle           	   03:00:27:14	   03:00:30:23	   00:00:03:09	Unmuted
+1       	25      	sip plastic cup with napkin (soo-lin)	   03:01:25:12	   03:01:27:11	   00:00:01:23	Unmuted
+1       	26      	heavy concrete blocks fall & tumble	   03:02:56:07	   03:02:58:14	   00:00:02:07	Unmuted
+1       	27      	gift bag handle woman long skirt RL	   03:03:21:18	   03:03:29:16	   00:00:07:22	Unmuted
+1       	28      	worker toolbelt mvmnt         	   03:13:10:16	   03:13:18:13	   00:00:07:21	Unmuted
+1       	29      	giant lever down & springs back	   03:15:58:00	   03:15:59:02	   00:00:01:02	Unmuted
+1       	30      	work badge on lanyard mvmnt (soo-lin)	   04:00:00:00	   04:00:13:12	   00:00:13:12	Unmuted
+1       	31      	work badge on lanyard mvmnt (soo-lin)	   04:00:31:02	   04:00:50:03	   00:00:19:01	Unmuted
+1       	32      	work badge on lanyard mvmnt (soo-lin)	   04:00:54:06	   04:01:05:03	   00:00:10:21	Unmuted
+1       	33      	taught string mvmnt           	   04:04:51:22	   04:04:59:06	   00:00:07:08	Muted
+1       	34      	into bed matress mvmnts       	   04:05:22:11	   04:05:30:17	   00:00:08:06	Unmuted
+1       	35      	sunglasses large plastic mvmnt (bern)	   04:05:46:05	   04:05:50:07	   00:00:04:02	Muted
+1       	36      	sunglasses large plastic mvmnt (bern)	   04:05:56:12	   04:05:58:13	   00:00:02:01	Muted
+1       	37      	big leather purse mvmnt (doc) 	   04:06:07:01	   04:06:10:12	   00:00:03:11	Unmuted
+1       	38      	big leather purse mvmnt (doc) 	   04:06:12:18	   04:06:16:07	   00:00:03:13	Unmuted
+1       	39      	big leather purse mvmnt (doc) 	   04:06:31:05	   04:06:32:01	   00:00:00:20	Unmuted
+1       	40      	lanyard & badge mvmnt (soo-lin)	   05:00:12:20	   05:00:37:07	   00:00:24:11	Unmuted
+1       	41      	lanyard & badge mvmnt (soo-lin)	   05:00:45:20	   05:00:54:04	   00:00:08:08	Unmuted
+1       	42      	lanyard & badge 2 prefab wood & slide off (soo-lin)	   05:00:54:04	   05:00:55:16	   00:00:01:12	Unmuted
+1       	43      	lanyard & badge mvmnt (soo-lin)	   05:00:55:16	   05:00:58:05	   00:00:02:13	Unmuted
+1       	44      	lanyard & badge mvmnt (soo-lin)	   05:01:30:22	   05:01:33:05	   00:00:02:07	Unmuted
+1       	45      	lanyard & badge mvmnt (soo-lin)	   05:02:00:10	   05:02:09:17	   00:00:09:07	Unmuted
+1       	46      	lanyard & badge mvmnt (soo-lin)	   05:02:28:02	   05:02:35:14	   00:00:07:12	Unmuted
+1       	47      	grab tag & snap               	   05:05:24:20	   05:05:25:07	   00:00:00:11	Unmuted
+1       	48      	wood & metal debris on tile floor (prod)	   05:15:23:19	   05:15:25:01	   00:00:01:06	Unmuted
+1       	49      	hand on window curtain mvmnt (audrey)	   05:16:07:07	   05:16:09:13	   00:00:02:06	Unmuted
+1       	50      	hand on curtain mvmnt (audrey)	   05:16:13:10	   05:16:16:09	   00:00:02:23	Unmuted
+1       	51      	hands off curtain mvmnt (audrey)	   05:16:21:23	   05:16:24:05	   00:00:02:06	Unmuted
+1       	52      	back of couch sit & up (bern) 	   05:16:35:22	   05:16:47:08	   00:00:11:10	Unmuted
+1       	53      	metal chair mvnt hand on up   	   06:02:02:21	   06:02:06:06	   00:00:03:09	Unmuted
+1       	54      	Bernadette duffle bag mvnt    	   06:02:17:07	   06:02:24:01	   00:00:06:18	Unmuted
+1       	55      	dog collar mvnt               	   06:10:02:12	   06:10:07:21	   00:00:05:09	Unmuted
+1       	56      	pruple coat mvnt drags on metal rail	   07:01:43:19	   07:01:50:03	   00:00:06:08	Unmuted
+1       	57      	W red sit dwn                 	   07:03:35:09	   07:03:36:18	   00:00:01:09	Muted
+1       	58      	penquin walking R             	   07:04:02:10	   07:04:07:23	   00:00:05:13	Unmuted
+1       	59      	kayak paddle water 1          	   07:05:33:11	   07:05:43:11	   00:00:10:00	Unmuted
+1       	60      	gloved hands paddle           	   07:06:13:08	   07:06:15:05	   00:00:01:21	Unmuted
+1       	61      	gloved hand slide on paddle   	   07:06:26:21	   07:06:28:05	   00:00:01:08	Unmuted
+1       	62      	gloved hands mvnt on paddle   	   07:06:32:08	   07:06:33:22	   00:00:01:14	Unmuted
+1       	63      	gloved hand slide mvnt paddle 	   07:07:02:15	   07:07:05:19	   00:00:03:04	Unmuted
+1       	64      	grab small box handle         	   07:07:33:00	   07:07:40:03	   00:00:07:03	Unmuted
+1       	65      	water drips on kayak          	   07:08:05:10	   07:08:13:12	   00:00:08:02	Unmuted
+1       	66      	water drips on kayak less than first cue	   07:08:21:22	   07:08:24:20	   00:00:02:22	Unmuted
+1       	67      	drips on kayak                	   07:08:31:13	   07:08:34:03	   00:00:02:14	Unmuted
+1       	68      	tag on jacket mvnt            	   07:11:11:21	   07:11:21:08	   00:00:09:11	Unmuted
+1       	69      	water in bottle mvnt far shot then toss on aluminum boat floor	   07:11:25:16	   07:11:33:09	   00:00:07:17	Unmuted
+1       	70      	grab lid glove mvnt pop off   	   07:11:36:12	   07:11:43:00	   00:00:06:12	Unmuted
+1       	71      	slip snaekers on              	   07:11:57:13	   07:11:59:19	   00:00:02:06	Unmuted
+1       	72      	grab badge off book mvnt dwn to bed	   07:12:09:06	   07:12:12:05	   00:00:02:23	Unmuted
+1       	73      	xmas tree ornaments mvnt?     	   08:00:03:09	   08:01:22:00	   00:01:18:15	Unmuted
+1       	74      	seals run  mvnt               	   08:02:43:22	   08:02:46:21	   00:00:02:23	Unmuted
+1       	75      	pen up mvnt                   	   08:02:54:07	   08:03:01:15	   00:00:07:08	Unmuted
+1       	76      	use car door for this cue     	   08:05:48:09	   08:06:10:09	   00:00:22:00	Unmuted
+
+
+TRACK NAME:	PROP 7.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	OS trashbag mvnt              	   01:03:14:04	   01:03:21:20	   00:00:07:16	Unmuted
+1       	2       	OS trashbag mvnt walks across mvnt-	   01:03:23:07	   01:03:25:01	   00:00:01:18	Unmuted
+1       	3       	trashbag grab os con't on screen mvnt dwn	   01:03:27:11	   01:03:37:20	   00:00:10:09	Unmuted
+1       	4       	OS trashbag mvnt puts dwn then spread out and mvnt	   01:03:44:10	   01:03:49:23	   00:00:05:13	Unmuted
+1       	5       	key mvmnt                     	   01:04:47:04	   01:05:06:13	   00:00:19:09	Unmuted
+1       	6       	knee mvnt up dwn              	   01:08:09:12	   01:08:11:11	   00:00:01:23	Unmuted
+1       	7       	knee mvnt up dwn slide        	   01:08:19:12	   01:08:22:07	   00:00:02:19	Unmuted
+1       	8       	knee dwn slide mvnt           	   01:08:33:15	   01:08:36:08	   00:00:02:17	Unmuted
+1       	9       	knee slide walk on knees sit on legs	   01:08:50:08	   01:08:59:19	   00:00:09:11	Unmuted
+1       	10      	os mvnt up from floor         	   01:09:02:11	   01:09:04:09	   00:00:01:22	Unmuted
+1       	11      	t shirt mvnt                  	   01:10:09:14	   01:10:54:13	   00:00:44:23	Unmuted
+1       	12      	car door handle open          	   01:11:38:22	   01:11:39:18	   00:00:00:20	Unmuted
+1       	13      	hand on interiro car door     	   01:11:44:13	   01:11:45:10	   00:00:00:21	Unmuted
+1       	14      	untie scarf wrap around hand  	   01:12:33:09	   01:12:39:13	   00:00:06:04	Unmuted
+1       	15      	glass pieces dwn wood         	   01:12:49:21	   01:12:55:01	   00:00:05:04	Unmuted
+1       	16      	door flies open               	   01:13:11:04	   01:13:14:21	   00:00:03:17	Unmuted
+1       	17      	plastic cup straw threw dome lid mvnt prod	   01:14:00:23	   01:14:18:20	   00:00:17:20	Unmuted
+1       	18      	plastic cup straw threw dome lid mvnt prod-09	   01:14:18:20	   01:14:18:21	   00:00:00:01	Unmuted
+1       	19      	magazine mvnt                 	   02:03:10:03	   02:03:15:05	   00:00:05:02	Unmuted
+1       	20      	plastic bag mvnt dwn          	   02:04:27:15	   02:04:32:07	   00:00:04:16	Unmuted
+1       	21      	grab plastic bag mvnt dwn     	   02:04:40:08	   02:04:45:06	   00:00:04:22	Unmuted
+1       	22      	phone off leather purse handle	   02:05:29:08	   02:05:29:19	   00:00:00:11	Muted
+1       	23      	ext car door handle/int leather handle close	   02:10:16:10	   02:10:26:16	   00:00:10:06	Unmuted
+1       	24      	eat guac                      	   02:13:45:02	   02:13:46:22	   00:00:01:20	Unmuted
+1       	25      	eat non guac                  	   02:14:01:19	   02:14:02:17	   00:00:00:22	Unmuted
+1       	26      	eat guac                      	   02:14:06:06	   02:14:09:10	   00:00:03:04	Unmuted
+1       	27      	heavy concrete blocks shift   	   03:02:53:06	   03:02:58:14	   00:00:05:08	Unmuted
+1       	28      	audrey handle gift bags and hand to girl	   03:03:21:18	   03:03:29:16	   00:00:07:22	Unmuted
+1       	29      	wet mortar pack & scrape      	   03:15:15:23	   03:15:21:06	   00:00:05:07	Unmuted
+1       	30      	airflow cash booth            	   03:15:56:12	   03:15:59:22	   00:00:03:10	Muted
+1       	31      	hydraulic door open OS        	   04:05:34:17	   04:05:35:15	   00:00:00:22	Muted
+1       	32      	hydraulic door close          	   04:05:37:22	   04:05:40:23	   00:00:03:01	Muted
+1       	33      	trench coat mvmnt (doc)       	   04:06:07:01	   04:06:10:14	   00:00:03:12	Unmuted
+1       	34      	hand out of trench coat (doc) 	   04:06:12:17	   04:06:13:14	   00:00:00:21	Unmuted
+1       	35      	arm cross in trench coat (doc)	   04:06:14:23	   04:06:17:00	   00:00:02:01	Unmuted
+1       	36      	necklace tassle mvmnt (soo-lin)	   05:00:12:20	   05:00:22:09	   00:00:09:13	Unmuted
+1       	37      	necklace tassle mvmnt (soo-lin)	   05:00:45:20	   05:00:57:04	   00:00:11:08	Unmuted
+1       	38      	necklace tassle mvmnt (soo-lin)	   05:02:00:10	   05:02:08:19	   00:00:08:09	Unmuted
+1       	39      	leather purse mvmnt           	   05:05:23:13	   05:05:30:05	   00:00:06:16	Unmuted
+1       	40      	grab leather purse open magnet clasp root around	   05:05:31:14	   05:05:35:16	   00:00:04:02	Unmuted
+1       	41      	metal chair up (soo-lin)      	   05:05:54:22	   05:05:56:14	   00:00:01:16	Unmuted
+1       	42      	metal chair down OS (agent)   	   05:06:14:20	   05:06:17:09	   00:00:02:13	Unmuted
+1       	43      	metal chair up (agent)        	   05:09:08:04	   05:09:10:05	   00:00:02:01	Unmuted
+1       	44      	metal chair down (bern)       	   05:11:19:23	   05:11:26:17	   00:00:06:18	Unmuted
+1       	45      	metal chair mvmnt cont (bern) 	   05:12:08:01	   05:12:35:20	   00:00:27:19	Unmuted
+1       	46      	metal chair mvmnt & up (bern) 	   05:12:56:00	   05:13:08:20	   00:00:12:20	Unmuted
+1       	47      	kick wood door                	   05:15:23:10	   05:15:23:18	   00:00:00:08	Unmuted
+1       	48      	wood door slam into door stop 	   05:15:24:06	   05:15:25:00	   00:00:00:18	Unmuted
+1       	49      	penquin running L-R dcmpsd granite	   07:04:02:04	   07:04:08:00	   00:00:05:20	Unmuted
+1       	50      	W life vest on R cont bside instructor	   07:04:14:21	   07:04:40:03	   00:00:25:06	Unmuted
+1       	51      	kayak mvnt water              	   07:05:43:10	   07:07:16:08	   00:01:32:22	Unmuted
+1       	52      	sit on bed                    	   07:07:39:06	   07:07:40:05	   00:00:00:23	Unmuted
+1       	53      	vial bare hand mvnt twist     	   07:08:02:06	   07:08:16:07	   00:00:14:01	Unmuted
+1       	54      	vial bare hand mvnt handle    	   07:08:22:00	   07:08:41:17	   00:00:19:17	Unmuted
+1       	55      	p-u vial from plastic box handle mvnt p-u 2 vial from plastic box mvnt	   07:08:43:01	   07:09:04:23	   00:00:21:22	Unmuted
+1       	56      	tag on jacket mvnt            	   07:11:13:23	   07:11:23:08	   00:00:09:09	Unmuted
+1       	57      	rope beaner mvnt              	   07:11:26:03	   07:11:30:04	   00:00:04:01	Unmuted
+1       	58      	dwn jacket grab               	   07:12:09:22	   07:12:15:21	   00:00:05:23	Unmuted
+1       	59      	seal run mvnt                 	   08:02:43:22	   08:02:46:21	   00:00:02:23	Unmuted
+1       	60      	pen tap OS prod               	   08:02:56:12	   08:02:57:00	   00:00:00:11	Unmuted
+
+
+TRACK NAME:	PROP 8.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	keyboard 1 type               	   01:03:20:00	   01:03:20:13	   00:00:00:13	Unmuted
+1       	2       	wet kitchen towel up handle toss in copper pot	   01:03:37:08	   01:03:40:14	   00:00:03:06	Unmuted
+1       	3       	towel mvnt con't os           	   01:03:44:06	   01:03:50:15	   00:00:06:09	Unmuted
+1       	4       	towel grab mvnt               	   01:03:51:13	   01:03:52:10	   00:00:00:21	Unmuted
+1       	5       	hand car door                 	   01:11:39:18	   01:11:40:05	   00:00:00:11	Unmuted
+1       	6       	hands on jacket off dwn on vines	   01:12:33:03	   01:12:40:16	   00:00:07:13	Unmuted
+1       	7       	pull glass pieces off         	   01:12:51:11	   01:12:55:00	   00:00:03:13	Unmuted
+1       	8       	kick door 2 os 4 on screen    	   01:13:02:04	   01:13:11:20	   00:00:09:16	Unmuted
+1       	9       	leather purse mvnt            	   01:14:00:23	   01:14:18:18	   00:00:17:18	Unmuted
+1       	10      	sweater mvnt                  	   02:03:13:03	   02:03:15:11	   00:00:02:08	Unmuted
+1       	11      	brown paper mvnt              	   02:04:27:14	   02:04:28:19	   00:00:01:05	Unmuted
+1       	12      	brown paper mvnt              	   02:04:40:08	   02:04:45:06	   00:00:04:22	Unmuted
+1       	13      	leather purse mvnt            	   02:05:29:08	   02:05:29:19	   00:00:00:11	Unmuted
+1       	14      	bg backpack mvnt              	   02:10:11:00	   02:10:19:13	   00:00:08:13	Unmuted
+1       	15      	handle rebar                  	   03:15:21:06	   03:15:27:22	   00:00:06:16	Unmuted
+1       	16      	paper in cash booth           	   03:15:56:12	   03:15:59:22	   00:00:03:10	Muted
+1       	17      	hand 2 wood framed glass office door (soo-lin)	   04:06:07:04	   04:06:08:17	   00:00:01:13	Unmuted
+1       	18      	lanyard & badge mvmnt (agent) 	   05:00:12:22	   05:00:40:14	   00:00:27:16	Unmuted
+1       	19      	lanyard & badge mvmnt (agent) 	   05:00:47:15	   05:01:12:13	   00:00:24:22	Unmuted
+1       	20      	lanyard & badge mvmnt (agent) 	   05:01:16:21	   05:01:31:15	   00:00:14:18	Unmuted
+1       	21      	lanyard & badge mvmnt (agent) 	   05:01:37:23	   05:02:00:21	   00:00:22:22	Unmuted
+1       	22      	lanyard & badge mvmnt (agent) 	   05:02:06:08	   05:02:14:06	   00:00:07:22	Unmuted
+1       	23      	lanyard & badge mvmnt (agent) 	   05:02:29:05	   05:03:03:17	   00:00:34:12	Unmuted
+1       	24      	arm over couch cushion OS (soo-lin)	   05:04:30:00	   05:04:32:21	   00:00:02:21	Unmuted
+1       	25      	couch & cushion mvmnt (soo-lin)	   05:04:40:08	   05:05:10:18	   00:00:30:10	Unmuted
+1       	26      	passport from purse mvmnt into pocket	   05:05:34:11	   05:05:40:11	   00:00:06:00	Unmuted
+1       	27      	plush ottoman seated shift (doc)	   05:05:41:16	   05:05:46:18	   00:00:05:02	Unmuted
+1       	28      	plush ottoman shift & up (doc)	   05:05:51:06	   05:05:57:17	   00:00:06:11	Unmuted
+1       	29      	couch sits                    	   05:06:11:01	   05:06:16:22	   00:00:05:21	Unmuted
+1       	30      	couch mvmnt                   	   05:06:42:19	   05:06:51:15	   00:00:08:20	Unmuted
+1       	31      	couch mvmnt                   	   05:07:09:22	   05:07:53:19	   00:00:43:21	Unmuted
+1       	32      	plush ottoman down (bern)     	   05:08:06:12	   05:08:11:13	   00:00:05:01	Unmuted
+1       	33      	couch mvmnt-01                	   05:08:12:09	   05:08:18:11	   00:00:06:02	Unmuted
+1       	34      	plush ottoman mvmnt (bern)    	   05:08:18:11	   05:08:27:00	   00:00:08:13	Unmuted
+1       	35      	couch mvmnt-03                	   05:08:27:00	   05:08:33:06	   00:00:06:06	Unmuted
+1       	36      	plush ottoman mvmnt (bern)    	   05:08:33:06	   05:08:36:02	   00:00:02:20	Unmuted
+1       	37      	couch mvmnt-05                	   05:08:36:02	   05:08:40:08	   00:00:04:06	Unmuted
+1       	38      	plush ottoman mvmnt (bern)    	   05:08:40:08	   05:08:41:13	   00:00:01:05	Unmuted
+1       	39      	couch mvmnt-07                	   05:08:41:13	   05:08:45:00	   00:00:03:11	Unmuted
+1       	40      	plush ottoman up (bern)       	   05:08:45:00	   05:08:48:05	   00:00:03:05	Unmuted
+1       	41      	couch mvmnt-08                	   05:08:48:05	   05:13:22:05	   00:04:34:00	Unmuted
+1       	42      	wood door frame crack & snap  	   05:15:23:12	   05:15:23:17	   00:00:00:05	Unmuted
+1       	43      	M knapsack mvnt sits behind bella 	   07:03:27:16	   07:03:34:07	   00:00:06:15	Unmuted
+1       	44      	hanger handle 2x off rope on rope mvnt	   07:04:22:06	   07:04:37:06	   00:00:15:00	Unmuted
+1       	45      	paddle water mvnt             	   07:05:43:10	   07:06:03:21	   00:00:20:11	Unmuted
+1       	46      	paddle water mvnt             	   07:07:08:08	   07:07:16:06	   00:00:07:22	Unmuted
+1       	47      	cap on with gloved hand mvnt  	   07:08:05:14	   07:08:12:16	   00:00:07:02	Unmuted
+1       	48      	cap up gloved hand from plasitc box hand with bare hand back to glove	   07:08:19:03	   07:08:20:10	   00:00:01:07	Unmuted
+1       	49      	grab vial glove wipe mvnt handle bside put cap on mvnt	   07:08:22:04	   07:08:35:20	   00:00:13:16	Unmuted
+1       	50      	grab vial glove cheat cap up then on OS if possible	   07:08:43:17	   07:08:47:03	   00:00:03:10	Muted
+1       	51      	hikes up cooler mvnt          	   07:11:12:08	   07:11:21:02	   00:00:08:18	Unmuted
+1       	52      	grab fabric handle mvnt       	   07:11:33:14	   07:11:44:16	   00:00:11:02	Unmuted
+1       	53      	ski jacket grab               	   07:12:11:20	   07:12:15:21	   00:00:04:01	Unmuted
+1       	54      	becky grab styro cup handle   	   08:02:51:22	   08:02:59:01	   00:00:07:03	Unmuted
+1       	55      	pour OS                       	   08:03:15:11	   08:03:17:19	   00:00:02:08	Unmuted
+1       	56      	styro cup handel stirrer in cup on screen	   08:03:21:01	   08:03:42:15	   00:00:21:14	Unmuted
+
+
+TRACK NAME:	PROP 9.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	grab dry towel mvnt           	   01:03:37:04	   01:03:38:12	   00:00:01:08	Unmuted
+1       	2       	big towel  grab open mvnt     	   01:03:45:10	   01:03:50:15	   00:00:05:05	Unmuted
+1       	3       	towel mvnt drop               	   01:04:03:00	   01:04:08:10	   00:00:05:10	Unmuted
+1       	4       	dog steps wood then rug wood-rug	   01:12:49:22	   01:13:31:04	   00:00:41:05	Unmuted
+1       	5       	glasses bump necklace 6 x     	   02:04:22:20	   02:04:26:23	   00:00:04:03	Unmuted
+1       	6       	glasses hit necklace          	   02:04:35:13	   02:04:37:10	   00:00:01:21	Unmuted
+1       	7       	wild plates silverware mvnt   	   02:11:32:15	   02:14:00:18	   00:02:28:03	Unmuted
+1       	8       	foliage roots cracking & shifting	   03:01:44:07	   03:01:48:16	   00:00:04:09	Unmuted
+1       	9       	mud forceful burst            	   03:03:00:02	   03:03:03:21	   00:00:03:19	Unmuted
+1       	10      	wire wrap & snap with rebar   	   03:15:21:06	   03:15:22:00	   00:00:00:18	Unmuted
+1       	11      	level on rebar                	   03:15:26:23	   03:15:27:22	   00:00:00:23	Unmuted
+1       	12      	hand 2 wood frame of office door & off (doc)	   04:06:07:10	   04:06:08:08	   00:00:00:22	Unmuted
+1       	13      	lanyard & badge mvmnt (pablo) 	   05:00:18:14	   05:00:29:23	   00:00:11:09	Unmuted
+1       	14      	lanyard & badge mvmnt (pablo) 	   05:01:58:09	   05:02:12:13	   00:00:14:04	Unmuted
+1       	15      	necklace tassle mvmnt (soo-lin)	   05:04:40:08	   05:05:10:18	   00:00:30:10	Unmuted
+1       	16      	necklace tassle mvmnt (soo-lin)	   05:05:54:22	   05:05:56:06	   00:00:01:08	Unmuted
+1       	17      	necklace tassle mvmnt (soo-lin)	   05:06:12:10	   05:06:15:03	   00:00:02:17	Muted
+1       	18      	necklace tassle mvmnt (soo-lin)	   05:06:48:02	   05:06:51:02	   00:00:03:00	Unmuted
+1       	19      	necklace tassle mvmnt (soo-lin)	   05:07:21:17	   05:07:24:00	   00:00:02:07	Unmuted
+1       	20      	necklace tassle mvmnt (soo-lin)	   05:08:41:15	   05:08:44:22	   00:00:03:07	Unmuted
+1       	21      	necklace tassle mvmnt (soo-lin)	   05:08:50:01	   05:08:52:07	   00:00:02:06	Unmuted
+1       	22      	necklace tassle mvmnt (soo-lin)	   05:09:04:02	   05:09:09:18	   00:00:05:16	Unmuted
+1       	23      	necklace tassle mvmnt (soo-lin)	   05:14:34:16	   05:14:44:07	   00:00:09:15	Unmuted
+1       	24      	necklace tassle mvmnt (soo-lin)	   05:15:12:08	   05:15:15:20	   00:00:03:12	Unmuted
+1       	25      	knapsack mvnt sit dwn with it on	   07:03:26:17	   07:03:33:22	   00:00:07:05	Unmuted
+1       	26      	 M instructor jacket mvnt handle pass 2x	   07:04:21:17	   07:04:40:02	   00:00:18:09	Muted
+1       	27      	drip from paddle              	   07:05:43:10	   07:06:06:22	   00:00:23:12	Unmuted
+1       	28      	drip from paddle              	   07:07:08:12	   07:07:16:08	   00:00:07:20	Unmuted
+1       	29      	bernadette gloved hand mvnt   	   07:08:08:05	   07:09:05:05	   00:00:57:00	Unmuted
+1       	30      	rim dwn rubber boat up dwn mvnt	   07:11:34:22	   07:11:38:09	   00:00:03:11	Unmuted
+1       	31      	water pours out               	   07:11:41:00	   07:11:43:02	   00:00:02:02	Unmuted
+1       	32      	water splash FS               	   07:12:40:01	   07:13:00:01	   00:00:20:00	Unmuted
+1       	33      	grab metal carfe up dwn OS    	   08:03:12:23	   08:03:20:12	   00:00:07:13	Unmuted
+
+
+TRACK NAME:	PROP 10.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	wild water in pan drips       	   01:01:45:18	   01:09:22:10	   00:07:36:16	Unmuted
+1       	2       	dog shakes off                	   01:13:21:11	   01:13:24:05	   00:00:02:18	Unmuted
+1       	3       	tug on raincoat               	   02:09:59:08	   02:10:02:12	   00:00:03:04	Unmuted
+1       	4       	rain on umbrella              	   03:00:03:22	   03:00:06:04	   00:00:02:06	Unmuted
+1       	5       	roots & foliange tearing shifting	   03:02:43:19	   03:02:44:18	   00:00:00:23	Unmuted
+1       	6       	foliage shifting              	   03:02:46:20	   03:02:48:16	   00:00:01:20	Unmuted
+1       	7       	foliage breaking sliding      	   03:02:48:16	   03:02:58:14	   00:00:09:22	Unmuted
+1       	8       	mud seep under doors          	   03:02:58:14	   03:03:01:02	   00:00:02:12	Unmuted
+1       	9       	bern leather toolbelt         	   03:15:21:06	   03:15:27:22	   00:00:06:16	Unmuted
+1       	10      	lanyard & badge mvmnt (ponytail)	   05:00:18:15	   05:00:29:23	   00:00:11:08	Unmuted
+1       	11      	ipad with case up from prefab wood & mvmnt (pablo)	   05:02:03:14	   05:02:12:13	   00:00:08:23	Unmuted
+1       	12      	neck chain mvmnt (doc)        	   05:04:17:05	   05:05:10:18	   00:00:53:13	Unmuted
+1       	13      	neck chain mvmnt (doc)        	   05:05:41:13	   05:05:46:20	   00:00:05:07	Unmuted
+1       	14      	neck chain mvmnt (doc)        	   05:05:51:08	   05:06:01:10	   00:00:10:02	Unmuted
+1       	15      	neck chain mvmnt (doc)        	   05:06:07:02	   05:06:15:15	   00:00:08:13	Unmuted
+1       	16      	neck chain mvmnt (doc)        	   05:06:18:10	   05:06:25:07	   00:00:06:21	Unmuted
+1       	17      	neck chain mvmnt (doc)        	   05:08:12:09	   05:08:18:22	   00:00:06:13	Unmuted
+1       	18      	neck chain mvmnt (doc)        	   05:08:27:06	   05:08:34:00	   00:00:06:18	Unmuted
+1       	19      	neck chain mvmnt (doc)        	   05:08:36:01	   05:08:40:09	   00:00:04:08	Unmuted
+1       	20      	neck chain mvmnt (doc)        	   05:09:14:06	   05:09:16:03	   00:00:01:21	Unmuted
+1       	21      	neck chain mvmnt (doc)        	   05:09:19:23	   05:09:22:15	   00:00:02:16	Unmuted
+1       	22      	neck chain mvmnt (doc)        	   05:09:25:09	   05:09:29:05	   00:00:03:20	Unmuted
+1       	23      	neck chain mvmnt (doc)        	   05:09:34:19	   05:09:42:02	   00:00:07:07	Unmuted
+1       	24      	neck chain mvmnt (doc)        	   05:09:45:09	   05:09:49:15	   00:00:04:06	Unmuted
+1       	25      	neck chain mvmnt (doc)        	   05:09:54:04	   05:09:58:19	   00:00:04:15	Unmuted
+1       	26      	neck chain mvmnt (doc)        	   05:10:01:16	   05:10:05:22	   00:00:04:06	Unmuted
+1       	27      	neck chain mvmnt (doc)        	   05:10:10:19	   05:10:48:08	   00:00:37:13	Unmuted
+1       	28      	neck chain mvmnt (doc)        	   05:11:34:03	   05:11:46:12	   00:00:12:09	Unmuted
+1       	29      	neck chain mvmnt (doc)        	   05:12:05:06	   05:12:09:10	   00:00:04:04	Unmuted
+1       	30      	neck chain mvmnt (doc)        	   05:12:12:22	   05:12:19:02	   00:00:06:04	Unmuted
+1       	31      	neck chain mvmnt (doc)        	   05:12:36:00	   05:12:46:18	   00:00:10:18	Unmuted
+1       	32      	neck chain mvmnt (doc)        	   05:13:11:08	   05:13:15:10	   00:00:04:02	Unmuted
+1       	33      	neck chain mvmnt (doc)        	   05:13:16:07	   05:13:18:09	   00:00:02:02	Unmuted
+1       	34      	neck chain mvmnt (doc)        	   05:14:44:06	   05:14:48:05	   00:00:03:23	Unmuted
+1       	35      	neck chain mvmnt (doc)        	   05:15:06:07	   05:15:12:08	   00:00:06:01	Unmuted
+1       	36      	neck chain mvmnt (doc)        	   05:15:20:06	   05:15:28:05	   00:00:07:23	Unmuted
+1       	37      	drying machines               	   05:15:30:20	   05:15:43:06	   00:00:12:10	Unmuted
+1       	38      	drying machines               	   05:15:55:13	   05:18:10:13	   00:02:15:00	Unmuted
+1       	39      	knaosack mvnt off dwn         	   07:03:22:04	   07:03:27:00	   00:00:04:20	Unmuted
+1       	40      	tug on nylon vest             	   07:04:10:09	   07:04:14:19	   00:00:04:10	Unmuted
+1       	41      	handle fleece coat R          	   07:04:25:06	   07:04:40:02	   00:00:14:20	Unmuted
+1       	42      	W paddle mvnt water start OS  	   07:06:26:21	   07:07:16:08	   00:00:49:11	Unmuted
+1       	43      	handle towel glove and bare hand dwn glove	   07:08:13:07	   07:08:17:11	   00:00:04:04	Unmuted
+1       	44      	handle towel glove and bare hand dwn glove	   07:08:35:10	   07:08:42:12	   00:00:07:02	Unmuted
+1       	45      	towel up mvnt dwn on glove    	   07:08:46:10	   07:09:04:19	   00:00:18:09	Unmuted
+1       	46      	water drips on rubber boat    	   07:11:34:15	   07:11:44:16	   00:00:10:01	Unmuted
+
+
+TRACK NAME:	PROP 11.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	pat dog                       	   01:13:18:07	   01:13:22:06	   00:00:03:23	Unmuted
+1       	2       	zippers on vest               	   02:05:42:04	   02:05:46:18	   00:00:04:14	Unmuted
+1       	3       	mans raincoat mvnt            	   02:07:59:21	   02:08:17:21	   00:00:18:00	Unmuted
+1       	4       	vest mvnt                     	   02:09:11:10	   02:09:59:13	   00:00:48:03	Unmuted
+1       	5       	leather seat mvnt             	   02:10:16:20	   02:11:32:22	   00:01:16:02	Unmuted
+1       	6       	leather car seat mvnt         	   02:16:11:03	   02:17:17:00	   00:01:05:21	Unmuted
+1       	7       	rain on chain & metal disks   	   03:00:00:00	   03:00:03:22	   00:00:03:22	Unmuted
+1       	8       	water puddle plops            	   03:00:33:20	   03:00:35:13	   00:00:01:17	Unmuted
+1       	9       	water trickles thru foliage   	   03:01:41:07	   03:01:44:07	   00:00:03:00	Unmuted
+1       	10      	water pressure thru brick wall	   03:02:44:18	   03:02:46:20	   00:00:02:02	Unmuted
+1       	11      	water rushing down hill       	   03:02:48:16	   03:02:58:14	   00:00:09:22	Unmuted
+1       	12      	mud goosh steady              	   03:03:05:01	   03:03:15:10	   00:00:10:09	Unmuted
+1       	13      	worker toolbelt               	   03:15:21:06	   03:15:27:22	   00:00:06:16	Unmuted
+1       	14      	FG plastic back chair with wheels mvmnt (ponytail)	   05:00:07:06	   05:00:14:05	   00:00:06:23	Unmuted
+1       	15      	FG plastic back chair with wheels up (ponytail)	   05:00:15:23	   05:00:22:12	   00:00:06:13	Unmuted
+1       	16      	FG hand 2 plastic back chair & roll 2 side (ponytail)	   05:00:22:18	   05:00:25:01	   00:00:02:07	Unmuted
+1       	17      	hand 2 plastic back chair toss out grab arm (elgie)	   05:00:52:05	   05:00:55:00	   00:00:02:19	Unmuted
+1       	18      	grab arms plastic back chair with wheels & sit (elgie)	   05:00:55:00	   05:00:59:03	   00:00:04:03	Unmuted
+1       	19      	OS grab arms plastic back chair with wheels & sit (agent)	   05:01:02:13	   05:01:09:04	   00:00:06:15	Unmuted
+1       	20      	plastic back chair with wheels mvmnt (agent)	   05:01:21:06	   05:01:26:01	   00:00:04:19	Unmuted
+1       	21      	plastic back chair up & rolls (soo-lin)	   05:02:01:01	   05:02:02:10	   00:00:01:09	Unmuted
+1       	22      	OS grab arms roll in plastic back chair & sit (soo-lin)	   05:02:05:00	   05:02:08:22	   00:00:03:22	Unmuted
+1       	23      	BG parents clapping           	   05:04:02:21	   05:04:17:05	   00:00:14:08	Unmuted
+1       	24      	trenchcoat mvmnt (bern)       	   05:05:56:10	   05:05:59:00	   00:00:02:14	Unmuted
+1       	25      	trenchcoat mvmnt (bern)       	   05:06:03:16	   05:06:06:15	   00:00:02:23	Unmuted
+1       	26      	neck chain hits file folder (doc)	   05:06:14:12	   05:06:14:22	   00:00:00:10	Unmuted
+1       	27      	trenchcoat off & down into chair (bern)	   05:06:23:12	   05:06:34:15	   00:00:11:03	Unmuted
+1       	28      	neck chain on file folders (doc)	   05:08:13:14	   05:08:14:04	   00:00:00:14	Unmuted
+1       	29      	neck chain 2 file folders OS (prod doc)	   05:09:31:03	   05:09:32:10	   00:00:01:07	Unmuted
+1       	30      	neck chain on & off file folders (doc)	   05:09:36:13	   05:09:38:08	   00:00:01:19	Unmuted
+1       	31      	neck chain 2 file folders (doc)	   05:09:58:09	   05:09:58:22	   00:00:00:13	Unmuted
+1       	32      	neck chain 2 file folder & mvmnt (doc)	   05:10:00:21	   05:10:05:16	   00:00:04:19	Unmuted
+1       	33      	neck chain taps file folders (doc)	   05:10:28:11	   05:10:40:01	   00:00:11:14	Unmuted
+1       	34      	neck chain 2 file folder OS (doc)	   05:12:12:19	   05:12:14:13	   00:00:01:18	Unmuted
+1       	35      	neck chain on file folder mvmnt (doc)	   05:12:36:15	   05:12:46:01	   00:00:09:10	Unmuted
+1       	36      	water running in porcelain sink	   05:14:15:09	   05:14:26:08	   00:00:10:23	Muted
+1       	37      	water running in porcelain sink thru door	   05:14:26:08	   05:15:23:10	   00:00:57:02	Muted
+1       	38      	water running in porcelain sink	   05:15:23:10	   05:15:30:20	   00:00:07:10	Unmuted
+1       	39      	vest mvnt                     	   07:01:44:10	   07:01:51:11	   00:00:07:01	Unmuted
+1       	40      	vest mvnt                     	   07:03:22:06	   07:03:33:23	   00:00:11:17	Unmuted
+1       	41      	M jacket on R                 	   07:04:16:19	   07:04:39:17	   00:00:22:22	Muted
+1       	42      	cross arms nylon              	   07:05:05:21	   07:05:11:19	   00:00:05:22	Muted
+1       	43      	W drip from paddle start OS   	   07:06:26:21	   07:07:16:06	   00:00:49:09	Unmuted
+1       	44      	dry bag grab gloves mvnt      	   07:08:08:23	   07:08:11:06	   00:00:02:07	Unmuted
+1       	45      	dry bag handle mvnt           	   07:09:00:16	   07:09:02:04	   00:00:01:12	Unmuted
+1       	46      	jacket neck flaps ?           	   07:09:08:17	   07:10:34:21	   00:01:26:04	Muted
+1       	47      	water drips                   	   07:11:25:15	   07:11:44:16	   00:00:19:01	Unmuted
+1       	48      	winter overalls (becky)       	   08:02:45:23	   08:03:52:05	   00:01:06:06	Unmuted
+
+
+TRACK NAME:	PROP 12.1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: Inactive 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	raincoat mvnt                 	   01:04:47:03	   01:05:07:19	   00:00:20:16	Unmuted
+1       	2       	raincoat mvnt                 	   01:05:14:11	   01:05:41:22	   00:00:27:11	Unmuted
+1       	3       	raincoat mvnt-10              	   01:05:41:22	   01:05:42:15	   00:00:00:17	Unmuted
+1       	4       	raincoat mvnt                 	   01:05:53:11	   01:06:44:02	   00:00:50:15	Unmuted
+1       	5       	nail carpet 4x                	   01:08:21:23	   01:08:29:14	   00:00:07:15	Unmuted
+1       	6       	dog collar                    	   01:13:09:13	   01:13:31:03	   00:00:21:14	Unmuted
+1       	7       	raincoat mvnt for girl        	   02:02:12:16	   02:03:08:13	   00:00:55:21	Muted
+1       	8       	raincoat mvnt                 	   02:05:37:05	   02:08:10:14	   00:02:33:09	Unmuted
+1       	9       	raincoat mvnt                 	   02:09:08:04	   02:11:32:22	   00:02:24:18	Unmuted
+1       	10      	raincoat mvnt-09              	   02:11:32:22	   02:11:33:07	   00:00:00:09	Unmuted
+1       	11      	adjust sweater                	   02:14:28:12	   02:14:32:08	   00:00:03:20	Unmuted
+1       	12      	rain in metal gutter          	   03:00:00:00	   03:00:03:22	   00:00:03:22	Unmuted
+1       	13      	water birdbath plops          	   03:00:30:23	   03:00:33:20	   00:00:02:21	Unmuted
+1       	14      	water trickle thru foliage    	   03:00:35:13	   03:00:38:08	   00:00:02:19	Unmuted
+1       	15      	wet earth suck separate slide 	   03:01:44:07	   03:01:48:16	   00:00:04:09	Unmuted
+1       	16      	wet earth sucking & sliding   	   03:02:43:19	   03:02:44:18	   00:00:00:23	Unmuted
+1       	17      	wet earth sliding away        	   03:02:46:20	   03:02:48:16	   00:00:01:20	Unmuted
+1       	18      	wet earth suck sink settle    	   03:02:56:07	   03:02:57:12	   00:00:01:05	Unmuted
+1       	19      	mud goosh CU                  	   03:03:03:19	   03:03:05:01	   00:00:01:06	Unmuted
+1       	20      	rain on umbrellas             	   03:03:15:10	   03:03:29:16	   00:00:14:06	Unmuted
+1       	21      	trash dumped from truck (spot details)	   03:15:27:22	   03:15:35:00	   00:00:07:02	Unmuted
+1       	22      	laptop close OS (ponytail)    	   05:00:20:00	   05:00:21:22	   00:00:01:22	Unmuted
+1       	23      	hands 2 plastic back chair & roll out (soo-lin)	   05:00:50:06	   05:00:51:14	   00:00:01:08	Unmuted
+1       	24      	hand 2 plastic back chair & roll out (soo-lin)	   05:00:51:17	   05:00:53:15	   00:00:01:22	Unmuted
+1       	25      	hands 2 arms plastic back chair with wheels & sit (soo-lin)	   05:00:53:16	   05:00:55:18	   00:00:02:02	Unmuted
+1       	26      	hand 2 arm of plastic back chair (agent)	   05:01:09:03	   05:01:10:04	   00:00:01:01	Unmuted
+1       	27      	hand 2 arm plastic back chair & adjust & sit back (elgie)	   05:01:34:05	   05:01:38:07	   00:00:04:02	Unmuted
+1       	28      	hand 2 arm OS then again plastic back chair (elgie)	   05:01:48:08	   05:01:51:03	   00:00:02:19	Unmuted
+1       	29      	arms 2 chair arms & adjust plastic back chair (elgie)	   05:02:05:05	   05:02:15:19	   00:00:10:14	Unmuted
+1       	30      	sink in plastic back chair (elgie)	   05:02:17:21	   05:02:19:21	   00:00:02:00	Unmuted
+1       	31      	elbows 2 arms of plastic back chair & mvmnt (elgie)	   05:02:47:01	   05:02:53:17	   00:00:06:16	Unmuted
+1       	32      	BG parents clapping           	   05:04:02:21	   05:04:17:05	   00:00:14:08	Unmuted
+1       	33      	leather car seat mvmnt        	   05:05:10:18	   05:05:40:11	   00:00:29:17	Unmuted
+1       	34      	fishing vest with zippers & dangles mvmnt	   05:05:47:05	   05:05:53:14	   00:00:06:09	Unmuted
+1       	35      	fishing vest with zippers & dangles mvmnt	   05:05:56:18	   05:06:08:13	   00:00:11:19	Unmuted
+1       	36      	fishing vest with zippers & dangles mvmnt	   05:06:15:14	   05:06:45:10	   00:00:29:20	Unmuted
+1       	37      	fishing vest with zippers & dangles mvmnt	   05:06:46:21	   05:06:53:00	   00:00:06:03	Unmuted
+1       	38      	fishing vest with zippers & dangles mvmnt	   05:07:23:15	   05:07:27:17	   00:00:04:02	Unmuted
+1       	39      	fishing vest with zippers & dangles mvmnt	   05:07:38:11	   05:07:48:00	   00:00:09:13	Unmuted
+1       	40      	fishing vest with zippers & dangles mvmnt	   05:07:49:14	   05:07:52:16	   00:00:03:02	Unmuted
+1       	41      	fishing vest with zippers & dangles mvmnt	   05:07:59:08	   05:08:12:23	   00:00:13:15	Unmuted
+1       	42      	fishing vest with zippers & dangles mvmnt	   05:08:18:20	   05:08:28:12	   00:00:09:16	Unmuted
+1       	43      	fishing vest with zippers & dangles mvmnt	   05:08:34:20	   05:08:36:21	   00:00:02:01	Unmuted
+1       	44      	fishing vest with zippers & dangles mvmnt	   05:08:40:07	   05:08:41:14	   00:00:01:07	Unmuted
+1       	45      	fishing vest with zippers & dangles mvmnt	   05:08:44:22	   05:08:50:06	   00:00:05:08	Unmuted
+1       	46      	fishing vest with zippers & dangles mvmnt	   05:08:52:04	   05:08:56:11	   00:00:04:07	Unmuted
+1       	47      	fishing vest with zippers & dangles mvmnt	   05:08:57:02	   05:09:05:01	   00:00:07:23	Unmuted
+1       	48      	fishing vest with zippers & dangles mvmnt	   05:09:07:13	   05:09:10:11	   00:00:02:22	Unmuted
+1       	49      	fishing vest with zippers & dangles mvmnt	   05:09:16:01	   05:09:20:20	   00:00:04:19	Unmuted
+1       	50      	fishing vest with zippers & dangles mvmnt	   05:09:22:06	   05:09:27:18	   00:00:05:12	Unmuted
+1       	51      	fishing vest with zippers & dangles mvmnt	   05:09:29:00	   05:09:47:07	   00:00:18:07	Unmuted
+1       	52      	fishing vest with zippers & dangles mvmnt	   05:09:51:00	   05:09:56:23	   00:00:05:23	Unmuted
+1       	53      	fishing vest with zippers & dangles mvmnt	   05:09:58:22	   05:10:03:21	   00:00:04:23	Unmuted
+1       	54      	fishing vest with zippers & dangles mvmnt	   05:10:05:18	   05:10:11:18	   00:00:06:00	Unmuted
+1       	55      	fishing vest with zippers & dangles mvmnt	   05:10:13:05	   05:10:16:13	   00:00:03:08	Unmuted
+1       	56      	fishing vest with zippers & dangles mvmnt	   05:10:21:02	   05:10:28:06	   00:00:07:04	Unmuted
+1       	57      	fishing vest with zippers & dangles mvmnt	   05:10:31:19	   05:10:51:21	   00:00:20:02	Unmuted
+1       	58      	fishing vest with zippers & dangles mvmnt	   05:11:18:20	   05:11:27:00	   00:00:08:04	Unmuted
+1       	59      	fishing vest with zippers & dangles mvmnt	   05:11:37:18	   05:11:41:09	   00:00:03:15	Unmuted
+1       	60      	fishing vest with zippers & dangles mvmnt	   05:11:45:00	   05:12:38:02	   00:00:53:02	Unmuted
+1       	61      	fishing vest with zippers & dangles mvmnt	   05:12:47:20	   05:13:02:11	   00:00:14:15	Unmuted
+1       	62      	fishing vest with zippers & dangles mvmnt	   05:13:04:12	   05:14:26:09	   00:01:21:21	Unmuted
+1       	63      	fishing vest with zippers & dangles mvmnt	   05:15:30:20	   05:15:43:06	   00:00:12:10	Unmuted
+1       	64      	fishing vest with zippers & dangles mvmnt	   05:15:55:13	   05:16:56:10	   00:01:00:21	Unmuted
+1       	65      	fishing vest with zippers & dangles mvmnt	   05:17:03:14	   05:17:08:00	   00:00:04:10	Unmuted
+1       	66      	fishing vest with zippers & dangles mvmnt	   05:17:12:02	   05:17:13:16	   00:00:01:14	Unmuted
+1       	67      	fishing vest with zippers & dangles mvmnt	   05:17:19:17	   05:17:21:23	   00:00:02:06	Unmuted
+1       	68      	fishing vest with zippers & dangles mvmnt	   05:17:32:06	   05:17:35:00	   00:00:02:18	Unmuted
+1       	69      	fishing vest with zippers & dangles mvmnt	   05:17:43:06	   05:17:49:23	   00:00:06:17	Unmuted
+1       	70      	fishing vest with zippers & dangles mvmnt	   05:18:01:03	   05:18:10:13	   00:00:09:10	Unmuted
+1       	71      	one pass of nylon             	   07:01:39:05	   07:01:51:11	   00:00:12:06	Unmuted
+1       	72      	vest mvnt                     	   07:01:55:19	   07:02:28:04	   00:00:32:09	Unmuted
+1       	73      	vest mvnt                     	   07:02:30:20	   07:02:37:08	   00:00:06:12	Unmuted
+1       	74      	nylon jacket mvnt handle dwn  	   07:03:22:04	   07:03:26:06	   00:00:04:02	Unmuted
+1       	75      	winter coat mvnt              	   07:04:07:20	   07:04:40:04	   00:00:32:08	Unmuted
+1       	76      	nylon jacket mvnt             	   07:04:44:00	   07:05:30:05	   00:00:46:05	Unmuted
+1       	77      	winter clothes mvnt           	   07:05:33:14	   07:07:16:06	   00:01:42:16	Unmuted
+1       	78      	nylon jacket sit on mvnt      	   07:07:38:23	   07:07:40:05	   00:00:01:06	Unmuted
+1       	79      	winter clothes mvnt           	   07:08:02:14	   07:10:34:18	   00:02:32:04	Unmuted
+1       	80      	winter clothes mvnt           	   07:11:11:21	   07:11:44:19	   00:00:32:22	Unmuted
+1       	81      	winter clothes mvnt           	   07:12:15:15	   07:18:19:01	   00:06:03:10	Unmuted
+
+
