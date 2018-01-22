@@ -25,10 +25,10 @@ additional columns from the clip, track, and session name.
 
 Importing a normal text export outputs a CSV with one row for each clip, like this:
 
-|PT.Session.Name | PT.Track.Name | PT.Clip.Number | PT.Clip.Name |PT.Clip.Start   | PT.Clip.Finish  | PT.Clip.Muted| ...|
-|---------------|--------------|----------------|-------------|-----------|-----------|-------------|---------|---|
-|Test Session   | Track 1      | 1              | Audio 1-01  |01:00:00:05|01:01:00:12| Unmuted |...|
-|Test Session   | Track 1      | 2              | Audio 1-02  |01:01:00:12|01:01:00:20| Unmuted |...|
+| PT.Session.Name | PT.Track.Name | PT.Clip.Number | PT.Clip.Name | PT.Clip.Start   | PT.Clip.Finish  | PT.Clip.Muted | ... |
+|-----------------|---------------|----------------|--------------|-----------------|-----------------|---------------|-----|
+| Test Session    | Track 1       | 1              | Audio 1-01   |01:00:00:05      |01:01:00:12      | Unmuted |...|
+| Test Session    | Track 1       | 2              | Audio 1-02   |01:01:00:12      |01:01:00:20      | Unmuted |...|
 
 etc... Each clip has a column for the track name of the clip in addition to the session name. A column for the track comments 
 is also included. The first row of the output *always* contains column headings.
