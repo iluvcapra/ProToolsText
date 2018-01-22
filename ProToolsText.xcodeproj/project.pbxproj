@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A36FCEA2013D1F8009661B1 /* Track States.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A36FCE92013D1F8009661B1 /* Track States.txt */; };
+		9A69EA762015B7A2009ED43C /* ADRLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69EA752015B7A2009ED43C /* ADRLine.swift */; };
+		9A69EA772015B7A2009ED43C /* ADRLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69EA752015B7A2009ED43C /* ADRLine.swift */; };
 		9A70F4BB1FF448AD000DBF46 /* PKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */; };
 		9A8002811FEEF9A6009D4E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002801FEEF9A6009D4E28 /* Assets.xcassets */; };
@@ -82,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		9A36FCE92013D1F8009661B1 /* Track States.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Track States.txt"; sourceTree = "<group>"; usesTabs = 1; };
+		9A69EA752015B7A2009ED43C /* ADRLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADRLine.swift; sourceTree = "<group>"; };
 		9A70F4B81FF43FDF000DBF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9A80027A1FEEF9A6009D4E28 /* PText Convert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PText Convert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,9 +159,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A69EA742015B78D009ED43C /* ADR Entites */ = {
+			isa = PBXGroup;
+			children = (
+				9A69EA752015B7A2009ED43C /* ADRLine.swift */,
+			);
+			path = "ADR Entites";
+			sourceTree = "<group>";
+		};
 		9A80027B1FEEF9A6009D4E28 /* PText Convert */ = {
 			isa = PBXGroup;
 			children = (
+				9A69EA742015B78D009ED43C /* ADR Entites */,
 				9A8002B51FEF0092009D4E28 /* PText Convert.entitlements */,
 				9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */,
 				9A8002801FEEF9A6009D4E28 /* Assets.xcassets */,
@@ -447,6 +459,7 @@
 			files = (
 				9A8002B31FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A8002CA1FF051A2009D4E28 /* SessionEntityTabulator.swift in Sources */,
+				9A69EA762015B7A2009ED43C /* ADRLine.swift in Sources */,
 				9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */,
 				9A8002CD1FF051F1009D4E28 /* FieldParser.swift in Sources */,
 			);
@@ -457,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8002CB1FF051A2009D4E28 /* SessionEntityTabulator.swift in Sources */,
+				9A69EA772015B7A2009ED43C /* ADRLine.swift in Sources */,
 				9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A8002901FEEF9A7009D4E28 /* TagParserTests.swift in Sources */,
 				9A8002CE1FF051F1009D4E28 /* FieldParser.swift in Sources */,
