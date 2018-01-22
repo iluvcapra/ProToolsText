@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class ADRLine: NSObject {
+struct ADRLine: Codable {
 
     let SupervisorKey = "super"
     let ClientKey = "client"
@@ -59,7 +59,5 @@ class ADRLine: NSObject {
         
         reason = dictionary[ReasonKey]
         note = dictionary[NoteKey]
-        
-        super.init()
     }
 }
