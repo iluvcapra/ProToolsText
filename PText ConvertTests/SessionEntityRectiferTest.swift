@@ -69,8 +69,12 @@ class SessionEntityRectiferTest: XCTestCase {
         ]
         
         let testTracks = [
-            PTEntityParser.TrackEntity(rawTitle: "Track 1 [D]", rawComment: "This is a track {B=Goodbye} {C=Z1}", clips: testClipsTrack1),
-            PTEntityParser.TrackEntity(rawTitle: "Track 2", rawComment: "", clips: testClipsTrack2)
+            PTEntityParser.TrackEntity(rawTitle: "Track 1 [D]", rawComment: "This is a track {B=Goodbye} {C=Z1}",
+                                       solo: false, mute: false, active: true, hidden: false,
+                                       clips: testClipsTrack1),
+            PTEntityParser.TrackEntity(rawTitle: "Track 2", rawComment: "",
+                                       solo: false, mute: false, active: true, hidden: false,
+                                       clips: testClipsTrack2)
         ]
         
         tabulator = SessionEntityTabulator(tracks: testTracks, markers: testMarkers, session: session)
@@ -84,16 +88,16 @@ class SessionEntityRectiferTest: XCTestCase {
         XCTAssertEqual(testDelegate!.records[0][PTClipName],"Test 1")
         XCTAssertEqual(testDelegate!.records[0][PTStart],"01:00:00:00")
         XCTAssertEqual(testDelegate!.records[0][PTTrackName],"Track 1")
-        XCTAssertEqual(testDelegate!.records[0][PTMuted],"")
+        XCTAssertEqual(testDelegate!.records[0][PTClipMuted],"")
         
         XCTAssertEqual(testDelegate!.records[1][PTTrackName],"Track 1")
         XCTAssertEqual(testDelegate!.records[1][PTEventNumber],"3")
-        XCTAssertEqual(testDelegate!.records[1][PTMuted],PTMuted)
+        XCTAssertEqual(testDelegate!.records[1][PTClipMuted],PTClipMuted)
         
         XCTAssertEqual(testDelegate!.records[2][PTTrackName],"Track 2")
         XCTAssertEqual(testDelegate!.records[2][PTClipName],"Test T2")
         XCTAssertEqual(testDelegate!.records[2][PTEventNumber],"1")
-        XCTAssertEqual(testDelegate!.records[2][PTMuted],"")
+        XCTAssertEqual(testDelegate!.records[2][PTClipMuted],"")
     }
     
     /*
@@ -118,7 +122,7 @@ class SessionEntityRectiferTest: XCTestCase {
         XCTAssertTrue(testDelegate!.records.count >= 2)
         XCTAssertEqual(testDelegate!.records[0][PTSessionName], "Test Session")
         XCTAssertEqual(testDelegate!.records[1][PTSessionName], "Test Session")
-        XCTAssertEqual(testDelegate!.records[0][PTRawSessionName], "Test Session {S=Bill Hart}")
+//        XCTAssertEqual(testDelegate!.records[0][PTRawSessionName], "Test Session {S=Bill Hart}")
 
         XCTAssertEqual(testDelegate!.records[0]["S"], "Bill Hart")
         XCTAssertEqual(testDelegate!.records[1]["S"], "Bill Hart")

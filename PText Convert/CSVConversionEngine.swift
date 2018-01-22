@@ -69,10 +69,18 @@ class CSVConversionEngine: NSObject {
         
         let allFields = recordFieldSet(forRecords: records)
         
-        let canonicalFields = [PTSessionName, PTRawSessionName, PTTrackName,
-                               PTRawTrackName, PTTrackComment, PTRawTrackComment,
-                               PTEventNumber, PTClipName, PTRawClipName,
-                               PTStart, PTFinish, PTDuration, PTMuted]
+        let canonicalFields = [PTSessionName,
+                               PTTrackName,
+                               PTTrackComment,
+                               PTTrackInactive,
+                               PTTrackHidden,
+                               PTTrackMuted,
+                               PTTrackSolo,
+                               PTEventNumber,
+                               PTClipName,
+                               PTStart,
+                               PTFinish,
+                                PTClipMuted]
         
         let userFields = allFields.subtracting(Set(canonicalFields))
         return canonicalFields + userFields.sorted()

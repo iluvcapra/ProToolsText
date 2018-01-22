@@ -19,19 +19,21 @@ protocol SessionEntityTabulatorDelegate {
     func rectifier(_ r: SessionEntityTabulator, didReadRecord : [String:String])
 }
 
-let PTSessionName       = "PT_SessionName"
-let PTRawSessionName    = "PT_RawSessionName"
-let PTTrackName         = "PT_TrackName"
-let PTRawTrackName      = "PT_RawTrackName"
-let PTTrackComment      = "PT_TrackComment"
-let PTRawTrackComment   = "PT_RawTrackComment"
-let PTEventNumber       = "PT_EventNumber"
-let PTClipName          = "PT_ClipName"
-let PTRawClipName       = "PT_RawClipName"
-let PTStart             = "PT_Start"
-let PTFinish            = "PT_Finish"
-let PTDuration          = "PT_Duration"
-let PTMuted             = "PT_Muted"
+let PTSessionName       = "PT.Session.Name"
+
+let PTTrackName         = "PT.Track.Name"
+let PTTrackComment      = "PT.Track.Comment"
+let PTTrackMuted        = "PT.Track.Muted"
+let PTTrackSolo         = "PT.Track.Solo"
+let PTTrackInactive     = "PT.Track.Inactive"
+let PTTrackHidden       = "PT.Track.Hidden"
+
+let PTEventNumber       = "PT.Clip.Number"
+let PTClipName          = "PT.Clip.Name"
+let PTStart             = "PT.Clip.Start"
+let PTFinish            = "PT.Clip.Finish"
+let PTClipMuted         = "PT.Clip.Muted"
+
 
 class SessionEntityTabulator :SessionEntityTabulatorDelegate {
     
@@ -107,7 +109,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         let sessionNameParse = TagParser(string: session.rawTitle).parse()
         var dict = sessionNameParse.fields
         dict[PTSessionName] = sessionNameParse.text
-        dict[PTRawSessionName] = session.rawTitle
+    //    dict[PTRawSessionName] = session.rawTitle
         return dict
     }
     
@@ -118,9 +120,13 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
             var dict = trackNameParse.fields
             dict = dict.mergeKeepCurrent(trackCommentParse.fields)
             dict[PTTrackName] = trackNameParse.text
-            dict[PTRawTrackName] = track.rawTitle
+      //      dict[PTRawTrackName] = track.rawTitle
             dict[PTTrackComment] = trackCommentParse.text
-            dict[PTRawTrackComment] = track.rawComment
+       // dict[PTRawTrackComment] = track.rawComment
+            dict[PTTrackSolo] = track.solo ? PTTrackSolo : ""
+            dict[PTTrackMuted] = track.mute ? PTTrackMuted : ""
+            dict[PTTrackHidden] = track.hidden ? PTTrackHidden : ""
+            dict[PTTrackInactive] = track.active ? "" : PTTrackInactive
             return dict
         }()
         return trackDict
@@ -132,11 +138,11 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
             var dict = clipNameParse.fields
             dict[PTEventNumber] = String(clip.eventNumber)
             dict[PTClipName] = clipNameParse.text
-            dict[PTRawClipName] = clip.rawName
+       //     dict[PTRawClipName] = clip.rawName
             dict[PTStart] = clip.rawStart
             dict[PTFinish] = clip.rawFinish
-            dict[PTDuration] = clip.rawDuration
-            dict[PTMuted] = clip.muted ? PTMuted : ""
+           // dict[PTDuration] = clip.rawDuration
+            dict[PTClipMuted] = clip.muted ? PTClipMuted : ""
             return dict
         }()
         return clipDict
