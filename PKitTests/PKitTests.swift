@@ -206,6 +206,40 @@ class PKitTests: XCTestCase {
                                      encoding: String.Encoding.utf8.rawValue) )
     }
     
+    func testExample4() {
+        let testURL = Bundle(for: PKitTests.self).url(forResource: "Track States", withExtension: "txt")!
+        
+        let p = PTTextFileParser()
+        let d = ParserDelegateMock()
+        p.delegate = d
+        
+        let data = try! Data.init(contentsOf: testURL)
+        
+        XCTAssertFalse(d.didBegin)
+        XCTAssertFalse(d.didFinish)
+        XCTAssertNoThrow(try p.parse(data: data,
+                                     encoding: String.Encoding.utf8.rawValue) )
+        
+        let track1states = d.tracks[0]["stateFlags"] as! [String]
+        XCTAssertEqual(track1states.count, 0)
+        
+        let track2states = d.tracks[1]["stateFlags"] as! [String]
+        XCTAssertEqual(track2states.count, 1)
+        XCTAssertTrue(track2states[0] == "Solo")
+        
+        let track3states = d.tracks[2]["stateFlags"] as! [String]
+        XCTAssertEqual(track3states.count, 1)
+        XCTAssertTrue(track3states[0] == "Inactive")
+
+        let track4states = d.tracks[3]["stateFlags"] as! [String]
+        XCTAssertEqual(track4states.count, 2)
+        XCTAssertTrue(track4states.contains("Inactive"))
+        XCTAssertTrue(track4states.contains("Muted") )
+        
+        let track5states = d.tracks[4]["stateFlags"] as! [String]
+        XCTAssertEqual(track5states.count, 1)
+        XCTAssertTrue(track5states.contains("Hidden"))
+    }
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
 //        self.measure {

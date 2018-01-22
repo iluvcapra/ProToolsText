@@ -320,7 +320,7 @@ public class PTTextFileParser: NSObject {
         try expect(token: .LineBreak)
         let rawStates = try expectString() /* "STATE: */
         let statesString = rawStates.dropFirst(7)
-        let states = statesString.components(separatedBy: " ")
+        let states = statesString.components(separatedBy: " ").filter { !$0.isEmpty }
         try expect(token: .LineBreak)
         var plugins = [String]()
         if accept(string: "PLUG-INS: ") {

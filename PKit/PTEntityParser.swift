@@ -42,14 +42,25 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
     }
     
     public struct TrackEntity {
+        public var solo : Bool
+        public var mute : Bool
+        public var active : Bool
+        public var hidden : Bool
         public var rawTitle : String
         public var rawComment : String
         public var clips : [ClipEntity]
         
-        public init(rawTitle t : String, rawComment com: String, clips ca : [ClipEntity]) {
+        public init(rawTitle t : String, rawComment com: String,
+                    solo : Bool, mute : Bool,
+                    active : Bool, hidden : Bool,
+                    clips ca : [ClipEntity]) {
             rawTitle = t
             rawComment = com
             clips  = ca
+            self.solo = solo
+            self.mute = mute
+            self.active = active
+            self.hidden = hidden
         }
     }
     
@@ -106,6 +117,10 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
                 plugins: [String]) {
         thisTrack = TrackEntity(rawTitle: name,
                                 rawComment: comments ?? "",
+                                solo: stateFlags.contains("Solo"),
+                                mute: stateFlags.contains("Muted"),
+                                active: !stateFlags.contains("Inactive"),
+                                hidden: stateFlags.contains("Hidden"),
                                 clips: [])
     }
     
