@@ -109,7 +109,6 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         let sessionNameParse = TagParser(string: session.rawTitle).parse()
         var dict = sessionNameParse.fields
         dict[PTSessionName] = sessionNameParse.text
-    //    dict[PTRawSessionName] = session.rawTitle
         return dict
     }
     
@@ -120,9 +119,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
             var dict = trackNameParse.fields
             dict = dict.mergeKeepCurrent(trackCommentParse.fields)
             dict[PTTrackName] = trackNameParse.text
-      //      dict[PTRawTrackName] = track.rawTitle
             dict[PTTrackComment] = trackCommentParse.text
-       // dict[PTRawTrackComment] = track.rawComment
             dict[PTTrackSolo] = track.solo ? PTTrackSolo : ""
             dict[PTTrackMuted] = track.mute ? PTTrackMuted : ""
             dict[PTTrackHidden] = track.hidden ? PTTrackHidden : ""
@@ -138,10 +135,8 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
             var dict = clipNameParse.fields
             dict[PTEventNumber] = String(clip.eventNumber)
             dict[PTClipName] = clipNameParse.text
-       //     dict[PTRawClipName] = clip.rawName
             dict[PTStart] = clip.rawStart
             dict[PTFinish] = clip.rawFinish
-           // dict[PTDuration] = clip.rawDuration
             dict[PTClipMuted] = clip.muted ? PTClipMuted : ""
             return dict
         }()
