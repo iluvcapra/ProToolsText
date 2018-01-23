@@ -18,6 +18,9 @@ class ADRLine: NSObject {
     let MinPerLine = "mpl"
     let NoteKey = "note"
     let ReasonKey = "r"
+    let EffortKey = "eff"
+    let TVLineKey = "tv"
+    let TBWLineKey = "tbw"
     
     
     var title : String?
@@ -37,6 +40,12 @@ class ADRLine: NSObject {
     
     var reason : String?
     var note : String?
+    
+    var shootDate : String?
+    
+    var isEffort : Bool
+    var isTV : Bool
+    var isTBW : Bool
     
     init(with dictionary : [String:String]) {
         
@@ -59,6 +68,10 @@ class ADRLine: NSObject {
         
         reason = dictionary[ReasonKey]
         note = dictionary[NoteKey]
+        
+        isEffort = dictionary.keys.contains(EffortKey) ? true : false
+        isTV = dictionary.keys.contains(TVLineKey) ? true : false
+        isTBW = dictionary.keys.contains(TBWLineKey) ? true : false
         
         super.init()
     }
