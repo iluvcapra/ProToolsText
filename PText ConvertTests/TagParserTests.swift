@@ -24,6 +24,24 @@ class PText_ConvertTests: XCTestCase {
         XCTAssertEqual(result.fields["Sc"], "23 Int. House")
     }
     
+    func testAbutting() {
+        let tp = TagParser(string: "this is a name with [A][B]{note=a note}")
+        let result = tp.parse()
+        
+        XCTAssertEqual(result.fields["A"],"A" )
+        XCTAssertEqual(result.fields["B"],"B" )
+        XCTAssertEqual(result.fields["note"],"a note" )
+    }
+    
+    func testPTJunk() {
+        let tp = TagParser(string: "this is a -01 [TEST] {X=hello world}-03")
+        let result = tp.parse()
+        
+        XCTAssertEqual(result.fields["TEST"], "TEST")
+        XCTAssertEqual(result.fields["X"], "hello world")
+        XCTAssertEqual(result.text, "this is a -01")
+    }
+    
     func testDollar() {
         let tp = TagParser(string: "this is some text $V=100 $X=HELLO $QN=1001")
         let result = tp.parse()
