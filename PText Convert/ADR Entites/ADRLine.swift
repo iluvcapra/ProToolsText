@@ -12,12 +12,20 @@ struct ADRLine: Codable {
     let SupervisorKey = "super"
     let ClientKey = "client"
     
+    let ReelKey = "reel"
+    let VersionKey = "v"
+    let EpisodeKey = "ep"
+    let PartKey = "part"
+    
+    let PriorityKey = "p"
+    
     let CueNumberKey = "qn"
     let ActorNameKey = "act"
     let SceneKey = "sc"
     let MinPerLine = "mpl"
     let NoteKey = "note"
     let ReasonKey = "r"
+    
     
     
     var title : String?
