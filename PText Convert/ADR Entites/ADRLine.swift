@@ -25,6 +25,9 @@ struct ADRLine: Codable {
     let MinPerLine = "mpl"
     let NoteKey = "note"
     let ReasonKey = "r"
+    let EffortKey = "eff"
+    let TVLineKey = "tv"
+    let TBWLineKey = "tbw"
     
     
     
@@ -45,6 +48,12 @@ struct ADRLine: Codable {
     
     var reason : String?
     var note : String?
+    
+    var shootDate : String?
+    
+    var isEffort : Bool
+    var isTV : Bool
+    var isTBW : Bool
     
     init(with dictionary : [String:String]) {
         
