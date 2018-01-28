@@ -13,13 +13,6 @@ struct ADRLineValidationFailure {
     var line : ADRLine
 }
 
-//extension Sequence {
-//    func sequenceWithIndex() -> Sequence<(Int,Element)> {
-//        return zip((0...), self)
-//    }
-//}
-
-
 extension Sequence where Element == ADRLine {
     
     func validateNoEmptyTimes() -> [ADRLineValidationFailure] {
