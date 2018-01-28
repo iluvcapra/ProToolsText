@@ -101,18 +101,18 @@ extension ADRLine {
         let ReelKey = "reel"
         let VersionKey = "v"
         
-        let PriorityKey = "p"
+        let PriorityKey = "P"
         
-        let CueNumberKey = "qn"
-        let ActorNameKey = "act"
-        let SceneKey = "sc"
+        let CueNumberKey = "Qn"
+        let ActorNameKey = "Act"
+        let SceneKey = "Sc"
         let MinPerLine = "mpl"
         let NoteKey = "note"
-        let ReasonKey = "r"
-        let EffortKey = "eff"
-        let TVLineKey = "tv"
-        let TBWLineKey = "tbw"
-        let OmittedKey = "omit"
+        let ReasonKey = "R"
+        let EffortKey = "EFF"
+        let TVLineKey = "TV"
+        let TBWLineKey = "TBW"
+        let OmittedKey = "OMIT"
         
         title = dictionary[TitleKey] ?? dictionary[PTSessionName]
         supervisor = dictionary[SupervisorKey]
