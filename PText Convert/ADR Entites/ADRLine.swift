@@ -43,7 +43,7 @@ extension Sequence where Element == ADRLine {
         let numberSet = NSCountedSet(array: self.flatMap { $0.cueNumber })
         
         return zip((0...), self).flatMap { (index, line) -> ADRLineValidationFailure? in
-            if let number = line.cueNumber, numberSet.count(for: number) > 0 {
+            if let number = line.cueNumber, numberSet.count(for: number) > 1 {
                 return ADRLineValidationFailure(element: index, description: "Indistinct cue number", line: line)
             } else {
                 return nil
@@ -58,7 +58,7 @@ extension Sequence where Element == ADRLine {
     }
 }
 
-struct ADRLine: Codable {
+struct ADRLine {
     
     var title : String?
     var supervisor : String?
