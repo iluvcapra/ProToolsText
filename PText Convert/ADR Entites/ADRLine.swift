@@ -46,67 +46,22 @@ extension Sequence where Element == ADRLine {
         })
     }
     
-    func validateCueNumber() -> [ADRLineValidationFailure] {
+    func validateCueNumbersUnique() -> [ADRLineValidationFailure] {
+        let numberSet = NSCountedSet(array: self.flatMap { $0.cueNumber })
         
-    }
-
-    func validateADRLines() {
-        let errors = validateNoEmptyCueNumbers() + validateNoEmptyTimes() + validateCueNumbersUnique()
-    }
-    
-    func xmlDocument() -> XMLDocument {
-        let rootElement = XMLElement(name: "ADR_LOG")
-        
-        forEach { line in
-            let lineNode = XMLElement(name: "line")
-            
-            let elementMap = [
-                "title" : \ADRLine.title,
-                "supervisor" : \ADRLine.supervisor,
-                "client" : \ADRLine.client,
-                "reel"  : \ADRLine.reel,
-                "version" : \ADRLine.version,
-                "dialogue" : \ADRLine.dialogue,
-                "character" : \ADRLine.characterName,
-                "actor" : \ADRLine.actorName,
-                "start" : \ADRLine.start,
-                "finish" : \ADRLine.finish,
-                "reason" : \ADRLine.reason,
-                "effort" : \ADRLine.isEffort,
-                "note" : \ADRLine.note,
-                "priority" : \ADRLine.priority,
-                "shoot_date" : \ADRLine.shootDate,
-                "broadcast-alt" : \ADRLine.isTV,
-                "to-be-written" : \ADRLine.isTBW
-                ]
-            
-            for (key, kp) in elementMap {
-                
-                switch kp {
-                case let path as KeyPath<ADRLine,String?>:
-                    lineNode.addChild(XMLElement(name: key, stringValue: line[keyPath: path]))
-                case let path as KeyPath<ADRLine,Int?>:
-                    if let intVal = line[keyPath:path] {
-                        lineNode.addChild(XMLElement(name: key, stringValue: String(intVal)))
-                    }
-                case let path as KeyPath<ADRLine,TimeInterval?>:
-                    if let tVal = line[keyPath:path] {
-                        lineNode.addChild(XMLElement(name: key, stringValue: String(tVal)))
-                    }
-                case let path as KeyPath<ADRLine,Bool>:
-                    if line[keyPath : path] {
-                        lineNode.addChild(XMLElement(name: key))
-                    }
-                default:
-                    break
-                }
-                
+        return zip((0...), self).flatMap { (index, line) -> ADRLineValidationFailure? in
+            if let number = line.cueNumber, numberSet.count(for: number) > 0 {
+                return ADRLineValidationFailure(element: index, description: "Indistinct cue number", line: line)
+            } else {
+                return nil
             }
-
-            rootElement.addChild(lineNode)
         }
-        
-        return XMLDocument(rootElement: rootElement)
+    }
+
+    func validateADRLines() -> [ADRLineValidationFailure] {
+        return validateNoEmptyCueNumbers() +
+            validateNoEmptyTimes() +
+            validateCueNumbersUnique()
     }
 }
 
@@ -139,6 +94,7 @@ struct ADRLine: Codable {
     var isEffort : Bool
     var isTV : Bool
     var isTBW : Bool
+    var isOmitted : Bool
 }
 
 extension ADRLine {
@@ -163,6 +119,7 @@ extension ADRLine {
         let EffortKey = "eff"
         let TVLineKey = "tv"
         let TBWLineKey = "tbw"
+        let OmittedKey = "omit"
         
         title = dictionary[TitleKey] ?? dictionary[PTSessionName]
         supervisor = dictionary[SupervisorKey]
@@ -194,5 +151,55 @@ extension ADRLine {
         isEffort = dictionary.keys.contains(EffortKey)
         isTV = dictionary.keys.contains(TVLineKey)
         isTBW = dictionary.keys.contains(TBWLineKey)
+        isOmitted = dictionary.keys.contains(OmittedKey)
+    }
+    
+    func xmlElement() -> XMLElement {
+        let lineNode = XMLElement(name: "line")
+        
+        let elementMap = [
+            "title" : \ADRLine.title,
+            "supervisor" : \ADRLine.supervisor,
+            "client" : \ADRLine.client,
+            "reel"  : \ADRLine.reel,
+            "version" : \ADRLine.version,
+            "dialogue" : \ADRLine.dialogue,
+            "character" : \ADRLine.characterName,
+            "actor" : \ADRLine.actorName,
+            "start" : \ADRLine.start,
+            "finish" : \ADRLine.finish,
+            "reason" : \ADRLine.reason,
+            "effort" : \ADRLine.isEffort,
+            "note" : \ADRLine.note,
+            "omitted" : \ADRLine.isOmitted,
+            "priority" : \ADRLine.priority,
+            "shoot_date" : \ADRLine.shootDate,
+            "broadcast-alt" : \ADRLine.isTV,
+            "to-be-written" : \ADRLine.isTBW
+        ]
+        
+        for (key, kp) in elementMap {
+            
+            switch kp {
+            case let path as KeyPath<ADRLine,String?>:
+                lineNode.addChild(XMLElement(name: key, stringValue: self[keyPath: path]))
+            case let path as KeyPath<ADRLine,Int?>:
+                if let intVal = self[keyPath:path] {
+                    lineNode.addChild(XMLElement(name: key, stringValue: String(intVal)))
+                }
+            case let path as KeyPath<ADRLine,TimeInterval?>:
+                if let tVal = self[keyPath:path] {
+                    lineNode.addChild(XMLElement(name: key, stringValue: String(tVal)))
+                }
+            case let path as KeyPath<ADRLine,Bool>:
+                if self[keyPath : path] {
+                    lineNode.addChild(XMLElement(name: key))
+                }
+            default:
+                break
+            }
+        }
+        
+        return lineNode
     }
 }
