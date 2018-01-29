@@ -13,8 +13,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
 
     let errorDomain = "PTextConvertErrorDomain"
 
+    @IBOutlet var savePanelAuxiliaryView : NSView?
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -33,12 +35,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         }
         
         let savePanel = NSSavePanel()
-        savePanel.prompt = "Export All"
+        savePanel.prompt = "Export"
         savePanel.message = "Select Export Folder and Export File Nase Name."
         savePanel.title = "Export"
         savePanel.nameFieldLabel = "Base Name:"
         savePanel.allowedFileTypes = ["csv"]
         savePanel.isExtensionHidden = false
+        savePanel.accessoryView = savePanelAuxiliaryView
         if savePanel.runModal() != NSApplication.ModalResponse.OK  {
             return
         }
