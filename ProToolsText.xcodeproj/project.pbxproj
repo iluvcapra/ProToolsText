@@ -161,18 +161,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9A69EA742015B78D009ED43C /* ADR Entites */ = {
+		9A69EA742015B78D009ED43C /* XML Report Entites */ = {
 			isa = PBXGroup;
 			children = (
 				9A69EA752015B7A2009ED43C /* ADRLine.swift */,
 			);
-			path = "ADR Entites";
+			path = "XML Report Entites";
 			sourceTree = "<group>";
 		};
 		9A80027B1FEEF9A6009D4E28 /* PText Convert */ = {
 			isa = PBXGroup;
 			children = (
-				9A69EA742015B78D009ED43C /* ADR Entites */,
+				9A69EA742015B78D009ED43C /* XML Report Entites */,
 				9A8002B51FEF0092009D4E28 /* PText Convert.entitlements */,
 				9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */,
 				9A8002801FEEF9A6009D4E28 /* Assets.xcassets */,
