@@ -50,6 +50,9 @@ class ADRLineTests: XCTestCase {
     
     func testValidateUniqueCueNumber() {
         let failues = lines.validateADRLines()
+        XCTAssertTrue(failues.count == 2)
+        XCTAssertTrue(failues[0].element == 0)
+        XCTAssertTrue(failues[1].element == 1)
     }
 
 }
