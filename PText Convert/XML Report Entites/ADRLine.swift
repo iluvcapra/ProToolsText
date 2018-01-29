@@ -148,7 +148,7 @@ extension ADRLine {
     }
     
     func xmlElement() -> XMLElement {
-        let lineNode = XMLElement(name: "line")
+        
         
         let elementMap = [
             "title" : \ADRLine.title,
@@ -171,6 +171,7 @@ extension ADRLine {
             "to-be-written" : \ADRLine.isTBW
         ]
         
+        let lineNode = XMLElement(name: "adr-line")
         for (key, kp) in elementMap {
             
             switch kp {
