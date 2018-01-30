@@ -30,6 +30,9 @@
 		9A9450231FE71C1F007CFC2D /* PKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9450151FE71C1F007CFC2D /* PKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A9C45921FF9C0FF00B13FDA /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
 		9AA72C09201E8233002913A4 /* ADRLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA72C07201E81D9002913A4 /* ADRLineTests.swift */; };
+		9AA72C0B20202CA0002913A4 /* XMLStringDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA72C0A20202CA0002913A4 /* XMLStringDictionary.swift */; };
+		9AA72C0C20202CA0002913A4 /* XMLStringDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA72C0A20202CA0002913A4 /* XMLStringDictionary.swift */; };
+		9AA72C0E202036C3002913A4 /* XMLStringDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA72C0D202036C3002913A4 /* XMLStringDictionaryTests.swift */; };
 		9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */; };
 		9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
 		9AD6EE8E1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
@@ -113,6 +116,8 @@
 		9A9450201FE71C1F007CFC2D /* PKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKitTests.swift; sourceTree = "<group>"; };
 		9A9450221FE71C1F007CFC2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AA72C07201E81D9002913A4 /* ADRLineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ADRLineTests.swift; path = "PText ConvertTests/ADRLineTests.swift"; sourceTree = SOURCE_ROOT; };
+		9AA72C0A20202CA0002913A4 /* XMLStringDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLStringDictionary.swift; sourceTree = "<group>"; };
+		9AA72C0D202036C3002913A4 /* XMLStringDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLStringDictionaryTests.swift; sourceTree = "<group>"; };
 		9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScannerTests.swift; sourceTree = "<group>"; };
 		9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScanner.swift; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
@@ -165,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				9A69EA752015B7A2009ED43C /* ADRLine.swift */,
+				9AA72C0A20202CA0002913A4 /* XMLStringDictionary.swift */,
 			);
 			path = "XML Report Entites";
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				9A80028F1FEEF9A7009D4E28 /* TagParserTests.swift */,
 				9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */,
 				9A8002911FEEF9A7009D4E28 /* Info.plist */,
+				9AA72C0D202036C3002913A4 /* XMLStringDictionaryTests.swift */,
 			);
 			path = "PText ConvertTests";
 			sourceTree = "<group>";
@@ -464,6 +471,7 @@
 				9A8002CA1FF051A2009D4E28 /* SessionEntityTabulator.swift in Sources */,
 				9A69EA762015B7A2009ED43C /* ADRLine.swift in Sources */,
 				9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */,
+				9AA72C0B20202CA0002913A4 /* XMLStringDictionary.swift in Sources */,
 				9A8002CD1FF051F1009D4E28 /* FieldParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,8 +480,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA72C0E202036C3002913A4 /* XMLStringDictionaryTests.swift in Sources */,
 				9A8002CB1FF051A2009D4E28 /* SessionEntityTabulator.swift in Sources */,
 				9A69EA772015B7A2009ED43C /* ADRLine.swift in Sources */,
+				9AA72C0C20202CA0002913A4 /* XMLStringDictionary.swift in Sources */,
 				9AA72C09201E8233002913A4 /* ADRLineTests.swift in Sources */,
 				9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
 				9A8002901FEEF9A7009D4E28 /* TagParserTests.swift in Sources */,
