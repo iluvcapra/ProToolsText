@@ -88,11 +88,13 @@ struct ADRLine {
     var isTV : Bool
     var isTBW : Bool
     var isOmitted : Bool
+    
+    var userData : [String: String]
 }
 
 extension ADRLine {
     
-    init(with dictionary : [String:String]) {
+    static func with( dictionary : [String:String]) -> ADRLine {
         
         let TitleKey = "title"
         let SupervisorKey = "super"
@@ -114,37 +116,60 @@ extension ADRLine {
         let TBWLineKey = "TBW"
         let OmittedKey = "OMIT"
         
-        title = dictionary[TitleKey] ?? dictionary[PTSessionName]
-        supervisor = dictionary[SupervisorKey]
-        client = dictionary[ClientKey]
+        let tagMap = [
+            TitleKey : \ADRLine.title,
+            SupervisorKey : \ADRLine.supervisor,
+            ClientKey : \ADRLine.supervisor,
+            ReelKey : \ADRLine.reel,
+            VersionKey : \ADRLine.version,
+            PriorityKey : \ADRLine.priority,
+            CueNumberKey : \ADRLine.cueNumber,
+            ActorNameKey : \ADRLine.actorName,
+            SceneKey : \ADRLine.scene,
+            MinPerLine : \ADRLine.timeBudget,
+            NoteKey : \ADRLine.note,
+            ReasonKey : \ADRLine.reason,
+            EffortKey : \ADRLine.isEffort,
+            TVLineKey : \ADRLine.isTV,
+            TBWLineKey : \ADRLine.isTBW,
+            OmittedKey : \ADRLine.isOmitted
+        ]
         
-        dialogue = dictionary[PTClipName]
-        characterName = dictionary[PTTrackName]
-        actorName = dictionary[ActorNameKey]
-        if let mpl = dictionary[MinPerLine], let mins = Double(mpl) {
-            timeBudget = mins * TimeInterval(60.0)
-        }
-        
-        reel = dictionary[ReelKey]
-        version = dictionary[VersionKey]
-        
-        if let p = dictionary[PriorityKey] {
-            priority = Int(p)
-        }
+        var retVal = ADRLine(title: dictionary[PTSessionName],
+                             supervisor: nil,   client: nil,    cueNumber: nil,
+                             scene: nil,        reel: nil,      version: nil,
+                             dialogue: dictionary[PTClipName],
+                             characterName: dictionary[PTTrackName],
+                             actorName: nil,
+                             timeBudget: nil,
+                             priority: nil,
+                             start: nil, finish: nil, reason: nil, note: nil,
+                             shootDate: nil, isEffort: false, isTV: false, isTBW: false, isOmitted: false,
+                             userData: [:])
 
         
-        cueNumber = dictionary[CueNumberKey]
-        scene = dictionary[SceneKey]
+        for (userKey, path) in tagMap {
+            if let value = dictionary[userKey] {
+                switch (path) {
+                case let strPath as WritableKeyPath<ADRLine,String?>:
+                    retVal[keyPath: strPath] = value
+                case let boolPath as WritableKeyPath<ADRLine,Bool?>:
+                    retVal[keyPath: boolPath] = value.isEmpty ? false : true
+                case let intPath as WritableKeyPath<ADRLine,Int?>:
+                    retVal[keyPath: intPath] = Int(value)
+                case let (tvPath) as WritableKeyPath<ADRLine,TimeInterval?>:
+                    guard let sec = TimeInterval(value) else { break }
+                    retVal[keyPath: tvPath] = sec * TimeInterval(60.0)
+                default: break
+                }
+            }
+        }
         
-        start = dictionary[PTStart]
-        finish = dictionary[PTFinish]
+        retVal.userData = dictionary.filter{(key:String, _: String) -> Bool in
+            !dictionary.keys.contains(key)
+        }
         
-        reason = dictionary[ReasonKey]
-        note = dictionary[NoteKey]
-        isEffort = dictionary.keys.contains(EffortKey)
-        isTV = dictionary.keys.contains(TVLineKey)
-        isTBW = dictionary.keys.contains(TBWLineKey)
-        isOmitted = dictionary.keys.contains(OmittedKey)
+        return retVal
     }
     
     func xmlElement() -> XMLElement {
