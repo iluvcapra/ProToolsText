@@ -34,5 +34,4 @@ class XMLStringDictionaryTests: XCTestCase {
         XCTAssertTrue(names.contains("_walla"))
     }
 
-
 }

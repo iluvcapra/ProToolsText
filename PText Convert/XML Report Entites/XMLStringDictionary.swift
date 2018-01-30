@@ -41,8 +41,16 @@ extension Dictionary where Key == String, Value == String {
         
         for (key, value) in self {
             let saneKey = sanatizeElementName(key)
-            let memberElement = XMLElement(name: saneKey,
-                                           stringValue: value)
+            
+            let memberElement : XMLElement
+            if key == value {
+                memberElement = XMLElement(name: key)
+            } else {
+                memberElement = XMLElement(name: saneKey,
+                                               stringValue: value)
+            }
+            
+
             retVal.addChild(memberElement)
         }
         
