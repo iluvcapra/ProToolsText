@@ -119,7 +119,7 @@ extension ADRLine {
         let tagMap = [
             TitleKey : \ADRLine.title,
             SupervisorKey : \ADRLine.supervisor,
-            ClientKey : \ADRLine.supervisor,
+            ClientKey : \ADRLine.client,
             ReelKey : \ADRLine.reel,
             VersionKey : \ADRLine.version,
             PriorityKey : \ADRLine.priority,

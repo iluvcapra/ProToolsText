@@ -181,7 +181,6 @@
 				9A8002B21FEEFD10009D4E28 /* CSVConversionEngine.swift */,
 				9A8002CC1FF051F1009D4E28 /* FieldParser.swift */,
 				9A8002C91FF051A2009D4E28 /* SessionEntityTabulator.swift */,
-				9AA72C07201E81D9002913A4 /* ADRLineTests.swift */,
 			);
 			path = "PText Convert";
 			sourceTree = "<group>";
@@ -189,6 +188,7 @@
 		9A80028E1FEEF9A7009D4E28 /* PText ConvertTests */ = {
 			isa = PBXGroup;
 			children = (
+				9AA72C07201E81D9002913A4 /* ADRLineTests.swift */,
 				9A8002C51FEF7DD1009D4E28 /* ADR Spotting test.txt */,
 				9A80028F1FEEF9A7009D4E28 /* TagParserTests.swift */,
 				9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */,

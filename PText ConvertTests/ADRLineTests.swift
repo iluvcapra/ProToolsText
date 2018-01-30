@@ -34,7 +34,7 @@ class ADRLineTests: XCTestCase {
                             isEffort: false,
                             isTV: false,
                             isTBW: false,
-                            isOmitted: false)
+                            isOmitted: false, userData: [:])
         
         var line2 = line1
         line2.start = "02:00:00:00"
@@ -53,6 +53,36 @@ class ADRLineTests: XCTestCase {
         XCTAssertTrue(failues.count == 2)
         XCTAssertTrue(failues[0].element == 0)
         XCTAssertTrue(failues[1].element == 1)
+    }
+    
+    func testCreateFromDictionary() {
+        let testInput = ["title" : "Da Project",
+                         "super" : "Diego",
+                         "client" : "MGM",
+                         "reel" : "1",
+                         "v" : "1",
+                         "P":"2",
+                         "Qn" : "A1001",
+                         "Act" : "Olivia DeHavilland",
+                         "Sc" : "1 Main Titles",
+                         "mpl" : "8",
+                         "note" : "Added line",
+                         PTClipName : "Fuck that O'Hara cunt!!",
+                         "TV" : "TV",
+                         "EFF" : "",
+                         "R" : "Broadcast cover",
+                         PTTrackName : "Melanie"
+        ]
+        
+        let testOutput = ADRLine.with(dictionary: testInput)
+        
+        XCTAssertEqual(testOutput.title, "Da Project")
+        XCTAssertEqual(testOutput.supervisor, "Diego")
+        XCTAssertEqual(testOutput.client, "MGM")
+        XCTAssertEqual(testOutput.reel, "1")
+        XCTAssertEqual(testOutput.version, "1")
+        XCTAssertEqual(testOutput.priority, 2)
+        XCTAssertEqual(testOutput.cueNumber, "A1001")
     }
 
 }
