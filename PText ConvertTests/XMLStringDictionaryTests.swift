@@ -15,13 +15,14 @@ class XMLStringDictionaryTests: XCTestCase {
                       "val" : "this",
                       "012" : "omega",
                       "xml_file" : "filename",
-                      "$walla" : "Bango"
+                      "$walla" : "Bango",
+                      "Xml_Datum" : ""
         ]
         
         let element = input.toXMLElement(named: "test")
         
         XCTAssertNotNil(element)
-        XCTAssertEqual(element!.childCount, 5)
+        XCTAssertEqual(element!.childCount, input.count)
         
         let names = element!.children!.map({ (n) -> String in
             n.name!
@@ -32,6 +33,7 @@ class XMLStringDictionaryTests: XCTestCase {
         XCTAssertTrue(names.contains("_012"))
         XCTAssertTrue(names.contains("_xml_file"))
         XCTAssertTrue(names.contains("_walla"))
+        XCTAssertTrue(names.contains("_Xml_Datum"))
     }
 
 }
