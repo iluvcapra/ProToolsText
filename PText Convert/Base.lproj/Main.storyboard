@@ -112,6 +112,7 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="PText_Convert" customModuleProvider="target">
                     <connections>
+                        <outlet property="outputFormatSelector" destination="oF3-OR-hNt" id="oqx-xL-Pf0"/>
                         <outlet property="savePanelAuxiliaryView" destination="mO8-0v-diz" id="UPA-GH-31x"/>
                     </connections>
                 </customObject>
@@ -130,7 +131,7 @@
                                 <menu key="menu" id="CET-VD-abe">
                                     <items>
                                         <menuItem title="CSV" state="on" id="O3h-aV-wel"/>
-                                        <menuItem title="XML" hidden="YES" enabled="NO" id="YbC-sE-6nt"/>
+                                        <menuItem title="XML" tag="1" id="YbC-sE-6nt"/>
                                     </items>
                                 </menu>
                             </popUpButtonCell>
