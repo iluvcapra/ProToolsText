@@ -9,46 +9,62 @@
 <events>
 <xsl:for-each select="events/event">
 <event>
-<xsl:apply-templates mode="remap" />
+<xsl:apply-templates />
 </event>
 </xsl:for-each>
 </events>
 </pttext>
 </xsl:template>
 
-<xsl:template match="field[key = 'PT.Clip.Start']" mode="remap">
+<xsl:template match="field[key = 'PT.Clip.Start']">
 <start><xsl:value-of select="value" /></start>
 </xsl:template>
 
-<xsl:template match="field[key = 'PT.Clip.Finish']" mode="remap">
+<xsl:template match="field[key = 'PT.Clip.Finish']">
 <finish><xsl:value-of select="value" /></finish>
 </xsl:template>
 
-<xsl:template match="field[key = 'PT.Clip.Name']" mode="remap">
+<xsl:template match="field[key = 'PT.Clip.Name']">
 <name><xsl:value-of select="value" /></name>
 </xsl:template>
 
-<xsl:template match="field[key = 'PT.Track.Name']" mode="remap">
-<track_name><xsl:value-of select="value" /></track_name>
+<xsl:template match="field[key = 'PT.Clip.Number']">
+<track_seq><xsl:value-of select="value" /></track_seq>
 </xsl:template>
 
-<xsl:template match="field[key = 'PT.Track.Comment']" mode="remap">
-<track_comment><xsl:value-of select="value" /></track_comment>
-</xsl:template>
-
-<xsl:template match="field[key = 'PT.Clip.Number']" mode="remap">
-<seq><xsl:value-of select="value" /></seq>
-</xsl:template>
-
-<xsl:template match="field[key = 'PT.Session.Name']" mode="remap">
+<xsl:template match="field[key = 'PT.Session.Name']">
 <session_name><xsl:value-of select="value" /></session_name>
 </xsl:template>
 
-<xsl:template match="field[property = 'PT.Track.Inactive']" mode="remap">
-<track_inactive/>
+<xsl:template match="field[property = 'PT.Track.Inactive']">
+<track_inactive />
 </xsl:template>
 
-<xsl:template match="field" mode="remap">
+<xsl:template match="field[property = 'PT.Track.Muted']">
+    <track_muted />
+</xsl:template>
+
+<xsl:template match="field[property = 'PT.Track.Solo']">
+    <track_solo />
+</xsl:template>
+
+<xsl:template match="field[property = 'PT.Track.Hidden']">
+    <track_hidden />
+</xsl:template>
+
+<xsl:template match="field[key = 'PT.Track.Name']">
+    <track_name><xsl:value-of select="value" /></track_name>
+</xsl:template>
+
+<xsl:template match="field[key = 'PT.Track.Comment']">
+    <track_comment><xsl:value-of select="value" /></track_comment>
+</xsl:template>
+
+<xsl:template match="field[property = 'PT.Clip.Muted']">
+    <clip_muted />
+</xsl:template>
+
+<xsl:template match="field">
 <userField>
 <xsl:choose>
 <xsl:when test="property">

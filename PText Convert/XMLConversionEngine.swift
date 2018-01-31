@@ -39,7 +39,7 @@ class XMLConversionEngine: NSObject {
         
         let finalDocument = try document.objectByApplyingXSLT(at: basicXSLURL, arguments: nil) as! XMLDocument
         
-        let data = finalDocument.xmlData(options: XMLNode.Options.nodePrettyPrint)
+        let data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint, XMLNode.Options.nodeCompactEmptyElement] )
         
         try data.write(to: to)
     }
