@@ -122,7 +122,7 @@
 		9AA72C0A20202CA0002913A4 /* XMLStringDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLStringDictionary.swift; sourceTree = "<group>"; };
 		9AA72C0D202036C3002913A4 /* XMLStringDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLStringDictionaryTests.swift; sourceTree = "<group>"; };
 		9AA8FEA620218D9C00683243 /* XMLConversionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLConversionEngine.swift; sourceTree = "<group>"; };
-		9AA8FEA920219E2900683243 /* Basic.xsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Basic.xsl; path = XSL/Basic.xsl; sourceTree = "<group>"; };
+		9AA8FEA920219E2900683243 /* Basic.xsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Basic.xsl; sourceTree = "<group>"; };
 		9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScannerTests.swift; sourceTree = "<group>"; };
 		9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScanner.swift; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
@@ -171,6 +171,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A07E1D320227B6B001B61B0 /* XSL */ = {
+			isa = PBXGroup;
+			children = (
+				9AA8FEA920219E2900683243 /* Basic.xsl */,
+			);
+			path = XSL;
+			sourceTree = "<group>";
+		};
 		9A69EA742015B78D009ED43C /* XML Report Entites */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +201,7 @@
 				9AA8FEA620218D9C00683243 /* XMLConversionEngine.swift */,
 				9A8002CC1FF051F1009D4E28 /* FieldParser.swift */,
 				9A8002C91FF051A2009D4E28 /* SessionEntityTabulator.swift */,
-				9AA8FEA920219E2900683243 /* Basic.xsl */,
+				9A07E1D320227B6B001B61B0 /* XSL */,
 			);
 			path = "PText Convert";
 			sourceTree = "<group>";
