@@ -34,7 +34,12 @@ class XMLConversionEngine: NSObject {
         
         root.addChild(eventsEntity)
         let document = XMLDocument(rootElement: root)
-        let data = document.xmlData(options: XMLNode.Options.nodePrettyPrint)
+        
+        let basicXSLURL = Bundle.main.url(forResource: "Basic", withExtension: "xsl")!
+        
+        let finalDocument = try document.objectByApplyingXSLT(at: basicXSLURL, arguments: nil) as! XMLDocument
+        
+        let data = finalDocument.xmlData(options: XMLNode.Options.nodePrettyPrint)
         
         try data.write(to: to)
     }
