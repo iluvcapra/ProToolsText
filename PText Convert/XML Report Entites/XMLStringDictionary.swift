@@ -16,16 +16,16 @@ extension Dictionary where Key == String, Value == String {
         
         for (key, value) in self {
              if !value.isEmpty {
-                let memberElement = XMLElement(name: "FIELD")
+                let memberElement = XMLElement(name: "field")
                 if key != value {
-                    let keyElement = XMLElement(name: "KEY", stringValue: key)
-                    let valueElement = XMLElement(name: "VALUE", stringValue: value)
+                    let keyElement = XMLElement(name: "key", stringValue: key)
+                    let valueElement = XMLElement(name: "value", stringValue: value)
                     
                     memberElement.addChild(keyElement)
                     memberElement.addChild(valueElement)
                     
                 } else {
-                    let propertyElement = XMLElement(name: "PROPERTY", stringValue: key)
+                    let propertyElement = XMLElement(name: "property", stringValue: key)
                     memberElement.addChild(propertyElement)
                 }
                 retVal.addChild(memberElement)

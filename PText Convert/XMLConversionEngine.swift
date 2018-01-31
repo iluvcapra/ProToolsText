@@ -21,11 +21,11 @@ class XMLConversionEngine: NSObject {
         
         let records = tabulator.records
         
-        let root = XMLElement(name: "PTTEXT")
+        let root = XMLElement(name: "pttext")
         
-        let eventsEntity = XMLElement(name: "EVENTS")
+        let eventsEntity = XMLElement(name: "events")
         for record in records {
-            let event = record.toXMLElement(named: "EVENT")
+            let event = record.toXMLElement(named: "event")
             eventsEntity.addChild(event)
         }
         
