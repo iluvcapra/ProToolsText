@@ -11,9 +11,30 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
     
     public struct SessionEntity {
         public var rawTitle : String
+        public var sampleRate : Double
+        public var bitDepth : String
+        public var startTime : String
+        public var timecodeFormat : String
+        public var trackCount : Int
+        public var clipCount : Int
+        public var filesCount : Int
         
-        public init(rawTitle t : String) {
-            rawTitle = t
+        public init(rawTitle : String,
+                    sampleRate : Double,
+                    bitDepth : String,
+                    startTime : String,
+                    timecodeFormat : String,
+                    trackCount : Int,
+                    clipCount : Int,
+                    filesCount : Int) {
+            self.rawTitle = rawTitle
+            self.sampleRate = sampleRate
+            self.bitDepth = bitDepth
+            self.startTime = startTime
+            self.timecodeFormat = timecodeFormat
+            self.trackCount = trackCount
+            self.clipCount = clipCount
+            self.filesCount = filesCount
         }
     }
     
@@ -106,7 +127,13 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
                 trackCount : Int,
                 clipsCount : Int,
                 filesCount : Int) {
-        session = SessionEntity(rawTitle: title)
+        session = SessionEntity(rawTitle: title, sampleRate: sampleRate,
+                                bitDepth: bitDepth,
+                                startTime: startTime,
+                                timecodeFormat: timecodeFormat,
+                                trackCount: trackCount,
+                                clipCount: clipsCount,
+                                filesCount: filesCount)
     }
     
     public func parser(_ parser : PTTextFileParser,

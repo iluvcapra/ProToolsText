@@ -24,8 +24,10 @@ class SessionEntityRectiferTest: XCTestCase {
     
     override func setUp() {
         
-        let session = PTEntityParser.SessionEntity(rawTitle: "Test Session {S=Bill Hart}")
-        
+        let session  = PTEntityParser.SessionEntity(rawTitle: "Test Session {S=Bill Hart}",
+                                                    sampleRate: 48000.0, bitDepth: "24-bit",
+                                                    startTime: "01:00:00:00", timecodeFormat: "23.976 Frame",
+                                                    trackCount: 2, clipCount: 9, filesCount: 0)
         let testClipsTrack1 = [
             PTEntityParser.ClipEntity(rawName: "Test 1 $A=1 {B=Hello}",
                                       eventNumber: 1, rawStart: "01:00:00:00", rawFinish: "01:00:01:00",
