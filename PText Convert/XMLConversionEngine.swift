@@ -36,9 +36,13 @@ class XMLConversionEngine: NSObject {
         let document = XMLDocument(rootElement: root)
         
         let basicXSLURL = Bundle.main.url(forResource: "Basic", withExtension: "xsl")!
+        let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
         
-        let finalDocument = try document.objectByApplyingXSLT(at: basicXSLURL, arguments: nil) as! XMLDocument
+        let basicDocument = try document.objectByApplyingXSLT(at: basicXSLURL, arguments: nil) as! XMLDocument
         
+        let adrDocument = try basicDocument.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
+        
+        let finalDocument = adrDocument
         let data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint, XMLNode.Options.nodeCompactEmptyElement] )
         
         try data.write(to: to)

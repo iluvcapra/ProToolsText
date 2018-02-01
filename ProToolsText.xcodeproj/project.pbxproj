@@ -38,6 +38,8 @@
 		9AA8FEA720218D9C00683243 /* XMLConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8FEA620218D9C00683243 /* XMLConversionEngine.swift */; };
 		9AA8FEA820218D9C00683243 /* XMLConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA8FEA620218D9C00683243 /* XMLConversionEngine.swift */; };
 		9AA8FEAA20219E2900683243 /* Basic.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9AA8FEA920219E2900683243 /* Basic.xsl */; };
+		9AAF2B3D2022C9EE00F2546A /* ADR.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF2B3C2022C9EE00F2546A /* ADR.xsl */; };
+		9AAF2B3E2022C9EE00F2546A /* ADR.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF2B3C2022C9EE00F2546A /* ADR.xsl */; };
 		9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */; };
 		9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
 		9AD6EE8E1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
@@ -126,6 +128,7 @@
 		9AA72C0D202036C3002913A4 /* XMLStringDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLStringDictionaryTests.swift; sourceTree = "<group>"; };
 		9AA8FEA620218D9C00683243 /* XMLConversionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLConversionEngine.swift; sourceTree = "<group>"; };
 		9AA8FEA920219E2900683243 /* Basic.xsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Basic.xsl; sourceTree = "<group>"; };
+		9AAF2B3C2022C9EE00F2546A /* ADR.xsl */ = {isa = PBXFileReference; explicitFileType = text.xml; path = ADR.xsl; sourceTree = "<group>"; };
 		9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScannerTests.swift; sourceTree = "<group>"; };
 		9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScanner.swift; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				9AA8FEA920219E2900683243 /* Basic.xsl */,
+				9AAF2B3C2022C9EE00F2546A /* ADR.xsl */,
 			);
 			path = XSL;
 			sourceTree = "<group>";
@@ -444,6 +448,7 @@
 				9A8002811FEEF9A6009D4E28 /* Assets.xcassets in Resources */,
 				9AA8FEAA20219E2900683243 /* Basic.xsl in Resources */,
 				9A8002841FEEF9A6009D4E28 /* Main.storyboard in Resources */,
+				9AAF2B3D2022C9EE00F2546A /* ADR.xsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AAF2B3E2022C9EE00F2546A /* ADR.xsl in Resources */,
 				9A07E1D620228CFC001B61B0 /* Basic.xsl in Resources */,
 				9A8002C61FEF7DD1009D4E28 /* ADR Spotting test.txt in Resources */,
 			);
