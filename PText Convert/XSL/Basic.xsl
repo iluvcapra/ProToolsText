@@ -9,13 +9,16 @@
 </xsl:for-each>
 </xsl:variable>
 
+<xsl:variable name="phase2">
+    <xsl:copy-of select="$phase1" />
+</xsl:variable>
 
 <xsl:template match="/pttext">
     <pttext>
         <producer_identifer><xsl:value-of select="producer_identifer" /></producer_identifer>
         <producer_version><xsl:value-of select="producer_version" /></producer_version>
         <events>
-            <xsl:copy-of select="$phase1"/>
+            <xsl:copy-of select="$phase2"/>
         </events>
     </pttext>
 </xsl:template>
