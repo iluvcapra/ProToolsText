@@ -21,6 +21,10 @@ class BasicXMLTransformationTest: XCTestCase {
             <value>100</value>
             </field>
             <field>
+            <key>B</key>
+            <value>200</value>
+            </field>
+            <field>
 <key>PT.Clip.Start</key>
 <value>01:00:00:00</value>
             </field>

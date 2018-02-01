@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:template match="/pttext">
-<pttext>
-<!-- Note: This XML schema is under active development and may change at any time -->
-<producer_identifer><xsl:value-of select="producer_identifer" /></producer_identifer>
-<producer_version><xsl:value-of select="producer_version" /></producer_version>
-<events>
-<xsl:for-each select="events/event">
+<xsl:variable name="phase1">
+<xsl:for-each select="/pttext/events/event">
 <event>
 <xsl:apply-templates />
 </event>
 </xsl:for-each>
-</events>
-</pttext>
+</xsl:variable>
+
+
+<xsl:template match="/pttext">
+    <pttext>
+        <producer_identifer><xsl:value-of select="producer_identifer" /></producer_identifer>
+        <producer_version><xsl:value-of select="producer_version" /></producer_version>
+        <events>
+            <xsl:copy-of select="$phase1"/>
+        </events>
+    </pttext>
 </xsl:template>
 
 <!-- Mapping App-specified fields  -->

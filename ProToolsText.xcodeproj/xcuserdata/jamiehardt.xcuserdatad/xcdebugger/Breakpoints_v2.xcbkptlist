@@ -11,53 +11,5 @@
             continueAfterRunningActions = "No">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PText ConvertTests/BasicXMLTransformationTest.swift"
-            timestampString = "539135857.685524"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "testEventsList()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PText_ConvertTests.BasicXMLTransformationTest.testEventsList() -&gt; ()"
-                  moduleName = "PText ConvertTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jamiehardt/src/ProToolsText/PText%20ConvertTests/BasicXMLTransformationTest.swift"
-                  timestampString = "539135858.888077"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "3009">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #6 : @autoclosure () throws -&gt; Swift.Int in PText_ConvertTests.BasicXMLTransformationTest.testEventsList() -&gt; ()"
-                  moduleName = "PText ConvertTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jamiehardt/src/ProToolsText/PText%20ConvertTests/BasicXMLTransformationTest.swift"
-                  timestampString = "539135858.890883"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "29">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
