@@ -16,7 +16,7 @@ struct ADRLineValidationFailure {
 extension Sequence where Element == ADRLine {
     
     func validateNoEmptyTimes() -> [ADRLineValidationFailure] {
-        return zip((0...), self).flatMap({ (index, line) -> ADRLineValidationFailure? in
+        return zip((0...), self).compactMap({ (index, line) -> ADRLineValidationFailure? in
             if let _ = line.start, let _ = line.finish {
                 return nil
             } else {
@@ -28,7 +28,7 @@ extension Sequence where Element == ADRLine {
     }
     
     func validateNoEmptyCueNumbers() -> [ADRLineValidationFailure] {
-        return zip((0...), self).flatMap({ (index, line) -> ADRLineValidationFailure? in
+        return zip((0...), self).compactMap({ (index, line) -> ADRLineValidationFailure? in
             if let _ = line.cueNumber {
                 return nil
             } else {
@@ -40,9 +40,9 @@ extension Sequence where Element == ADRLine {
     }
     
     func validateCueNumbersUnique() -> [ADRLineValidationFailure] {
-        let numberSet = NSCountedSet(array: self.flatMap { $0.cueNumber })
+        let numberSet = NSCountedSet(array: self.compactMap { $0.cueNumber })
         
-        return zip((0...), self).flatMap { (index, line) -> ADRLineValidationFailure? in
+        return zip((0...), self).compactMap { (index, line) -> ADRLineValidationFailure? in
             if let number = line.cueNumber, numberSet.count(for: number) > 1 {
                 return ADRLineValidationFailure(element: index, description: "Indistinct cue number", line: line)
             } else {
