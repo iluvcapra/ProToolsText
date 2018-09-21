@@ -14,6 +14,7 @@ class XMLConversionEngine: NSObject {
     enum Stylesheet {
         case basic
         case adr
+        case filemaker
     }
     
     var stylesheet : Stylesheet = .adr
@@ -52,6 +53,9 @@ class XMLConversionEngine: NSObject {
         case .adr:
             let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
             finalDocument = try basicDocument.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
+        case .filemaker:
+            throw NSError(domain: NSCocoaErrorDomain,
+                          code: -1, userInfo: nil)
         }
         
         

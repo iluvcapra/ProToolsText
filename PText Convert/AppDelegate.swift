@@ -34,8 +34,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
 
     }
     
-    func xmlConvert(from inputUrl : URL, to exportUrl :  URL) throws {
+    func xmlConvert(from inputUrl : URL, to exportUrl :  URL,
+                    style stylesheet : XMLConversionEngine.Stylesheet ) throws {
             let engine = XMLConversionEngine()
+            engine.stylesheet = stylesheet
             try engine.convert(fileURL: inputUrl, to: exportUrl)
     }
     
@@ -76,7 +78,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         do {
             switch outputFormatTag {
             case 0:     try csvConvert(from : inputUrl, to: exportUrl)
-            case 1:     try xmlConvert(from: inputUrl, to: exportUrl)
+            case 1:     try xmlConvert(from: inputUrl,
+                                       to: exportUrl, style: .basic)
+            case 2:     try xmlConvert(from: inputUrl,
+                                       to: exportUrl, style: .adr)
+            case 3:     try xmlConvert(from: inputUrl,
+                                       to: exportUrl, style: .filemaker)
             default:    break
             }
             
@@ -114,8 +121,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             let newExt : String
             switch menuButton.selectedTag() {
             case 0:     newExt = "csv"
-            case 1:     newExt = "xml"
-            default:    newExt = "csv"
+            default:     newExt = "xml"
             }
             
             panel.allowedFileTypes = [newExt]
