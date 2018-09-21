@@ -11,6 +11,13 @@ import PKit
 
 class XMLConversionEngine: NSObject {
 
+    enum Stylesheet {
+        case basic
+        case adr
+    }
+    
+    var stylesheet : Stylesheet = .adr
+    
     func convert(fileURL : URL, to : URL) throws {
         let entityParser = try PTEntityParser(url: fileURL, encoding: String.Encoding.utf8.rawValue)
         let tabulator = SessionEntityTabulator(tracks: entityParser.tracks,
@@ -36,13 +43,18 @@ class XMLConversionEngine: NSObject {
         let document = XMLDocument(rootElement: root)
         
         let basicXSLURL = Bundle.main.url(forResource: "Basic", withExtension: "xsl")!
-        let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
-        
         let basicDocument = try document.objectByApplyingXSLT(at: basicXSLURL, arguments: nil) as! XMLDocument
+
+        let finalDocument : XMLDocument
+        switch stylesheet {
+        case .basic:
+            finalDocument = basicDocument
+        case .adr:
+            let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
+            finalDocument = try basicDocument.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
+        }
         
-        let adrDocument = try basicDocument.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
         
-        let finalDocument = adrDocument
         let data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint, XMLNode.Options.nodeCompactEmptyElement] )
         
         try data.write(to: to)
