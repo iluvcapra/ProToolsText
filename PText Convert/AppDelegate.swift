@@ -105,6 +105,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         alert.runModal()
     }
 
+    //MARK: Save Panel Auxiliary View method
+    
     @IBAction func selectOutputFormat(_ sender : AnyObject?) {
         if  let menuButton = sender as? NSPopUpButton,
             let panel = activeSavePanel  {
