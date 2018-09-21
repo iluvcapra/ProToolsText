@@ -38,7 +38,7 @@ class CSVWriter: NSObject {
     }
     
     init(writeTo url: URL, encoding : String.Encoding) throws {
-        FileManager().createFile(atPath: url.path, contents: nil, attributes: nil)
+        try Data().write(to: url)
         fileHandle = try FileHandle(forWritingTo: url)
         self.encoding = encoding
     }

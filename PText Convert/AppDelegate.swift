@@ -8,13 +8,15 @@
 import Cocoa
 import PKit // for error reporting
 
+let errorDomain = "PTextConvertErrorDomain"
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
 
-    let errorDomain = "PTextConvertErrorDomain"
-
     @IBOutlet var savePanelAuxiliaryView : NSView?
     @IBOutlet var outputFormatSelector   : NSPopUpButton?
+    
+    var activeSavePanel : NSSavePanel?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 
@@ -49,12 +51,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         }
         
         let savePanel = NSSavePanel()
+        
+        activeSavePanel = savePanel
+        defer {
+            activeSavePanel = nil
+        }
+        
         savePanel.prompt = "Export"
         savePanel.message = "Select Export Folder and Export File Nase Name."
         savePanel.title = "Export"
         savePanel.nameFieldLabel = "Export:"
         savePanel.isExtensionHidden = false
         savePanel.accessoryView = savePanelAuxiliaryView
+        savePanel.allowsOtherFileTypes = false
+        savePanel.allowedFileTypes = ["csv","xml"]
         if savePanel.runModal() != NSApplication.ModalResponse.OK  {
             return
         }
@@ -64,14 +74,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         }
         
         do {
-            
             switch outputFormatTag {
-            case 0:
-                try csvConvert(from : inputUrl, to: exportUrl)
-            case 1:
-                try xmlConvert(from: inputUrl, to: exportUrl)
-            default:
-                break
+            case 0:     try csvConvert(from : inputUrl, to: exportUrl)
+            case 1:     try xmlConvert(from: inputUrl, to: exportUrl)
+            default:    break
             }
             
             convertSucceeded()
@@ -83,8 +89,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             
             NSApp.presentError(presentedError)
         } catch let error {
-            let presentedError = NSError(domain: errorDomain, code: -1, userInfo: [NSUnderlyingErrorKey : error])
-            NSApp.presentError(presentedError)
+            NSApp.presentError(error)
         }
     }
     
@@ -100,6 +105,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         alert.runModal()
     }
 
+    @IBAction func selectOutputFormat(_ sender : AnyObject?) {
+        if  let menuButton = sender as? NSPopUpButton,
+            let panel = activeSavePanel  {
+            
+            let newExt : String
+            switch menuButton.selectedTag() {
+            case 0:     newExt = "csv"
+            case 1:     newExt = "xml"
+            default:    newExt = "csv"
+            }
+            
+            panel.allowedFileTypes = [newExt]
+        }
+    }
 
 }
 
