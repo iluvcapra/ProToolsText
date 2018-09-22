@@ -34,6 +34,9 @@ class XMLConversionEngine: NSObject {
         root.setAttributesAs(["testMode" : "true"])
         root.addChild(XMLElement(name: "producer_identifer", stringValue: Bundle.main.bundleIdentifier))
         root.addChild(XMLElement(name: "producer_version", stringValue: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""))
+        root.addChild(XMLElement(name: "input_document", stringValue: fileURL.lastPathComponent))
+        root.addChild(XMLElement(name: "production_date", stringValue: ISO8601DateFormatter().string(from: Date() ) ))
+        
         let eventsEntity = XMLElement(name: "events")
         for record in records {
             let event = record.toXMLElement(named: "event")

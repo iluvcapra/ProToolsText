@@ -18,7 +18,7 @@
 <xsl:value-of select="count(events/event)" />
 </xsl:attribute>
 <xsl:attribute name="NAME">
-<xsl:value-of select="$filename" />
+<xsl:value-of select="input_document" />
 </xsl:attribute>
 </DATABASE>
 <METADATA>
