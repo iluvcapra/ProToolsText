@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A07E1D5202283B9001B61B0 /* BasicXMLTransformationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07E1D4202283B9001B61B0 /* BasicXMLTransformationTest.swift */; };
 		9A0B572E2155C6E000C7E7AA /* FMPXMLRESULT.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B572D2155C6E000C7E7AA /* FMPXMLRESULT.xsl */; };
 		9A36FCEA2013D1F8009661B1 /* Track States.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A36FCE92013D1F8009661B1 /* Track States.txt */; };
 		9A69EA762015B7A2009ED43C /* ADRLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69EA752015B7A2009ED43C /* ADRLine.swift */; };
@@ -93,7 +92,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9A07E1D4202283B9001B61B0 /* BasicXMLTransformationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicXMLTransformationTest.swift; sourceTree = "<group>"; };
 		9A0B572D2155C6E000C7E7AA /* FMPXMLRESULT.xsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FMPXMLRESULT.xsl; sourceTree = "<group>"; };
 		9A36FCE92013D1F8009661B1 /* Track States.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Track States.txt"; sourceTree = "<group>"; usesTabs = 1; };
 		9A69EA752015B7A2009ED43C /* ADRLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADRLine.swift; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 				9A8002C71FF04A0E009D4E28 /* SessionEntityRectiferTest.swift */,
 				9A8002911FEEF9A7009D4E28 /* Info.plist */,
 				9AA72C0D202036C3002913A4 /* XMLStringDictionaryTests.swift */,
-				9A07E1D4202283B9001B61B0 /* BasicXMLTransformationTest.swift */,
 			);
 			path = "PText ConvertTests";
 			sourceTree = "<group>";
@@ -516,7 +513,6 @@
 				9AA72C09201E8233002913A4 /* ADRLineTests.swift in Sources */,
 				9AA8FEA820218D9C00683243 /* XMLConversionEngine.swift in Sources */,
 				9A8002B41FEEFD10009D4E28 /* CSVConversionEngine.swift in Sources */,
-				9A07E1D5202283B9001B61B0 /* BasicXMLTransformationTest.swift in Sources */,
 				9A8002901FEEF9A7009D4E28 /* TagParserTests.swift in Sources */,
 				9A8002CE1FF051F1009D4E28 /* FieldParser.swift in Sources */,
 				9A8002C81FF04A0E009D4E28 /* SessionEntityRectiferTest.swift in Sources */,

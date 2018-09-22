@@ -11,23 +11,51 @@
 <events>
     <xsl:for-each select="/pttext/events/event">
     <event>
-        <title> <xsl:value-of select="session_name" /> </title>
-        <supervisor><xsl:value-of  select="userField[name = 'Supv']/value" /> </supervisor>
-        <client> <xsl:value-of select="userField[name = 'Client']/value" /> </client>
-        <scene> <xsl:value-of select="userField[name = 'Sc']/value" /> </scene>
-        <cue-number> <xsl:value-of  select="userField[name = 'QN']/value" /> </cue-number>
-        <start> <xsl:value-of select="start" /> </start>
-        <finish> <xsl:value-of select="finish" /> </finish>
-        <version> <xsl:value-of select="userField[name = 'Ver']/value" /> </version>
-        <character-name> <xsl:value-of select="userField[name = 'Char']/value" /> </character-name>
-        <actor-name> <xsl:value-of select="userField[name = 'Actor']/value" /> </actor-name>
-        <character-number> <xsl:value-of select="userField[name = 'CN']/value" /> </character-number>
-        <line> <xsl:value-of select="name" /> </line>
-        <reason> <xsl:value-of select="userField[name = 'R']/value" /> </reason>
-        <requested-by> <xsl:value-of select="userField[name = 'Rq']/value" /> </requested-by>
-        <spot> <xsl:value-of select="userField[name = 'Spot']/value" /> </spot>
-        <note> <xsl:value-of select="userField[name = 'Note']/value" /> </note>
-        <time-budget> <xsl:value-of select="userField[name = 'Mins']/value" /> </time-budget>
+        <title> <xsl:value-of select="field[key = 'PT.Session.Name']/value" /> </title>
+        
+        <xsl:if test="field[key = 'Supv']" >
+        <supervisor><xsl:value-of select="field[key = 'Supv']/value" /> </supervisor>
+        </xsl:if>
+        
+        <xsl:if test="field[key = 'Client']" >
+        <client> <xsl:value-of select="field[key = 'Client']/value" /> </client>
+        </xsl:if>
+        
+        <xsl:if test="field[key = 'Sc']" >
+        <scene> <xsl:value-of select="field[key = 'Sc']/value" /> </scene>
+        </xsl:if>
+        
+        <cue-number> <xsl:value-of  select="field[key = 'QN']/value" /> </cue-number>
+        <start> <xsl:value-of select="field[key = 'PT.Clip.Start']/value" /> </start>
+        <finish> <xsl:value-of select="field[key = 'PT.Clip.Finish']/value" /> </finish>
+        
+        <xsl:if test="field[key = 'Ver']" >
+        <version> <xsl:value-of select="field[key = 'Ver']/value" /> </version>
+        </xsl:if>
+        
+        <character-name> <xsl:value-of select="field[key = 'Char']/value" /> </character-name>
+        <actor-name> <xsl:value-of select="field[key = 'Actor']/value" /> </actor-name>
+        <xsl:if test="field[key = 'CN']" >
+        <character-number> <xsl:value-of select="number(field[key = 'CN']/value)" /> </character-number>
+        </xsl:if>
+        
+        <line> <xsl:value-of select="field[key = 'PT.Clip.Name']/value" /> </line>
+        
+        <xsl:if test="field[key = 'R']" >
+        <reason> <xsl:value-of select="field[key = 'R']/value" /> </reason>
+        </xsl:if>
+        <xsl:if test="field[key = 'Rq']" >
+        <requested-by> <xsl:value-of select="field[key = 'Rq']/value" /> </requested-by>
+        </xsl:if>
+        <xsl:if test="field[key = 'Spot']" >
+        <spot> <xsl:value-of select="field[key = 'Spot']/value" /> </spot>
+        </xsl:if>
+        <xsl:if test="field[key = 'Note']" >
+        <note> <xsl:value-of select="field[key = 'Note']/value" /> </note>
+        </xsl:if>
+        <xsl:if test="field[name = 'Mins']" >
+        <time-budget> <xsl:value-of select="number(field[name = 'Mins']/value)" /> </time-budget>
+        </xsl:if>
     </event>
     </xsl:for-each>
 </events>
