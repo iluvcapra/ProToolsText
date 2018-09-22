@@ -60,7 +60,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         }
         
         savePanel.prompt = "Export"
-        savePanel.message = "Select Export Folder and Export File Nase Name."
+        savePanel.message = "Export converted document."
         savePanel.title = "Export"
         savePanel.nameFieldLabel = "Export:"
         savePanel.isExtensionHidden = false
