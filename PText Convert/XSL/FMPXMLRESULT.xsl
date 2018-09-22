@@ -13,12 +13,14 @@
 <xsl:value-of select="producer_version"/>
 </xsl:attribute>
 </PRODUCT>
-<DATABASE DATEFORMAT="MM/dd/yy" LAYOUT="summary" NAME="Employees.fmp12" TIMEFORMAT="hh:mm:ss">
+<DATABASE DATEFORMAT="MM/dd/yy" LAYOUT="summary" TIMEFORMAT="hh:mm:ss">
 <xsl:attribute name="RECORDS">
 <xsl:value-of select="count(events/event)" />
 </xsl:attribute>
+<xsl:attribute name="NAME">
+<xsl:value-of select="$filename" />
+</xsl:attribute>
 </DATABASE>
-
 <METADATA>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Title" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Supervisor" TYPE="TEXT"/>

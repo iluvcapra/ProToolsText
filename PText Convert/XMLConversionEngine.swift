@@ -49,7 +49,8 @@ class XMLConversionEngine: NSObject {
         
         let basicDocument =     try document.objectByApplyingXSLT(at: basicXSLURL, arguments: nil) as! XMLDocument
         let adrxmlDocument =    try basicDocument.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
-        let fmpDocument =       try adrxmlDocument.objectByApplyingXSLT(at: fmpXSLURL, arguments: nil) as! XMLDocument
+        let fmpDocument =       try adrxmlDocument.objectByApplyingXSLT(at: fmpXSLURL,
+                                                                        arguments: ["filename": to.lastPathComponent]) as! XMLDocument
         
         let finalDocument : XMLDocument
         switch stylesheet {
