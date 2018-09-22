@@ -26,6 +26,10 @@
         </xsl:if>
         
         <cue-number> <xsl:value-of  select="field[key = 'QN']/value" /> </cue-number>
+        <xsl:if test="field[key = 'Reel']" >
+        <reel> <xsl:value-of select="field[key = 'Reel']/value" /> </reel>
+        </xsl:if>
+        
         <start> <xsl:value-of select="field[key = 'PT.Clip.Start']/value" /> </start>
         <finish> <xsl:value-of select="field[key = 'PT.Clip.Finish']/value" /> </finish>
         
@@ -36,11 +40,11 @@
         <character-name> <xsl:value-of select="field[key = 'Char']/value" /> </character-name>
         <actor-name> <xsl:value-of select="field[key = 'Actor']/value" /> </actor-name>
         <xsl:if test="field[key = 'CN']" >
-        <character-number> <xsl:value-of select="number(field[key = 'CN']/value)" /> </character-number>
+        <character-number> <xsl:value-of select="number(field[key = 'CN']/value) | 1" /> </character-number>
         </xsl:if>
         
         <line> <xsl:value-of select="field[key = 'PT.Clip.Name']/value" /> </line>
-        
+        <priority> <xsl:value-of select="number(field[key = 'P']/value)" /> </priority>
         <xsl:if test="field[key = 'R']" >
         <reason> <xsl:value-of select="field[key = 'R']/value" /> </reason>
         </xsl:if>
@@ -55,6 +59,18 @@
         </xsl:if>
         <xsl:if test="field[name = 'Mins']" >
         <time-budget> <xsl:value-of select="number(field[name = 'Mins']/value)" /> </time-budget>
+        </xsl:if>
+        <xsl:if test="field[name = 'EFF']" >
+            <effort/>
+        </xsl:if>
+        <xsl:if test="field[name = 'TV']" >
+            <tv/>
+        </xsl:if>
+        <xsl:if test="field[name = 'TBW']" >
+            <to-be-written/>
+        </xsl:if>
+        <xsl:if test="field[name = 'OMIT']" >
+            <omit/>
         </xsl:if>
     </event>
     </xsl:for-each>
