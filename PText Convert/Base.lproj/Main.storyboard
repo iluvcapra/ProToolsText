@@ -133,10 +133,10 @@
                                     <items>
                                         <menuItem title="CSV" state="on" id="O3h-aV-wel"/>
                                         <menuItem title="XML Basic" tag="1" id="YbC-sE-6nt"/>
-                                        <menuItem title="XML ADR List" tag="2" id="j3y-Ev-QdO">
+                                        <menuItem title="XML ADR" tag="2" id="j3y-Ev-QdO">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="XML Filemaker" tag="3" id="75A-jK-FXW">
+                                        <menuItem title="XML ADR — FileMaker" tag="3" id="75A-jK-FXW">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                     </items>
