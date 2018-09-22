@@ -39,6 +39,7 @@
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Reason" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Requested By" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Spot" TYPE="TEXT"/>
+<FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Shot" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Note" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Time Budget Mins" TYPE="NUMBER"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Effort" TYPE="TEXT"/>
@@ -69,6 +70,7 @@
 <COL><DATA><xsl:value-of select="reason" /></DATA></COL>
 <COL><DATA><xsl:value-of select="requested-by" /></DATA></COL>
 <COL><DATA><xsl:value-of select="spot" /></DATA></COL>
+<COL><DATA><xsl:value-of select="shot" /></DATA></COL>
 <COL><DATA><xsl:value-of select="note" /></DATA></COL>
 <COL><DATA><xsl:value-of select="time-budget" /></DATA></COL>
 <COL><DATA><xsl:if test="effort" >EFFORT</xsl:if></DATA></COL>
