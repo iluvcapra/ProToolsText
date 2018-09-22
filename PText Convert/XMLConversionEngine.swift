@@ -44,18 +44,22 @@ class XMLConversionEngine: NSObject {
         let document = XMLDocument(rootElement: root)
         
         let basicXSLURL = Bundle.main.url(forResource: "Basic", withExtension: "xsl")!
-        let basicDocument = try document.objectByApplyingXSLT(at: basicXSLURL, arguments: nil) as! XMLDocument
-
+        let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
+        let fmpXSLURL   = Bundle.main.url(forResource: "FMPXMLRESULT", withExtension: "xsl")!
+        
+        let basicDocument =     try document.objectByApplyingXSLT(at: basicXSLURL, arguments: nil) as! XMLDocument
+        let adrxmlDocument =    try basicDocument.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
+        let fmpDocument =       try adrxmlDocument.objectByApplyingXSLT(at: fmpXSLURL, arguments: nil) as! XMLDocument
+        
         let finalDocument : XMLDocument
         switch stylesheet {
         case .basic:
             finalDocument = basicDocument
         case .adr:
-            let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
-            finalDocument = try basicDocument.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
+            
+            finalDocument = adrxmlDocument
         case .filemaker:
-            throw NSError(domain: NSCocoaErrorDomain,
-                          code: -1, userInfo: nil)
+            finalDocument = fmpDocument
         }
         
         

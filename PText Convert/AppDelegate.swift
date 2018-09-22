@@ -66,7 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         savePanel.isExtensionHidden = false
         savePanel.accessoryView = savePanelAuxiliaryView
         savePanel.allowsOtherFileTypes = false
-        savePanel.allowedFileTypes = ["csv","xml"]
+        savePanel.allowedFileTypes = ["csv"]
         if savePanel.runModal() != NSApplication.ModalResponse.OK  {
             return
         }
@@ -121,7 +121,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             let newExt : String
             switch menuButton.selectedTag() {
             case 0:     newExt = "csv"
-            default:     newExt = "xml"
+            case 1:     newExt = "xptext"
+            case 2:     newExt = "xadr"
+            case 3:     newExt = "xml"
+            default:    newExt = "csv"
             }
             
             panel.allowedFileTypes = [newExt]
