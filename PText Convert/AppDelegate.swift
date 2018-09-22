@@ -78,11 +78,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         do {
             switch outputFormatTag {
             case 0:     try csvConvert(from : inputUrl, to: exportUrl)
-            case 1:     try xmlConvert(from: inputUrl,
+            case 10:    try xmlConvert(from: inputUrl,
+                                       to: exportUrl, style: .none)
+            case 20:     try xmlConvert(from: inputUrl,
                                        to: exportUrl, style: .basic)
-            case 2:     try xmlConvert(from: inputUrl,
+            case 30:     try xmlConvert(from: inputUrl,
                                        to: exportUrl, style: .adr)
-            case 3:     try xmlConvert(from: inputUrl,
+            case 40:     try xmlConvert(from: inputUrl,
                                        to: exportUrl, style: .filemaker)
             default:    break
             }
@@ -120,10 +122,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             
             let newExt : String
             switch menuButton.selectedTag() {
-            case 0:     newExt = "csv"
-            case 1:     newExt = "xpttext"
-            case 2:     newExt = "xadr"
-            case 3:     newExt = "xml"
+            case 00:     newExt = "csv"
+            case 10:    newExt = "xrawpttext"
+            case 20:    newExt = "xpttext"
+            case 30:    newExt = "xadr"
+            case 40:    newExt = "xml"
             default:    newExt = "csv"
             }
             

@@ -12,6 +12,7 @@ import PKit
 class XMLConversionEngine: NSObject {
 
     enum Stylesheet {
+        case none
         case basic
         case adr
         case filemaker
@@ -57,6 +58,8 @@ class XMLConversionEngine: NSObject {
         
         let finalDocument : XMLDocument
         switch stylesheet {
+        case .none:
+            finalDocument = document
         case .basic:
             finalDocument = basicDocument
         case .adr:
