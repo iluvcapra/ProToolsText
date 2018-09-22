@@ -135,7 +135,6 @@
                                         <menuItem title="XML Raw" tag="10" id="ljH-6w-oWz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="XML Basic" tag="20" id="YbC-sE-6nt"/>
                                         <menuItem title="XML ADR" tag="30" id="j3y-Ev-QdO">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>

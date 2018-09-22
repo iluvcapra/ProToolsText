@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:variable name="phase1">
-<xsl:for-each select="/pttext/events/event">
-<event>
-<xsl:apply-templates />
-</event>
-</xsl:for-each>
-</xsl:variable>
-
-<xsl:variable name="phase2">
-    <xsl:copy-of select="$phase1" />
-</xsl:variable>
-
-<xsl:template match="/pttext">
+<xsl:template match="/pttext" mode="phase-1">
     <pttext>
         <producer_identifer><xsl:value-of select="producer_identifer" /></producer_identifer>
         <producer_version><xsl:value-of select="producer_version" /></producer_version>
         <input_document><xsl:value-of select="input_document" /></input_document>
         <production_date><xsl:value-of select="production_date" /></production_date>
         <events>
-            <xsl:copy-of select="$phase2"/>
+<xsl:for
         </events>
     </pttext>
 </xsl:template>

@@ -13,7 +13,7 @@ class XMLConversionEngine: NSObject {
 
     enum Stylesheet {
         case none
-        case basic
+        //case basic
         case adr
         case filemaker
     }
@@ -47,12 +47,10 @@ class XMLConversionEngine: NSObject {
         root.addChild(eventsEntity)
         let document = XMLDocument(rootElement: root)
         
-        let basicXSLURL = Bundle.main.url(forResource: "Basic", withExtension: "xsl")!
         let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
         let fmpXSLURL   = Bundle.main.url(forResource: "FMPXMLRESULT", withExtension: "xsl")!
         
-        let basicDocument =     try document.objectByApplyingXSLT(at: basicXSLURL, arguments: nil) as! XMLDocument
-        let adrxmlDocument =    try basicDocument.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
+        let adrxmlDocument =    try document.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
         let fmpDocument =       try adrxmlDocument.objectByApplyingXSLT(at: fmpXSLURL,
                                                                         arguments: ["filename": to.lastPathComponent]) as! XMLDocument
         
@@ -60,8 +58,6 @@ class XMLConversionEngine: NSObject {
         switch stylesheet {
         case .none:
             finalDocument = document
-        case .basic:
-            finalDocument = basicDocument
         case .adr:
             
             finalDocument = adrxmlDocument

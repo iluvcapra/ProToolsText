@@ -80,8 +80,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             case 0:     try csvConvert(from : inputUrl, to: exportUrl)
             case 10:    try xmlConvert(from: inputUrl,
                                        to: exportUrl, style: .none)
-            case 20:     try xmlConvert(from: inputUrl,
-                                       to: exportUrl, style: .basic)
             case 30:     try xmlConvert(from: inputUrl,
                                        to: exportUrl, style: .adr)
             case 40:     try xmlConvert(from: inputUrl,
