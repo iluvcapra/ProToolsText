@@ -3,7 +3,7 @@
 
 
 <xsl:template match="/pttext">
-<pttext>
+<adr>
 <producer_identifer><xsl:value-of select="producer_identifer" /></producer_identifer>
 <producer_version><xsl:value-of select="producer_version" /></producer_version>
 <events>
@@ -35,7 +35,7 @@
      </xsl:choose>
     </xsl:for-each>
 </events>
-</pttext>
+</adr>
 </xsl:template>
 
 </xsl:transform>
