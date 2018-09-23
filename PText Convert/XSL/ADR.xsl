@@ -44,7 +44,9 @@
         </xsl:if>
         
         <line> <xsl:value-of select="field[key = 'PT.Clip.Name']/value" /> </line>
-        <priority> <xsl:value-of select="number(field[key = 'P']/value)" /> </priority>
+        <xsl:if test="field[key = 'P']" >
+        <priority> <xsl:value-of select="number(field[key = 'P']/value) | 1" /> </priority>
+        </xsl:if>
         <xsl:if test="field[key = 'R']" >
         <reason> <xsl:value-of select="field[key = 'R']/value" /> </reason>
         </xsl:if>
