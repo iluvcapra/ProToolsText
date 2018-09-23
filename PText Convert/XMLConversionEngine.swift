@@ -64,12 +64,10 @@ class XMLConversionEngine: NSObject {
         case .none:
             finalDocument = document
         case .adr:
-            
             finalDocument = adrxmlDocument
         case .filemaker:
             finalDocument = fmpDocument
         }
-        
         
         let data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
         
