@@ -20,6 +20,26 @@ class XMLConversionEngine: NSObject {
     
     var stylesheet : Stylesheet = .adr
     
+    private func rawDocument(with records : [[String:String]], from url : URL) -> XMLDocument {
+        
+        let root = XMLElement(name: "pttext")
+        root.addChild(XMLNode.comment(withStringValue: "Be advised this XML format is under active development and the schema may change at any time") as! XMLNode)
+        root.setAttributesAs(["testMode" : "true"])
+        root.addChild(XMLElement(name: "producer_identifer", stringValue: Bundle.main.bundleIdentifier))
+        root.addChild(XMLElement(name: "producer_version", stringValue: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""))
+        root.addChild(XMLElement(name: "input_document", stringValue: url.lastPathComponent))
+        root.addChild(XMLElement(name: "production_date", stringValue: ISO8601DateFormatter().string(from: Date() ) ))
+        
+        let eventsEntity = XMLElement(name: "events")
+        for record in records {
+            let event = record.toXMLElement(named: "event")
+            eventsEntity.addChild(event)
+        }
+        
+        root.addChild(eventsEntity)
+        return XMLDocument(rootElement: root)
+    }
+    
     func convert(fileURL : URL, to : URL) throws {
         let entityParser = try PTEntityParser(url: fileURL, encoding: String.Encoding.utf8.rawValue)
         let tabulator = SessionEntityTabulator(tracks: entityParser.tracks,
@@ -30,22 +50,7 @@ class XMLConversionEngine: NSObject {
         
         let records = tabulator.records
         
-        let root = XMLElement(name: "pttext")
-        root.addChild(XMLNode.comment(withStringValue: "Be advised this XML format is under active development and the schema may change at any time") as! XMLNode)
-        root.setAttributesAs(["testMode" : "true"])
-        root.addChild(XMLElement(name: "producer_identifer", stringValue: Bundle.main.bundleIdentifier))
-        root.addChild(XMLElement(name: "producer_version", stringValue: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""))
-        root.addChild(XMLElement(name: "input_document", stringValue: fileURL.lastPathComponent))
-        root.addChild(XMLElement(name: "production_date", stringValue: ISO8601DateFormatter().string(from: Date() ) ))
-        
-        let eventsEntity = XMLElement(name: "events")
-        for record in records {
-            let event = record.toXMLElement(named: "event")
-            eventsEntity.addChild(event)
-        }
-        
-        root.addChild(eventsEntity)
-        let document = XMLDocument(rootElement: root)
+        let document = rawDocument(with : records , from : fileURL)
         
         let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
         let fmpXSLURL   = Bundle.main.url(forResource: "FMPXMLRESULT", withExtension: "xsl")!
@@ -66,7 +71,7 @@ class XMLConversionEngine: NSObject {
         }
         
         
-        let data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint, XMLNode.Options.nodeCompactEmptyElement] )
+        let data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
         
         try data.write(to: to)
     }
