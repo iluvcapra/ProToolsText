@@ -28,11 +28,15 @@ class XMLConversionEngine: NSObject {
         
         let docInfo = XMLElement(name: "document_information")
         
-        
         docInfo.addChild(XMLElement(name: "producer_identifer", stringValue: Bundle.main.bundleIdentifier))
         docInfo.addChild(XMLElement(name: "producer_version", stringValue: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""))
+        
+        docInfo.addChild(XMLElement(name: "production_hostname", stringValue: Host.current().localizedName ))
+        docInfo.addChild(XMLElement(name: "production_user", stringValue: NSFullUserName() ))
+        
         docInfo.addChild(XMLElement(name: "input_document", stringValue: url.lastPathComponent))
         docInfo.addChild(XMLElement(name: "production_date", stringValue: ISO8601DateFormatter().string(from: Date() ) ))
+        
         
         root.addChild(docInfo)
         
