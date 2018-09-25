@@ -4,10 +4,7 @@
 
 <xsl:template match="/pttext">
 <adr>
-<producer_identifer><xsl:value-of select="producer_identifer" /></producer_identifer>
-<producer_version><xsl:value-of select="producer_version" /></producer_version>
-<input_document><xsl:value-of select="input_document" /></input_document>
-<production_date><xsl:value-of select="production_date" /></production_date>
+    <xsl:copy-of select="document_information" />
 <events>
     <xsl:for-each select="/pttext/events/event">
     <event>

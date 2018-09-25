@@ -25,10 +25,16 @@ class XMLConversionEngine: NSObject {
         let root = XMLElement(name: "pttext")
         root.addChild(XMLNode.comment(withStringValue: "Be advised this XML format is under active development and the schema may change at any time") as! XMLNode)
         root.setAttributesAs(["testMode" : "true"])
-        root.addChild(XMLElement(name: "producer_identifer", stringValue: Bundle.main.bundleIdentifier))
-        root.addChild(XMLElement(name: "producer_version", stringValue: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""))
-        root.addChild(XMLElement(name: "input_document", stringValue: url.lastPathComponent))
-        root.addChild(XMLElement(name: "production_date", stringValue: ISO8601DateFormatter().string(from: Date() ) ))
+        
+        let docInfo = XMLElement(name: "document_information")
+        
+        
+        docInfo.addChild(XMLElement(name: "producer_identifer", stringValue: Bundle.main.bundleIdentifier))
+        docInfo.addChild(XMLElement(name: "producer_version", stringValue: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""))
+        docInfo.addChild(XMLElement(name: "input_document", stringValue: url.lastPathComponent))
+        docInfo.addChild(XMLElement(name: "production_date", stringValue: ISO8601DateFormatter().string(from: Date() ) ))
+        
+        root.addChild(docInfo)
         
         let eventsEntity = XMLElement(name: "events")
         for record in records {
