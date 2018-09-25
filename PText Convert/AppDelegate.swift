@@ -67,6 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         savePanel.accessoryView = savePanelAuxiliaryView
         savePanel.allowsOtherFileTypes = false
         savePanel.allowedFileTypes = ["csv"]
+        savePanel.nameFieldStringValue = inputUrl.deletingPathExtension().lastPathComponent + ".csv"
         if savePanel.runModal() != NSApplication.ModalResponse.OK  {
             return
         }
