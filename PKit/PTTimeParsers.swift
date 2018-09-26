@@ -13,7 +13,7 @@ extension NSRegularExpression {
         if let tcr = self
             .firstMatch(in: str, options: [],
                         range: NSRange(location: 0, length: str.count )) {
-            return (0 ..< tcr.numberOfRanges).map {
+            return (1 ..< tcr.numberOfRanges).map {
                 let thisRange = tcr.range(at: $0)
                 
                 if thisRange.length == 0 && thisRange.location == NSNotFound {
@@ -29,8 +29,6 @@ extension NSRegularExpression {
             
             return nil
         }
-        
-        
     }
 }
 
