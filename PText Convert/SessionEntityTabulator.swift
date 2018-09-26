@@ -32,6 +32,7 @@ let PTEventNumber       = "PT.Clip.Number"
 let PTClipName          = "PT.Clip.Name"
 let PTStart             = "PT.Clip.Start"
 let PTFinish            = "PT.Clip.Finish"
+let PTUserTimestamp     = "PT.Clip.UserTimestamp"
 let PTClipMuted         = "PT.Clip.Muted"
 
 
@@ -137,6 +138,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
             dict[PTClipName] = clipNameParse.text
             dict[PTStart] = clip.rawStart
             dict[PTFinish] = clip.rawFinish
+            if let ut = clip.rawUserTimestamp { dict[PTUserTimestamp] = ut }
             dict[PTClipMuted] = clip.muted ? PTClipMuted : ""
             return dict
         }()
