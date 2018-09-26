@@ -282,7 +282,19 @@
 		9A94501F1FE71C1F007CFC2D /* PKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				9AAA0E10215B5B6500F9158E /* Text Files */,
 				9AAA0E08215B479400F9158E /* Test Export */,
+				9A9450201FE71C1F007CFC2D /* PKitTests.swift */,
+				9A9450221FE71C1F007CFC2D /* Info.plist */,
+				9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */,
+				9AAA0E0C215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift */,
+			);
+			path = PKitTests;
+			sourceTree = "<group>";
+		};
+		9AAA0E10215B5B6500F9158E /* Text Files */ = {
+			isa = PBXGroup;
+			children = (
 				9AAA0E01215B478900F9158E /* Test Export feet frames.txt */,
 				9AAA0E02215B478900F9158E /* Test Export mins-secs.txt */,
 				9AAA0E03215B478900F9158E /* Test Export samples.txt */,
@@ -291,12 +303,8 @@
 				9AF53A5020131C1700F067F9 /* cue.test.utf8.txt */,
 				9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */,
 				9A944FED1FE71952007CFC2D /* PT Text Export.txt */,
-				9A9450201FE71C1F007CFC2D /* PKitTests.swift */,
-				9A9450221FE71C1F007CFC2D /* Info.plist */,
-				9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */,
-				9AAA0E0C215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift */,
 			);
-			path = PKitTests;
+			path = "Text Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
