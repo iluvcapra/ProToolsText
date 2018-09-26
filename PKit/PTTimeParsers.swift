@@ -8,11 +8,66 @@
 import Foundation
 import CoreMedia
 
+extension NSRegularExpression {
+    func hasFirstMatch(in str : String) -> [String?]? {
+        if let tcr = self
+            .firstMatch(in: str, options: [],
+                        range: NSRange(location: 0, length: str.count )) {
+            return (0 ..< tcr.numberOfRanges).map {
+                let thisRange = tcr.range(at: $0)
+                
+                if thisRange.length == 0 && thisRange.location == NSNotFound {
+                    return nil
+                } else {
+                    let start = str.index(str.startIndex, offsetBy: thisRange.lowerBound)
+                    let end = str.index(start, offsetBy: thisRange.length)
+                    return String(str[start..<end])
+                }
+            }
+                                        
+            } else {
+            
+            return nil
+        }
+        
+        
+    }
+}
+
 struct ProToolsTimeParsingError : Error {
     
 }
 
+enum TimeRepresentation {
+    case timecode
+    case footage
+    case realtime
+    case samples
+    
+    var regularExpression : NSRegularExpression {
+        switch self {
+        case .timecode:
+            return try! NSRegularExpression(pattern: "(\\d+):(\\d\\d):(\\d\\d):(\\d\\d)(\\.\\d+)?" )
+        case .footage:
+            return try! NSRegularExpression(pattern: "(\\d+)\\+(\\d+)(\\.\\d+)?")
+        case .realtime:
+            return try! NSRegularExpression(pattern: "(\\d+):(\\d+)(\\.\\d)")
+        case .samples:
+            return try! NSRegularExpression(pattern: "^(\\d+)$")
+        }
+    }
+    
+    func detect(in string : String) -> Bool {
+        if self.regularExpression.hasFirstMatch(in: string) != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
 extension PTEntityParser.SessionEntity {
+    
     func frameDuration() throws -> CMTime {
         switch self.timecodeFormat {
         case "23.976 Frame":        return CMTime(value: 1001, timescale: 24000)
@@ -40,18 +95,10 @@ extension PTEntityParser.SessionEntity {
     
 }
 
-
-
-
-
-
 extension CMTime {
     
     static func from(ProToolsTimecode string : String,
                      from session : PTEntityParser.SessionEntity) throws -> CMTime {
-        
-
-
         
         return CMTime.zero
     }

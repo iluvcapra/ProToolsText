@@ -1,0 +1,58 @@
+SESSION NAME:	Test Export
+SAMPLE RATE:	48000.000000
+BIT DEPTH:	24-bit
+SESSION START TIMECODE:	01:00:00:00.00
+TIMECODE FORMAT:	30 Frame
+# OF AUDIO TRACKS:	4
+# OF AUDIO CLIPS:	0
+# OF AUDIO FILES:	0
+
+
+F I L E S  I N  S E S S I O N
+Filename	Location
+
+
+P L U G - I N S  L I S T I N G
+MANUFACTURER            	PLUG-IN NAME            	VERSION         	FORMAT          	STEMS                   	NUMBER OF INSTANCES
+
+
+T R A C K  L I S T I N G
+TRACK NAME:	Audio 1
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	Audio 1.grp                   	       0+00.00	      33+08.58	      33+08.58	Unmuted
+
+
+TRACK NAME:	Audio 2
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	Audio 2.grp                   	      33+08.58	      62+15.62	      29+07.04	Unmuted
+
+
+TRACK NAME:	Audio 3
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+
+
+TRACK NAME:	Audio 4
+COMMENTS:	
+USER DELAY:	0 Samples
+STATE: 
+PLUG-INS: 
+CHANNEL 	EVENT   	CLIP NAME                     	START TIME    	END TIME      	DURATION      	STATE
+1       	1       	Audio 4.grp                   	      30+11.52	      38+02.30	       7+06.78	Unmuted
+1       	2       	Audio 4.grp                   	      42+03.84	      49+10.62	       7+06.78	Unmuted
+1       	3       	Audio 4.grp                   	      53+03.97	      60+10.75	       7+06.78	Unmuted
+
+
+M A R K E R S  L I S T I N G
+#   	LOCATION     	TIME REFERENCE    	UNITS    	NAME                             	COMMENTS
