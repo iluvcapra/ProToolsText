@@ -472,8 +472,9 @@ public class PTTextFileParser: NSObject {
         scanner?.charactersToBeSkipped = nil
         try expect(token: .Begin)
         delegate?.parserWillBegin(self)
+        defer { delegate?.parserDidFinish(self) }
         try parseTextFile()
-        delegate?.parserDidFinish(self)
+        
     }
     
 }
