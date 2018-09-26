@@ -44,18 +44,21 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
         public var rawStart : String
         public var rawFinish : String
         public var rawDuration : String
+        public var rawUserTimestamp : String?
         public var muted : Bool
         
         public init(rawName n: String, eventNumber e: Int,
                     rawStart s: String,
                     rawFinish f: String,
                     rawDuration d: String,
+                    rawUserTimestamp u: String?,
                     muted m: Bool) {
             rawName = n
             eventNumber = e
             rawStart = s
             rawFinish = f
             rawDuration = d
+            rawUserTimestamp = u
             muted = m
             
         }
@@ -171,7 +174,10 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
         if channel != 1 { return }
         
         let c = ClipEntity(rawName: n, eventNumber: eventNumber,
-                           rawStart: start, rawFinish: end, rawDuration: duration,
+                           rawStart: start,
+                           rawFinish: end,
+                           rawDuration: duration,
+                           rawUserTimestamp : timestamp,
                            muted: state == "Unmuted" ? false : true)
         
         thisTrack!.clips.append(c)
