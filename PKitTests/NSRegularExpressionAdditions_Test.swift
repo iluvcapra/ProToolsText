@@ -24,7 +24,7 @@ class NSRegularExpressionAdditions_Test: XCTestCase {
             
             guard let matches = reg.hasFirstMatch(in: str) else { throw NSError() }
             
-            XCTAssertEqual(matches, ["1","2","3","4","5"], "")
+            XCTAssertEqual(matches, [str,"1","2","3","4","5"], "")
             
         } catch  _ {
             XCTFail()

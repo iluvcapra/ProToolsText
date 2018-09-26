@@ -10,24 +10,20 @@ import CoreMedia
 
 extension NSRegularExpression {
     func hasFirstMatch(in str : String) -> [String?]? {
-        if let tcr = self
+        guard  let tcr = self
             .firstMatch(in: str, options: [],
-                        range: NSRange(location: 0, length: str.count )) {
-            return (1 ..< tcr.numberOfRanges).map {
-                let thisRange = tcr.range(at: $0)
-                
-                if thisRange.length == 0 && thisRange.location == NSNotFound {
-                    return nil
-                } else {
-                    let start = str.index(str.startIndex, offsetBy: thisRange.lowerBound)
-                    let end = str.index(start, offsetBy: thisRange.length)
-                    return String(str[start..<end])
-                }
-            }
-                                        
-            } else {
+                        range: NSRange(location: 0, length: str.count )) else { return nil }
+        
+        return (0 ..< tcr.numberOfRanges).map {
+            let thisRange = tcr.range(at: $0)
             
-            return nil
+            if thisRange.length == 0 && thisRange.location == NSNotFound {
+                return nil
+            } else {
+                let start = str.index(str.startIndex, offsetBy: thisRange.lowerBound)
+                let end = str.index(start, offsetBy: thisRange.length)
+                return String(str[start..<end])
+            }
         }
     }
 }
