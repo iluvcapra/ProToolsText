@@ -10,14 +10,14 @@ import Foundation
 public class PTEntityParser: NSObject, PTTextFileParserDelegate {
     
     public struct SessionEntity {
-        public var rawTitle : String
-        public var sampleRate : Double
-        public var bitDepth : String
-        public var startTime : String
-        public var timecodeFormat : String
-        public var trackCount : Int
-        public var clipCount : Int
-        public var filesCount : Int
+        public let rawTitle : String
+        public let sampleRate : Double
+        public let bitDepth : String
+        public let startTime : String
+        public let timecodeFormat : String
+        public let trackCount : Int
+        public let clipCount : Int
+        public let filesCount : Int
         
         public init(rawTitle : String,
                     sampleRate : Double,
@@ -39,13 +39,13 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
     }
     
     public struct ClipEntity {
-        public var rawName : String
-        public var eventNumber : Int
-        public var rawStart : String
-        public var rawFinish : String
-        public var rawDuration : String
-        public var rawUserTimestamp : String?
-        public var muted : Bool
+        public let rawName : String
+        public let eventNumber : Int
+        public let rawStart : String
+        public let rawFinish : String
+        public let rawDuration : String
+        public let rawUserTimestamp : String?
+        public let muted : Bool
         
         public init(rawName n: String, eventNumber e: Int,
                     rawStart s: String,
@@ -60,18 +60,31 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
             rawDuration = d
             rawUserTimestamp = u
             muted = m
-            
+        }
+        
+        public init(rawName n: String, eventNumber e: Int,
+                    rawStart s: String,
+                    rawFinish f: String,
+                    rawDuration d: String,
+                    muted m: Bool) {
+            rawName = n
+            eventNumber = e
+            rawStart = s
+            rawFinish = f
+            rawDuration = d
+            rawUserTimestamp = nil
+            muted = m
         }
         
     }
     
     public struct TrackEntity {
-        public var solo : Bool
-        public var mute : Bool
-        public var active : Bool
-        public var hidden : Bool
-        public var rawTitle : String
-        public var rawComment : String
+        public let solo : Bool
+        public let mute : Bool
+        public let active : Bool
+        public let hidden : Bool
+        public let rawTitle : String
+        public let rawComment : String
         public var clips : [ClipEntity]
         
         public init(rawTitle t : String, rawComment com: String,
@@ -89,9 +102,9 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
     }
     
     public struct MarkerEntity {
-        public var rawName : String
-        public var rawComment : String
-        public var rawLocation : String
+        public let rawName : String
+        public let rawComment : String
+        public let rawLocation : String
         
         public init(rawName n: String, rawComment c: String, rawLocation l: String) {
             rawName = n
