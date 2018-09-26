@@ -46,6 +46,7 @@
 		9AAA0E0A215B4C2400F9158E /* PTEntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */; };
 		9AAA0E0B215B4C2800F9158E /* PTTextFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */; };
 		9AAA0E0D215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0E0C215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift */; };
+		9AAA0E12215BFCFA00F9158E /* Test Export samples tc2997df.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAA0E11215BFCFA00F9158E /* Test Export samples tc2997df.txt */; };
 		9AAF2B3D2022C9EE00F2546A /* ADR.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF2B3C2022C9EE00F2546A /* ADR.xsl */; };
 		9AAF2B3E2022C9EE00F2546A /* ADR.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF2B3C2022C9EE00F2546A /* ADR.xsl */; };
 		9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */; };
@@ -142,6 +143,7 @@
 		9AAA0E03215B478900F9158E /* Test Export samples.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Test Export samples.txt"; sourceTree = "<group>"; };
 		9AAA0E08215B479400F9158E /* Test Export */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Test Export"; sourceTree = "<group>"; };
 		9AAA0E0C215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRegularExpressionAdditions_Test.swift; sourceTree = "<group>"; };
+		9AAA0E11215BFCFA00F9158E /* Test Export samples tc2997df.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Test Export samples tc2997df.txt"; sourceTree = "<group>"; };
 		9AAF2B3C2022C9EE00F2546A /* ADR.xsl */ = {isa = PBXFileReference; explicitFileType = text.xml; path = ADR.xsl; sourceTree = "<group>"; };
 		9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScannerTests.swift; sourceTree = "<group>"; };
 		9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScanner.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		9AAA0E10215B5B6500F9158E /* Text Files */ = {
 			isa = PBXGroup;
 			children = (
+				9AAA0E11215BFCFA00F9158E /* Test Export samples tc2997df.txt */,
 				9AAA0E01215B478900F9158E /* Test Export feet frames.txt */,
 				9AAA0E02215B478900F9158E /* Test Export mins-secs.txt */,
 				9AAA0E03215B478900F9158E /* Test Export samples.txt */,
@@ -514,6 +517,7 @@
 				9AAA0E05215B478900F9158E /* Test Export feet frames.txt in Resources */,
 				9AF53A5120131C1700F067F9 /* cue.test.utf8.txt in Resources */,
 				9AE7E3DD1FEB67CD00011429 /* PT Text Export.txt in Resources */,
+				9AAA0E12215BFCFA00F9158E /* Test Export samples tc2997df.txt in Resources */,
 				9AAA0E07215B478900F9158E /* Test Export samples.txt in Resources */,
 				9AAA0E04215B478900F9158E /* Test Export tc.txt in Resources */,
 				9A36FCEA2013D1F8009661B1 /* Track States.txt in Resources */,
