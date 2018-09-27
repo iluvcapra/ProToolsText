@@ -32,6 +32,16 @@ struct ProToolsTimeParsingError : Error {
     var proposedString : String
 }
 
+func droppedFrameCount(for frameCount : Int) -> Int {
+    let fps = 30
+    let oneMinute = fps * 60
+    let tenMinutes = oneMinute * 10
+    
+    let minutes = frameCount / oneMinute
+    let tens = frameCount / tenMinutes
+    return ( minutes - tens ) * 2
+}
+
 enum TimeRepresentation : CaseIterable {
     
     case timecode
@@ -67,57 +77,92 @@ enum TimeRepresentation : CaseIterable {
         return TimeRepresentation.allCases.filter { $0.detect(in: string) }
     }
     
-    static func terms(in string : String) -> (TimeRepresentation, [String?])? {
-        if let rep = TimeRepresentation
+    static func terms(in string : String) throws -> (TimeRepresentation, [String?]) {
+        guard let rep = TimeRepresentation
             .representationsMatching(string: string)
             .first,
-            let terms = rep.regularExpression.hasFirstMatch(in:string)?.dropFirst() {
-            
-            return (rep , Array(terms) )
-        } else {
-            return nil
+            let terms = rep.regularExpression.hasFirstMatch(in:string)?.dropFirst() else {
+                throw ProToolsTimeParsingError(proposedString: string)
         }
         
-        
+        return (rep , Array(terms) )
     }
 }
 
 extension PTEntityParser.SessionEntity {
     
-    func frameDuration() throws -> CMTime {
-        switch self.timecodeFormat {
-        case "23.976 Frame":        return CMTime(value: 1001, timescale: 24000)
-        case "24 Frame":            return CMTime(value: 1, timescale: 24)
-        case "29.97 Frame":         fallthrough
-        case "29.97 Drop Frame":    return CMTime(value: 1001, timescale: 30000)
-        case "30 Frame":            fallthrough
-        case "30 Drop Frame":       return CMTime(value: 1, timescale: 30)
-        default:
+    enum TimecodeFormat : String {
+        case Frame2398      = "23.976 Frame"
+        case Frame24        = "24 Frame"
+        case Frame25        = "25 Frame"
+        case Frame2997      = "29.97 Frame"
+        case Frame2997Drop  = "29.97 Drop Frame"
+        case Frame30        = "30 Frame"
+        case Frame30Drop    = "30 Drop Frame"
+    }
+    
+    func symbolicTimecodeFormat() throws -> TimecodeFormat {
+        guard let retval = TimecodeFormat(rawValue: self.timecodeFormat) else {
             throw ProToolsTimeParsingError(proposedString: self.timecodeFormat)
         }
+        return retval
     }
     
-    func isDropFrame(from session : PTEntityParser.SessionEntity) -> Bool {
-        switch self.timecodeFormat {
-        case "29.97 Drop Frame":    fallthrough
-        case "30 Drop Frame":       return true
-        default:                    return false
+    func framesPerTimecodeSecond() throws -> Int {
+        switch try self.symbolicTimecodeFormat() {
+        case .Frame2398, .Frame24:
+            return 24
+        case .Frame25:
+            return 25
+        case .Frame2997Drop, .Frame2997, .Frame30Drop, .Frame30:
+            return 30
         }
     }
     
-    func decodeTime(from string : String) -> CMTime {
-        return CMTime.zero
-    }
+//    var isDropFrame() : Bool {
+//        switch self.timecodeFormat {
+//        case "29.97 Drop Frame":    fallthrough
+//        case "30 Drop Frame":       return true
+//        default:                    return false
+//        }
+//    }
     
-}
-
-extension CMTime {
-    
-    static func from(ProToolsTimecode string : String,
-                     from session : PTEntityParser.SessionEntity) throws -> CMTime {
+    private func frameCount(for s : String) throws -> (count: Int, perSecond: Int) {
+        let (rep, terms) = try TimeRepresentation.terms(in: s)
         
-        return CMTime.zero
+        let termMultiples : [Double]
+        let fps : Double
+        switch rep {
+        case .timecode, .timecodeDF:
+            fps = Double(try self.framesPerTimecodeSecond() )
+            termMultiples = [3600.0, 60.0, 1.0].map { $0 * fps } + [1.0]
+        case .footage:
+            fps = 24.0
+            termMultiples = [16.0, 1.0]
+        case .samples:
+            fps = self.sampleRate
+            termMultiples = [fps]
+        case .realtime:
+            fps = Double(try self.framesPerTimecodeSecond() )
+            termMultiples = [60.0 * fps, fps]
+        }
+        
+        let numericalTerms = terms.map { Double($0 ?? "") ?? 0.0 }
+        let rawFrameCount =  zip(numericalTerms, termMultiples).map {$0 * $1}.reduce(0.0,+)
+        
+        if rep == .timecodeDF {
+            let dfCorrection = droppedFrameCount(for: Int( rawFrameCount) )
+            return ( Int( rawFrameCount ) - dfCorrection , Int(fps) )
+        } else {
+            return ( Int( rawFrameCount ) , Int(fps) )
+        }
+    }
+    
+    func decodeTime(from string : String) throws -> CMTime {
+        let (frameCount, fps) = try self.frameCount(for : string)
+        
+        return CMTime(value: CMTimeValue(frameCount),
+                      timescale: CMTimeScale(fps))
     }
     
 }
-

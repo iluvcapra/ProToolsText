@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreMedia
 
 public class PTEntityParser: NSObject, PTTextFileParserDelegate {
     
@@ -47,11 +48,23 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
         public let rawUserTimestamp : String?
         public let muted : Bool
         
+        public let start : CMTime
+        public let finish : CMTime
+        public let userTimestamp : CMTime?
+
+        public var duration : CMTime {
+            return finish - start
+        }
+        
+        
         public init(rawName n: String, eventNumber e: Int,
                     rawStart s: String,
                     rawFinish f: String,
                     rawDuration d: String,
                     rawUserTimestamp u: String?,
+                    start tcStart : CMTime,
+                    finish tcFinish : CMTime,
+                    userTimestamp tcTimestamp : CMTime?,
                     muted m: Bool) {
             rawName = n
             eventNumber = e
@@ -60,21 +73,41 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
             rawDuration = d
             rawUserTimestamp = u
             muted = m
+            
+            start = tcStart
+            finish = tcFinish
+            userTimestamp = tcTimestamp
+            
         }
         
-        public init(rawName n: String, eventNumber e: Int,
-                    rawStart s: String,
-                    rawFinish f: String,
-                    rawDuration d: String,
-                    muted m: Bool) {
-            rawName = n
-            eventNumber = e
-            rawStart = s
-            rawFinish = f
-            rawDuration = d
-            rawUserTimestamp = nil
-            muted = m
-        }
+//        public init(rawName n: String, eventNumber e: Int,
+//                    rawStart s: String,
+//                    rawFinish f: String,
+//                    rawDuration d: String,
+//                    rawUserTimestamp u: String?,
+//                    muted m: Bool) {
+//            rawName = n
+//            eventNumber = e
+//            rawStart = s
+//            rawFinish = f
+//            rawDuration = d
+//            rawUserTimestamp = u
+//            muted = m
+//        }
+//
+//        public init(rawName n: String, eventNumber e: Int,
+//                    rawStart s: String,
+//                    rawFinish f: String,
+//                    rawDuration d: String,
+//                    muted m: Bool) {
+//            rawName = n
+//            eventNumber = e
+//            rawStart = s
+//            rawFinish = f
+//            rawDuration = d
+//            rawUserTimestamp = nil
+//            muted = m
+//        }
         
     }
     
@@ -186,11 +219,20 @@ public class PTEntityParser: NSObject, PTTextFileParserDelegate {
         
         if channel != 1 { return }
         
+        guard let sess = session else { return }
+        
+        let decodedStart = (try? sess.decodeTime(from: start)) ?? CMTime.invalid
+        let decodedFinish = (try? sess.decodeTime(from: end)) ?? CMTime.invalid
+        let decodedTimestamp = try? sess.decodeTime(from: timestamp ?? "")
+        
         let c = ClipEntity(rawName: n, eventNumber: eventNumber,
                            rawStart: start,
                            rawFinish: end,
                            rawDuration: duration,
                            rawUserTimestamp : timestamp,
+                           start: decodedStart,
+                           finish: decodedFinish,
+                           userTimestamp: decodedTimestamp,
                            muted: state == "Unmuted" ? false : true)
         
         thisTrack!.clips.append(c)
