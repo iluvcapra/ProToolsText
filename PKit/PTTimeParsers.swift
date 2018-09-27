@@ -29,19 +29,23 @@ extension NSRegularExpression {
 }
 
 struct ProToolsTimeParsingError : Error {
-    
+    var proposedString : String
 }
 
-enum TimeRepresentation {
+enum TimeRepresentation : CaseIterable {
+    
     case timecode
+    case timecodeDF
     case footage
     case realtime
     case samples
     
-    var regularExpression : NSRegularExpression {
+    private var regularExpression : NSRegularExpression {
         switch self {
         case .timecode:
             return try! NSRegularExpression(pattern: "(\\d+):(\\d\\d):(\\d\\d):(\\d\\d)(\\.\\d+)?" )
+        case .timecodeDF:
+            return try! NSRegularExpression(pattern: "(\\d+):(\\d\\d):(\\d\\d);(\\d\\d)(\\.\\d+)?" )
         case .footage:
             return try! NSRegularExpression(pattern: "(\\d+)\\+(\\d+)(\\.\\d+)?")
         case .realtime:
@@ -58,6 +62,24 @@ enum TimeRepresentation {
             return false
         }
     }
+    
+    static func representationsMatching(string : String) -> [TimeRepresentation] {
+        return TimeRepresentation.allCases.filter { $0.detect(in: string) }
+    }
+    
+    static func terms(in string : String) -> (TimeRepresentation, [String?])? {
+        if let rep = TimeRepresentation
+            .representationsMatching(string: string)
+            .first,
+            let terms = rep.regularExpression.hasFirstMatch(in:string)?.dropFirst() {
+            
+            return (rep , Array(terms) )
+        } else {
+            return nil
+        }
+        
+        
+    }
 }
 
 extension PTEntityParser.SessionEntity {
@@ -71,7 +93,7 @@ extension PTEntityParser.SessionEntity {
         case "30 Frame":            fallthrough
         case "30 Drop Frame":       return CMTime(value: 1, timescale: 30)
         default:
-            throw ProToolsTimeParsingError()
+            throw ProToolsTimeParsingError(proposedString: self.timecodeFormat)
         }
     }
     
