@@ -10,9 +10,9 @@ import PKit
 
 class RectifierTestDelegate : SessionEntityTabulatorDelegate {
     
-    var records = [[String:String]]()
+    var records = [EventRecord]()
     
-    func rectifier(_ r: SessionEntityTabulator, didReadRecord : [String:String]) {
+    func rectifier(_ r: SessionEntityTabulator, didReadRecord : EventRecord) {
         records.append(didReadRecord)
     }
 }

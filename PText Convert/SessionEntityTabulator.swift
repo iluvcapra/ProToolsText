@@ -16,7 +16,7 @@ import PKit
  */
 
 protocol SessionEntityTabulatorDelegate {
-    func rectifier(_ r: SessionEntityTabulator, didReadRecord : [String:String])
+    func rectifier(_ r: SessionEntityTabulator, didReadRecord : EventRecord)
 }
 
 let PTSessionName       = "PT.Session.Name"
@@ -50,7 +50,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
     
     var delegate : SessionEntityTabulatorDelegate? = nil
     
-    var records : [[String:String]] = []
+    var records : [EventRecord] = []
     
     
     init(tracks: [PTEntityParser.TrackEntity],
@@ -74,7 +74,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
     /***
      Delegate methods
      */
-    func rectifier(_ r: SessionEntityTabulator, didReadRecord: [String:String]) {
+    func rectifier(_ r: SessionEntityTabulator, didReadRecord: EventRecord) {
         records.append(didReadRecord)
     }
     
@@ -84,7 +84,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         let trackFields = fields(for: track)
         let sessionFields = fields(for: session)
         
-        var fieldAccumulator : [String:String] = [:]
+        var fieldAccumulator : EventRecord = [:]
         for clip in track.clips {
             if clip.rawName.hasPrefix("@") {
                 timeSpanClips.append(clip)
@@ -110,17 +110,17 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         }
     }
     
-    private func fields(for session : PTEntityParser.SessionEntity) -> [String:String] {
+    private func fields(for session : PTEntityParser.SessionEntity) -> EventRecord {
         let sessionNameParse = TagParser(string: session.rawTitle).parse()
         var dict = sessionNameParse.fields
         dict[PTSessionName] = sessionNameParse.text
         return dict
     }
     
-    private func fields(for track : PTEntityParser.TrackEntity) -> [String:String] {
+    private func fields(for track : PTEntityParser.TrackEntity) -> EventRecord {
         let trackNameParse = TagParser(string: track.rawTitle).parse()
         let trackCommentParse = TagParser(string : track.rawComment).parse()
-        let trackDict : [String:String] = {
+        let trackDict : EventRecord = {
             var dict = trackNameParse.fields
             dict = dict.mergeKeepCurrent(trackCommentParse.fields)
             dict[PTTrackName] = trackNameParse.text
@@ -134,9 +134,9 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         return trackDict
     }
     
-    private func fields(for clip: PTEntityParser.ClipEntity) -> [String:String] {
+    private func fields(for clip: PTEntityParser.ClipEntity) -> EventRecord {
         let clipNameParse = TagParser(string: clip.rawName).parse()
-        let clipDict : [String:String] = {
+        let clipDict : EventRecord = {
             var dict = clipNameParse.fields
             dict[PTEventNumber] = String(clip.eventNumber)
             dict[PTClipName] = clipNameParse.text
@@ -175,23 +175,23 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         }
     }
     
-    private func timespanFields(for clip: PTEntityParser.ClipEntity ) -> [String:String] {
+    private func timespanFields(for clip: PTEntityParser.ClipEntity ) -> EventRecord {
         let applicable = timeSpanClips.reversed().filter {
             clip.start >= $0.start && clip.start <= $0.finish
         }
         
-        return applicable.reduce([String:String](), { (dict, thisClip) -> [String:String] in
+        return applicable.reduce(EventRecord(), { (dict, thisClip) -> EventRecord in
             let fields = TagParser(string: thisClip.rawName).parse().fields
             return dict.mergeKeepCurrent(fields)
         })
     }
     
-    private func accumulateRecord(forClipFields clipFields: [String:String],
-                        accumulatedFields : [String : String],
-                        trackFields : [ String: String],
-                        timespanFields : [String : String],
-                        markerFields : [String : String],
-                        sessionFields : [String : String] )  -> [String:String]{
+    private func accumulateRecord(forClipFields clipFields: EventRecord,
+                        accumulatedFields : EventRecord,
+                        trackFields : EventRecord,
+                        timespanFields : EventRecord,
+                        markerFields : EventRecord,
+                        sessionFields : EventRecord )  -> EventRecord {
         var record = accumulatedFields
             .mergeKeepCurrent(clipFields)
             .mergeKeepCurrent(trackFields)
