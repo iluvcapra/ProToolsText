@@ -145,6 +145,7 @@
 		9AAA0E11215BFCFA00F9158E /* Test Export samples tc2997df.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Test Export samples tc2997df.txt"; sourceTree = "<group>"; };
 		9AAA0E13215C063700F9158E /* TimeRepresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRepresentationTests.swift; sourceTree = "<group>"; };
 		9AAF2B3C2022C9EE00F2546A /* ADR.xsl */ = {isa = PBXFileReference; explicitFileType = text.xml; path = ADR.xsl; sourceTree = "<group>"; };
+		9AB46594215EDBA400DB6907 /* ADR_Reports.fmp12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ADR_Reports.fmp12; sourceTree = "<group>"; };
 		9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScannerTests.swift; sourceTree = "<group>"; };
 		9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScanner.swift; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
@@ -213,6 +214,7 @@
 		9A80027B1FEEF9A6009D4E28 /* PText Convert */ = {
 			isa = PBXGroup;
 			children = (
+				9AB46594215EDBA400DB6907 /* ADR_Reports.fmp12 */,
 				9A69EA742015B78D009ED43C /* XML Report Entites */,
 				9A8002B51FEF0092009D4E28 /* PText Convert.entitlements */,
 				9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */,
