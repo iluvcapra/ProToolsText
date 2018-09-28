@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreMedia
 
 protocol XMLRepresentable {
     
@@ -19,6 +20,28 @@ extension String: XMLRepresentable {
         let node = XMLNode(kind: XMLNode.Kind.text)
         node.stringValue = self
         return node
+    }
+}
+
+extension CMTime: XMLRepresentable {
+    
+    func xmlEntity() -> XMLNode {
+        let retVal = XMLElement(name: "CMTime")
+        switch self {
+        case CMTime.positiveInfinity:
+            retVal.addChild(XMLElement(name: "positive-infinity"))
+        case CMTime.negativeInfinity:
+            retVal.addChild(XMLElement(name: "negative-infinity"))
+        case CMTime.indefinite:
+            retVal.addChild(XMLElement(name: "indefinite"))
+        case CMTime.invalid:
+            retVal.addChild(XMLElement(name: "invalid"))
+        default:
+            retVal.addChild(XMLElement(name: "value", stringValue: String(self.value)))
+            retVal.addChild(XMLElement(name: "timescale", stringValue: String(self.timescale)))
+        }
+        
+        return retVal
     }
 }
 
