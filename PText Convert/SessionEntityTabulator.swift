@@ -177,7 +177,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
     
     private func timespanFields(for clip: PTEntityParser.ClipEntity ) -> [String:String] {
         let applicable = timeSpanClips.reversed().filter {
-            clip.rawStart >= $0.rawStart && clip.rawStart <= $0.rawFinish
+            clip.start >= $0.start && clip.start <= $0.finish
         }
         
         return applicable.reduce([String:String](), { (dict, thisClip) -> [String:String] in
