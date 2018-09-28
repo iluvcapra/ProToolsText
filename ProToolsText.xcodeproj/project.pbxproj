@@ -48,6 +48,7 @@
 		9AAA0E14215C063700F9158E /* TimeRepresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0E13215C063700F9158E /* TimeRepresentationTests.swift */; };
 		9AAF2B3D2022C9EE00F2546A /* ADR.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF2B3C2022C9EE00F2546A /* ADR.xsl */; };
 		9AAF2B3E2022C9EE00F2546A /* ADR.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF2B3C2022C9EE00F2546A /* ADR.xsl */; };
+		9AB46595215EDC1C00DB6907 /* ADR_Reports.fmp12 in Resources */ = {isa = PBXBuildFile; fileRef = 9AB46594215EDBA400DB6907 /* ADR_Reports.fmp12 */; };
 		9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */; };
 		9ACEFD7D215DC2720044AD3B /* PTTimeParsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0DFD215B047900F9158E /* PTTimeParsers.swift */; };
 		9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
@@ -481,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB46595215EDC1C00DB6907 /* ADR_Reports.fmp12 in Resources */,
 				9A8002811FEEF9A6009D4E28 /* Assets.xcassets in Resources */,
 				9A8002841FEEF9A6009D4E28 /* Main.storyboard in Resources */,
 				9AAF2B3D2022C9EE00F2546A /* ADR.xsl in Resources */,
