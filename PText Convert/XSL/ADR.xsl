@@ -28,7 +28,9 @@
         </xsl:if>
         
         <start> <xsl:value-of select="field[key = 'PT.Clip.Start']/value" /> </start>
+        <start-seconds><xsl:value-of select="field[key = 'PT.Clip.Start.Seconds']/value" /></start-seconds>
         <finish> <xsl:value-of select="field[key = 'PT.Clip.Finish']/value" /> </finish>
+        <finish-seconds><xsl:value-of select="field[key = 'PT.Clip.Finish.Seconds']/value" /></finish-seconds>
         
         <xsl:if test="field[key = 'Ver']" >
         <version> <xsl:value-of select="field[key = 'Ver']/value" /> </version>
