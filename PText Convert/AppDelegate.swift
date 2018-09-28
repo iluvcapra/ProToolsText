@@ -85,6 +85,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
                                        to: exportUrl, style: .adr)
             case 40:     try xmlConvert(from: inputUrl,
                                        to: exportUrl, style: .filemaker)
+            case 50:     try xmlConvert(from: inputUrl,
+                                        to: exportUrl, style: .adrhtml)
             default:    break
             }
             
@@ -142,6 +144,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             case 20:    newExt = "xpttext"
             case 30:    newExt = "xadr"
             case 40:    newExt = "xml"
+            case 50:    newExt = "html"
             default:    newExt = "csv"
             }
             

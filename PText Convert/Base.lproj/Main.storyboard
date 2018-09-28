@@ -147,6 +147,9 @@
                                         <menuItem title="XML ADR — FileMaker" tag="40" id="75A-jK-FXW">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
+                                        <menuItem title="HTML ADR Report" tag="50" id="dVl-PE-cWG">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </popUpButtonCell>

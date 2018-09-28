@@ -16,6 +16,7 @@ class XMLConversionEngine: NSObject {
         //case basic
         case adr
         case filemaker
+        case adrhtml
     }
     
     var stylesheet : Stylesheet = .adr
@@ -64,22 +65,30 @@ class XMLConversionEngine: NSObject {
         
         let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
         let fmpXSLURL   = Bundle.main.url(forResource: "FMPXMLRESULT", withExtension: "xsl")!
+        let adrhtmlXSLURL   = Bundle.main.url(forResource: "ADR-html", withExtension: "xsl")!
         
         let adrxmlDocument =    try document.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
         let fmpDocument =       try adrxmlDocument.objectByApplyingXSLT(at: fmpXSLURL,
                                                                         arguments: nil) as! XMLDocument
+        let adrHtmlDocument =   try adrxmlDocument.objectByApplyingXSLT(at: adrhtmlXSLURL,
+                                                                        arguments: nil) as! Data
+        
         
         let finalDocument : XMLDocument
+        let data : Data
         switch stylesheet {
         case .none:
             finalDocument = document
+            data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
         case .adr:
             finalDocument = adrxmlDocument
+            data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
         case .filemaker:
             finalDocument = fmpDocument
+            data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
+        case .adrhtml:
+            data = adrHtmlDocument
         }
-        
-        let data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
         
         try data.write(to: to)
     }
