@@ -65,6 +65,12 @@
                                                 <action selector="convertTextExport:" target="Voe-Tx-rLC" id="TF4-lk-rOX"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Export Empty FileMaker ADR Report..." id="lUV-yR-OOr">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="exportEmptyFilemakerADRReport:" target="Voe-Tx-rLC" id="mP4-hx-t3g"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -160,7 +166,7 @@
                     </subviews>
                 </customView>
             </objects>
-            <point key="canvasLocation" x="107" y="17"/>
+            <point key="canvasLocation" x="76" y="-192"/>
         </scene>
     </scenes>
 </document>

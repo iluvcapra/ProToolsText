@@ -112,6 +112,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
         alert.messageText = "Conversion succeeded."
         alert.runModal()
     }
+    
+    @IBAction func exportEmptyFilemakerADRReport(_ sender : AnyObject?) {
+        let savePanel = NSSavePanel()
+        savePanel.allowedFileTypes = ["fmp12"]
+        savePanel.nameFieldStringValue = "ADR Reports.fmp12"
+        
+        if savePanel.runModal() == .OK,
+            let fromURL = Bundle.main.url(forResource: "ADR_Reports", withExtension: "fmp12"),
+            let toURL = savePanel.url {
+            do {
+                try FileManager().copyItem(at: fromURL, to: toURL)
+            } catch let error {
+                NSApp.presentError(error)
+            }
+        }
+    }
 
     //MARK: Save Panel Auxiliary View method
     
