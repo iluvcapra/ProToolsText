@@ -51,6 +51,7 @@
 		9AAF2B3D2022C9EE00F2546A /* ADR.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF2B3C2022C9EE00F2546A /* ADR.xsl */; };
 		9AAF2B3E2022C9EE00F2546A /* ADR.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9AAF2B3C2022C9EE00F2546A /* ADR.xsl */; };
 		9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */; };
+		9ACEFD7D215DC2720044AD3B /* PTTimeParsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0DFD215B047900F9158E /* PTTimeParsers.swift */; };
 		9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
 		9AD6EE8E1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
 		9AE7E3D81FEB5B0200011429 /* ADR Spotting test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */; };
@@ -560,6 +561,7 @@
 				9A8002901FEEF9A7009D4E28 /* TagParserTests.swift in Sources */,
 				9A8002CE1FF051F1009D4E28 /* FieldParser.swift in Sources */,
 				9A8002C81FF04A0E009D4E28 /* SessionEntityRectiferTest.swift in Sources */,
+				9ACEFD7D215DC2720044AD3B /* PTTimeParsers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
