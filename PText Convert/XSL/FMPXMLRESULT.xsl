@@ -48,6 +48,7 @@
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="TV" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="To Be Written" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Omit" TYPE="TEXT"/>
+<FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Adlib" TYPE="TEXT"/>
 </METADATA>
 <RESULTSET>
 <xsl:attribute name="FOUND">
@@ -107,6 +108,8 @@
 <COL><DATA><xsl:if test="to-be-written" >TBW</xsl:if></DATA></COL>
 <xsl:comment> omit </xsl:comment>
 <COL><DATA><xsl:if test="omit" >OMIT</xsl:if></DATA></COL>
+<xsl:comment> adlib </xsl:comment>
+<COL><DATA><xsl:if test="adlib" >ADLIB</xsl:if></DATA></COL>
 </ROW>
 </xsl:for-each>
 </RESULTSET>

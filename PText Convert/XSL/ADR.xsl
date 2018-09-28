@@ -76,6 +76,9 @@
         <xsl:if test="field/property = 'OMIT'" >
             <omit />
         </xsl:if>
+        <xsl:if test="field/property = 'ADLIB'" >
+            <adlib />
+        </xsl:if>
     </event>
     </xsl:for-each>
 </events>
