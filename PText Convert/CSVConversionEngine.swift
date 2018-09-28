@@ -59,13 +59,13 @@ class CSVWriter: NSObject {
 class CSVConversionEngine: NSObject {
     
 
-    private func recordFieldSet(forRecords records: [[String:String]]) -> Set<String> {
+    private func recordFieldSet(forRecords records: [EventRecord]) -> Set<String> {
         return records.reduce(Set<String>(), { (accum, thisRecord) -> Set<String> in
             return accum.union(thisRecord.keys)
         })
     }
     
-    private func orderedFields(forRecords records : [[String:String]]) -> [String] {
+    private func orderedFields(forRecords records : [EventRecord]) -> [String] {
         
         let allFields = recordFieldSet(forRecords: records)
         
@@ -86,7 +86,7 @@ class CSVConversionEngine: NSObject {
         return canonicalFields + userFields.sorted()
     }
     
-    private func row(withFields fields: [String], for record : [String : String]) -> [String] {
+    private func row(withFields fields: [String], for record : EventRecord) -> [String] {
         return fields.map { (key) -> String in
             record[key] ?? ""
         }

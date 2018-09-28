@@ -20,7 +20,7 @@ class XMLConversionEngine: NSObject {
     
     var stylesheet : Stylesheet = .adr
     
-    private func rawDocument(with records : [[String:String]], from url : URL) -> XMLDocument {
+    private func rawDocument(with records : [EventRecord], from url : URL) -> XMLDocument {
         
         let root = XMLElement(name: "pttext")
         root.addChild(XMLNode.comment(withStringValue: "Be advised this XML format is under active development and the schema may change at any time") as! XMLNode)

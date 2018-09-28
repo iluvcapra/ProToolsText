@@ -45,7 +45,14 @@ extension CMTime: XMLRepresentable {
     }
 }
 
-extension Dictionary where Key == String, Value : XMLRepresentable {
+enum EventRecordValue {
+    case string(String)
+    case time(CMTime)
+}
+
+typealias EventRecord = [String:String]
+
+extension Dictionary where Key == String, Value == String {
     
     func toXMLElement(named n : String) -> XMLElement {
         
@@ -53,7 +60,7 @@ extension Dictionary where Key == String, Value : XMLRepresentable {
 
         for (key, value) in self {
             let memberElement : XMLElement = XMLElement(name: "field")
-            if let strValue = value as? String, strValue == key {
+            if key == value {
                 let propertyElement = XMLElement(name: "property", stringValue: key)
                 memberElement.addChild(propertyElement)
                 
