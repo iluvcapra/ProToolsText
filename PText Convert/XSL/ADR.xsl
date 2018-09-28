@@ -58,7 +58,6 @@
         <xsl:if test="field[key = 'Shot']" >
             <shot> <xsl:value-of select="field[key = 'Shot']/value" /> </shot>
         </xsl:if>
-        
         <xsl:if test="field[key = 'Note']" >
         <note> <xsl:value-of select="field[key = 'Note']/value" /> </note>
         </xsl:if>
