@@ -29,7 +29,9 @@
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Cue Number" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Reel" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Start" TYPE="TEXT"/>
+<FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Start Seconds" TYPE="NUMBER"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Finish" TYPE="TEXT"/>
+<FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Finish Seconds" TYPE="NUMBER"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Version" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Character Name" TYPE="TEXT"/>
 <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="Actor Name" TYPE="TEXT"/>
@@ -60,7 +62,9 @@
 <COL><DATA><xsl:value-of select="cue-number" /></DATA></COL>
 <COL><DATA><xsl:value-of select="reel" /></DATA></COL>
 <COL><DATA><xsl:value-of select="start" /></DATA></COL>
+<COL><DATA><xsl:value-of select="start-seconds" /></DATA></COL>
 <COL><DATA><xsl:value-of select="finish" /></DATA></COL>
+<COL><DATA><xsl:value-of select="finish-seconds" /></DATA></COL>
 <COL><DATA><xsl:value-of select="version" /></DATA></COL>
 <COL><DATA><xsl:value-of select="character-name" /></DATA></COL>
 <COL><DATA><xsl:value-of select="actor-name" /></DATA></COL>
