@@ -6,21 +6,6 @@
 //
 
 import Foundation
-import CoreMedia
-
-
-extension CMTime {
-    func xmlNode() -> XMLNode {
-        let node = XMLElement(name: "time")
-        if self.isValid {
-            node.addChild(XMLElement(name: "value", stringValue: String(self.value) ) )
-            node.addChild(XMLElement(name: "timescale", stringValue: String(self.timescale)))
-        } else {
-            node.addChild(XMLElement(name: "invalid"))
-        }
-        return node
-    }
-}
 
 extension Dictionary where Key == String, Value == String {
     
