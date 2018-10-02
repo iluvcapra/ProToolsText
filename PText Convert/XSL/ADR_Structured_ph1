@@ -21,9 +21,10 @@
             </xsl:if>
         
             <xsl:for-each select="/pttext/events/event[ count(.| key('titles-character', concat(field[key = 'Char']/value, $thisTitle ))[1]) = 1]" >
+                <xsl:sort select="field[key = 'CN']/value" />
             <xsl:variable name="thisCharacter" select="concat(field[key = 'Char']/value, $thisTitle)" />
             <character>
-                <order><xsl:value-of select="field[key = 'CN']/value" /></order>
+                <xsl:attribute name="order"><xsl:number value="position()" /></xsl:attribute>
                 <name><xsl:value-of select="field[key = 'Char']/value" /></name>
                 <actor><xsl:value-of select="field[key = 'Actor']/value" /></actor>
                 <xsl:for-each select="/pttext/events/event[concat(field[key = 'Char']/value,field[key = 'PT.Session.Name']/value) = $thisCharacter]" >
