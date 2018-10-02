@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A0B572E2155C6E000C7E7AA /* FMPXMLRESULT.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B572D2155C6E000C7E7AA /* FMPXMLRESULT.xsl */; };
+		9A1BF50C2162874C00CD9210 /* ADR_Structured_ph1 in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BF50B2162874C00CD9210 /* ADR_Structured_ph1 */; };
 		9A36FCEA2013D1F8009661B1 /* Track States.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A36FCE92013D1F8009661B1 /* Track States.txt */; };
 		9A70F4BB1FF448AD000DBF46 /* PKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */; };
@@ -106,6 +107,7 @@
 
 /* Begin PBXFileReference section */
 		9A0B572D2155C6E000C7E7AA /* FMPXMLRESULT.xsl */ = {isa = PBXFileReference; explicitFileType = text.xml; path = FMPXMLRESULT.xsl; sourceTree = "<group>"; };
+		9A1BF50B2162874C00CD9210 /* ADR_Structured_ph1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = ADR_Structured_ph1; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.xml; };
 		9A36FCE92013D1F8009661B1 /* Track States.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Track States.txt"; sourceTree = "<group>"; usesTabs = 1; };
 		9A70F4B81FF43FDF000DBF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9A80027A1FEEF9A6009D4E28 /* PText Convert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PText Convert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +205,7 @@
 				9AAF2B3C2022C9EE00F2546A /* ADR.xsl */,
 				9A0B572D2155C6E000C7E7AA /* FMPXMLRESULT.xsl */,
 				9AB46596215EE52900DB6907 /* ADR-html.xsl */,
+				9A1BF50B2162874C00CD9210 /* ADR_Structured_ph1 */,
 			);
 			path = XSL;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				9A8002811FEEF9A6009D4E28 /* Assets.xcassets in Resources */,
 				9A8002841FEEF9A6009D4E28 /* Main.storyboard in Resources */,
 				9AAF2B3D2022C9EE00F2546A /* ADR.xsl in Resources */,
+				9A1BF50C2162874C00CD9210 /* ADR_Structured_ph1 in Resources */,
 				9A0B572E2155C6E000C7E7AA /* FMPXMLRESULT.xsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
