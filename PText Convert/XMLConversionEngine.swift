@@ -27,16 +27,16 @@ class XMLConversionEngine: NSObject {
         root.addChild(XMLNode.comment(withStringValue: "Be advised this XML format is under active development and the schema may change at any time") as! XMLNode)
         root.setAttributesAs(["testMode" : "true"])
         
-        let docInfo = XMLElement(name: "document_information")
+        let docInfo = XMLElement(name: "document-information")
         
-        docInfo.addChild(XMLElement(name: "producer_identifer", stringValue: Bundle.main.bundleIdentifier))
-        docInfo.addChild(XMLElement(name: "producer_version", stringValue: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""))
+        docInfo.addChild(XMLElement(name: "producer-identifer", stringValue: Bundle.main.bundleIdentifier))
+        docInfo.addChild(XMLElement(name: "producer-version", stringValue: (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? ""))
         
-        docInfo.addChild(XMLElement(name: "production_hostname", stringValue: Host.current().localizedName ))
-        docInfo.addChild(XMLElement(name: "production_user", stringValue: NSFullUserName() ))
+        docInfo.addChild(XMLElement(name: "production-hostname", stringValue: Host.current().localizedName ))
+        docInfo.addChild(XMLElement(name: "production-user", stringValue: NSFullUserName() ))
         
-        docInfo.addChild(XMLElement(name: "input_document", stringValue: url.lastPathComponent))
-        docInfo.addChild(XMLElement(name: "production_date", stringValue: ISO8601DateFormatter().string(from: Date() ) ))
+        docInfo.addChild(XMLElement(name: "input-document", stringValue: url.lastPathComponent))
+        docInfo.addChild(XMLElement(name: "production-date", stringValue: ISO8601DateFormatter().string(from: Date() ) ))
         
         
         root.addChild(docInfo)

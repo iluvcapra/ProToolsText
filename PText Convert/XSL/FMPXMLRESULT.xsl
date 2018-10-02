@@ -7,10 +7,10 @@
 <ERRORCODE>0</ERRORCODE>
 <PRODUCT>
 <xsl:attribute name="NAME">
-<xsl:value-of select="document_information/producer_identifer" />
+<xsl:value-of select="document-information/producer-identifer" />
 </xsl:attribute>
 <xsl:attribute name="VERSION">
-<xsl:value-of select="document_information/producer_version"/>
+<xsl:value-of select="document-information/producer-version"/>
 </xsl:attribute>
 </PRODUCT>
 <DATABASE DATEFORMAT="MM/dd/yy" LAYOUT="summary" TIMEFORMAT="hh:mm:ss">
@@ -18,7 +18,7 @@
 <xsl:value-of select="count(events/event)" />
 </xsl:attribute>
 <xsl:attribute name="NAME">
-<xsl:value-of select="document_information/input_document" />
+<xsl:value-of select="document-information/input-document" />
 </xsl:attribute>
 </DATABASE>
 <METADATA>

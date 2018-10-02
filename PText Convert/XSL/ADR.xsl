@@ -2,7 +2,7 @@
 <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/pttext">
 <adr>
-    <xsl:copy-of select="document_information" />
+    <xsl:copy-of select="document-information" />
 <events>
     <xsl:for-each select="/pttext/events/event">
     <event>
