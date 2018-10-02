@@ -85,9 +85,7 @@
                     </xsl:if>
                     </cue>
                     </xsl:for-each>
-                
             </character>
-            
             </xsl:for-each>
         </title>
         </xsl:for-each>
