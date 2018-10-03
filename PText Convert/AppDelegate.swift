@@ -82,7 +82,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             case 10:    try xmlConvert(from: inputUrl,
                                        to: exportUrl, style: .none)
             case 40:     try xmlConvert(from: inputUrl,
-                                       to: exportUrl, style: .filemaker)
+                                       to: exportUrl, style: .filemaker_adr)
             case 60:     try xmlConvert(from: inputUrl,
                                         to: exportUrl, style: .structured)
             default:    break

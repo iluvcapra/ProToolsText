@@ -14,7 +14,7 @@ class XMLConversionEngine: NSObject {
     enum Stylesheet {
         case none
         case structured
-        case filemaker
+        case filemaker_adr
     }
     
     var stylesheet : Stylesheet = .none
@@ -80,7 +80,7 @@ class XMLConversionEngine: NSObject {
         case .none:
             finalDocument = document
             data = finalDocument.xmlData(options: xmlOptions )
-        case .filemaker:
+        case .filemaker_adr:
             finalDocument = fmpDocument
             data = finalDocument.xmlData(options: xmlOptions )
         case .structured:
