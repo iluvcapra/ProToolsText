@@ -52,16 +52,16 @@
 </METADATA>
 <RESULTSET>
 <xsl:attribute name="FOUND">
-<xsl:value-of select="count(events/event)" />
+<xsl:value-of select="count(/adr/title/character/cue)" />
 </xsl:attribute>
-<xsl:for-each select="/adr/events/event">
+<xsl:for-each select="/adr/title/character/cue">
 <ROW>
 <xsl:comment> title </xsl:comment>
-<COL><DATA><xsl:value-of select="title" /></DATA></COL>
+<COL><DATA><xsl:value-of select="../../title" /></DATA></COL>
 <xsl:comment> supervisor </xsl:comment>
-<COL><DATA><xsl:value-of select="supervisor" /></DATA></COL>
+<COL><DATA><xsl:value-of select="../../supervisor" /></DATA></COL>
 <xsl:comment> client </xsl:comment>
-<COL><DATA><xsl:value-of select="client" /></DATA></COL>
+<COL><DATA><xsl:value-of select="../../client" /></DATA></COL>
 <xsl:comment> scene </xsl:comment>
 <COL><DATA><xsl:value-of select="scene" /></DATA></COL>
 <xsl:comment> cue-number </xsl:comment>
@@ -79,11 +79,11 @@
 <xsl:comment> version </xsl:comment>
 <COL><DATA><xsl:value-of select="version" /></DATA></COL>
 <xsl:comment> character-name </xsl:comment>
-<COL><DATA><xsl:value-of select="character-name" /></DATA></COL>
+<COL><DATA><xsl:value-of select="../name" /></DATA></COL>
 <xsl:comment> actor-name </xsl:comment>
-<COL><DATA><xsl:value-of select="actor-name" /></DATA></COL>
+<COL><DATA><xsl:value-of select="../actor" /></DATA></COL>
 <xsl:comment> character-number </xsl:comment>
-<COL><DATA><xsl:value-of select="character-number" /></DATA></COL>
+<COL><DATA><xsl:value-of select="../@order" /></DATA></COL>
 <xsl:comment> line </xsl:comment>
 <COL><DATA><xsl:value-of select="line" /></DATA></COL>
 <xsl:comment> priority </xsl:comment>

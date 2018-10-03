@@ -81,12 +81,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             case 0:     try csvConvert(from : inputUrl, to: exportUrl)
             case 10:    try xmlConvert(from: inputUrl,
                                        to: exportUrl, style: .none)
-            case 30:     try xmlConvert(from: inputUrl,
-                                       to: exportUrl, style: .adr)
             case 40:     try xmlConvert(from: inputUrl,
                                        to: exportUrl, style: .filemaker)
-            case 50:     try xmlConvert(from: inputUrl,
-                                        to: exportUrl, style: .adrhtml)
+            case 60:     try xmlConvert(from: inputUrl,
+                                        to: exportUrl, style: .structured)
             default:    break
             }
             
@@ -141,10 +139,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             switch menuButton.selectedTag() {
             case 00:    newExt = "csv"
             case 10:    newExt = "xrawpttext"
-            case 20:    newExt = "xpttext"
-            case 30:    newExt = "xadr"
             case 40:    newExt = "xml"
-            case 50:    newExt = "html"
+            case 60:    newExt = "spottingdoc"
             default:    newExt = "csv"
             }
             

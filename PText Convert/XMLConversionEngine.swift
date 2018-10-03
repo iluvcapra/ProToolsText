@@ -14,9 +14,8 @@ class XMLConversionEngine: NSObject {
     enum Stylesheet {
         case none
         //case basic
-        case adr
         case filemaker
-        case adrhtml
+        case structured
     }
     
     var stylesheet : Stylesheet = .adr
@@ -63,15 +62,16 @@ class XMLConversionEngine: NSObject {
         
         let document = rawDocument(with : records , from : fileURL)
         
-        let adrXSLURL   = Bundle.main.url(forResource: "ADR", withExtension: "xsl")!
         let fmpXSLURL   = Bundle.main.url(forResource: "FMPXMLRESULT", withExtension: "xsl")!
-        let adrhtmlXSLURL   = Bundle.main.url(forResource: "ADR-html", withExtension: "xsl")!
         
-        let adrxmlDocument =    try document.objectByApplyingXSLT(at: adrXSLURL, arguments: nil) as! XMLDocument
-        let fmpDocument =       try adrxmlDocument.objectByApplyingXSLT(at: fmpXSLURL,
-                                                                        arguments: nil) as! XMLDocument
-        let adrHtmlDocument =   try adrxmlDocument.objectByApplyingXSLT(at: adrhtmlXSLURL,
-                                                                        arguments: nil) as! Data
+        let structuredXSLURL = Bundle.main.url(forResource: "ADR_Structured", withExtension: "xsl")!
+        
+        let structuredXMLDocument = try document.objectByApplyingXSLT(at: structuredXSLURL, arguments: nil) as! XMLDocument
+        
+        
+        let fmpDocument =       try structuredXMLDocument.objectByApplyingXSLT(at: fmpXSLURL,
+                                                                           arguments: nil) as! XMLDocument
+
         
         
         let finalDocument : XMLDocument
@@ -80,14 +80,12 @@ class XMLConversionEngine: NSObject {
         case .none:
             finalDocument = document
             data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
-        case .adr:
-            finalDocument = adrxmlDocument
-            data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
         case .filemaker:
             finalDocument = fmpDocument
             data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
-        case .adrhtml:
-            data = adrHtmlDocument
+        case .structured:
+            finalDocument = structuredXMLDocument
+            data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
         }
         
         try data.write(to: to)
