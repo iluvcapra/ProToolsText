@@ -13,12 +13,11 @@ class XMLConversionEngine: NSObject {
 
     enum Stylesheet {
         case none
-        //case basic
-        case filemaker
         case structured
+        case filemaker
     }
     
-    var stylesheet : Stylesheet = .adr
+    var stylesheet : Stylesheet = .none
     
     private func rawDocument(with records : [EventRecord], from url : URL) -> XMLDocument {
         
@@ -76,16 +75,17 @@ class XMLConversionEngine: NSObject {
         
         let finalDocument : XMLDocument
         let data : Data
+        let xmlOptions : XMLDocument.Options = [XMLNode.Options.nodeCompactEmptyElement, .nodePrettyPrint]
         switch stylesheet {
         case .none:
             finalDocument = document
-            data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
+            data = finalDocument.xmlData(options: xmlOptions )
         case .filemaker:
             finalDocument = fmpDocument
-            data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
+            data = finalDocument.xmlData(options: xmlOptions )
         case .structured:
             finalDocument = structuredXMLDocument
-            data = finalDocument.xmlData(options: [XMLNode.Options.nodePrettyPrint] )
+            data = finalDocument.xmlData(options: xmlOptions )
         }
         
         try data.write(to: to)
