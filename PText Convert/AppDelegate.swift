@@ -139,7 +139,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSAlertDelegate {
             
             let newExt : String
             switch menuButton.selectedTag() {
-            case 00:     newExt = "csv"
+            case 00:    newExt = "csv"
             case 10:    newExt = "xrawpttext"
             case 20:    newExt = "xpttext"
             case 30:    newExt = "xadr"
