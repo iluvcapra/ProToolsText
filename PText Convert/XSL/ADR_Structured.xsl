@@ -7,6 +7,7 @@
     
 <xsl:template match="/pttext">
 <adr>
+    <xsl:comment>Be advised this XML format is under active development and the schema may change at any time</xsl:comment>
     <xsl:copy-of select="document-information" />
     <xsl:for-each select="events/event[ count( . | key('titles', field[key = 'PT.Session.Name']/value )[1]) = 1]" >
         <title>
