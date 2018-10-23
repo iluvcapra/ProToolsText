@@ -2,16 +2,16 @@
 <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="xml" encoding="utf-8" indent="yes" />
 
-    <xsl:key name="titles" match="events/event" use="field[key = 'PT.Session.Name']/value" />
-    <xsl:key name="titles-character" match="events/event" use="concat(field[key = 'Char']/value, field[key = 'PT.Session.Name']/value)" />
+    <xsl:key name="titles" match="events/event" use="field[key = 'Title']/value" />
+    <xsl:key name="titles-character" match="events/event" use="concat(field[key = 'PT.Track.Name']/value, field[key = 'Title']/value)" />
     
 <xsl:template match="/pttext">
 <adr>
     <xsl:comment>Be advised this XML format is under active development and the schema may change at any time</xsl:comment>
     <xsl:copy-of select="document-information" />
-    <xsl:for-each select="events/event[ count( . | key('titles', field[key = 'PT.Session.Name']/value )[1]) = 1]" >
+    <xsl:for-each select="events/event[ count( . | key('titles', field[key = 'Title']/value )[1]) = 1]" >
         <title>
-            <xsl:variable name="thisTitle" select="field[key = 'PT.Session.Name']/value" />
+            <xsl:variable name="thisTitle" select="field[key = 'Title']/value" />
             <title><xsl:value-of select="$thisTitle" /></title>
             <xsl:if test="field[key = 'Supv']" >
                 <supervisor><xsl:value-of select="field[key = 'Supv']/value" /> </supervisor>
@@ -21,14 +21,14 @@
                 <client> <xsl:value-of select="field[key = 'Client']/value" /> </client>
             </xsl:if>
         
-            <xsl:for-each select="/pttext/events/event[ count(.| key('titles-character', concat(field[key = 'Char']/value, $thisTitle ))[1]) = 1]" >
+            <xsl:for-each select="/pttext/events/event[ count(.| key('titles-character', concat(field[key = 'PT.Track.Name']/value, $thisTitle ))[1]) = 1]" >
                 <xsl:sort select="field[key = 'CN']/value" />
-            <xsl:variable name="thisCharacter" select="concat(field[key = 'Char']/value, $thisTitle)" />
+            <xsl:variable name="thisCharacter" select="concat(field[key = 'PT.Track.Name']/value, $thisTitle)" />
             <character>
                 <xsl:attribute name="order"><xsl:number value="position()" /></xsl:attribute>
-                <name><xsl:value-of select="field[key = 'Char']/value" /></name>
+                <name><xsl:value-of select="field[key = 'PT.Track.Name']/value" /></name>
                 <actor><xsl:value-of select="field[key = 'Actor']/value" /></actor>
-                <xsl:for-each select="/pttext/events/event[concat(field[key = 'Char']/value,field[key = 'PT.Session.Name']/value) = $thisCharacter]" >
+                <xsl:for-each select="/pttext/events/event[concat(field[key = 'PT.Track.Name']/value,field[key = 'Title']/value) = $thisCharacter]" >
                     <cue>
                     <cue-number><xsl:value-of select="field[key = 'QN']/value" /></cue-number>
                     <line><xsl:value-of select="field[key = 'PT.Clip.Name']/value" /></line>
