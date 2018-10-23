@@ -141,7 +141,7 @@
                                         <menuItem title="XML Raw" tag="10" id="ljH-6w-oWz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
-                                        <menuItem title="Structured XML" tag="60" id="wAv-1j-kPD">
+                                        <menuItem title="XML Spotting Notes" tag="60" id="wAv-1j-kPD">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                         <menuItem title="XML ADR — FileMaker" tag="40" id="75A-jK-FXW">
