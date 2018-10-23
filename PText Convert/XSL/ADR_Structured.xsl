@@ -6,7 +6,7 @@
     <xsl:key name="titles-character" match="events/event" use="concat(field[key = 'PT.Track.Name']/value, field[key = 'Title']/value)" />
     
 <xsl:template match="/pttext">
-<adr>
+<spotting-notes>
     <xsl:comment>Be advised this XML format is under active development and the schema may change at any time</xsl:comment>
     <xsl:copy-of select="document-information" />
     <xsl:for-each select="events/event[ count( . | key('titles', field[key = 'Title']/value )[1]) = 1]" >
@@ -90,6 +90,6 @@
             </xsl:for-each>
         </title>
         </xsl:for-each>
-</adr>
+</spotting-notes>
 </xsl:template>
 </xsl:transform>
