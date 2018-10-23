@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.3.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,12 +63,6 @@
                                         <menuItem title="Convert Text Export..." keyEquivalent="o" id="F5f-LL-Fsg">
                                             <connections>
                                                 <action selector="convertTextExport:" target="Voe-Tx-rLC" id="TF4-lk-rOX"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Export Empty FileMaker ADR Report..." id="lUV-yR-OOr">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="exportEmptyFilemakerADRReport:" target="Voe-Tx-rLC" id="mP4-hx-t3g"/>
                                             </connections>
                                         </menuItem>
                                     </items>

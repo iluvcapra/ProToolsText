@@ -43,7 +43,6 @@
 		9AAA0E0D215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0E0C215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift */; };
 		9AAA0E12215BFCFA00F9158E /* Test Export samples tc2997df.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAA0E11215BFCFA00F9158E /* Test Export samples tc2997df.txt */; };
 		9AAA0E14215C063700F9158E /* TimeRepresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0E13215C063700F9158E /* TimeRepresentationTests.swift */; };
-		9AB46595215EDC1C00DB6907 /* ADR_Reports.fmp12 in Resources */ = {isa = PBXBuildFile; fileRef = 9AB46594215EDBA400DB6907 /* ADR_Reports.fmp12 */; };
 		9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */; };
 		9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
 		9AD6EE8E1FF595D1008C3CB0 /* JHScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */; };
@@ -142,7 +141,6 @@
 		9AAA0E0C215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRegularExpressionAdditions_Test.swift; sourceTree = "<group>"; };
 		9AAA0E11215BFCFA00F9158E /* Test Export samples tc2997df.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Test Export samples tc2997df.txt"; sourceTree = "<group>"; };
 		9AAA0E13215C063700F9158E /* TimeRepresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRepresentationTests.swift; sourceTree = "<group>"; };
-		9AB46594215EDBA400DB6907 /* ADR_Reports.fmp12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ADR_Reports.fmp12; sourceTree = "<group>"; };
 		9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScannerTests.swift; sourceTree = "<group>"; };
 		9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHScanner.swift; sourceTree = "<group>"; };
 		9AE7E3D71FEB5B0200011429 /* ADR Spotting test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ADR Spotting test.txt"; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 		9A80027B1FEEF9A6009D4E28 /* PText Convert */ = {
 			isa = PBXGroup;
 			children = (
-				9AB46594215EDBA400DB6907 /* ADR_Reports.fmp12 */,
 				9A69EA742015B78D009ED43C /* XML Report Entites */,
 				9A8002B51FEF0092009D4E28 /* PText Convert.entitlements */,
 				9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */,
@@ -488,7 +485,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AB46595215EDC1C00DB6907 /* ADR_Reports.fmp12 in Resources */,
 				9A8002811FEEF9A6009D4E28 /* Assets.xcassets in Resources */,
 				9A8002841FEEF9A6009D4E28 /* Main.storyboard in Resources */,
 				9A1BF50C2162874C00CD9210 /* ADR_Structured.xsl in Resources */,
