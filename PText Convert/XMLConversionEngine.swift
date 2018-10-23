@@ -49,7 +49,7 @@ class XMLConversionEngine: NSObject {
         return XMLDocument(rootElement: root)
     }
     
-    func convert(fileURL : URL, to : URL) throws {
+    func convert(fileURL : URL) throws -> Data  {
         let entityParser = try PTEntityParser(url: fileURL, encoding: String.Encoding.utf8.rawValue)
         let tabulator = SessionEntityTabulator(tracks: entityParser.tracks,
                                                markers: entityParser.markers,
@@ -69,8 +69,8 @@ class XMLConversionEngine: NSObject {
         
         
         let fmpDocument =       try structuredXMLDocument.objectByApplyingXSLT(at: fmpXSLURL,
-                                                                           arguments: nil) as! XMLDocument
-
+                                                                               arguments: nil) as! XMLDocument
+        
         
         
         let finalDocument : XMLDocument
@@ -88,6 +88,10 @@ class XMLConversionEngine: NSObject {
             data = finalDocument.xmlData(options: xmlOptions )
         }
         
-        try data.write(to: to)
+        return data
+    }
+    
+    func convert(fileURL u: URL, to : URL) throws {
+        try convert(fileURL: u).write(to: to)
     }
 }
