@@ -22,7 +22,7 @@
             </xsl:if>
         
             <xsl:for-each select="/pttext/events/event[ count(.| key('titles-character', concat(field[key = 'PT.Track.Name']/value, $thisTitle ))[1]) = 1]" >
-                <xsl:sort select="field[key = 'CN']/value" />
+                <xsl:sort select="number(field[key = 'CN']/value)" data-type="number" />
             <xsl:variable name="thisCharacter" select="concat(field[key = 'PT.Track.Name']/value, $thisTitle)" />
             <character>
                 <xsl:attribute name="order"><xsl:number value="position()" /></xsl:attribute>
