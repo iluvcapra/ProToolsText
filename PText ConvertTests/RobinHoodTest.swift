@@ -77,5 +77,38 @@ class RobinHoodTest: XCTestCase {
         
         print(outputData?.count ?? 0)
     }
+    
+    func testCharacterOrder() {
+        let path = "//spotting-notes/title[1]/character/name"
+        
+        do {
+            guard let result = try document?.rootElement()?.nodes(forXPath: path) else {
+                XCTFail()
+                return
+            }
+            
+            let namesInDoc = result.map { $0.stringValue ?? "_" }
+            
+            let namesInOrder = ["Robin",
+                                "Will",
+                                "Marian",
+                                "John",
+                                "Guy",
+                                "Much",
+                                "Butcher",
+                                "Town Crier",
+                                "Soldier 1",
+                                "Soldier 2",
+                                "Soldier 3",
+                                "Priest",
+                                "Guest at Court"]
+            
+            
+            XCTAssertEqual(namesInDoc, namesInOrder)
+            
+        } catch let error {
+            XCTFail(error.localizedDescription)
+        }
+    }
 
 }
