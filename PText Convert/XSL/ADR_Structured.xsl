@@ -28,6 +28,7 @@
                 <xsl:attribute name="order"><xsl:number value="position()" /></xsl:attribute>
                 <name><xsl:value-of select="field[key = 'PT.Track.Name']/value" /></name>
                 <actor><xsl:value-of select="field[key = 'Actor']/value" /></actor>
+                <number><xsl:value-of select="field[key = 'CN']/value" /></number>
                 <xsl:for-each select="/pttext/events/event[concat(field[key = 'PT.Track.Name']/value,field[key = 'Title']/value) = $thisCharacter]" >
                     <cue>
                     <cue-number><xsl:value-of select="field[key = 'QN']/value" /></cue-number>
