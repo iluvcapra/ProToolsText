@@ -34,7 +34,7 @@
                   moduleName = "PText Convert"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jamiehardt/src/ProToolsText/PText%20Convert/CSVConversionEngine.swift"
-                  timestampString = "561956732.5969011"
+                  timestampString = "561752368.4093291"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -49,12 +49,12 @@
                   moduleName = "PText Convert"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jamiehardt/src/ProToolsText/PText%20Convert/CSVConversionEngine.swift"
-                  timestampString = "561956732.600644"
+                  timestampString = "561752368.411787"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
                   endingLineNumber = "22"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "291">
                </Location>
             </Locations>
          </BreakpointContent>
