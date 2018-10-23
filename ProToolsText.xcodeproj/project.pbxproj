@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		9A0B572E2155C6E000C7E7AA /* FMPXMLRESULT.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B572D2155C6E000C7E7AA /* FMPXMLRESULT.xsl */; };
 		9A1BF50C2162874C00CD9210 /* ADR_Structured.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BF50B2162874C00CD9210 /* ADR_Structured.xsl */; };
-		9A2A3891217EC9A6004A488D /* Robin Hood Spotting.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A2A3890217EC9A6004A488D /* Robin Hood Spotting.txt */; };
 		9A36FCEA2013D1F8009661B1 /* Track States.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A36FCE92013D1F8009661B1 /* Track States.txt */; };
 		9A70F4BB1FF448AD000DBF46 /* PKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A779CE4217FCA55007A40FB /* Robin Hood Spotting.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A779CE3217FCA3E007A40FB /* Robin Hood Spotting.txt */; };
 		9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */; };
 		9A8002811FEEF9A6009D4E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002801FEEF9A6009D4E28 /* Assets.xcassets */; };
 		9A8002841FEEF9A6009D4E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8002821FEEF9A6009D4E28 /* Main.storyboard */; };
@@ -106,9 +106,10 @@
 /* Begin PBXFileReference section */
 		9A0B572D2155C6E000C7E7AA /* FMPXMLRESULT.xsl */ = {isa = PBXFileReference; explicitFileType = text.xml; path = FMPXMLRESULT.xsl; sourceTree = "<group>"; };
 		9A1BF50B2162874C00CD9210 /* ADR_Structured.xsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ADR_Structured.xsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.xml; };
-		9A2A3890217EC9A6004A488D /* Robin Hood Spotting.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Robin Hood Spotting.txt"; sourceTree = "<group>"; };
 		9A36FCE92013D1F8009661B1 /* Track States.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Track States.txt"; sourceTree = "<group>"; usesTabs = 1; };
 		9A70F4B81FF43FDF000DBF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9A779CE2217FCA3E007A40FB /* Robin Hood Spotting.ptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Robin Hood Spotting.ptx"; sourceTree = "<group>"; };
+		9A779CE3217FCA3E007A40FB /* Robin Hood Spotting.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Robin Hood Spotting.txt"; sourceTree = "<group>"; };
 		9A80027A1FEEF9A6009D4E28 /* PText Convert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PText Convert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A8002801FEEF9A6009D4E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,6 +214,15 @@
 			path = "XML Report Entites";
 			sourceTree = "<group>";
 		};
+		9A779CE1217FCA30007A40FB /* Robin Hood */ = {
+			isa = PBXGroup;
+			children = (
+				9A779CE2217FCA3E007A40FB /* Robin Hood Spotting.ptx */,
+				9A779CE3217FCA3E007A40FB /* Robin Hood Spotting.txt */,
+			);
+			path = "Robin Hood";
+			sourceTree = "<group>";
+		};
 		9A80027B1FEEF9A6009D4E28 /* PText Convert */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +245,7 @@
 		9A80028E1FEEF9A7009D4E28 /* PText ConvertTests */ = {
 			isa = PBXGroup;
 			children = (
-				9A2A3890217EC9A6004A488D /* Robin Hood Spotting.txt */,
+				9A779CE1217FCA30007A40FB /* Robin Hood */,
 				9AA72C07201E81D9002913A4 /* ADRLineTests.swift */,
 				9A8002C51FEF7DD1009D4E28 /* ADR Spotting test.txt */,
 				9A80028F1FEEF9A7009D4E28 /* TagParserTests.swift */,
@@ -497,7 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8002C61FEF7DD1009D4E28 /* ADR Spotting test.txt in Resources */,
-				9A2A3891217EC9A6004A488D /* Robin Hood Spotting.txt in Resources */,
+				9A779CE4217FCA55007A40FB /* Robin Hood Spotting.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
