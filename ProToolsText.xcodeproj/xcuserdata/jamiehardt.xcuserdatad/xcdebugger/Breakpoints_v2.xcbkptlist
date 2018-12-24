@@ -25,6 +25,38 @@
             endingLineNumber = "40"
             landmarkName = "init(writeTo:encoding:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PText_Convert.CSVWriter.__allocating_init(writeTo: Foundation.URL, encoding: (extension in Foundation):Swift.String.Encoding) throws -&gt; PText_Convert.CSVWriter"
+                  moduleName = "PText Convert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamiehardt/src/ProToolsText/PText%20Convert/CSVConversionEngine.swift"
+                  timestampString = "566237995.5757999"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "13">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PText_Convert.CSVWriter.init(writeTo: Foundation.URL, encoding: (extension in Foundation):Swift.String.Encoding) throws -&gt; PText_Convert.CSVWriter"
+                  moduleName = "PText Convert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jamiehardt/src/ProToolsText/PText%20Convert/CSVConversionEngine.swift"
+                  timestampString = "566237995.578555"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
