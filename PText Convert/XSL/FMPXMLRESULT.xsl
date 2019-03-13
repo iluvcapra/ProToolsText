@@ -54,7 +54,7 @@
 <xsl:attribute name="FOUND">
 <xsl:value-of select="count(/adr/title/character/cue)" />
 </xsl:attribute>
-<xsl:for-each select="/adr/title/character/cue">
+<xsl:for-each select="/spotting-notes/title/character/cue">
 <ROW>
 <xsl:comment> title </xsl:comment>
 <COL><DATA><xsl:value-of select="../../title" /></DATA></COL>
