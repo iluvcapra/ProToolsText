@@ -85,6 +85,9 @@
                     <xsl:if test="field/property = 'ADLIB'" >
                         <adlib />
                     </xsl:if>
+                    <xsl:if test="field/property = 'OPT'" >
+                        <optional />
+                    </xsl:if>
                     </cue>
                     </xsl:for-each>
             </character>
