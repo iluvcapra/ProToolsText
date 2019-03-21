@@ -67,8 +67,8 @@
                     <xsl:if test="field[key = 'Note']" >
                         <note> <xsl:value-of select="field[key = 'Note']/value" /> </note>
                     </xsl:if>
-                    <xsl:if test="field[name = 'Mins']" >
-                        <time-budget> <xsl:value-of select="number(field[name = 'Mins']/value)" /> </time-budget>
+                    <xsl:if test="field[key = 'Mins']" >
+                        <time-budget> <xsl:value-of select="number(field[key = 'Mins']/value)" /> </time-budget>
                     </xsl:if>
                     <xsl:if test="field/property = 'EFF'" >
                         <effort />
