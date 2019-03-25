@@ -21,15 +21,15 @@
                 <client> <xsl:value-of select="field[key = 'Client']/value" /> </client>
             </xsl:if>
         
-            <xsl:for-each select="/pttext/events/event[ count(.| key('titles-character', concat(field[key = 'PT.Track.Name']/value, $thisTitle ))[1]) = 1]" >
+            <xsl:for-each select="/pttext/events/event[ count(.| key('titles-character', concat(number(field[key = 'CN']/value), $thisTitle ))[1]) = 1]" >
                 <xsl:sort select="number(field[key = 'CN']/value)" data-type="number" />
-            <xsl:variable name="thisCharacter" select="concat(field[key = 'PT.Track.Name']/value, $thisTitle)" />
+            <xsl:variable name="thisCharacter" select="concat(field[key = 'CN']/value, $thisTitle)" />
             <character>
                 <xsl:attribute name="order"><xsl:number value="position()" /></xsl:attribute>
                 <name><xsl:value-of select="field[key = 'PT.Track.Name']/value" /></name>
                 <actor><xsl:value-of select="field[key = 'Actor']/value" /></actor>
                 <number><xsl:value-of select="field[key = 'CN']/value" /></number>
-                <xsl:for-each select="/pttext/events/event[concat(field[key = 'PT.Track.Name']/value,field[key = 'Title']/value) = $thisCharacter]" >
+                <xsl:for-each select="/pttext/events/event[concat(field[key = 'CN']/value,field[key = 'Title']/value) = $thisCharacter]" >
                     <cue>
                     <cue-number><xsl:value-of select="field[key = 'QN']/value" /></cue-number>
                     <line><xsl:value-of select="field[key = 'PT.Clip.Name']/value" /></line>
