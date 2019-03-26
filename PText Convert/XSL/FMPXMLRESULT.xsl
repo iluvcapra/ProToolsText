@@ -84,7 +84,7 @@
 <xsl:comment> actor-name </xsl:comment>
 <COL><DATA><xsl:value-of select="../actor" /></DATA></COL>
 <xsl:comment> character-number </xsl:comment>
-<COL><DATA><xsl:value-of select="../@order" /></DATA></COL>
+<COL><DATA><xsl:value-of select="../number" /></DATA></COL>
 <xsl:comment> line </xsl:comment>
 <COL><DATA><xsl:value-of select="line" /></DATA></COL>
 <xsl:comment> priority </xsl:comment>

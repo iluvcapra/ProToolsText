@@ -3,7 +3,7 @@
 <xsl:output method="xml" encoding="utf-8" indent="yes" />
 
     <xsl:key name="titles" match="events/event" use="field[key = 'Title']/value" />
-    <xsl:key name="titles-character" match="events/event" use="concat(field[key = 'PT.Track.Name']/value, field[key = 'Title']/value)" />
+    <xsl:key name="titles-character" match="events/event" use="concat(field[key = 'CN']/value, field[key = 'Title']/value)" />
     
 <xsl:template match="/pttext">
 <spotting-notes>

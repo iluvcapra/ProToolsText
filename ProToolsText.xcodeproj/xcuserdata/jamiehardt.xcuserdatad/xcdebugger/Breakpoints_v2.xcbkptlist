@@ -14,11 +14,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PText Convert/CSVConversionEngine.swift"
-            timestampString = "574191314.773519"
+            timestampString = "559846894.250378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -27,14 +27,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "PText_Convert.CSVWriter.__allocating_init(writeTo: Foundation.URL, encoding: (extension in Foundation):Swift.String.Encoding) throws -&gt; PText_Convert.CSVWriter"
                   moduleName = "PText Convert"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jamiehardt/src/ProToolsText/PText%20Convert/CSVConversionEngine.swift"
-                  timestampString = "568930283.052454"
+                  timestampString = "575250325.121097"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -42,14 +42,14 @@
                   offsetFromSymbolStart = "13">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "PText_Convert.CSVWriter.init(writeTo: Foundation.URL, encoding: (extension in Foundation):Swift.String.Encoding) throws -&gt; PText_Convert.CSVWriter"
                   moduleName = "PText Convert"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jamiehardt/src/ProToolsText/PText%20Convert/CSVConversionEngine.swift"
-                  timestampString = "568930283.056865"
+                  timestampString = "575250325.12321"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
