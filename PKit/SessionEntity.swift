@@ -44,6 +44,23 @@ public struct SessionEntity {
         case Frame2997Drop  = "29.97 Drop Frame"
         case Frame30        = "30 Frame"
         case Frame30Drop    = "30 Drop Frame"
+        
+        var frameDuration : CMTime {
+            switch self {
+            case .Frame24:
+                return CMTime(value: 1, timescale: 24)
+            case .Frame2398:
+                return CMTime(value: 1001, timescale: 24000)
+            case .Frame25:
+                return CMTime(value: 1, timescale: 25)
+            case .Frame30: fallthrough
+            case .Frame30Drop:
+                return CMTime(value: 1, timescale: 30)
+            case .Frame2997: fallthrough
+            case .Frame2997Drop:
+                return CMTime(value: 1001, timescale: 30000)
+            }
+        }
     }
     
     func symbolicTimecodeFormat() throws -> TimecodeFormat {
@@ -72,24 +89,25 @@ public struct SessionEntity {
         }
     }
     
-    private func frameCount(for s : String) throws -> (count: Int, perSecond: Int) {
+    private func frameCount(for s : String) throws -> (count: Int, frameDuration: CMTime) {
         let (rep, terms) = try TimeRepresentation.terms(in: s)
         
         let termMultiples : [Double]
-        let fps : Double
+        let frameDur : CMTime
         switch rep {
         case .timecode, .timecodeDF:
-            fps = Double(try self.framesPerTimecodeSecond() )
-            termMultiples = [3600.0, 60.0, 1.0].map { $0 * fps } + [1.0]
+            let fpss = try self.framesPerTimecodeSecond()
+            frameDur = try self.symbolicTimecodeFormat().frameDuration
+            termMultiples = [3600.0, 60.0, 1.0].map { $0 * Double(fpss) } + [1.0]
         case .footage:
-            fps = 24.0
+            frameDur = CMTime(value: 24000, timescale: 1001) // FIXME this won't be right under some circumstances
             termMultiples = [16.0, 1.0]
         case .samples:
-            fps = self.sampleRate
-            termMultiples = [fps]
+            frameDur = CMTime(value: 1, timescale: Int32(self.sampleRate))
+            termMultiples = [self.sampleRate]
         case .realtime:
-            fps = Double(try self.framesPerTimecodeSecond() )
-            termMultiples = [60.0 * fps, fps]
+            frameDur = CMTime(value: 1, timescale: 1)
+            termMultiples = [60.0, 1.0]
         }
         
         let numericalTerms = terms.map { Double($0 ?? "") ?? 0.0 }
@@ -97,17 +115,17 @@ public struct SessionEntity {
         
         if rep == .timecodeDF {
             let dfCorrection = droppedFrameCount(for: Int( rawFrameCount) )
-            return ( Int( rawFrameCount ) - dfCorrection , Int(fps) )
+            return ( Int( rawFrameCount ) - dfCorrection , frameDur )
         } else {
-            return ( Int( rawFrameCount ) , Int(fps) )
+            return ( Int( rawFrameCount ) , frameDur )
         }
     }
     
     func decodeTime(from string : String) throws -> CMTime {
-        let (frameCount, fps) = try self.frameCount(for : string)
+        let (frameCount, frameDuration) = try self.frameCount(for : string)
         
-        return CMTime(value: CMTimeValue(frameCount),
-                      timescale: CMTimeScale(fps))
+        return CMTime(value: Int64(frameCount * Int(frameDuration.value)),
+                      timescale: frameDuration.timescale)
     }
     
 }

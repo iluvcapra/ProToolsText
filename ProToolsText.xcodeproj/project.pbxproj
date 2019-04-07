@@ -14,6 +14,11 @@
 		9A4B3EFA225A764E002726C5 /* TrackEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EF9225A764E002726C5 /* TrackEntity.swift */; };
 		9A4B3EFC225A769A002726C5 /* ClipEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EFB225A769A002726C5 /* ClipEntity.swift */; };
 		9A4B3EFE225A77AB002726C5 /* MarkerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EFD225A77AB002726C5 /* MarkerEntity.swift */; };
+		9A4B3F00225A79A3002726C5 /* SessionEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EFF225A79A3002726C5 /* SessionEntityTests.swift */; };
+		9A4B3F01225A79D7002726C5 /* ClipEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EFB225A769A002726C5 /* ClipEntity.swift */; };
+		9A4B3F02225A79DA002726C5 /* SessionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EF7225A7593002726C5 /* SessionEntity.swift */; };
+		9A4B3F03225A79DE002726C5 /* TrackEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EF9225A764E002726C5 /* TrackEntity.swift */; };
+		9A4B3F04225A79E1002726C5 /* MarkerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EFD225A77AB002726C5 /* MarkerEntity.swift */; };
 		9A70F4BB1FF448AD000DBF46 /* PKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A779CE4217FCA55007A40FB /* Robin Hood Spotting.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A779CE3217FCA3E007A40FB /* Robin Hood Spotting.txt */; };
 		9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */; };
@@ -107,6 +112,7 @@
 		9A4B3EF9225A764E002726C5 /* TrackEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEntity.swift; sourceTree = "<group>"; };
 		9A4B3EFB225A769A002726C5 /* ClipEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipEntity.swift; sourceTree = "<group>"; };
 		9A4B3EFD225A77AB002726C5 /* MarkerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerEntity.swift; sourceTree = "<group>"; };
+		9A4B3EFF225A79A3002726C5 /* SessionEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEntityTests.swift; sourceTree = "<group>"; };
 		9A70F4B81FF43FDF000DBF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9A779CE2217FCA3E007A40FB /* Robin Hood Spotting.ptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Robin Hood Spotting.ptx"; sourceTree = "<group>"; };
 		9A779CE3217FCA3E007A40FB /* Robin Hood Spotting.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Robin Hood Spotting.txt"; sourceTree = "<group>"; };
@@ -305,6 +311,7 @@
 				9AB8714A1FF81DB8005E7A15 /* JHScannerTests.swift */,
 				9AAA0E0C215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift */,
 				9AAA0E13215C063700F9158E /* TimeRepresentationTests.swift */,
+				9A4B3EFF225A79A3002726C5 /* SessionEntityTests.swift */,
 			);
 			path = PKitTests;
 			sourceTree = "<group>";
@@ -594,13 +601,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4B3F00225A79A3002726C5 /* SessionEntityTests.swift in Sources */,
 				9AB8714B1FF81DB8005E7A15 /* JHScannerTests.swift in Sources */,
 				9AAA0E0B215B4C2800F9158E /* PTTextFileParser.swift in Sources */,
 				9AAA0E0D215B51D500F9158E /* NSRegularExpressionAdditions_Test.swift in Sources */,
+				9A4B3F04225A79E1002726C5 /* MarkerEntity.swift in Sources */,
+				9A4B3F02225A79DA002726C5 /* SessionEntity.swift in Sources */,
 				9AAA0DFF215B047900F9158E /* PTTimeParsers.swift in Sources */,
 				9AAA0E0A215B4C2400F9158E /* PTEntityParser.swift in Sources */,
 				9AAA0E14215C063700F9158E /* TimeRepresentationTests.swift in Sources */,
 				9AD6EE8E1FF595D1008C3CB0 /* JHScanner.swift in Sources */,
+				9A4B3F01225A79D7002726C5 /* ClipEntity.swift in Sources */,
+				9A4B3F03225A79DE002726C5 /* TrackEntity.swift in Sources */,
 				9A9450211FE71C1F007CFC2D /* PKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

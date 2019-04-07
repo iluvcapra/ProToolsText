@@ -35,17 +35,21 @@ class TimeRepresentationTests: XCTestCase {
     }
     
     func testTerms() {
-        let (format_ff, terms_ff) = TimeRepresentation.terms(in: feet)!
-        XCTAssertEqual(format_ff, TimeRepresentation.footage)
-        XCTAssertEqual(terms_ff, ["33","08",".58"])
-
-        let (format_tc, terms_tc) = TimeRepresentation.terms(in: tc)!
-        XCTAssertEqual(format_tc, TimeRepresentation.timecode)
-        XCTAssertEqual(terms_tc, ["01","00","41","29",".52"])
-        
-        let (format_tcdf, terms_tcdf) = TimeRepresentation.terms(in: tcdf)!
-        XCTAssertEqual(format_tcdf, TimeRepresentation.timecodeDF)
-        XCTAssertEqual(terms_tcdf, ["01","00","41","28", nil])
+        do {
+            let (format_ff, terms_ff) = try TimeRepresentation.terms(in: feet)
+            XCTAssertEqual(format_ff, TimeRepresentation.footage)
+            XCTAssertEqual(terms_ff, ["33","08",".58"])
+            
+            let (format_tc, terms_tc) = try TimeRepresentation.terms(in: tc)
+            XCTAssertEqual(format_tc, TimeRepresentation.timecode)
+            XCTAssertEqual(terms_tc, ["01","00","41","29",".52"])
+            
+            let (format_tcdf, terms_tcdf) = try TimeRepresentation.terms(in: tcdf)
+            XCTAssertEqual(format_tcdf, TimeRepresentation.timecodeDF)
+            XCTAssertEqual(terms_tcdf, ["01","00","41","28", nil])
+        } catch let error {
+            XCTFail(error.localizedDescription)
+        }
 
     }
     
