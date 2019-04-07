@@ -10,6 +10,10 @@
 		9A0B572E2155C6E000C7E7AA /* FMPXMLRESULT.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B572D2155C6E000C7E7AA /* FMPXMLRESULT.xsl */; };
 		9A1BF50C2162874C00CD9210 /* ADR_Structured.xsl in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BF50B2162874C00CD9210 /* ADR_Structured.xsl */; };
 		9A36FCEA2013D1F8009661B1 /* Track States.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A36FCE92013D1F8009661B1 /* Track States.txt */; };
+		9A4B3EF8225A7593002726C5 /* SessionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EF7225A7593002726C5 /* SessionEntity.swift */; };
+		9A4B3EFA225A764E002726C5 /* TrackEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EF9225A764E002726C5 /* TrackEntity.swift */; };
+		9A4B3EFC225A769A002726C5 /* ClipEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EFB225A769A002726C5 /* ClipEntity.swift */; };
+		9A4B3EFE225A77AB002726C5 /* MarkerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3EFD225A77AB002726C5 /* MarkerEntity.swift */; };
 		9A70F4BB1FF448AD000DBF46 /* PKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9450131FE71C1F007CFC2D /* PKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A779CE4217FCA55007A40FB /* Robin Hood Spotting.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A779CE3217FCA3E007A40FB /* Robin Hood Spotting.txt */; };
 		9A80027D1FEEF9A6009D4E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80027C1FEEF9A6009D4E28 /* AppDelegate.swift */; };
@@ -99,6 +103,10 @@
 		9A0B572D2155C6E000C7E7AA /* FMPXMLRESULT.xsl */ = {isa = PBXFileReference; explicitFileType = text.xml; path = FMPXMLRESULT.xsl; sourceTree = "<group>"; };
 		9A1BF50B2162874C00CD9210 /* ADR_Structured.xsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ADR_Structured.xsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.xml; };
 		9A36FCE92013D1F8009661B1 /* Track States.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Track States.txt"; sourceTree = "<group>"; usesTabs = 1; };
+		9A4B3EF7225A7593002726C5 /* SessionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEntity.swift; sourceTree = "<group>"; };
+		9A4B3EF9225A764E002726C5 /* TrackEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEntity.swift; sourceTree = "<group>"; };
+		9A4B3EFB225A769A002726C5 /* ClipEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipEntity.swift; sourceTree = "<group>"; };
+		9A4B3EFD225A77AB002726C5 /* MarkerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerEntity.swift; sourceTree = "<group>"; };
 		9A70F4B81FF43FDF000DBF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9A779CE2217FCA3E007A40FB /* Robin Hood Spotting.ptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Robin Hood Spotting.ptx"; sourceTree = "<group>"; };
 		9A779CE3217FCA3E007A40FB /* Robin Hood Spotting.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Robin Hood Spotting.txt"; sourceTree = "<group>"; };
@@ -275,8 +283,12 @@
 			children = (
 				9A9450151FE71C1F007CFC2D /* PKit.h */,
 				9A9450161FE71C1F007CFC2D /* Info.plist */,
-				9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */,
 				9A8002C01FEF301A009D4E28 /* PTEntityParser.swift */,
+				9A4B3EFB225A769A002726C5 /* ClipEntity.swift */,
+				9A4B3EF7225A7593002726C5 /* SessionEntity.swift */,
+				9A4B3EF9225A764E002726C5 /* TrackEntity.swift */,
+				9A4B3EFD225A77AB002726C5 /* MarkerEntity.swift */,
+				9AE7E3DB1FEB5E8A00011429 /* PTTextFileParser.swift */,
 				9AD6EE8C1FF595D1008C3CB0 /* JHScanner.swift */,
 				9AAA0DFD215B047900F9158E /* PTTimeParsers.swift */,
 			);
@@ -569,7 +581,11 @@
 			files = (
 				9AD6EE8D1FF595D1008C3CB0 /* JHScanner.swift in Sources */,
 				9AAA0DFE215B047900F9158E /* PTTimeParsers.swift in Sources */,
+				9A4B3EFC225A769A002726C5 /* ClipEntity.swift in Sources */,
+				9A4B3EF8225A7593002726C5 /* SessionEntity.swift in Sources */,
+				9A4B3EFE225A77AB002726C5 /* MarkerEntity.swift in Sources */,
 				9AE7E3DC1FEB5E8A00011429 /* PTTextFileParser.swift in Sources */,
+				9A4B3EFA225A764E002726C5 /* TrackEntity.swift in Sources */,
 				9A9C45921FF9C0FF00B13FDA /* PTEntityParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

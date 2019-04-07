@@ -42,20 +42,20 @@ let PTUserTimestampSeconds      = "PT.Clip.UserTimestamp.Seconds"
 
 class SessionEntityTabulator :SessionEntityTabulatorDelegate {
     
-    private let session : PTEntityParser.SessionEntity
-    private let markers : [PTEntityParser.MarkerEntity]
-    private let tracks : [PTEntityParser.TrackEntity]
+    private let session : SessionEntity
+    private let markers : [MarkerEntity]
+    private let tracks : [TrackEntity]
     
-    private var timeSpanClips : [PTEntityParser.ClipEntity] = []
+    private var timeSpanClips : [ClipEntity] = []
     
     var delegate : SessionEntityTabulatorDelegate? = nil
     
     var records : [EventRecord] = []
     
     
-    init(tracks: [PTEntityParser.TrackEntity],
-         markers: [PTEntityParser.MarkerEntity],
-         session: PTEntityParser.SessionEntity) {
+    init(tracks: [TrackEntity],
+         markers: [MarkerEntity],
+         session: SessionEntity) {
         self.session = session
         self.markers = markers
         self.tracks = tracks
@@ -80,7 +80,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
     
     // MARK: - Implementation
     
-    private func interpret(track : PTEntityParser.TrackEntity) {
+    private func interpret(track : TrackEntity) {
         let trackFields = fields(for: track)
         let sessionFields = fields(for: session)
         
@@ -110,14 +110,14 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         }
     }
     
-    private func fields(for session : PTEntityParser.SessionEntity) -> EventRecord {
+    private func fields(for session : SessionEntity) -> EventRecord {
         let sessionNameParse = TagParser(string: session.rawTitle).parse()
         var dict = sessionNameParse.fields
         dict[PTSessionName] = sessionNameParse.text
         return dict
     }
     
-    private func fields(for track : PTEntityParser.TrackEntity) -> EventRecord {
+    private func fields(for track : TrackEntity) -> EventRecord {
         let trackNameParse = TagParser(string: track.rawTitle).parse()
         let trackCommentParse = TagParser(string : track.rawComment).parse()
         let trackDict : EventRecord = {
@@ -134,7 +134,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         return trackDict
     }
     
-    private func fields(for clip: PTEntityParser.ClipEntity) -> EventRecord {
+    private func fields(for clip: ClipEntity) -> EventRecord {
         let clipNameParse = TagParser(string: clip.rawName).parse()
         let clipDict : EventRecord = {
             var dict = clipNameParse.fields
@@ -156,7 +156,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         return clipDict
     }
     
-    private func memoryLocationFields(for clip : PTEntityParser.ClipEntity) -> [String : String] {
+    private func memoryLocationFields(for clip : ClipEntity) -> [String : String] {
         let sortedMems = markers.sorted { (el, er) -> Bool in
             el.rawLocation < er.rawLocation
         }
@@ -175,7 +175,7 @@ class SessionEntityTabulator :SessionEntityTabulatorDelegate {
         }
     }
     
-    private func timespanFields(for clip: PTEntityParser.ClipEntity ) -> EventRecord {
+    private func timespanFields(for clip: ClipEntity ) -> EventRecord {
         let applicable = timeSpanClips.reversed().filter {
             clip.start >= $0.start && clip.start <= $0.finish
         }

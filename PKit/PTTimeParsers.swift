@@ -89,7 +89,7 @@ enum TimeRepresentation : CaseIterable {
     }
 }
 
-extension PTEntityParser.SessionEntity {
+extension SessionEntity {
     
     enum TimecodeFormat : String {
         case Frame2398      = "23.976 Frame"
