@@ -50,7 +50,7 @@
                     </xsl:if>
                     
                     <xsl:if test="field[key = 'P']" >
-                        <priority> <xsl:value-of select="number(field[key = 'P']/value)" /> </priority>
+                        <priority> <xsl:value-of select="field[key = 'P']/value" /> </priority>
                     </xsl:if>
                     <xsl:if test="field[key = 'R']" >
                         <reason> <xsl:value-of select="field[key = 'R']/value" /> </reason>

@@ -67,7 +67,6 @@ class XMLConversionEngine: NSObject {
         
         let structuredXMLDocument = try document.objectByApplyingXSLT(at: structuredXSLURL, arguments: nil) as! XMLDocument
         
-        
         let fmpDocument =       try structuredXMLDocument.objectByApplyingXSLT(at: fmpXSLURL,
                                                                                arguments: nil) as! XMLDocument
         
