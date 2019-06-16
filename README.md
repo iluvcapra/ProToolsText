@@ -100,10 +100,5 @@ A clip name setting the `[AP]` field will have its parsed clip name appended to 
 
 This is experimental software, it is provided AS IS with no warranty for any purpose.
 
-At this time the application only accepts text exports in the UTF-8 format, and exports CSV encoded likewise.
-
-The parser is naive about timecodes and time formats. Times are compared by lexicographic sorting, which works great
-for SMPTE timecodes, but may have unexpected results with anything else.
-
-
+At this time the application mos reliably accepts text exports in the UTF-8 format, and exports CSV. XML formats are produced as well bu their schema is unstable and subject to change.
 
